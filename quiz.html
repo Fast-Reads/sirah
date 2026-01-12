@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اختبار فصول الرحيق المختوم</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      margin: 0;
+      background: #eff3f8;
+      color: #1f2933;
+      line-height: 1.8;
+    }
+    header {
+      background: linear-gradient(120deg, #0f4c75, #3282b8);
+      color: #fff;
+      padding: 2.8rem 1.5rem;
+      text-align: center;
+    }
+    header p {
+      max-width: 720px;
+      margin: 0.8rem auto 0;
+    }
+    nav {
+      text-align: center;
+      margin: -25px 0 25px;
+    }
+    nav a {
+      display: inline-block;
+      background: #3282b8;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.6rem 1.4rem;
+      border-radius: 28px;
+      font-size: 0.95rem;
+    }
+    main {
+      max-width: 960px;
+      margin: -40px auto 60px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 2.7rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    }
+    details {
+      background: #f8fbff;
+      border-radius: 14px;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 20px rgba(15, 76, 117, 0.08);
+    }
+    summary {
+      cursor: pointer;
+      padding: 1rem 1.2rem;
+      font-weight: 600;
+      color: #0f4c75;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    summary::marker {
+      content: "";
+    }
+    .section-content {
+      padding: 0 1.5rem 1.5rem;
+    }
+    .question-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.25rem 1.4rem;
+      margin-top: 1.2rem;
+      box-shadow: inset 0 0 0 1px #dbe7f5;
+    }
+    .question-card h3 {
+      margin: 0 0 0.5rem;
+      color: #0f4c75;
+    }
+    .question-card p {
+      margin: 0 0 0.9rem;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .options button {
+      border: 1px solid #cfd8e3;
+      background: #fff;
+      border-radius: 10px;
+      padding: 0.65rem;
+      font-size: 0.95rem;
+      text-align: right;
+      cursor: pointer;
+      transition: background 0.2s ease, border 0.2s ease;
+    }
+    .options button:hover {
+      background: #eef4ff;
+    }
+    .options button.correct {
+      border-color: #1d9a6c;
+      background: #e6f7f0;
+      color: #0c5f45;
+    }
+    .options button.incorrect {
+      border-color: #c53030;
+      background: #fde8e8;
+      color: #7b1111;
+    }
+    .feedback {
+      margin-top: 0.7rem;
+      font-weight: 600;
+    }
+    .feedback.correct {
+      color: #1d9a6c;
+    }
+    .feedback.incorrect {
+      color: #c53030;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>اختبار فصول الرحيق المختوم</h1>
+    <p>منصة قابلة للتوسع لاختبار معرفتك بملخص «موقع العرب وأقوامها»، «الحكم والإمارة في العرب»، وسيرة إبراهيم عليه السلام. افتح كل قسم وأجب على الأسئلة بالترتيب الذي تراه مناسبًا.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">العودة إلى الصفحة الرئيسة</a>
+  </nav>
+
+  <main>
+    <div id="quiz-sections"></div>
+  </main>
+
+  <script>
+    const quizSections = [
+      {
+        title: "القسم الأول: موقع العرب وأقوامها",
+        description: "أسئلة تركز على الجغرافيا والممرات والهجرات كما وردت في الملخص.",
+        questions: [
+          {
+            title: "حصانة الجزيرة",
+            prompt: "ما العنصر الطبيعي الذي منح الجزيرة العربية حصانة ضد القوى الخارجية؟",
+            choices: [
+              { text: "الأودية النهرية الواسعة", correct: false },
+              { text: "الصحارى والرمال التي تحيط بالجزيرة من كل الجهات", correct: true },
+              { text: "الغابات المدارية", correct: false }
+            ]
+          },
+          {
+            title: "الممرات العالمية",
+            prompt: "ما الذي جعل الموانئ العربية محطات إلزامية للسفن والقوافل؟",
+            choices: [
+              { text: "انعزالها عن البحار", correct: false },
+              { text: "اتصالها ببحري العرب والأحمر ومسارات الهند", correct: true },
+              { text: "وجود ثلوج دائمة في تهامة", correct: false }
+            ]
+          },
+          {
+            title: "الهجرات القحطانية",
+            prompt: "ما السبب الأبرز وراء هجرة البطون القحطانية قبل الإسلام؟",
+            choices: [
+              { text: "البحث عن المناخ البارد", correct: false },
+              { text: "انهيار سد مأرب وتراجع التجارة بعد سيطرة الرومان والأحباش", correct: true },
+              { text: "ظهور الذهب في الشمال", correct: false }
+            ]
+          }
+        ]
+      },
+      {
+        title: "القسم الثاني: الحكم والإمارة في العرب",
+        description: "يغطي أنماط السلطة وتحالفات القوى الكبرى مع القبائل.",
+        questions: [
+          {
+            title: "أنماط الحكم",
+            prompt: "ما التركيبة التي لخصت مشهد الحكم في الجزيرة؟",
+            choices: [
+              { text: "ملوك بتيجان مستقلون تمامًا وجمهوريات", correct: false },
+              { text: "ملوك تابعون لقوى كبرى ورؤساء قبائل يحكمون تقليديًا", correct: true },
+              { text: "ولاة عثمانيون مع برلمانات", correct: false }
+            ]
+          },
+          {
+            title: "حزام الحدود",
+            prompt: "لماذا دعمت القوى الكبرى حلفاء عربًا عند حدودها؟",
+            choices: [
+              { text: "لإنشاء حزام أمني يرد الغارات ويحمي التجارة", correct: true },
+              { text: "لإرسالهم إلى أوروبا", correct: false },
+              { text: "لتحويلهم إلى رهبان", correct: false }
+            ]
+          },
+          {
+            title: "تجربة اليمن",
+            prompt: "ما السمة التي ميزت الحكم في اليمن عبر العصور؟",
+            choices: [
+              { text: "ثبات السلالة دون تدخل خارجي", correct: false },
+              { text: "توالي سلالات محلية ثم تدخلات رومانية وأحباش وفُرس", correct: true },
+              { text: "خضوع كامل لملوك الشام فقط", correct: false }
+            ]
+          }
+        ]
+      },
+      {
+        title: "القسم الثالث: سيرة إبراهيم عليه السلام",
+        description: "خمسة أسئلة تغطي محطات السيرة والدروس المستفادة.",
+        questions: [
+          {
+            title: "الجذور والموطن",
+            prompt: "من أين بدأت رحلة إبراهيم قبل أن يستقر نسله في مكة؟",
+            choices: [
+              { text: "من «أُر» بالعراق ثم حاران ففلسطين", correct: true },
+              { text: "من الأندلس", correct: false },
+              { text: "من الهند مباشرة", correct: false }
+            ]
+          },
+          {
+            title: "زيارة مصر",
+            prompt: "ما الدرس الذي أبرزته الرحلة إلى مصر؟",
+            choices: [
+              { text: "تحول إبراهيم إلى ملك على مصر", correct: false },
+              { text: "حفظ الله لسارة ثم إهداء هاجر فبدء نسل إسماعيل", correct: true },
+              { text: "هدم الكعبة", correct: false }
+            ]
+          },
+          {
+            title: "معجزة زمزم",
+            prompt: "ما النتيجة المباشرة لسعي هاجر بين الصفا والمروة؟",
+            choices: [
+              { text: "جفاف الوادي", correct: false },
+              { text: "تفجر زمزم واستقرار جرهم حول إسماعيل", correct: true },
+              { text: "تحول مكة إلى مركز صناعي", correct: false }
+            ]
+          },
+          {
+            title: "رفع القواعد",
+            prompt: "ما الحدث المحوري في الزيارة الثالثة لإبراهيم إلى مكة؟",
+            choices: [
+              { text: "رفع قواعد الكعبة وإحياء المناسك", correct: true },
+              { text: "الهجرة إلى اليمن", correct: false },
+              { text: "ترك الحج نهائيًا", correct: false }
+            ]
+          },
+          {
+            title: "الدروس المركزية",
+            prompt: "ما الخلاصة التي تؤكدها قصة إبراهيم في الصفحة؟",
+            choices: [
+              { text: "أن مكة مجرد مركز عسكري", correct: false },
+              { text: "أن الاستقلال الجغرافي والانفتاح التجاري مهدا لحمل الرسالة", correct: true },
+              { text: "أن العرب انقطعوا عن الحج", correct: false }
+            ]
+          }
+        ]
+      }
+    ];
+
+    const container = document.getElementById('quiz-sections');
+    let questionCounter = 0;
+
+    quizSections.forEach(section => {
+      const details = document.createElement('details');
+      details.open = true;
+
+      const summary = document.createElement('summary');
+      summary.textContent = section.title;
+
+      const desc = document.createElement('p');
+      desc.textContent = section.description;
+
+      const sectionContent = document.createElement('div');
+      sectionContent.className = 'section-content';
+      sectionContent.appendChild(desc);
+
+      section.questions.forEach(q => {
+        questionCounter += 1;
+        const card = document.createElement('article');
+        card.className = 'question-card';
+
+        const heading = document.createElement('h3');
+        heading.textContent = `سؤال ${questionCounter}: ${q.title}`;
+        card.appendChild(heading);
+
+        const prompt = document.createElement('p');
+        prompt.textContent = q.prompt;
+        card.appendChild(prompt);
+
+        const optionsDiv = document.createElement('div');
+        optionsDiv.className = 'options';
+
+        q.choices.forEach(choice => {
+          const btn = document.createElement('button');
+          btn.textContent = choice.text;
+          btn.addEventListener('click', () => {
+            optionsDiv.querySelectorAll('button').forEach(b => b.classList.remove('correct', 'incorrect'));
+            feedback.textContent = '';
+            if (choice.correct) {
+              btn.classList.add('correct');
+              feedback.textContent = 'إجابة صحيحة!';
+              feedback.className = 'feedback correct';
+            } else {
+              btn.classList.add('incorrect');
+              feedback.textContent = 'إجابة غير صحيحة، أعد المحاولة.';
+              feedback.className = 'feedback incorrect';
+            }
+          });
+          optionsDiv.appendChild(btn);
+        });
+
+        card.appendChild(optionsDiv);
+
+        const feedback = document.createElement('div');
+        feedback.className = 'feedback';
+        card.appendChild(feedback);
+
+        sectionContent.appendChild(card);
+      });
+
+      details.appendChild(summary);
+      details.appendChild(sectionContent);
+      container.appendChild(details);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إبراهيم عليه السلام - الرحيق المختوم</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.9;
+    }
+    header {
+      background: linear-gradient(120deg, #2b5876, #4e4376);
+      color: #fff;
+      padding: 2.8rem 1.5rem;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin: -25px 0 25px;
+    }
+    nav a {
+      display: inline-block;
+      margin: 0 0.4rem;
+      padding: 0.55rem 1.3rem;
+      border-radius: 28px;
+      text-decoration: none;
+      color: #fff;
+      background: #4e4376;
+      transition: opacity 0.2s ease;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      opacity: 0.85;
+    }
+    main {
+      max-width: 950px;
+      margin: 0 auto 50px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 2.5rem;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    }
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin: 1.5rem 0 2rem;
+      justify-content: center;
+    }
+    .toc a {
+      padding: 0.45rem 1.1rem;
+      border-radius: 25px;
+      background: #eef1fb;
+      color: #2b5876;
+      text-decoration: none;
+      font-size: 0.92rem;
+      transition: background 0.2s ease;
+    }
+    .toc a:hover {
+      background: #dfe7ff;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    h2 {
+      color: #2b5876;
+      border-right: 4px solid #4e4376;
+      padding-right: 0.75rem;
+      margin-top: 2.2rem;
+    }
+    p {
+      margin: 0.5rem 0 1.5rem;
+      text-align: justify;
+    }
+    ul {
+      background: #f0f3f8;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      list-style: none;
+      margin: 0 0 1.8rem;
+    }
+    ul li {
+      margin-bottom: 0.75rem;
+      color: #333;
+    }
+    .visit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+    .visit-card {
+      background: linear-gradient(150deg, #fdfefe, #e8f1ff);
+      border-radius: 14px;
+      padding: 0.85rem 0.9rem 0.8rem;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(32, 99, 155, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 240px;
+    }
+    .visit-icon {
+      width: 80px;
+      height: 110px;
+      margin: 0 auto 0.3rem;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #ffffff, #f3f6ff);
+      box-shadow: inset 0 0 0 2px rgba(32, 99, 155, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.1rem;
+      color: #20639b;
+    }
+    .visit-title {
+      font-weight: 600;
+      margin: 0 0 0.45rem;
+      color: #1b365d;
+    }
+    .visit-card p {
+      margin: 0;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .timeline {
+      margin-top: 1rem;
+      border-right: 4px solid #d9e2ef;
+      padding-right: 1.5rem;
+    }
+    .timeline-item {
+      position: relative;
+      padding: 1rem 1.25rem 1rem 0;
+      margin-bottom: 1.2rem;
+      background: #f9fbff;
+      border-radius: 10px;
+      box-shadow: inset 2px 0 0 #4e4376;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -1.7rem;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: #4e4376;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #d9e2ef;
+    }
+    .timeline-icon {
+      flex: 0 0 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(75, 67, 118, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: #4e4376;
+      margin-top: 0.2rem;
+    }
+    .timeline-content {
+      flex: 1;
+    }
+    .timeline-title {
+      font-weight: 600;
+      color: #2b5876;
+      margin: 0 0 0.35rem;
+    }
+    .timeline-text {
+      margin: 0;
+      color: #414c60;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>إبراهيم عليه السلام</h1>
+    <p>سيرة موجزة بحسب ما ورد في «الرحيق المختوم» ضمن فصل «موقع العرب وأقوامها»</p>
+  </header>
+
+  <nav>
+    <a href="persons.html">قائمة الشخصيات</a>
+    <a href="index.html">الصفحة الرئيسة</a>
+    <a href="mowqe-al-arab.html">القسم المرتبط</a>
+  </nav>
+
+  <main>
+    <div class="toc">
+      <a href="#roots">الجذور والموطن</a>
+      <a href="#egypt">الرحلة إلى مصر</a>
+      <a href="#mecca">إسكان مكة</a>
+      <a href="#visits">الزيارات والكعبة</a>
+      <a href="#trial">الابتلاء الأعظم</a>
+      <a href="#lineage">النسل المبارك</a>
+      <a href="#lessons">الدروس</a>
+      <a href="#timeline">الخط الزمني</a>
+    </div>
+
+    <section id="roots">
+      <h2>الجذور والموطن الأول</h2>
+      <p>
+        ينحدر إبراهيم عليه السلام من بلاد العراق، من بلدة «أُر» الواقعة على الضفة الغربية لنهر الفرات بالقرب من
+        الكوفة. أظهرت الحفريات تفاصيل عن تلك المدينة وعن المجتمع الذي عاش فيه، مبرزة البيئة الدينية والاجتماعية
+        التي واجهها في بداية دعوته. هاجر من هناك إلى حاران، ثم اتخذ من فلسطين مركزًا لمهمته التوحيدية، وجاب البلاد
+        المحيطة داعيًا إلى الله.
+      </p>
+    </section>
+
+    <section id="egypt">
+      <h2>الرحلة إلى مصر وزواج هاجر</h2>
+      <p>
+        زار إبراهيم مصر بصحبة زوجته سارة، فحاول الفرعون أن يعتدي عليها، لكن الله قيّد قدرته وأصابه بالبلاء كلما اقترب،
+        فاستسلم لكرامة سارة وطلب منها الدعاء له. المرويات في صحيح البخاري وكتب السيرة تذكر أنه بعد أن عرف مكانتها
+        أهدى لها جاريته هاجر احترامًا، فزوّجتها سارة لإبراهيم. من هذه الهدية وُلد إسماعيل عليه السلام وتفتحت صفحة جديدة
+        في تاريخ العرب.
+      </p>
+      <p>
+        المصدر: صحيح البخاري، كتاب أحاديث الأنبياء، باب هجرة إبراهيم عليه السلام بسارة (حديث رقم 3358 بحسب ترقيم فتح الباري)،
+        إلى جانب شروح السيرة مثل «البداية والنهاية» و«الرحيق المختوم».
+      </p>
+    </section>
+
+    <section id="mecca">
+      <h2>إسكان مكة ومعجزة زمزم</h2>
+      <p>
+        بعد مولد إسماعيل غارت سارة، فأمر الله إبراهيم أن يرحل بهاجر وطفلها إلى وادٍ غير ذي زرع عند بيت الله الحرام.
+        تركهما عند دوحة فوق زمزم ولم يكن بمكة بشر ولا ماء، ثم عاد إلى فلسطين. سرعان ما نفد الزاد فهرعت هاجر بين
+        الصفا والمروة حتى تفجرت زمزم رحمة من الله، فبدأت الحياة تدب في مكة. استأذنت قبيلة جرهم اليمانية في السكن
+        إلى جوارهم، فنشأ إسماعيل بينهم وتعلم لغتهم وتزوج منهم.
+      </p>
+    </section>
+
+    <section id="visits">
+      <h2>الزيارات المتكررة وبناء الكعبة</h2>
+      <p>
+        كان إبراهيم عليه السلام يتفقد أسرته في مكة على فترات، وروت المصادر ثلاث زيارات أساسية بعد بلوغ إسماعيل:
+      </p>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <div class="visit-icon" aria-hidden="true">🚪</div>
+          <p class="visit-title">التوجيه بتغيير العتبة</p>
+          <p>
+            في الزيارة الأولى لم يجد إبراهيم ابنه، فسأل زوجته الجرهمية الأولى عن حالهما فشكت الفقر وعدم الرضا،
+            فأوصاها أن تبلغ إسماعيل أن «يغيّر عتبة بابه»، وهو تعبير مهذب لإنهاء الزواج، فاستجاب إسماعيل للنصيحة.
+          </p>
+        </div>
+        <div class="visit-card">
+          <div class="visit-icon" aria-hidden="true">🚪</div>
+          <p class="visit-title">الثبات على الزوجة الثانية</p>
+          <p>
+            في الزيارة الثانية أثنت زوجته الجديدة- ابنة مضاض بن عمرو- على نعمة الله، فأوصى إبراهيم ابنه بالثبات على
+            عتبة بابه أي الاستمرار معها لما رأى من الإيمان والرضا.
+          </p>
+        </div>
+        <div class="visit-card">
+          <div class="visit-icon" aria-hidden="true">🚪</div>
+          <p class="visit-title">رفع القواعد والدعوة للحج</p>
+          <p>
+            في الزيارة الثالثة التقى إبراهيم إسماعيل عند زمزم، وشاركه في رفع قواعد الكعبة وإحياء المناسك، ثم أمره الله
+            أن يؤذن في الناس بالحج، فكانت بداية المرحلة الشعائرية للحرم.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="trial">
+      <h2>الابتلاء الأعظم</h2>
+      <p>
+        أخبر الله تعالى إبراهيم في المنام أن يذبح ابنه، فاستجاب لأمر الله، وأطاعه إسماعيل طاعة كاملة حتى إذا أسلما
+        وتلّه للجبين فداه الله بذبح عظيم، كما ورد في سورة الصافات (103-107). تشير الروايات إلى أن هذه الحادثة وقعت قبل
+        ولادة إسحاق، وأن إسماعيل كان أكبر من أخيه بثلاث عشرة سنة، ما يبرز مكانته في مسار العرب المستعربة.
+      </p>
+    </section>
+
+    <section id="lineage">
+      <h2>النسل المبارك وأثره في العرب</h2>
+      <p>
+        رُزق إسماعيل من زوجه ابنة مضاض الجرهمي اثني عشر ولدًا تفرعت منهم قبائل عدة انتشرت في الحجاز وما حوله. ازدهرت
+        حضارة الأنباط وأُقيمت إمارات عربية، بينما ظل نسل قيدار في مكة حتى خرج منهم عدنان، ثم معد، ثم القبائل العدنانية
+        التي انبثقت عنها قريش وبنو هاشم. بهذا تلتقي السيرة النبوية بجذورها الإبراهيمية، حيث اصطفى الله من بني هاشم خاتم
+        الأنبياء محمدًا ﷺ.
+      </p>
+    </section>
+
+    <section id="lessons">
+      <h2>الدروس المركزية</h2>
+      <p>
+        تظهر قصة إبراهيم عليه السلام مزيج الاستقلال والانفتاح في الجزيرة العربية: استقلالٌ تحرسه الجغرافيا، وانفتاحٌ
+        صنعته طرق التجارة والحج التي دعا إليها إبراهيم. وبفضل صبره وتوحيده، أصبحت مكة مركزًا دينيًا واقتصاديًا يؤهل
+        العرب لحمل الرسالة الخاتمة.
+      </p>
+    </section>
+
+    <section id="timeline">
+      <h2>خط زمني لأبرز أحداث السيرة</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon" aria-hidden="true">🧭</div>
+          <div class="timeline-content">
+            <p class="timeline-title">النشأة في «أُر» والهجرة إلى حاران ثم فلسطين</p>
+            <p class="timeline-text">
+              ترعرع إبراهيم في العراق وواجه بيئة وثنية، ثم هاجر بأمر الله إلى حاران ومنها إلى فلسطين لتكون قاعدة دعوته للتوحيد.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon" aria-hidden="true">👑</div>
+          <div class="timeline-content">
+            <p class="timeline-title">زيارة مصر وإهداء هاجر</p>
+            <p class="timeline-text">
+              حمى الله سارة من كيد الفرعون، فاعتذر الأخير وأهداها هاجر، ومنها جاء ميلاد إسماعيل عليه السلام الذي سيغيّر وجه الجزيرة.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon" aria-hidden="true">💧</div>
+          <div class="timeline-content">
+            <p class="timeline-title">إسكان مكة وتفجّر زمزم</p>
+            <p class="timeline-text">
+              أسكن إبراهيم هاجر وإسماعيل بوادي مكة، فكان سعي هاجر سببًا في ظهور زمزم واستقرار جرهم حولهما، لتبدأ نشأة المجتمع المكي.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon" aria-hidden="true">🕊️</div>
+          <div class="timeline-content">
+            <p class="timeline-title">الزيارات والابتلاء بالذبح</p>
+            <p class="timeline-text">
+              تفقد إبراهيم أسرته ثلاث مرات، وفي إحدى الفترات ابتلي بذبح ابنه فاستجاب كلاهما للأمر حتى فداه الله بذبح عظيم، فترسخ الإيمان في البيت الحرام.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon" aria-hidden="true">🕋</div>
+          <div class="timeline-content">
+            <p class="timeline-title">بناء الكعبة وإعلان الحج</p>
+            <p class="timeline-text">
+              التقى إبراهيم بإسماعيل عند زمزم، فرفعا القواعد وأذّن إبراهيم في الناس بالحج، لتصبح مكة مقصد المؤمنين ومركزًا للتجارة والعبادة.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon" aria-hidden="true">🌍</div>
+          <div class="timeline-content">
+            <p class="timeline-title">انتشار النسل العدناني</p>
+            <p class="timeline-text">
+              من بني إسماعيل خرجت القبائل العدنانية، فحافظت على الحرم وخط التجارة، حتى اصطفى الله من ذرية عدنان بني هاشم الذين حملوا الرسالة الخاتمة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شخصيات من الرحيق المختوم</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background: #eef2f7;
+      color: #1f2933;
+      line-height: 1.8;
+    }
+    header {
+      background: linear-gradient(135deg, #1b4332, #40916c);
+      color: #fff;
+      padding: 3rem 1.5rem 4rem;
+      text-align: center;
+    }
+    main {
+      max-width: 1100px;
+      margin: -50px auto 60px;
+      padding: 0 1.5rem;
+    }
+    .panel {
+      background: #fff;
+      border-radius: 18px;
+      padding: 2.5rem;
+      box-shadow: 0 15px 40px rgba(27, 67, 50, 0.15);
+      margin-bottom: 2rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    p.lead {
+      max-width: 720px;
+      margin: 1rem auto 0;
+      color: #e9f5ef;
+    }
+    h2 {
+      color: #1b4332;
+      border-right: 5px solid #40916c;
+      padding-right: 0.75rem;
+      display: inline-block;
+      margin-top: 0;
+    }
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .person-card {
+      background: linear-gradient(145deg, #fbfefc, #ecf7f1);
+      border-radius: 16px;
+      padding: 1.8rem;
+      border: 1px solid #d8efe2;
+      color: inherit;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .person-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 38px rgba(64, 145, 108, 0.25);
+    }
+    .person-card strong {
+      font-size: 1.2rem;
+      color: #1b4332;
+      margin-bottom: 0.4rem;
+    }
+    .person-card span {
+      color: #40916c;
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+    .person-card p {
+      margin: 0;
+      color: #3e4c59;
+      font-size: 0.95rem;
+    }
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #fff;
+      background: #1b4332;
+      padding: 0.55rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      transition: background 0.2s ease;
+    }
+    nav a:hover {
+      background: #132a20;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>سير شخصيات من «الرحيق المختوم»</h1>
+    <p class="lead">دليل تفاعلي للتعريف بالشخصيات المحورية المذكورة في السيرة، مع روابط تفصيلية لكل شخصية.</p>
+    <nav>
+      <a href="index.html">الصفحة الرئيسة للكتاب</a>
+      <a href="mowqe-al-arab.html">موقع العرب وأقوامها</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>الشخصيات المتاحة</h2>
+      <p>
+        سيتم إثراء هذه القائمة تدريجيًا. يمكنك البدء بسيرة خليل الرحمن إبراهيم عليه السلام للاطلاع على رحلاته
+        وهجراته ودوره في تأسيس المجتمع المكي الذي انبثقت منه القبائل المستعربة.
+      </p>
+      <div class="people-grid">
+        <a class="person-card" href="ibrahim.html">
+          <strong>إبراهيم عليه السلام</strong>
+          <span>أبو الأنبياء ومؤسس البيت الحرام</span>
+          <p>
+            من موطنه في العراق إلى الحجاز، رحلة إيمانية أثمرت بناء الكعبة وترسيخ جذور العرب المستعربة.
+          </p>
+        </a>
+        <div class="person-card" style="opacity:0.6; cursor:not-allowed;">
+          <strong>شخصيات أخرى</strong>
+          <span>قريبًا</span>
+          <p>سيتم إضافة السير الخاصة بالأنبياء والرموز الذين وردوا في فصول الكتاب.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
