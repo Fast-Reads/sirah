@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المولد وأربعون عامًا قبل النبوة — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .breadcrumb a:hover {
+      background: var(--gold-pale);
+      color: var(--navy);
+    }
+    .breadcrumb .sep {
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+    .breadcrumb .current {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--text);
+      text-align: justify;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    /* LISTS */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    ul li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+    }
+
+    /* VISUAL GRID */
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .visual-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .visual-icon {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .visual-title {
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+    }
+    .visual-text {
+      margin: 0;
+      color: var(--text-light);
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow);
+    }
+    .card h4 {
+      margin: 0 0 0.4rem;
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* FLOW TIMELINE */
+    .flowline {
+      border-right: 3px solid var(--gold-light);
+      margin-top: 1.3rem;
+      padding-right: 1.3rem;
+    }
+    .flow-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover {
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+    .flow-item::before {
+      content: "";
+      position: absolute;
+      right: -1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .flow-title {
+      margin: 0;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .flow-text {
+      margin: 0.3rem 0 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+    }
+    .tribe-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tribe-table tr:hover td {
+      background: var(--gold-pale);
+    }
+
+    /* INSIGHT / CONNECTION BOX */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .insight p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .connection p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* PERSON LINK */
+    a.person-link {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 0.05rem;
+    }
+    a.person-link:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+    }
+
+    /* QUIZ */
+    .quiz-wrapper {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--gold-light);
+    }
+    .quiz-wrapper > h2 {
+      text-align: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+    .quiz-intro {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin: 0 auto 1.5rem;
+      max-width: 600px;
+    }
+    .quiz-score-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .quiz-score-bar span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .quiz-score-bar .q-score {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .quiz-section-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer;
+      padding: 1rem 1.4rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow {
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body {
+      padding: 0 1.4rem 1.4rem;
+    }
+    .q-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.3rem;
+      margin-top: 0.9rem;
+    }
+    .q-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .q-card p {
+      margin: 0 0 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      text-align: right;
+    }
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .q-opts button {
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      font-size: 0.92rem;
+      font-family: 'Tajawal', sans-serif;
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text);
+    }
+    .q-opts button:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+    .q-opts button.q-correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .q-opts button.q-wrong {
+      border-color: #c53030;
+      background: #fde8e8;
+      color: #c53030;
+    }
+    .q-opts button.q-off {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .q-feedback {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      font-size: 0.86rem;
+      min-height: 1.3em;
+    }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .quiz-retry-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2.2rem;
+      font-size: 1rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover {
+      background: #14293f;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>المولد وأربعون عامًا قبل النبوة</h1>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">المولد وأربعون عامًا قبل النبوة</span>
+  </nav>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section>
+      <h2>لماذا هذا الفصل مهم؟</h2>
+      <p>
+        أربعون سنة عاشها محمد ﷺ قبل أن ينزل عليه الوحي — ليست سنوات فراغ، بل سنوات إعداد إلهي
+        دقيق. كل محطة في طفولته وشبابه — اليُتم، والرعي، والتجارة، والزواج، والتحنث — كانت
+        تبني فيه الصفات التي سيحتاجها لحمل أعظم رسالة في التاريخ. المباركفوري يرسم هنا
+        خريطة هذه الأربعين سنة ليُظهر كيف صنع الله نبيّه قبل أن يوحي إليه.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح القراءة</span>
+        <p>
+          كل مصيبة في حياة النبي ﷺ المبكرة — فقد الأب ثم الأم ثم الجد — كانت تقطع رابطة بشرية
+          لتربطه بالله وحده. وكل مهنة مارسها — الرعي ثم التجارة — علّمته مهارة سيحتاجها في قيادة
+          الأمة. اقرأ هذا الفصل وأنت تبحث عن «الحكمة» خلف كل حدث.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ المولد ═══════ -->
+
+    <section>
+      <h2>المولد المبارك — عام الفيل</h2>
+      <p>
+        وُلد محمد ﷺ في مكة يوم الاثنين من شهر ربيع الأول عام الفيل (٥٧١م تقريبًا) — العام الذي
+        جاء فيه <a class="person-link" href="persons.html">أبرهة الأشرم</a> بجيش الفيلة لهدم الكعبة
+        فأهلكه الله بطير أبابيل. وُلد ﷺ يتيم الأب، إذ توفي
+        <a class="person-link" href="persons.html">عبد الله بن عبد المطلب</a>
+        قبل ولادته (وقيل بعدها بأشهر قليلة) بالمدينة وهو عائد من رحلة تجارية إلى الشام.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F418;</span>
+          <p class="visual-title">عام الفيل</p>
+          <p class="visual-text">العام الذي أهلك الله فيه جيش أبرهة — علامة تأريخية عرفها العرب كلهم.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F319;</span>
+          <p class="visual-title">يوم الاثنين</p>
+          <p class="visual-text">ربيع الأول. سُئل ﷺ عن صيام الاثنين فقال: «ذاك يوم وُلدت فيه».</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3E0;</span>
+          <p class="visual-title">بيت أبي طالب</p>
+          <p class="visual-text">وُلد في شِعب بني هاشم بمكة. كفله جده عبد المطلب من أول يوم.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">لماذا عام الفيل تحديدًا؟</span>
+        <p>
+          هلاك جيش أبرهة كان رسالة واضحة: الله يحمي بيته. وُلد النبي ﷺ في العام نفسه كأن الله يقول
+          للعرب: حميتُ البيت بالقوة، والآن أبعث فيكم مَن يُحييه بالتوحيد. لهذا كان العرب يؤرّخون
+          بعام الفيل — فكل عربي يعرف أن مولد محمد ﷺ ارتبط بمعجزة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الرضاعة ═══════ -->
+
+    <section>
+      <h2>الرضاعة في بادية بني سعد</h2>
+      <p>
+        جرت عادة أشراف مكة أن يرسلوا أطفالهم إلى البادية للرضاعة، لتقوى أجسامهم وتصفو لغتهم.
+        التقطته <a class="person-link" href="persons.html">حليمة السعدية</a> من بني سعد بن بكر
+        (فرع من هوازن)، ولم يكن أحد من المرضعات يرغب فيه لأنه يتيم — واليتيم لا يُرجى من ورائه
+        عطاء كبير. لكن حليمة لم تجد غيره فأخذته، فتغيّر حالها من أول يوم.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">البركة الفورية</p>
+          <p class="flow-text">
+            جاءت حليمة على أتان هزيلة وشارف ناقتها جافّ. فلما أخذت محمدًا ﷺ درّ ثديها
+            ودرّت ناقتها وأخصبت أرضهم، حتى قال زوجها: «والله يا حليمة لقد أخذتِ نسمة مباركة».
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">سنتان في البادية</p>
+          <p class="flow-text">
+            قضى عامين في بادية بني سعد حيث نشأ على الفصاحة والفروسية وصفاء الفطرة بعيدًا عن
+            أمراض المدن وأوبئتها، ثم أعادته حليمة إلى أمه.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">حادثة شق الصدر</p>
+          <p class="flow-text">
+            طلبت حليمة أن يبقى عندها، فأعادته أمه إليها. في هذه الفترة وقعت حادثة شق الصدر:
+            جاءه ملكان فشقّا صدره واستخرجا قلبه وغسلاه في طست من ذهب بماء زمزم ثم أعاداه.
+            فزعت حليمة وأعادته إلى أمه.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">الحكمة من البادية</span>
+        <p>
+          البادية علّمته ﷺ ثلاثة أشياء ستظهر لاحقًا: الفصاحة العربية الخالصة التي نزل بها القرآن،
+          والصلابة الجسدية التي تحمّل بها مشاق الدعوة والجهاد، والتأمل في الكون الفسيح الذي
+          مهّد لتحنّثه في غار حراء. النبي ﷺ قال لاحقًا: «أنا أعربكم، أنا قرشي واسترضعت في بني سعد».
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ اليُتم ═══════ -->
+
+    <section>
+      <h2>اليُتم المبكر — من حضن إلى حضن</h2>
+      <p>
+        فقد محمد ﷺ كل سند بشري في سنوات قليلة. لكن كل فقد كان ينقله إلى كافل جديد يُكمل
+        تربيته بطريقة مختلفة، وكأن القدر يصنعه صناعة خاصة:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>العمر</th>
+            <th>الحدث</th>
+            <th>الكافل الجديد</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>قبل الولادة</td>
+            <td>وفاة أبيه <a class="person-link" href="persons.html">عبد الله</a> بالمدينة</td>
+            <td>جده <a class="person-link" href="persons.html">عبد المطلب</a></td>
+          </tr>
+          <tr>
+            <td>٦ سنوات</td>
+            <td>وفاة أمه <a class="person-link" href="persons.html">آمنة بنت وهب</a> بالأبواء</td>
+            <td>جده عبد المطلب</td>
+          </tr>
+          <tr>
+            <td>٨ سنوات</td>
+            <td>وفاة جده عبد المطلب</td>
+            <td>عمه <a class="person-link" href="persons.html">أبو طالب</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">اليُتم مدرسة</span>
+        <p>
+          اليُتم المبكر لم يكن عقوبة بل إعداد. فقد الأب علّمه الاعتماد على الله، وفقد الأم علّمه
+          الرحمة بالضعفاء (ولهذا أوصى بالأيتام كثيرًا)، وفقد الجد أخرجه من الدلال إلى المسؤولية
+          المبكرة. القرآن أشار لهذا صريحًا: ﴿أَلَمْ يَجِدْكَ يَتِيمًا فَآوَى﴾.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ في كنف أبي طالب ═══════ -->
+
+    <section>
+      <h2>في كنف أبي طالب — الرحلة إلى الشام</h2>
+      <p>
+        تولّى <a class="person-link" href="persons.html">أبو طالب</a> كفالة ابن أخيه فأحبه
+        حبًّا شديدًا وقدّمه على أولاده. وحين بلغ محمد ﷺ الثانية عشرة خرج معه أبو طالب في رحلة
+        تجارية إلى الشام، فوقعت هناك حادثة بحيرا الراهب.
+      </p>
+      <ul>
+        <li>
+          <strong>بحيرا الراهب:</strong> لما نزلت القافلة في بُصرى (جنوب الشام) لاحظ الراهب بحيرا
+          علامات كان يجدها في كتبه. دعا القافلة كلها — وهو أمر لم يفعله قبل ذلك — ثم سأل عن الغلام
+          وفحص خاتم النبوة بين كتفيه. نصح أبا طالب أن يحذر عليه من اليهود وأن يعيده إلى مكة.
+        </li>
+        <li>
+          <strong>الأثر:</strong> أعاده أبو طالب من فوره إلى مكة حمايةً له. وظلت هذه الحادثة محفورة
+          في ذاكرة أبي طالب، وهي من أسباب حمايته المستميتة لابن أخيه لاحقًا رغم ضغوط قريش كلها.
+        </li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">حماية أبي طالب لاحقًا</span>
+        <p>
+          حين تبدأ فصول الدعوة المكية ستجد أبا طالب يقف كالجبل أمام قريش دفاعًا عن ابن أخيه.
+          رفض كل العروض: المال والملك والزعامة. ورفض تسليمه رغم الحصار والتجويع. فهم هذا
+          الولاء يبدأ من هنا — من يوم كفالته وهو ابن ثمان سنين ومن رحلة بحيرا.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الشباب ═══════ -->
+
+    <section>
+      <h2>سنوات الشباب — الرعي وبناء الشخصية</h2>
+      <p>
+        عمل محمد ﷺ في شبابه راعيًا للغنم في مكة وما حولها، وهي مهنة مارسها كل الأنبياء قبله.
+        قال ﷺ: «ما بعث الله نبيًّا إلا رعى الغنم». قالوا: وأنت؟ قال: «نعم، كنت أرعاها على
+        قراريط لأهل مكة». ثم شهد في سن العشرين حَدَثين مهمين:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F411;</span>
+          <p class="visual-title">رعي الغنم</p>
+          <p class="visual-text">الرعي يعلّم الصبر والرفق والمسؤولية والقيادة الهادئة — وكلها صفات النبوة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x2694;&#xFE0F;</span>
+          <p class="visual-title">حرب الفِجار</p>
+          <p class="visual-text">حرب بين قريش وكنانة ضد هوازن. شهدها ﷺ وهو في العشرين، وكان يناول أعمامه النبال.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F91D;</span>
+          <p class="visual-title">حلف الفضول</p>
+          <p class="visual-text">تحالف على نصرة المظلوم. حضره ﷺ وقال بعد البعثة: «لو دُعيت به في الإسلام لأجبت».</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">حرب الفِجَار — لماذا هذا الاسم؟</span>
+        <p>
+          سُمّيت الفِجار لأنها وقعت في الأشهر الحُرم التي يَحرم فيها القتال عند العرب — ففَجَروا
+          بانتهاكها. اندلعت بين قريش وكنانة من جهة وقبائل هوازن (قيس عيلان) من جهة أخرى، واستمرت
+          أربع سنوات متقطعة. شهدها النبي ﷺ وعمره نحو عشرين سنة — لم يقاتل بنفسه لكنه كان يناول
+          أعمامه النبال ويجمعها لهم. انتهت الحرب بصلح، وكان من أهم نتائجها أن قريشًا أدركت حاجتها
+          إلى ميثاق يمنع الظلم — فعُقد بعدها مباشرة حلف الفضول.
+        </p>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لماذا الرعي؟</span>
+        <p>
+          الراعي يتعامل مع نفوس مختلفة — الشاة الضعيفة والكبش العنيد والحَمَل التائه. يحتاج
+          صبرًا ورفقًا وحزمًا ويقظة دائمة. هذه بالضبط صفات قائد الأمة: يرفق بالضعيف ويصبر على
+          العنيد ويبحث عن الضال. النبي ﷺ قال لاحقًا: «كلكم راعٍ وكلكم مسؤول عن رعيته».
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الأخلاق قبل البعثة ═══════ -->
+
+    <section>
+      <h2>الأمين — سمعة لم يبنها إنسان</h2>
+      <p>
+        عُرف محمد ﷺ بين قريش بلقب «الأمين» و«الصادق» قبل البعثة بسنوات طويلة. لم يُعرف
+        عنه كذب ولا خيانة ولا فحش ولا سكر ولا أي رذيلة من رذائل الجاهلية. كانت سيرته قبل
+        النبوة حجةً عليهم حين كذّبوه:
+      </p>
+      <ul>
+        <li>
+          <strong>لم يسجد لصنم قط</strong> — في مجتمع غارق في الوثنية، حفظه الله من كل عبادة لغيره.
+        </li>
+        <li>
+          <strong>لم يشرب خمرًا</strong> ولم يحضر مجالس اللهو — رغم أنها كانت عادة شائعة بين شباب قريش.
+        </li>
+        <li>
+          <strong>الصدق المطلق</strong> — حتى أعداؤه شهدوا بذلك. أبو جهل نفسه قال: «ما نكذّبك ولكن نكذّب ما جئت به».
+        </li>
+        <li>
+          <strong>أمانة التجارة</strong> — أودعه الناس أماناتهم حتى ليلة الهجرة، فأوصى عليًّا بردّها.
+        </li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">الحجة على قريش</span>
+        <p>
+          حين صعد النبي ﷺ على الصفا وقال: «لو أخبرتكم أن خيلًا بالوادي تريد أن تغير عليكم
+          أكنتم مصدقيّ؟» قالوا: «نعم، ما جرّبنا عليك إلا صدقًا». أربعون سنة من الصدق كانت
+          مقدمة لهذه اللحظة — ولهذا لم تستطع قريش أن تقول: كذب، بل قالت: ساحر أو مجنون — لأنهم
+          يعلمون أنه لم يكذب قط.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ التجارة وخديجة ═══════ -->
+
+    <section>
+      <h2>التجارة والزواج من خديجة</h2>
+      <p>
+        بلغت سمعة محمد ﷺ في الصدق والأمانة أسماع
+        <a class="person-link" href="persons.html">خديجة بنت خويلد</a> — سيدة تجارة ثرية من أشراف
+        قريش. عرضت عليه أن يتاجر بمالها إلى الشام، فخرج ومعه غلامها ميسرة. عاد بأرباح مضاعفة
+        وأخبرها ميسرة بما رأى من أخلاقه وبركته.
+      </p>
+
+      <h3>الزواج المبارك</h3>
+      <p>
+        أُعجبت خديجة بأخلاقه فأرسلت إليه مَن يعرض عليه الزواج. تزوجها ﷺ وعمره خمسة وعشرون
+        عامًا وعمرها أربعون. أصدقها عشرين بَكرة. كانت خديجة أول مَن آمن به، وأعظم سند له طوال
+        خمسة عشر عامًا من المعاناة المكية — أنفقت مالها في سبيل الدعوة وواسته حين كذّبه الناس.
+      </p>
+
+      <h3>الأبناء</h3>
+      <p>
+        أنجبت له خديجة كل أولاده ما عدا إبراهيم: القاسم (وبه كُنّي)، وزينب، ورقية، وأم كلثوم،
+        وفاطمة، وعبد الله. مات الذكور صغارًا، وعاشت البنات الأربع.
+      </p>
+      <div class="insight">
+        <span class="insight-label">لماذا خديجة تحديدًا؟</span>
+        <p>
+          خديجة لم تكن مجرد زوجة — كانت أول مؤمنة وأول داعية وأول ممولة للدعوة. ثروتها حمت المسلمين
+          الأوائل من الجوع، وحكمتها ثبّتت النبي ﷺ حين جاءه الوحي مرتعدًا فقالت: «كلا والله
+          ما يخزيك الله أبدًا». كل نبي يحتاج ظهيرًا — وخديجة كانت ظهيره الأول.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ بناء الكعبة ═══════ -->
+
+    <section>
+      <h2>بناء الكعبة وحكمة التحكيم</h2>
+      <p>
+        حين بلغ محمد ﷺ الخامسة والثلاثين هدم سيلٌ جارف أجزاء من الكعبة، فأعادت قريش بناءها.
+        لكن حين وصلوا إلى موضع الحجر الأسود اختلفوا: كل قبيلة تريد شرف وضعه. كاد الخلاف
+        يتحول إلى حرب حتى اقترح أكبرهم سنًّا: نحكّم أول داخل من باب المسجد.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">أول داخل: محمد ﷺ</p>
+          <p class="flow-text">
+            دخل محمد ﷺ فلما رأوه قالوا: «هذا الأمين، رضينا». لم يكن نبيًّا بعد، لكن سمعته
+            جعلته الحَكَم الذي يقبله الجميع.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الحل الذكي</p>
+          <p class="flow-text">
+            بسط رداءه ووضع الحجر فيه، ثم طلب من كل قبيلة أن تأخذ بطرف من الرداء فرفعوه جميعًا،
+            ثم أخذه ﷺ بيده ووضعه في مكانه. حلّ يُرضي الجميع ويحفظ الكرامات.
+          </p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">درس في القيادة</span>
+        <p>
+          هذا الحادث يكشف عن عبقرية اجتماعية فطرية: لم يأخذ الشرف لنفسه ولم يُقصِ أحدًا، بل
+          أشرك الجميع في الفعل. هذا المنهج ستراه يتكرر في المدينة: الشورى، المؤاخاة بين المهاجرين
+          والأنصار، تقسيم الغنائم — كلها تطبيقات لنفس الحكمة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ التحنث في حراء ═══════ -->
+
+    <section>
+      <h2>التحنث في غار حراء — على أعتاب الوحي</h2>
+      <p>
+        في السنوات الأخيرة قبل البعثة بدأ النبي ﷺ يخلو بنفسه في غار حراء — غار صغير في
+        جبل النور شمال مكة. كان يتحنّث فيه (يتعبّد) الليالي ذوات العدد، يتأمل في الكون والخلق
+        بعيدًا عن ضوضاء مكة ووثنيتها. يأخذ معه طعامًا ثم يعود إلى خديجة يتزوّد، ثم يرجع.
+      </p>
+      <ul>
+        <li>
+          <strong>الرؤيا الصادقة:</strong> قبيل الوحي بدأت تأتيه الرؤيا في المنام فتقع كفلق الصبح
+          — كل ما يراه في نومه يتحقق. هذا أول مراحل الوحي.
+        </li>
+        <li>
+          <strong>حبّ الخلوة:</strong> كان يتعبد على ملة إبراهيم عليه السلام — يوحّد الله بفطرته
+          ويرفض الأصنام دون أن يكون قد أُمر بعد. كانت فطرته تقوده.
+        </li>
+        <li>
+          <strong>حتى جاءه الحق:</strong> في إحدى ليالي رمضان، وهو في الأربعين من عمره، نزل عليه
+          جبريل بأول كلمات الوحي: ﴿اقرأ باسم ربك الذي خلق﴾ — وبدأ فصل جديد تمامًا.
+        </li>
+      </ul>
+      <div class="insight">
+        <span class="insight-label">أربعون سنة من الإعداد</span>
+        <p>
+          اليُتم علّمه التواضع والرحمة. البادية أعطته الفصاحة والصلابة. الرعي بنى فيه الصبر
+          والمسؤولية. التجارة أكسبته معرفة الناس والبلدان. الزواج من خديجة وفّر له السكن والاستقرار.
+          والتحنّث في حراء هيّأ قلبه لاستقبال النور. كل محطة كانت لبنة في بناء لن يكتمل إلا بالوحي.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section>
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. يُتم مقصود</h4>
+          <p>كل فقد قطع رابطة بشرية ليربطه بالله وحده. اليُتم لم يكن عقوبة بل صناعة ربانية.</p>
+        </article>
+        <article class="card">
+          <h4>٢. البادية أساس</h4>
+          <p>الفصاحة والصلابة والتأمل — كلها بدأت في بادية بني سعد عند حليمة السعدية.</p>
+        </article>
+        <article class="card">
+          <h4>٣. رعي ثم تجارة</h4>
+          <p>مهنتان علّمتاه الصبر ومعرفة الناس. كل نبي رعى الغنم، وكل قائد يحتاج معرفة بالبشر.</p>
+        </article>
+        <article class="card">
+          <h4>٤. الأمين قبل النبي</h4>
+          <p>٤٠ سنة من الصدق المطلق — بنت سمعة لا يستطيع أعداؤه إنكارها حين جاء بالرسالة.</p>
+        </article>
+        <article class="card">
+          <h4>٥. خديجة = الظهير الأول</h4>
+          <p>أول مؤمنة، وأول ممولة، وأول مَن ثبّته. بدون خديجة كانت بداية الدعوة أصعب بمراحل.</p>
+        </article>
+        <article class="card">
+          <h4>٦. حراء = بوابة الوحي</h4>
+          <p>التحنث والخلوة والتأمل هيّأت قلبه لاستقبال ﴿اقرأ﴾ — أول كلمة من السماء.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch6-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch6-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch6-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'المولد والرضاعة',
+        questions: [
+          {
+            t: 'عام المولد',
+            q: 'في أي عام وُلد النبي ﷺ؟',
+            o: ['عام الحزن', 'عام الفيل', 'عام الحديبية', 'عام الفتح'],
+            a: 1
+          },
+          {
+            t: 'يوم الولادة',
+            q: 'في أي يوم من الأسبوع وُلد النبي ﷺ؟',
+            o: ['الجمعة', 'الخميس', 'الاثنين', 'الأربعاء'],
+            a: 2
+          },
+          {
+            t: 'يُتم الأب',
+            q: 'متى توفي والد النبي ﷺ عبد الله بن عبد المطلب؟',
+            o: ['حين بلغ ﷺ عشر سنوات', 'قبل ولادته ﷺ أو بعدها بقليل', 'في عام الفيل', 'بعد البعثة'],
+            a: 1
+          },
+          {
+            t: 'المرضعة',
+            q: 'مَن التي أرضعت النبي ﷺ في البادية؟',
+            o: ['أم أيمن', 'حليمة السعدية', 'آمنة بنت وهب', 'ثويبة مولاة أبي لهب'],
+            a: 1
+          },
+          {
+            t: 'حادثة شق الصدر',
+            q: 'ماذا حدث في حادثة شق الصدر؟',
+            o: ['أُصيب ﷺ في حادث سقوط', 'جاءه ملكان فشقّا صدره وغسلا قلبه بماء زمزم', 'مرض مرضًا شديدًا في البادية', 'تعرض لهجوم من ذئب'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'اليُتم والكفالة',
+        questions: [
+          {
+            t: 'وفاة الأم',
+            q: 'كم كان عمر النبي ﷺ حين توفيت أمه آمنة بنت وهب؟',
+            o: ['سنتان', 'أربع سنوات', 'ست سنوات', 'ثماني سنوات'],
+            a: 2
+          },
+          {
+            t: 'مكان وفاة الأم',
+            q: 'أين توفيت آمنة بنت وهب؟',
+            o: ['في مكة', 'في المدينة', 'بالأبواء بين مكة والمدينة', 'في الطائف'],
+            a: 2
+          },
+          {
+            t: 'كفالة عبد المطلب',
+            q: 'مَن كفل النبي ﷺ بعد وفاة أمه؟',
+            o: ['أبو طالب', 'العباس بن عبد المطلب', 'عبد المطلب بن هاشم', 'حمزة بن عبد المطلب'],
+            a: 2
+          },
+          {
+            t: 'وفاة الجد',
+            q: 'كم كان عمر النبي ﷺ حين توفي جده عبد المطلب؟',
+            o: ['ست سنوات', 'ثماني سنوات', 'عشر سنوات', 'اثنتا عشرة سنة'],
+            a: 1
+          },
+          {
+            t: 'حكمة اليُتم',
+            q: 'ما الآية القرآنية التي تشير إلى يُتم النبي ﷺ وإيواء الله له؟',
+            o: ['﴿وما أرسلناك إلا رحمة للعالمين﴾', '﴿أَلَمْ يَجِدْكَ يَتِيمًا فَآوَى﴾', '﴿إنك لعلى خلق عظيم﴾', '﴿وإنك لتهدي إلى صراط مستقيم﴾'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'الشباب والأخلاق',
+        questions: [
+          {
+            t: 'بحيرا الراهب',
+            q: 'ماذا فعل بحيرا الراهب حين رأى محمدًا ﷺ في بُصرى؟',
+            o: ['طرده من الدير', 'لاحظ علامات النبوة ونصح أبا طالب بحفظه من اليهود', 'لم يلاحظ شيئًا مميزًا', 'طلب منه البقاء في الشام'],
+            a: 1
+          },
+          {
+            t: 'رعي الغنم',
+            q: 'لماذا يرعى كل الأنبياء الغنم حسب قول النبي ﷺ؟',
+            o: ['لأنها أسهل المهن', 'لأن الرعي يعلّم الصبر والرفق والمسؤولية والقيادة', 'لأن الغنم كثيرة في الجزيرة', 'لم يقل ﷺ ذلك'],
+            a: 1
+          },
+          {
+            t: 'لقب الأمين',
+            q: 'لماذا لقّبت قريش محمدًا ﷺ بالأمين قبل البعثة؟',
+            o: ['لأنه كان أغنى شباب قريش', 'لصدقه المطلق وأمانته التي لم يُعرف عنه خلافها قط', 'لأنه كان يحرس الكعبة', 'لأنه كان أكبرهم سنًّا'],
+            a: 1
+          },
+          {
+            t: 'شهادة الأعداء',
+            q: 'ماذا قال أبو جهل عن النبي ﷺ رغم عداوته؟',
+            o: ['قال إنه كاذب', 'قال: ما نكذّبك ولكن نكذّب ما جئت به', 'قال إنه مجنون', 'لم يتكلم عنه قط'],
+            a: 1
+          },
+          {
+            t: 'الأمانات ليلة الهجرة',
+            q: 'ماذا فعل النبي ﷺ بأمانات قريش ليلة الهجرة؟',
+            o: ['أخذها معه إلى المدينة', 'أوصى عليًّا بردّها إلى أهلها', 'تركها في الكعبة', 'أعطاها لأبي بكر'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'الزواج وبناء الكعبة وغار حراء',
+        questions: [
+          {
+            t: 'زواج خديجة',
+            q: 'كم كان عمر النبي ﷺ حين تزوج خديجة؟',
+            o: ['عشرون سنة', 'خمسة وعشرون سنة', 'ثلاثون سنة', 'خمسة وثلاثون سنة'],
+            a: 1
+          },
+          {
+            t: 'دور خديجة',
+            q: 'ماذا قالت خديجة للنبي ﷺ حين جاءه الوحي أول مرة وهو مرتعد؟',
+            o: ['قالت: لعلك تخيلت', 'قالت: كلا والله ما يخزيك الله أبدًا', 'قالت: اذهب إلى الطبيب', 'لم تقل شيئًا'],
+            a: 1
+          },
+          {
+            t: 'حادثة الحجر الأسود',
+            q: 'كيف حلّ النبي ﷺ خلاف قريش حول وضع الحجر الأسود؟',
+            o: ['وضعه بنفسه دون مشاورة', 'بسط رداءه ووضع الحجر فيه وطلب من كل قبيلة أن تأخذ بطرف', 'اقترح القرعة بين القبائل', 'رفض التدخل في الخلاف'],
+            a: 1
+          },
+          {
+            t: 'غار حراء',
+            q: 'ما معنى «التحنّث» الذي كان يفعله النبي ﷺ في غار حراء؟',
+            o: ['التجارة في الجبل', 'التعبّد والتأمل في الخلوة', 'الرياضة البدنية', 'تعلّم القراءة والكتابة'],
+            a: 1
+          },
+          {
+            t: 'أول الوحي',
+            q: 'ما أول ما نزل من القرآن على النبي ﷺ في غار حراء؟',
+            o: ['﴿بسم الله الرحمن الرحيم﴾', '﴿الحمد لله رب العالمين﴾', '﴿اقرأ باسم ربك الذي خلق﴾', '﴿يا أيها المدثر﴾'],
+            a: 2
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch6-score');
+    const container = document.getElementById('ch6-quiz-container');
+    const retryBtn = document.getElementById('ch6-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «المولد وأربعون عامًا قبل النبوة» من كتاب «الرحيق المختوم»
+  </footer>
+
+</body>
+</html>

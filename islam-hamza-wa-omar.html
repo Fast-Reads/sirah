@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إسلام حمزة وعمر والمقاطعة — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .hero .subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 620px;
+      margin: 0.8rem auto 0;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .breadcrumb a:hover {
+      background: var(--gold-pale);
+      color: var(--navy);
+    }
+    .breadcrumb .sep {
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+    .breadcrumb .current {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* TOC */
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      max-width: 880px;
+      margin: 1.5rem auto 0;
+      padding: 0 1.5rem;
+    }
+    .toc a {
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
+    }
+
+    /* SECTIONS */
+    section { margin-bottom: 1.5rem; }
+    h2 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--text);
+      text-align: justify;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    /* LISTS */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    ul li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+    }
+
+    /* VISUAL GRID */
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .visual-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .visual-icon {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .visual-title {
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+    }
+    .visual-text {
+      margin: 0;
+      color: var(--text-light);
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow);
+    }
+    .card h4 {
+      margin: 0 0 0.4rem;
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* FLOW TIMELINE */
+    .flowline {
+      border-right: 3px solid var(--gold-light);
+      margin-top: 1.3rem;
+      padding-right: 1.3rem;
+    }
+    .flow-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover {
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+    .flow-item::before {
+      content: "";
+      position: absolute;
+      right: -1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .flow-title {
+      margin: 0;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .flow-text {
+      margin: 0.3rem 0 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+    }
+    .tribe-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tribe-table tr:hover td {
+      background: var(--gold-pale);
+    }
+
+    /* INSIGHT / CONNECTION BOX */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .insight p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .connection p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* PERSON LINK */
+    a.person-link {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 0.05rem;
+    }
+    a.person-link:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+    }
+
+    /* BLOCKQUOTE */
+    blockquote {
+      background: var(--gold-pale);
+      border-right: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 1rem 0 1.5rem;
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      line-height: 2;
+    }
+
+    /* QUIZ */
+    .quiz-wrapper {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--gold-light);
+    }
+    .quiz-wrapper > h2 {
+      text-align: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+    .quiz-intro {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin: 0 auto 1.5rem;
+      max-width: 600px;
+    }
+    .quiz-score-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .quiz-score-bar span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .quiz-score-bar .q-score {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .quiz-section-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer;
+      padding: 1rem 1.4rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow {
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body {
+      padding: 0 1.4rem 1.4rem;
+    }
+    .q-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.3rem;
+      margin-top: 0.9rem;
+    }
+    .q-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .q-card p {
+      margin: 0 0 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      text-align: right;
+    }
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .q-opts button {
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      font-size: 0.92rem;
+      font-family: 'Tajawal', sans-serif;
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text);
+    }
+    .q-opts button:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+    .q-opts button.q-correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .q-opts button.q-wrong {
+      border-color: #c53030;
+      background: #fde8e8;
+      color: #c53030;
+    }
+    .q-opts button.q-off {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .q-feedback {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      font-size: 0.86rem;
+      min-height: 1.3em;
+    }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .quiz-retry-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2.2rem;
+      font-size: 1rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover {
+      background: #14293f;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+      .toc { gap: 0.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>إسلام حمزة وعمر والمقاطعة</h1>
+    <p class="subtitle">كيف انقلبت موازين القوى بدخول أسد الله وفاروق الإسلام، وكيف ردّت قريش بأقسى حصار عرفته مكة</p>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">إسلام حمزة وعمر والمقاطعة</span>
+  </nav>
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <a href="#why">لماذا هذا الفصل؟</a>
+    <a href="#hamza">إسلام حمزة</a>
+    <a href="#omar">إسلام عمر</a>
+    <a href="#impact">أثر الإسلامين</a>
+    <a href="#boycott">قرار المقاطعة</a>
+    <a href="#shiab">في شِعب أبي طالب</a>
+    <a href="#end-boycott">نهاية الحصار</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section id="why">
+      <h2>لماذا هذا الفصل مهم؟</h2>
+      <p>
+        حتى هذه اللحظة كان الإسلام «دعوة مستضعفين» في نظر قريش: عبيد وموالٍ وشباب لا وزن
+        قبليًّا لهم. ثم يحدث تحوّلان زلزاليان في فصل واحد: إسلام <a class="person-link" href="persons.html">حمزة بن عبد المطلب</a>
+        — أقوى فارس في قريش وعمّ النبي ﷺ — وإسلام <a class="person-link" href="persons.html">عمر بن الخطاب</a>
+        — أشد رجال قريش بأسًا وهيبة. هذا الفصل يكشف كيف يغيّر فردٌ واحدٌ معادلة القوة بأكملها،
+        وكيف ردّت قريش على هذا التحوّل بأقسى أسلحتها: المقاطعة الشاملة.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح الفهم</span>
+        <p>
+          التصعيد مستمر: سخرية ← تعذيب ← ضغط قبلي ← هجرة إلى الحبشة ← إسلام حمزة وعمر ←
+          <strong>مقاطعة شاملة</strong>. كل خطوة تكشف أن قريشًا تخسر المعركة تدريجيًا: كل أسلوب
+          يفشل فتلجأ إلى أعنف منه. والمقاطعة — أعنف ما قبل الاغتيال — ستفشل هي الأخرى.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ إسلام حمزة ═══════ -->
+
+    <section id="hamza">
+      <h2>إسلام حمزة بن عبد المطلب — أسد الله</h2>
+      <p>
+        في السنة السادسة من البعثة وقع حدث غيّر مجرى المرحلة المكية. كان
+        <a class="person-link" href="persons.html">أبو جهل</a> قد اعترض النبي ﷺ عند الصفا
+        وآذاه أذى شديدًا وشتمه وسبّه، والنبي ﷺ لم يردّ عليه بكلمة. فأخبرت مولاةٌ لعبد الله بن جدعان
+        <a class="person-link" href="persons.html">حمزة بن عبد المطلب</a> بما جرى حين عاد من الصيد
+        وقوسه معلّقة في عنقه.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">الغضبة المشتعلة</p>
+          <p class="flow-text">
+            أقبل حمزة غاضبًا حتى دخل المسجد، فعمد إلى أبي جهل وضربه بالقوس على رأسه ضربة
+            شقّت رأسه شقًّا مُنكرًا، وقال: «أتشتمه وأنا على دينه أقول ما يقول؟ فرُدَّ ذلك عليّ إن استطعت!»
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">إعلان الإسلام</p>
+          <p class="flow-text">
+            كان حمزة قد نطق بالشهادة في لحظة غضب نصرةً لابن أخيه، لكن الله شرح صدره
+            بعدها فثبت على الإسلام وأصبح من أشد المؤمنين.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">ردّ فعل قريش</p>
+          <p class="flow-text">
+            قام رجال من بني مخزوم لنصرة أبي جهل فأشار إليهم بالتوقف وقال: «دعوا أبا عمارة (حمزة)
+            فإني والله قد سببت ابن أخيه سبًّا قبيحًا.» عرفت قريش أن ميزان القوة تغيّر.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لماذا كان إسلام حمزة مزلزلًا؟</span>
+        <p>
+          حمزة لم يكن مجرد رجل — كان أعزّ فتيان قريش وأقواهم ساعدًا وأشدهم بأسًا. كان صيّادًا مرهوبًا
+          وفارسًا لا يُقهر. إسلامه يعني أن الإسلام لم يعد «دين ضعفاء» بل دين فيه أقوى محاربي مكة.
+          قريش بدأت تخشى المواجهة المباشرة مع المسلمين — ولأول مرة يتردد أبو جهل نفسه في الردّ.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ إسلام عمر ═══════ -->
+
+    <section id="omar">
+      <h2>إسلام عمر بن الخطاب — الفاروق</h2>
+      <p>
+        بعد إسلام حمزة بثلاثة أيام — وقيل بفترة قصيرة — جاء الزلزال الثاني. كان
+        <a class="person-link" href="persons.html">عمر بن الخطاب</a> من أشد الناس عداوة للإسلام
+        وأكثرهم أذى للمسلمين. ثم تحوّل في ساعة واحدة من أعدى عدوّ إلى أقوى نصير.
+        والقصة من أعجب قصص التحوّل في التاريخ:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">عمر يخرج قاصدًا قتل النبي ﷺ</p>
+          <p class="flow-text">
+            خرج عمر متقلّدًا سيفه يريد النبي ﷺ. التقى به <a class="person-link" href="persons.html">نعيم بن عبد الله</a>
+            فقال له: أين تريد يا عمر؟ قال: أريد محمدًا هذا الصابئ لأقتله. فقال نعيم: أفلا ترجع إلى
+            أهل بيتك فتقيم أمرهم؟ فإن ختنك وابن عمك سعيد بن زيد وأختك فاطمة قد أسلما!
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">عند باب أخته فاطمة</p>
+          <p class="flow-text">
+            ذهب عمر إلى بيت أخته <a class="person-link" href="persons.html">فاطمة بنت الخطاب</a>
+            وزوجها <a class="person-link" href="persons.html">سعيد بن زيد</a>. كان عندهم
+            <a class="person-link" href="persons.html">خبّاب بن الأرت</a> يُقرئهما سورة طه من صحيفة.
+            سمع عمر همهمة القراءة فدخل غاضبًا وضرب سعيدًا ولطم أخته حتى أدماها.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الصحيفة التي غيّرت كل شيء</p>
+          <p class="flow-text">
+            حين رأى الدم على وجه أخته لانت نفسه، فطلب الصحيفة. قالت: إنك نجس ولا يمسّه إلا
+            المطهّرون — فاغتسل. اغتسل عمر وأخذ الصحيفة فقرأ: ﴿طه * مَا أَنزَلْنَا عَلَيْكَ الْقُرْآنَ
+            لِتَشْقَىٰ * إِلَّا تَذْكِرَةً لِّمَن يَخْشَىٰ﴾ حتى بلغ: ﴿إِنَّنِي أَنَا اللَّهُ لَا إِلَٰهَ إِلَّا أَنَا
+            فَاعْبُدْنِي وَأَقِمِ الصَّلَاةَ لِذِكْرِي﴾. فقال: «ما أحسن هذا الكلام وأكرمه! دلّوني على محمد.»
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">في دار الأرقم</p>
+          <p class="flow-text">
+            جاء عمر إلى دار الأرقم والسيف في يده. فتح الباب فأمسكه حمزة وقال: «دعوه! فإن جاء
+            بخير قبلناه، وإن جاء بشر قتلناه بسيفه.» دخل عمر فأسلم، فكبّر المسلمون تكبيرة سُمعت في شعاب مكة.
+          </p>
+        </div>
+      </div>
+      <blockquote>
+        قال عبد الله بن مسعود رضي الله عنه: «ما زلنا أعزّة منذ أسلم عمر.»
+      </blockquote>
+      <div class="connection">
+        <span class="connection-label">دعاء النبي ﷺ المستجاب</span>
+        <p>
+          كان النبي ﷺ قد دعا: «اللهم أعزّ الإسلام بأحبّ هذين الرجلين إليك: بأبي جهل أو بعمر بن الخطاب.»
+          فاستجاب الله بعمر. هذا يكشف منهجًا: النبي ﷺ كان يفكر استراتيجيًا — يعرف أن إسلام رجل واحد
+          ذي ثقل يُغني عن مئات. وعمر سيصبح ثاني الخلفاء الراشدين ومؤسس الإمبراطورية الإسلامية.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ أثر الإسلامين ═══════ -->
+
+    <section id="impact">
+      <h2>ما الذي تغيّر بعد إسلام حمزة وعمر؟</h2>
+      <p>
+        إسلام هذين الرجلين أحدث تحولًا نوعيًا لا كميًّا فقط. لم يزد عدد المسلمين بعشرات — لكن
+        نوعية المسلمين اختلفت اختلافًا جذريًا:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x2694;&#xFE0F;</span>
+          <p class="visual-title">القوة العسكرية</p>
+          <p class="visual-text">حمزة أقوى فرسان قريش وعمر من أشدهم بأسًا. أصبح للمسلمين ذراع عسكري يُخشى.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F5E3;&#xFE0F;</span>
+          <p class="visual-title">الجرأة العلنية</p>
+          <p class="visual-text">عمر رفض السرية — خرج المسلمون في صفّين لأول مرة علنًا وعمر على أحدهما وحمزة على الآخر.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3DB;&#xFE0F;</span>
+          <p class="visual-title">الصلاة عند الكعبة</p>
+          <p class="visual-text">لأول مرة صلّى المسلمون عند الكعبة جهارًا — لم يجرؤ أحد من قريش على منعهم.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4A5;</span>
+          <p class="visual-title">رعب قريش</p>
+          <p class="visual-text">أدركت قريش أن سياسة الاحتواء فشلت — فلجأت إلى خطة أخيرة: المقاطعة الشاملة.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">قاعدة: النوعية لا الكمية</span>
+        <p>
+          لم يضف إسلام حمزة وعمر رقمين فقط — بل غيّرا طبيعة الصراع. قبلهما كان الإسلام يُضطهد في
+          الخفاء. بعدهما صار الإسلام يتحدى في العلن. هذا المبدأ — أن فردًا واحدًا مؤثرًا يساوي جيشًا —
+          سيتكرر: إسلام خالد بن الوليد وعمرو بن العاص قبيل الفتح سيقلب موازين المرحلة المدنية كذلك.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ قرار المقاطعة ═══════ -->
+
+    <section id="boycott">
+      <h2>قرار المقاطعة — آخر أسلحة قريش</h2>
+      <p>
+        حين رأت قريش أن الإسلام يزداد قوة يومًا بعد يوم، وأن الهجرة إلى الحبشة فتحت جبهة خارجية،
+        وأن إسلام حمزة وعمر منح المسلمين حماية داخلية — قررت اللجوء إلى سلاح شامل لم تستخدمه
+        من قبل: <strong>المقاطعة الاقتصادية والاجتماعية الكاملة</strong> لبني هاشم وبني عبد المطلب.
+      </p>
+      <p>
+        اجتمعت بطون قريش وكتبت وثيقة علّقوها في جوف الكعبة تتضمن:
+      </p>
+      <ul>
+        <li><strong>لا مصاهرة:</strong> لا أحد يتزوج من بني هاشم أو يزوّجهم.</li>
+        <li><strong>لا بيع ولا شراء:</strong> محظور على أي تاجر أن يبيع لهم أو يشتري منهم شيئًا.</li>
+        <li><strong>لا مجالسة:</strong> ممنوع الجلوس معهم أو الدخول عليهم أو مخاطبتهم.</li>
+        <li><strong>لا نصرة:</strong> لا تُقبل من بني هاشم صلح ولا تُرفع عنهم المقاطعة حتى يسلّموا محمدًا ﷺ للقتل.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">لماذا بنو هاشم كلهم؟</span>
+        <p>
+          لم تستهدف المقاطعة المسلمين فقط — بل كل بني هاشم وبني المطلب، مسلمهم وكافرهم.
+          السبب: العُرف القبلي يوجب على العشيرة حماية أفرادها. فما دام أبو طالب (وهو غير مسلم)
+          يحمي النبي ﷺ بحكم العشيرة، فإن قريشًا عاقبت العشيرة بأكملها. هذا الأسلوب سيفشل لأنه
+          وحّد المسلمين وغير المسلمين من بني هاشم في جبهة واحدة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ في شِعب أبي طالب ═══════ -->
+
+    <section id="shiab">
+      <h2>في شِعب أبي طالب — ثلاث سنوات من الحصار</h2>
+      <p>
+        انحاز بنو هاشم وبنو المطلب — مسلمهم وكافرهم ما عدا أبا لهب — إلى شِعب أبي طالب
+        (وادٍ ضيق بين جبلين في مكة). وأقاموا فيه محاصَرين من أول المحرم سنة سبع من البعثة
+        حتى المحرم سنة عشر — ثلاث سنوات كاملة.
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>الجانب</th>
+            <th>الوصف</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>الغذاء</strong></td>
+            <td>كاد الطعام ينفد تمامًا. أكلوا ورق الشجر والجلود. كان صراخ الأطفال من الجوع يُسمع من خلف الشِّعب.</td>
+          </tr>
+          <tr>
+            <td><strong>التجارة</strong></td>
+            <td>مُنعوا من دخول أسواق مكة. وكان أي تاجر يتعامل معهم يُعاقب ويُغرَّم.</td>
+          </tr>
+          <tr>
+            <td><strong>المساعدة السرية</strong></td>
+            <td>بعض ذوي المروءة من قريش كانوا يُهرّبون الطعام سرًا: هشام بن عمرو العامري كان يأتي بالبعير محملًا بالطعام ليلًا.</td>
+          </tr>
+          <tr>
+            <td><strong>أبو طالب والحراسة</strong></td>
+            <td>كان أبو طالب يُبدّل مكان نوم النبي ﷺ كل ليلة خوفًا من أن يُغتال — يضع أحد أبنائه مكانه.</td>
+          </tr>
+          <tr>
+            <td><strong>أبو لهب</strong></td>
+            <td>الوحيد من بني هاشم الذي انحاز إلى قريش ضد عشيرته — خذلان من أقرب الناس.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">لماذا صمد بنو هاشم رغم أن أكثرهم لم يسلموا؟</span>
+        <p>
+          العصبية القبلية — التي هي من أعراف الجاهلية — صارت هنا أداة لحفظ الدعوة. بنو هاشم
+          رفضوا تسليم ابن عشيرتهم ولو لم يوافقوه في دينه — لأن التسليم عار لا يُمحى.
+          المفارقة: الجاهلية نفسها حمت الإسلام في أضعف لحظاته. والله يسخّر الأسباب — حتى تلك التي
+          لا يتوقعها أحد.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ نهاية الحصار ═══════ -->
+
+    <section id="end-boycott">
+      <h2>نهاية الحصار — كيف سقطت الصحيفة؟</h2>
+      <p>
+        بعد ثلاث سنوات من الحصار القاسي، تضافرت عدة عوامل لإنهاء المقاطعة:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">تحرّك أصحاب الضمائر</p>
+          <p class="flow-text">
+            تحركت مجموعة من شرفاء قريش الذين رفضوا هذا الظلم. قام هشام بن عمرو العامري
+            بالتنسيق مع زهير بن أبي أمية والمطعم بن عدي وأبي البختري بن هشام وزمعة بن الأسود
+            لنقض الصحيفة علنًا. اتفقوا على أن يقوم أحدهم في نادي قريش فيطالب بإنهائها ويؤيده الباقون.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الآية الإلهية</p>
+          <p class="flow-text">
+            أخبر النبي ﷺ عمّه أبا طالب أن الله سلّط على صحيفة قريش الأرَضة (دودة)
+            فأكلت كل ما فيها من ظلم وقطيعة ولم تُبقِ إلا اسم الله. فذهب أبو طالب إلى
+            قريش وأخبرهم: إن ابن أخي قد أخبرني بكذا، فإن كان صادقًا فانتهوا عن قطيعتنا، وإن كان كاذبًا
+            دفعته إليكم. فقبلوا.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">فتح الصحيفة</p>
+          <p class="flow-text">
+            فتحوا الكعبة وأخرجوا الصحيفة فوجدوها كما قال النبي ﷺ تمامًا: أكلتها الأرَضة ولم يبقَ
+            إلا «باسمك اللهم». فقام المطعم بن عدي ومزّق الصحيفة، وخرج بنو هاشم من الشِّعب.
+          </p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">بعد الشِّعب مباشرة — عام الحزن</span>
+        <p>
+          خرج بنو هاشم من الحصار ضعافًا مرهقين. وبعد أشهر قليلة ستقع الكارثة المزدوجة:
+          وفاة أبي طالب (الدرع القبلي) ثم وفاة خديجة (السند العاطفي) — وهو ما يُعرف بـ«عام الحزن»
+          الذي سيُدرس في الفصل القادم. المقاطعة لم تكسر الإسلام لكنها أنهكت أجساد المسلمين — وخاصة
+          كبار السن كأبي طالب وخديجة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. حمزة: الغضب تحوّل إلى إيمان</h4>
+          <p>ضرب أبا جهل نصرة لابن أخيه ثم ثبت على الإسلام. أقوى فارس في قريش صار أسد الله.</p>
+        </article>
+        <article class="card">
+          <h4>٢. عمر: من أعدى عدو إلى أقوى نصير</h4>
+          <p>خرج ليقتل النبي ﷺ فأسلم بعد سماع سورة طه. كبّر المسلمون تكبيرة سُمعت في شعاب مكة.</p>
+        </article>
+        <article class="card">
+          <h4>٣. النوعية تغلب الكمية</h4>
+          <p>رجلان فقط غيّرا ميزان القوة: المسلمون صلّوا عند الكعبة جهارًا وخرجوا في صفّين لأول مرة.</p>
+        </article>
+        <article class="card">
+          <h4>٤. المقاطعة: ٣ سنوات في الشِّعب</h4>
+          <p>وثيقة ظلم عُلّقت في الكعبة: لا بيع ولا شراء ولا مصاهرة مع بني هاشم حتى يسلّموا محمدًا ﷺ.</p>
+        </article>
+        <article class="card">
+          <h4>٥. الصمود والأرَضة</h4>
+          <p>صمد بنو هاشم ثلاث سنوات. ثم أكلت الأرضة الصحيفة ولم تُبقِ إلا اسم الله — آية حسية.</p>
+        </article>
+        <article class="card">
+          <h4>٦. تمهيد لعام الحزن</h4>
+          <p>أنهك الحصار كبار بني هاشم — وبعده بأشهر مات أبو طالب وخديجة: بداية أشد مراحل السيرة.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch10-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch10-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch10-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'إسلام حمزة بن عبد المطلب',
+        questions: [
+          {
+            t: 'سبب إسلام حمزة',
+            q: 'ما الحدث المباشر الذي دفع حمزة للإسلام؟',
+            o: ['سماعه القرآن في دار الأرقم', 'علمه بأن أبا جهل آذى النبي ﷺ وسبّه عند الصفا', 'رؤيا رآها في منامه', 'نصيحة من أبي بكر الصديق'],
+            a: 1
+          },
+          {
+            t: 'ضربة القوس',
+            q: 'ماذا فعل حمزة حين واجه أبا جهل في المسجد؟',
+            o: ['سبّه بالكلام فقط', 'تجاهله وذهب للنبي ﷺ', 'ضربه بالقوس على رأسه ضربة شقّت رأسه وأعلن إسلامه', 'طلب منه الاعتذار'],
+            a: 2
+          },
+          {
+            t: 'ردّ فعل أبي جهل',
+            q: 'كيف تصرف أبو جهل بعد ضربة حمزة؟',
+            o: ['هاجمه بسيفه', 'أشار لبني مخزوم بالتوقف واعترف أنه سبّ النبي ﷺ', 'شكاه لأبي سفيان', 'هرب من مكة'],
+            a: 1
+          },
+          {
+            t: 'لقب حمزة',
+            q: 'ما اللقب الذي عُرف به حمزة بعد إسلامه؟',
+            o: ['الفاروق', 'ذو النورين', 'أسد الله', 'سيف الله'],
+            a: 2
+          },
+          {
+            t: 'أثر إسلام حمزة',
+            q: 'لماذا كان إسلام حمزة مُزلزلًا لقريش؟',
+            o: ['لأنه كان غنيًا جدًا', 'لأنه كان أقوى فارس في قريش وأعزّ فتيانها', 'لأنه كان رئيس بني هاشم', 'لأنه كان حليف الروم'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'إسلام عمر بن الخطاب',
+        questions: [
+          {
+            t: 'قصد عمر الأول',
+            q: 'ماذا كان عمر ينوي حين خرج متقلّدًا سيفه؟',
+            o: ['الذهاب للصيد', 'قتل النبي ﷺ', 'الهجرة إلى الحبشة', 'مقابلة أبي سفيان'],
+            a: 1
+          },
+          {
+            t: 'نعيم بن عبد الله',
+            q: 'ماذا أخبر نعيم بن عبد الله عمرَ في الطريق؟',
+            o: ['أن النبي ﷺ غادر مكة', 'أن أخته فاطمة وزوجها سعيد بن زيد قد أسلما', 'أن قريشًا وافقت على الصلح', 'أن حمزة يبحث عنه'],
+            a: 1
+          },
+          {
+            t: 'السورة التي أسلم بسببها',
+            q: 'ما السورة التي قرأها عمر في بيت أخته فأسلم بعدها؟',
+            o: ['سورة مريم', 'سورة البقرة', 'سورة طه', 'سورة الرحمن'],
+            a: 2
+          },
+          {
+            t: 'مكان إسلام عمر',
+            q: 'أين أعلن عمر إسلامه رسميًا أمام النبي ﷺ؟',
+            o: ['عند الكعبة', 'في دار الأرقم', 'في بيت أخته', 'على جبل حراء'],
+            a: 1
+          },
+          {
+            t: 'قول ابن مسعود',
+            q: 'ماذا قال عبد الله بن مسعود عن إسلام عمر؟',
+            o: ['كان يومًا عاديًا', 'ما زلنا أعزّة منذ أسلم عمر', 'خفنا من عمر في البداية', 'لم نصدق إسلامه'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'المقاطعة ووثيقة الظلم',
+        questions: [
+          {
+            t: 'دعاء النبي ﷺ',
+            q: 'بماذا دعا النبي ﷺ قبل إسلام عمر؟',
+            o: ['اللهم أهلك قريشًا', 'اللهم أعزّ الإسلام بأحبّ الرجلين إليك: أبي جهل أو عمر', 'اللهم يسّر الهجرة', 'اللهم انصرنا على الظالمين'],
+            a: 1
+          },
+          {
+            t: 'بنود المقاطعة',
+            q: 'أي من هذه لم يكن من بنود وثيقة المقاطعة؟',
+            o: ['لا مصاهرة مع بني هاشم', 'لا بيع ولا شراء معهم', 'إعدام كل من يُسلم منهم', 'لا مجالسة ولا نصرة حتى يسلّموا محمدًا ﷺ'],
+            a: 2
+          },
+          {
+            t: 'مكان الحصار',
+            q: 'أين حُوصر بنو هاشم؟',
+            o: ['في غار حراء', 'في دار الأرقم', 'في شِعب أبي طالب', 'في الطائف'],
+            a: 2
+          },
+          {
+            t: 'مدة الحصار',
+            q: 'كم استمر حصار الشِّعب؟',
+            o: ['ستة أشهر', 'سنة واحدة', 'سنتين', 'نحو ثلاث سنوات'],
+            a: 3
+          },
+          {
+            t: 'أبو لهب',
+            q: 'ما موقف أبي لهب من المقاطعة؟',
+            o: ['انضم لبني هاشم في الشِّعب', 'وقف محايدًا', 'انحاز إلى قريش ضد عشيرته', 'هاجر إلى الحبشة'],
+            a: 2
+          }
+        ]
+      },
+      {
+        title: 'نهاية الحصار والدروس',
+        questions: [
+          {
+            t: 'المساعدة السرية',
+            q: 'مَن كان يُهرّب الطعام سرًّا إلى بني هاشم في الشِّعب؟',
+            o: ['أبو سفيان بن حرب', 'هشام بن عمرو العامري', 'أبو لهب', 'الوليد بن المغيرة'],
+            a: 1
+          },
+          {
+            t: 'الأرضة',
+            q: 'ماذا حدث لصحيفة المقاطعة المعلقة في الكعبة؟',
+            o: ['سرقها أحد المسلمين', 'أحرقها أبو طالب', 'أكلتها الأرضة ولم تُبقِ إلا اسم الله', 'مزّقها عمر بن الخطاب'],
+            a: 2
+          },
+          {
+            t: 'نقض الصحيفة',
+            q: 'مَن قام بتمزيق الصحيفة علنًا بعد إخراجها من الكعبة؟',
+            o: ['أبو بكر الصديق', 'حمزة بن عبد المطلب', 'المطعم بن عدي', 'أبو طالب'],
+            a: 2
+          },
+          {
+            t: 'عدد ناقضي الصحيفة',
+            q: 'كم كان عدد شرفاء قريش الذين تحركوا لنقض المقاطعة؟',
+            o: ['رجل واحد فقط', 'ثلاثة رجال', 'خمسة رجال نسّقوا فيما بينهم', 'عشرة رجال'],
+            a: 2
+          },
+          {
+            t: 'ما بعد الشِّعب',
+            q: 'ماذا حدث بعد أشهر قليلة من نهاية الحصار؟',
+            o: ['فُتحت مكة', 'مات أبو طالب وخديجة — عام الحزن', 'هاجر النبي ﷺ إلى المدينة', 'أسلمت قريش'],
+            a: 1
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch10-score');
+    const container = document.getElementById('ch10-quiz-container');
+    const retryBtn = document.getElementById('ch10-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «إسلام حمزة وعمر والمقاطعة» من كتاب «الرحيق المختوم»
+  </footer>
+
+</body>
+</html>

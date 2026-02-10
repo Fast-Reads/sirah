@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دار الأرقم والهجرة إلى الحبشة — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#1e3a5f;--navy-deep:#0d1b2a;--gold:#b8860b;--gold-light:#f5e6c8;--gold-pale:#fdf6e3;--cream:#faf8f2;--white:#ffffff;--text:#2d3436;--text-light:#636e72;--border:#e8e0d4;--shadow:rgba(30,58,95,0.08);--radius:14px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased}
+    .hero{background:linear-gradient(160deg,#0a1628 0%,#132f4c 40%,#1e3a5f 100%);color:#fff;padding:3.5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 20% 30%,rgba(184,134,11,0.3) 50%,transparent 50%),radial-gradient(1px 1px at 60% 20%,rgba(255,255,255,0.15) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 80% 60%,rgba(184,134,11,0.2) 50%,transparent 50%),radial-gradient(1px 1px at 40% 70%,rgba(255,255,255,0.1) 50%,transparent 50%),radial-gradient(1px 1px at 10% 80%,rgba(255,255,255,0.12) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 90% 40%,rgba(184,134,11,0.15) 50%,transparent 50%);background-size:200px 200px;animation:twinkle 8s ease-in-out infinite alternate}
+    @keyframes twinkle{from{opacity:0.6}to{opacity:1}}
+    .hero>*{position:relative;z-index:1}
+    .hero-ornament{width:60px;height:3px;background:var(--gold);margin:0 auto 1.5rem;border-radius:2px}
+    .hero h1{font-family:'Amiri',serif;font-size:2.4rem;font-weight:700;letter-spacing:0.5px}
+    .hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.7);max-width:620px;margin:0.8rem auto 0}
+    .breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:0.6rem 1rem;display:flex;justify-content:center;align-items:center;gap:0.4rem;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px var(--shadow)}
+    .breadcrumb a{text-decoration:none;color:var(--text-light);font-size:0.85rem;font-weight:500;padding:0.4rem 0.85rem;border-radius:8px;transition:all 0.2s;white-space:nowrap}
+    .breadcrumb a:hover{background:var(--gold-pale);color:var(--navy)}
+    .breadcrumb .sep{color:var(--border);font-size:0.8rem}
+    .breadcrumb .current{font-size:0.85rem;font-weight:700;color:var(--navy)}
+    .toc{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;max-width:880px;margin:1.5rem auto 0;padding:0 1.5rem}
+    .toc a{padding:0.4rem 1rem;border-radius:8px;background:var(--white);border:1px solid var(--border);color:var(--navy);text-decoration:none;font-size:0.85rem;font-weight:500;transition:all 0.2s}
+    .toc a:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    main{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem 1rem}
+    section{margin-bottom:1.5rem}
+    h2{font-family:'Amiri',serif;color:var(--navy);border-right:3px solid var(--gold);padding-right:0.75rem;margin-top:2.5rem;margin-bottom:0.8rem;font-size:1.5rem}
+    h3{font-family:'Amiri',serif;color:var(--navy);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.5rem}
+    p{color:var(--text);text-align:justify;font-size:1rem;margin:0.5rem 0 1.5rem}
+    ul{list-style:none;padding:0;margin:0 0 1.5rem}
+    ul li{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.6rem;border-right:3px solid var(--gold-light)}
+    .visual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0 0.5rem}
+    .visual-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s}
+    .visual-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px var(--shadow)}
+    .visual-icon{font-size:2rem;margin-bottom:0.4rem;display:block}
+    .visual-title{font-weight:600;margin:0 0 0.35rem;color:var(--navy)}
+    .visual-text{margin:0;color:var(--text-light);line-height:1.5;font-size:0.95rem}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0 1.5rem}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.3rem;transition:transform 0.2s ease,box-shadow 0.2s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px var(--shadow)}
+    .card h4{margin:0 0 0.4rem;color:var(--navy);font-size:1rem;font-weight:700}
+    .card p{margin:0;font-size:0.95rem;color:var(--text-light)}
+    .flowline{border-right:3px solid var(--gold-light);margin-top:1.3rem;padding-right:1.3rem}
+    .flow-item{position:relative;margin-bottom:1.2rem;padding:0.8rem 1rem 0.8rem 0;background:var(--white);border:1px solid var(--border);border-radius:10px;transition:box-shadow 0.2s ease}
+    .flow-item:hover{box-shadow:0 8px 20px var(--shadow)}
+    .flow-item::before{content:"";position:absolute;right:-1.6rem;top:50%;transform:translateY(-50%);width:14px;height:14px;background:var(--gold);border:3px solid var(--white);border-radius:50%;box-shadow:0 0 0 2px var(--gold-light)}
+    .flow-title{margin:0;color:var(--navy);font-weight:600}
+    .flow-text{margin:0.3rem 0 0;font-size:0.95rem;color:var(--text-light);line-height:1.6}
+    .tribe-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:0.95rem}
+    .tribe-table th{background:var(--navy);color:#fff;padding:0.75rem 1rem;text-align:right;font-family:'Amiri',serif;font-weight:700}
+    .tribe-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--border);background:var(--white)}
+    .tribe-table tr:hover td{background:var(--gold-pale)}
+    .insight{background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .insight-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--gold);margin-bottom:0.4rem}
+    .insight p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    .connection{background:linear-gradient(135deg,#eef3f9 0%,#f5f0e8 100%);border:1px solid #d4dce8;border-right:3px solid var(--navy);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .connection-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--navy);margin-bottom:0.4rem}
+    .connection p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    a.person-link{color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-light);padding-bottom:0.05rem}
+    a.person-link:hover{color:var(--navy);border-bottom-color:var(--navy)}
+    blockquote{background:var(--gold-pale);border-right:4px solid var(--gold);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1rem 0 1.5rem;font-family:'Amiri',serif;font-size:1.1rem;color:var(--navy);line-height:2}
+    .quiz-wrapper{margin-top:3rem;padding-top:2.5rem;border-top:2px solid var(--gold-light)}
+    .quiz-wrapper>h2{text-align:center;border-right:none;padding-right:0;font-size:1.6rem;margin-bottom:0.3rem}
+    .quiz-intro{text-align:center;color:var(--text-light);font-size:0.92rem;margin:0 auto 1.5rem;max-width:600px}
+    .quiz-score-bar{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 12px var(--shadow);display:flex;justify-content:space-between;align-items:center}
+    .quiz-score-bar span{font-size:0.9rem;color:var(--text-light);font-weight:500}
+    .quiz-score-bar .q-score{font-family:'Amiri',serif;font-size:1.15rem;color:var(--navy);font-weight:700}
+    .quiz-section-block{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1rem;box-shadow:0 4px 24px var(--shadow);overflow:hidden}
+    .quiz-section-block summary{cursor:pointer;padding:1rem 1.4rem;font-weight:700;font-size:1.02rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;transition:background 0.2s;list-style:none}
+    .quiz-section-block summary::-webkit-details-marker{display:none}
+    .quiz-section-block summary::marker{content:""}
+    .quiz-section-block summary:hover{background:rgba(245,230,200,0.25)}
+    .quiz-section-block summary .q-arrow{transition:transform 0.3s;font-size:0.8rem;color:var(--text-light)}
+    .quiz-section-block[open] summary .q-arrow{transform:rotate(90deg)}
+    .q-section-body{padding:0 1.4rem 1.4rem}
+    .q-card{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:1.15rem 1.3rem;margin-top:0.9rem}
+    .q-card h4{margin:0 0 0.35rem;color:var(--navy);font-size:0.95rem;font-weight:700}
+    .q-card p{margin:0 0 0.75rem;font-size:0.92rem;color:var(--text);text-align:right}
+    .q-opts{display:flex;flex-direction:column;gap:0.45rem}
+    .q-opts button{border:1px solid var(--border);background:var(--white);border-radius:10px;padding:0.65rem 1rem;font-size:0.92rem;font-family:'Tajawal',sans-serif;text-align:right;cursor:pointer;transition:all 0.2s;color:var(--text)}
+    .q-opts button:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    .q-opts button.q-correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:600}
+    .q-opts button.q-wrong{border-color:#c53030;background:#fde8e8;color:#c53030}
+    .q-opts button.q-off{pointer-events:none;opacity:0.6}
+    .q-feedback{margin-top:0.5rem;font-weight:700;font-size:0.86rem;min-height:1.3em}
+    .q-feedback.q-correct{color:#2e7d32}
+    .q-feedback.q-wrong{color:#c53030}
+    .quiz-retry-wrap{text-align:center;margin-top:1.5rem}
+    .quiz-retry-btn{display:inline-block;background:var(--navy);color:#fff;border:none;border-radius:10px;padding:0.75rem 2.2rem;font-size:1rem;font-family:'Tajawal',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s,transform 0.2s}
+    .quiz-retry-btn:hover{background:#14293f;transform:translateY(-2px)}
+    footer{text-align:center;color:var(--text-light);font-size:0.82rem;border-top:1px solid var(--border);padding:2rem 1.5rem;margin-top:3rem}
+    @media(max-width:700px){.hero h1{font-size:1.9rem}.hero{padding:2.5rem 1.2rem 3rem}main{padding:1.5rem 1rem 1rem}.visual-grid,.card-grid{grid-template-columns:1fr}.breadcrumb a{font-size:0.78rem;padding:0.35rem 0.6rem}.tribe-table{font-size:0.85rem}.quiz-score-bar{flex-direction:column;gap:0.5rem;text-align:center}.q-section-body{padding:0 1rem 1rem}.toc{gap:0.35rem}}
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>دار الأرقم والهجرة إلى الحبشة</h1>
+    <p class="subtitle">من الدعوة السرية في دار الأرقم إلى أول هجرة في الإسلام — كيف بنى النبي ﷺ نواة الأمة تحت أقسى الظروف</p>
+  </header>
+
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">دار الأرقم والهجرة إلى الحبشة</span>
+  </nav>
+
+  <div class="toc">
+    <a href="#why">لماذا هذا الفصل؟</a>
+    <a href="#dar">دار الأرقم</a>
+    <a href="#early-muslims">السابقون الأولون</a>
+    <a href="#why-hijra">لماذا الهجرة؟</a>
+    <a href="#hijra1">الهجرة الأولى</a>
+    <a href="#hijra2">الهجرة الثانية</a>
+    <a href="#negus">بلاط النجاشي</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <section id="why">
+      <h2>لماذا ندرس هذا الفصل؟</h2>
+      <p>
+        في المراحل الأولى من الدعوة واجه النبي ﷺ وأصحابه واقعًا مريرًا: قلة في العدد، وتعذيب متصاعد،
+        ومجتمع بأكمله يقف ضدهم. هذا الفصل يكشف كيف تحوّل بيت صغير على جبل الصفا إلى أول «مؤسسة تعليمية»
+        في الإسلام، وكيف جاء قرار الهجرة إلى الحبشة كأول خطوة استراتيجية لحماية الدعوة الناشئة. فهمُ هذه المرحلة
+        يُظهر أن بناء الأمة لا يبدأ بالأعداد الكبيرة بل بالتربية العميقة والتخطيط الواعي.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح الفهم</span>
+        <p>
+          النبي ﷺ لم يكتفِ بالدعوة — بل بنى هيكلًا تنظيميًا: مقر سري (دار الأرقم)، وقاعدة خارجية آمنة
+          (الحبشة)، وشبكة من العلاقات المتينة بين الصحابة. هذا التفكير الاستراتيجي سيتكرر لاحقًا في الهجرة
+          إلى المدينة وبناء الدولة.
+        </p>
+      </div>
+    </section>
+
+    <section id="dar">
+      <h2>دار الأرقم بن أبي الأرقم</h2>
+      <p>
+        في السنوات الثلاث الأولى من البعثة كانت الدعوة سرية، واحتاج النبي ﷺ إلى مكان آمن يجتمع فيه
+        بمن أسلم بعيدًا عن أعين قريش. وقع الاختيار على دار <a class="person-link" href="persons.html">الأرقم بن أبي الأرقم المخزومي</a>
+        الواقعة على جبل الصفا. وفيها كان النبي ﷺ يتلو القرآن على أصحابه ويعلّمهم أصول الدين ويربّيهم
+        تربية إيمانية عميقة.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3E0;</span>
+          <p class="visual-title">الموقع</p>
+          <p class="visual-text">على جبل الصفا في مكة — موقع بعيد عن مراكز تجمع قريش، يسهل الوصول إليه دون إثارة الشبهات.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4D6;</span>
+          <p class="visual-title">الوظيفة</p>
+          <p class="visual-text">مدرسة لتعليم القرآن وأصول التوحيد، ومكان لتقوية الروابط بين المسلمين الأوائل وتثبيت إيمانهم.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F510;</span>
+          <p class="visual-title">السرية</p>
+          <p class="visual-text">كان الصحابة يأتون إليها متفرقين ويتحرّون الخفاء، فلم تكتشف قريش المقر طوال فترة الدعوة السرية.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لماذا اختيار دار الأرقم تحديدًا؟</span>
+        <p>
+          الأرقم بن أبي الأرقم كان من بني مخزوم — وهم من أقوى بطون قريش. لو فتّشت قريش عن مقر
+          الدعوة لما خطر ببالها أن يكون في دار شاب من بني مخزوم أنفسهم. هذا الاختيار يكشف عن ذكاء
+          أمني في التخطيط: الاختباء في آخر مكان يتوقعه الخصم.
+        </p>
+      </div>
+      <div class="connection">
+        <span class="connection-label">ستقابل هذا لاحقًا</span>
+        <p>
+          فكرة «المقر السري» ستتكرر في الهجرة إلى المدينة: غار ثور كمخبأ، وخطة الخروج الدقيقة،
+          واختيار طريق غير متوقع عبر الساحل. النبي ﷺ يأخذ بالأسباب دائمًا ثم يتوكل على الله.
+        </p>
+      </div>
+    </section>
+
+    <section id="early-muslims">
+      <h2>السابقون الأولون إلى الإسلام</h2>
+      <p>
+        في رحاب دار الأرقم وقبلها تشكّلت النواة الأولى للأمة الإسلامية. هؤلاء هم الذين آمنوا
+        قبل أن يكون للإسلام قوة أو سلطان، فكان إيمانهم أصدق اختبار للإخلاص:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr><th>الاسم</th><th>الصفة</th><th>ستقابله في...</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a class="person-link" href="persons.html">خديجة بنت خويلد</a></td><td>أول من آمن مطلقًا — زوج النبي ﷺ</td><td>عام الحزن</td></tr>
+          <tr><td><a class="person-link" href="persons.html">أبو بكر الصديق</a></td><td>أول من آمن من الرجال الأحرار</td><td>الهجرة — غار ثور — الخلافة</td></tr>
+          <tr><td><a class="person-link" href="persons.html">علي بن أبي طالب</a></td><td>أول من آمن من الصبيان</td><td>نام في فراش النبي ﷺ ليلة الهجرة</td></tr>
+          <tr><td><a class="person-link" href="persons.html">زيد بن حارثة</a></td><td>أول من آمن من الموالي</td><td>غزوة مؤتة — أول قائد يُستشهد</td></tr>
+          <tr><td><a class="person-link" href="persons.html">بلال بن رباح</a></td><td>مؤذن الإسلام — عُذّب فاشتراه أبو بكر</td><td>أذان بلال فوق الكعبة يوم الفتح</td></tr>
+          <tr><td><a class="person-link" href="persons.html">عثمان بن عفان</a></td><td>من السابقين — ذو النورين</td><td>قائد الهجرة الأولى إلى الحبشة</td></tr>
+          <tr><td><a class="person-link" href="persons.html">سعد بن أبي وقاص</a></td><td>أول من رمى بسهم في سبيل الله</td><td>بدر — فتح فارس (القادسية)</td></tr>
+        </tbody>
+      </table>
+      <div class="connection">
+        <span class="connection-label">لماذا تنوّعت طبقاتهم؟</span>
+        <p>
+          لاحظ أن السابقين جاءوا من كل طبقة: زوجة النبي ﷺ، وتاجر ثري (أبو بكر)، وصبي (علي)،
+          ومولى (زيد)، وعبد (بلال). هذا التنوع يُظهر أن الإسلام لم يكن حركة طبقية بل دعوة شاملة.
+          وهذا التنوع نفسه سيكون سلاحًا لاحقًا: كل فئة في المجتمع لها ممثل مؤمن يخاطبها.
+        </p>
+      </div>
+    </section>
+
+    <section id="why-hijra">
+      <h2>لماذا أصبحت الهجرة ضرورة؟</h2>
+      <p>
+        بعد الجهر بالدعوة تصاعد أذى قريش بشكل منهجي واستهدف الحلقة الأضعف: المستضعفين الذين لا عشيرة
+        تحميهم. تعذيب بلال وآل ياسر وخبّاب كان رسالة واضحة: لا مكان آمنًا في مكة لمن لا ظهر قبليًا له.
+        النبي ﷺ أدرك أن استمرار هذا الوضع سيؤدي إلى إبادة النواة المؤمنة، فبحث عن ملاذ آمن خارج نطاق سلطة قريش.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">تعذيب جسدي ممنهج</p>
+          <p class="flow-text">بلال يُوضع على الرمضاء، وآل ياسر يُعذَّبون حتى الموت، وخبّاب يُكوى بالحديد. الهدف: كسر إرادة المسلمين وإرهاب كل من يفكر في الإسلام.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">حصار اقتصادي واجتماعي</p>
+          <p class="flow-text">مقاطعة تجارية، وضغط على العشائر لتسلّم أبناءها المسلمين أو تتبرأ منهم، وتشهير ودعاية مضادة في مواسم الحج.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">القرار النبوي: الحبشة</p>
+          <p class="flow-text">قال النبي ﷺ: «إن بأرض الحبشة ملكًا لا يُظلم عنده أحد، فالحقوا ببلاده حتى يجعل الله لكم فرجًا ومخرجًا مما أنتم فيه.»</p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لماذا الحبشة تحديدًا؟</span>
+        <p>
+          اختيار الحبشة لم يكن عشوائيًا: ملك عادل لا يُظلم عنده أحد (النجاشي أصحمة)، وديانة نصرانية
+          قريبة من التوحيد تُسهّل التفاهم، وبُعد جغرافي يصعب على قريش الوصول إليه بقوتها القبلية،
+          وعلاقات تجارية قائمة بين مكة والحبشة عبر البحر الأحمر.
+        </p>
+      </div>
+    </section>
+
+    <section id="hijra1">
+      <h2>الهجرة الأولى إلى الحبشة — رجب، السنة الخامسة</h2>
+      <p>
+        في شهر رجب من السنة الخامسة للبعثة، خرجت أول مجموعة من المسلمين متسللين تحت جنح الليل
+        إلى ميناء شُعَيبة حيث وجدوا سفينتين أبحرتا بهم مقابل نصف دينار للراكب.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F465;</span>
+          <p class="visual-title">العدد</p>
+          <p class="visual-text">١٢ رجلًا و٤ نسوة — مجموعة صغيرة مختارة بعناية.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F451;</span>
+          <p class="visual-title">القائد</p>
+          <p class="visual-text"><a class="person-link" href="persons.html">عثمان بن عفان</a> ومعه زوجته <a class="person-link" href="persons.html">رقية بنت رسول الله ﷺ</a>.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x26F5;</span>
+          <p class="visual-title">الطريق</p>
+          <p class="visual-text">تسللوا ليلًا إلى ميناء شُعَيبة ثم أبحروا عبر البحر الأحمر إلى الحبشة.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">أول زوجين يهاجران في سبيل الله</span>
+        <p>
+          قال النبي ﷺ عن عثمان ورقية: «إنهما لأول من هاجر إلى الله بعد لوط». عثمان ضحّى بتجارته
+          ومكانته في قريش، ورقية بنت النبي ﷺ تركت أباها. هذه التضحية ستُكافأ: عثمان سيصبح ثالث
+          الخلفاء الراشدين، وسيُلقّب بذي النورين لزواجه من ابنتي النبي ﷺ (رقية ثم أم كلثوم).
+        </p>
+      </div>
+    </section>
+
+    <section id="hijra2">
+      <h2>الهجرة الثانية إلى الحبشة — الموجة الكبرى</h2>
+      <p>
+        لم تتوقف قريش عن اضطهاد المسلمين، فهاجرت مجموعة ثانية أكبر بكثير من الأولى.
+        هذه المرة لم تكن هجرة أفراد بل حركة جماعية منظمة:
+      </p>
+      <ul>
+        <li><strong>العدد:</strong> ٨٣ رجلًا و١٨ امرأة (وقيل ١٩) — أي نحو عُشر المسلمين آنذاك. رقم ضخم يكشف حجم الأزمة.</li>
+        <li><strong>القائد:</strong> <a class="person-link" href="persons.html">جعفر بن أبي طالب</a> — ابن عم النبي ﷺ وأخو علي الأكبر، اختير لفصاحته وحكمته.</li>
+        <li><strong>التنوع:</strong> شملت الهجرة شبابًا وشيوخًا ونساءً وأطفالًا من مختلف بطون قريش وحلفائها.</li>
+        <li><strong>الاستقرار:</strong> وجدوا عند النجاشي أمانًا تامًا وحرية في عبادتهم، فاستقر بعضهم سنوات حتى فتح خيبر.</li>
+      </ul>
+      <div class="insight">
+        <span class="insight-label">حجم التضحية الاستراتيجية</span>
+        <p>
+          النبي ﷺ ضحّى بوجود معظم أتباعه بجواره مقابل حمايتهم — حفظ الأرواح كان أولوية
+          قبل بناء القوة العددية في مكة. هذا المبدأ سيتكرر: في الهجرة إلى المدينة سيأمر
+          كل المسلمين بالخروج ويبقى هو آخرهم.
+        </p>
+      </div>
+    </section>
+
+    <section id="negus">
+      <h2>المواجهة في بلاط النجاشي</h2>
+      <p>
+        لم تقبل قريش أن يفلت المسلمون من قبضتها، فأرسلت وفدًا دبلوماسيًّا إلى الحبشة محمّلًا بالهدايا
+        الثمينة للنجاشي وبطارقته، يطالب بتسليم المهاجرين. كانت الخطة: رشوة البطارقة أولًا
+        ليضغطوا على النجاشي، ثم إقناع النجاشي بأن هؤلاء سفهاء فارقوا دين آبائهم.
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr><th>الطرف</th><th>الممثل</th><th>الحجة</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>وفد قريش</td><td><a class="person-link" href="persons.html">عمرو بن العاص</a> و<a class="person-link" href="persons.html">عبد الله بن أبي ربيعة</a></td><td>هؤلاء سفهاء فارقوا دين آبائهم ولم يدخلوا في دينك — ردّهم إلينا</td></tr>
+          <tr><td>المسلمون</td><td><a class="person-link" href="persons.html">جعفر بن أبي طالب</a></td><td>خطبة بليغة عن الجاهلية والإسلام + تلاوة من سورة مريم</td></tr>
+          <tr><td>الحَكَم</td><td>النجاشي أصحمة</td><td>استمع للطرفين ثم رفض تسليم المسلمين وردّ هدايا قريش</td></tr>
+        </tbody>
+      </table>
+
+      <h3>خطبة جعفر التاريخية</h3>
+      <p>
+        سأل النجاشي المسلمين عن دينهم الجديد، فوقف <a class="person-link" href="persons.html">جعفر بن أبي طالب</a> وألقى
+        كلمات أصبحت من أشهر الخطب في التاريخ الإسلامي:
+      </p>
+      <blockquote>
+        «أيها الملك، كنا قومًا أهل جاهلية، نعبد الأصنام، ونأكل الميتة، ونأتي الفواحش، ونقطع الأرحام،
+        ونُسيء الجوار، ويأكل القويّ منا الضعيف. فكنا على ذلك حتى بعث الله إلينا رسولًا منا نعرف نسبه
+        وصدقه وأمانته وعفافه، فدعانا إلى الله لنوحّده ونعبده، ونخلع ما كنا نعبد نحن وآباؤنا من دونه
+        من الحجارة والأوثان. وأمرنا بصدق الحديث، وأداء الأمانة، وصلة الرحم، وحسن الجوار،
+        والكف عن المحارم والدماء...»
+      </blockquote>
+      <p>
+        ثم سأله النجاشي: هل معك مما جاء به عن الله من شيء؟ فقرأ جعفر صدر سورة مريم:
+        ﴿كهيعص * ذِكْرُ رَحْمَتِ رَبِّكَ عَبْدَهُ زَكَرِيَّا...﴾ — فبكى النجاشي حتى اخضلّت لحيته،
+        وبكت أساقفته حتى أخضلوا مصاحفهم. ثم قال:
+      </p>
+      <blockquote>
+        «إن هذا والذي جاء به عيسى ليخرج من مشكاة واحدة. انطلقا، فلا والله لا أسلّمهم إليكما.»
+      </blockquote>
+      <div class="connection">
+        <span class="connection-label">لماذا سورة مريم تحديدًا؟</span>
+        <p>
+          اختار جعفر سورة مريم وليس أي سورة أخرى — لأنها تتحدث عن عيسى ومريم بتكريم عظيم
+          أمام ملك نصراني يعظّمهما. هذا الذكاء في اختيار الخطاب المناسب للجمهور المناسب درس
+          في فقه الدعوة. النجاشي نفسه سيُسلم لاحقًا وسيصلي عليه النبي ﷺ صلاة الغائب عند وفاته.
+        </p>
+      </div>
+
+      <h3>محاولة قريش الثانية — ورقة عيسى</h3>
+      <p>
+        في اليوم التالي عاد عمرو بن العاص بخطة ماكرة: أخبر النجاشي أن هؤلاء المسلمين يقولون في
+        عيسى بن مريم قولًا عظيمًا — يريد استفزاز النجاشي بموقف الإسلام من ألوهية المسيح.
+        استدعى النجاشي المسلمين وسألهم: ما تقولون في عيسى بن مريم؟
+      </p>
+      <p>فأجاب جعفر بلا تردد:</p>
+      <blockquote>
+        «نقول فيه الذي جاء به نبيّنا ﷺ: هو عبد الله ورسوله وروحه وكلمته ألقاها إلى مريم العذراء البتول.»
+      </blockquote>
+      <p>
+        فأخذ النجاشي عودًا من الأرض وقال: «والله ما عدا عيسى ابن مريم ما قلتَ هذا العود».
+        فتناخرت بطارقته (أبدوا استياءهم)، فقال: <strong>وإن تناخرتم!</strong>
+      </p>
+      <div class="insight">
+        <span class="insight-label">الصدق فوق المجاملة</span>
+        <p>
+          كان بإمكان جعفر أن يجامل النجاشي ويسكت عن موقف الإسلام من عيسى — لكنه قال الحق كاملًا
+          أمام ملك نصراني في بلاطه. المفارقة أن هذا الصدق هو ما زاد النجاشي يقينًا بصدقهم.
+          الدرس: الحق يُقال كاملًا ولا يُجزَّأ حسب الجمهور، والصدق أقوى أدوات الإقناع.
+        </p>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. دار الأرقم أول مؤسسة</h4>
+          <p>بيت على الصفا تحوّل إلى مركز تعليمي سري — التربية أساس كل بناء.</p>
+        </article>
+        <article class="card">
+          <h4>٢. الهجرة الأولى رجب ٥ هـ.ق</h4>
+          <p>١٢ رجلًا و٤ نسوة بقيادة عثمان — أول خروج منظم لحماية المسلمين.</p>
+        </article>
+        <article class="card">
+          <h4>٣. الهجرة الثانية أكبر بكثير</h4>
+          <p>٨٣ رجلًا و١٨ امرأة بقيادة جعفر — حركة جماعية تكشف حجم الأزمة في مكة.</p>
+        </article>
+        <article class="card">
+          <h4>٤. النجاشي حمى المسلمين</h4>
+          <p>رفض تسليمهم لقريش رغم الهدايا والضغوط — العدل يتجاوز حدود الدين.</p>
+        </article>
+        <article class="card">
+          <h4>٥. خطبة جعفر نموذج دعوي</h4>
+          <p>وصف الجاهلية ثم الإسلام ثم تلاوة القرآن — بنية خطابية محكمة وسورة مناسبة للجمهور.</p>
+        </article>
+        <article class="card">
+          <h4>٦. تمهيد لما بعدها</h4>
+          <p>هذه التجربة مهّدت لهجرة أكبر — إلى المدينة — حيث سيُبنى مجتمع ودولة.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch9-score">٠ / ٢٠</span>
+      </div>
+      <div id="ch9-quiz-container"></div>
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch9-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+  (function(){
+    const toArabicNum=n=>n.toString().replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+    const sections=[
+      {title:'دار الأرقم والسابقون الأولون',questions:[
+        {t:'موقع دار الأرقم',q:'أين كانت تقع دار الأرقم بن أبي الأرقم؟',o:['في وادي بطن مكة','على جبل الصفا','في حي بني هاشم','قرب بئر زمزم'],a:1},
+        {t:'قبيلة الأرقم',q:'إلى أي بطن من بطون قريش ينتمي الأرقم بن أبي الأرقم؟',o:['بنو هاشم','بنو أمية','بنو مخزوم','بنو عبد الدار'],a:2},
+        {t:'وظيفة الدار',q:'ما الوظيفة الرئيسة لدار الأرقم في المرحلة السرية؟',o:['مخزن للأسلحة','مركز لتعليم القرآن وتربية المسلمين','مكان لاجتماعات قريش','سوق تجاري سري'],a:1},
+        {t:'أول من آمن',q:'من أول من آمن مطلقًا بالنبي ﷺ؟',o:['أبو بكر الصديق','خديجة بنت خويلد','علي بن أبي طالب','زيد بن حارثة'],a:1},
+        {t:'أول من آمن من الموالي',q:'من أول من آمن من الموالي؟',o:['بلال بن رباح','عمار بن ياسر','زيد بن حارثة','صهيب الرومي'],a:2}
+      ]},
+      {title:'الهجرة الأولى إلى الحبشة',questions:[
+        {t:'توقيت الهجرة الأولى',q:'متى كانت الهجرة الأولى إلى الحبشة؟',o:['السنة الثالثة من البعثة','شهر رجب من السنة الخامسة للبعثة','السنة السابعة من البعثة','السنة العاشرة من البعثة'],a:1},
+        {t:'قائد الهجرة الأولى',q:'مَن قاد الهجرة الأولى إلى الحبشة؟',o:['جعفر بن أبي طالب','أبو بكر الصديق','عثمان بن عفان','حمزة بن عبد المطلب'],a:2},
+        {t:'عدد المهاجرين',q:'كم كان عدد المهاجرين في الهجرة الأولى تقريبًا؟',o:['٥ رجال فقط','١٢ رجلًا و٤ نسوة','٨٣ رجلًا و١٨ امرأة','٤٠ رجلًا و١٠ نسوة'],a:1},
+        {t:'سبب اختيار الحبشة',q:'لماذا اختار النبي ﷺ الحبشة تحديدًا للهجرة؟',o:['لأنها أقرب بلد إلى مكة','لأن فيها ملكًا عادلًا لا يُظلم عنده أحد','لأن أهلها مسلمون','لأن فيها أقارب للنبي ﷺ'],a:1},
+        {t:'ميناء الانطلاق',q:'من أي ميناء أبحر المهاجرون الأوائل إلى الحبشة؟',o:['ميناء جدة','ميناء شُعَيبة','ميناء ينبع','ميناء عدن'],a:1}
+      ]},
+      {title:'الهجرة الثانية والمواجهة',questions:[
+        {t:'قائد الهجرة الثانية',q:'مَن قاد الهجرة الثانية (الكبرى) إلى الحبشة؟',o:['عثمان بن عفان','جعفر بن أبي طالب','عمر بن الخطاب','مصعب بن عمير'],a:1},
+        {t:'عدد الهجرة الثانية',q:'كم بلغ عدد المهاجرين في الهجرة الثانية؟',o:['١٢ رجلًا و٤ نسوة','٤٠ رجلًا و١٠ نسوة','٨٣ رجلًا و١٨ امرأة','١٠٠ رجل و٣٠ امرأة'],a:2},
+        {t:'وفد قريش',q:'مَن أرسلته قريش إلى النجاشي لاسترداد المهاجرين؟',o:['أبو سفيان وعتبة بن ربيعة','عمرو بن العاص وعبد الله بن أبي ربيعة','أبو جهل والوليد بن المغيرة','خالد بن الوليد وعكرمة بن أبي جهل'],a:1},
+        {t:'خطة وفد قريش',q:'ما كانت خطة وفد قريش للضغط على النجاشي؟',o:['تهديده بالحرب','رشوة البطارقة أولًا ثم إقناع النجاشي بأنهم سفهاء','اختطاف المسلمين سرًّا','عرض تحالف تجاري مقابل التسليم'],a:1},
+        {t:'حجة عمرو بن العاص',q:'بماذا حاجج عمرو بن العاص النجاشي ضد المسلمين؟',o:['أنهم يخططون لانقلاب','أنهم سفهاء فارقوا دين آبائهم ولم يدخلوا في دينه','أنهم سرقوا أموال قريش','أنهم جواسيس لفارس'],a:1}
+      ]},
+      {title:'خطبة جعفر ونتائج المواجهة',questions:[
+        {t:'بداية خطبة جعفر',q:'بماذا بدأ جعفر خطبته أمام النجاشي؟',o:['بمدح النجاشي وملكه','بوصف حال العرب في الجاهلية قبل الإسلام','بتلاوة سورة الفاتحة','بالتهديد بأن الله سينتقم'],a:1},
+        {t:'سورة مريم',q:'ما السورة التي قرأها جعفر أمام النجاشي؟',o:['سورة البقرة','سورة الفاتحة','سورة مريم','سورة يوسف'],a:2},
+        {t:'ردّ النجاشي الأول',q:'ماذا قال النجاشي بعد سماع تلاوة جعفر من سورة مريم؟',o:['هذا سحر مبين','إن هذا والذي جاء به عيسى ليخرج من مشكاة واحدة','أخرجوهم من بلادي','سأفكر في الأمر'],a:1},
+        {t:'ورقة عيسى',q:'ما الحيلة الثانية التي استخدمها عمرو بن العاص ضد المسلمين؟',o:['ادّعى أنهم جواسيس','أخبر النجاشي أنهم يقولون في عيسى قولًا مخالفًا للنصرانية','قدّم هدايا أكبر','هدد بقطع التجارة'],a:1},
+        {t:'موقف جعفر من عيسى',q:'ماذا قال جعفر عن عيسى عليه السلام أمام النجاشي؟',o:['هو إله كما تعتقدون','لا نعرف عنه شيئًا','هو عبد الله ورسوله وروحه وكلمته ألقاها إلى مريم','هو نبي عادي فقط'],a:2}
+      ]}
+    ];
+    function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+    const totalQ=sections.reduce((s,sec)=>s+sec.questions.length,0);
+    let correct=0,answered=0;
+    const scoreEl=document.getElementById('ch9-score'),container=document.getElementById('ch9-quiz-container'),retryBtn=document.getElementById('ch9-retry');
+    function updateScore(){scoreEl.textContent=toArabicNum(correct)+' / '+toArabicNum(totalQ)}
+    function buildQuiz(){
+      correct=0;answered=0;container.innerHTML='';retryBtn.style.display='none';updateScore();
+      let qNum=0;
+      sections.forEach(function(sec,sIdx){
+        const details=document.createElement('details');details.className='quiz-section-block';if(sIdx===0)details.open=true;
+        const summary=document.createElement('summary');summary.innerHTML=sec.title+'<span class="q-arrow">&#x276F;</span>';details.appendChild(summary);
+        const body=document.createElement('div');body.className='q-section-body';
+        var qs=sec.questions.slice();shuffle(qs);
+        qs.forEach(function(item){
+          qNum++;
+          var card=document.createElement('article');card.className='q-card';
+          var h=document.createElement('h4');h.textContent='سؤال '+toArabicNum(qNum)+': '+item.t;card.appendChild(h);
+          var p=document.createElement('p');p.textContent=item.q;card.appendChild(p);
+          var optsDiv=document.createElement('div');optsDiv.className='q-opts';
+          var fb=document.createElement('div');fb.className='q-feedback';
+          var indices=item.o.map(function(_,i){return i});shuffle(indices);
+          indices.forEach(function(origIdx){
+            var btn=document.createElement('button');btn.textContent=item.o[origIdx];
+            btn.addEventListener('click',function(){
+              if(card.dataset.done)return;card.dataset.done='1';answered++;
+              optsDiv.querySelectorAll('button').forEach(function(b){b.classList.add('q-off')});
+              optsDiv.querySelectorAll('button').forEach(function(b,bIdx){if(indices[bIdx]===item.a)b.classList.add('q-correct')});
+              if(origIdx===item.a){btn.classList.add('q-correct');fb.textContent='إجابة صحيحة!';fb.className='q-feedback q-correct';correct++}
+              else{btn.classList.add('q-wrong');fb.textContent='إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';fb.className='q-feedback q-wrong'}
+              updateScore();if(answered===totalQ)retryBtn.style.display='inline-block';
+            });optsDiv.appendChild(btn);
+          });
+          card.appendChild(optsDiv);card.appendChild(fb);body.appendChild(card);
+        });
+        details.appendChild(body);container.appendChild(details);
+      });
+    }
+    retryBtn.addEventListener('click',function(){buildQuiz();document.getElementById('quiz-root').scrollIntoView({behavior:'smooth'})});
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>أُعِدَّ الملخص استنادًا إلى فصل «دار الأرقم والهجرة إلى الحبشة» من كتاب «الرحيق المختوم»</footer>
+
+</body>
+</html>

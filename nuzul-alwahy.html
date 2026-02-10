@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نزول الوحي والدعوة السرية — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .breadcrumb a:hover {
+      background: var(--gold-pale);
+      color: var(--navy);
+    }
+    .breadcrumb .sep {
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+    .breadcrumb .current {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
+    }
+
+    /* SECTIONS */
+    section { margin-bottom: 1.5rem; }
+    h2 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--text);
+      text-align: justify;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    /* LISTS */
+    ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+    ul li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+    }
+
+    /* VISUAL GRID */
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .visual-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .visual-icon { font-size: 2rem; margin-bottom: 0.4rem; display: block; }
+    .visual-title { font-weight: 600; margin: 0 0 0.35rem; color: var(--navy); }
+    .visual-text { margin: 0; color: var(--text-light); line-height: 1.5; font-size: 0.95rem; }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow);
+    }
+    .card h4 { margin: 0 0 0.4rem; color: var(--navy); font-size: 1rem; font-weight: 700; }
+    .card p { margin: 0; font-size: 0.95rem; color: var(--text-light); }
+
+    /* FLOW TIMELINE */
+    .flowline {
+      border-right: 3px solid var(--gold-light);
+      margin-top: 1.3rem;
+      padding-right: 1.3rem;
+    }
+    .flow-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover { box-shadow: 0 8px 20px var(--shadow); }
+    .flow-item::before {
+      content: "";
+      position: absolute;
+      right: -1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px; height: 14px;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .flow-title { margin: 0; color: var(--navy); font-weight: 600; }
+    .flow-text { margin: 0.3rem 0 0; font-size: 0.95rem; color: var(--text-light); line-height: 1.6; }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+    }
+    .tribe-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tribe-table tr:hover td { background: var(--gold-pale); }
+
+    /* INSIGHT / CONNECTION */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .insight p { margin: 0; font-size: 0.95rem; color: var(--text); line-height: 1.75; }
+
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .connection p { margin: 0; font-size: 0.95rem; color: var(--text); line-height: 1.75; }
+
+    /* PERSON LINK */
+    a.person-link {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 0.05rem;
+    }
+    a.person-link:hover { color: var(--navy); border-bottom-color: var(--navy); }
+
+    /* QUIZ */
+    .quiz-wrapper { margin-top: 3rem; padding-top: 2.5rem; border-top: 2px solid var(--gold-light); }
+    .quiz-wrapper > h2 { text-align: center; border-right: none; padding-right: 0; font-size: 1.6rem; margin-bottom: 0.3rem; }
+    .quiz-intro { text-align: center; color: var(--text-light); font-size: 0.92rem; margin: 0 auto 1.5rem; max-width: 600px; }
+    .quiz-score-bar {
+      background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 12px var(--shadow);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .quiz-score-bar span { font-size: 0.9rem; color: var(--text-light); font-weight: 500; }
+    .quiz-score-bar .q-score { font-family: 'Amiri', serif; font-size: 1.15rem; color: var(--navy); font-weight: 700; }
+    .quiz-section-block {
+      background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+      margin-bottom: 1rem; box-shadow: 0 4px 24px var(--shadow); overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer; padding: 1rem 1.4rem; font-weight: 700; font-size: 1.02rem; color: var(--navy);
+      display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow { transition: transform 0.3s; font-size: 0.8rem; color: var(--text-light); }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body { padding: 0 1.4rem 1.4rem; }
+    .q-card { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 1.15rem 1.3rem; margin-top: 0.9rem; }
+    .q-card h4 { margin: 0 0 0.35rem; color: var(--navy); font-size: 0.95rem; font-weight: 700; }
+    .q-card p { margin: 0 0 0.75rem; font-size: 0.92rem; color: var(--text); text-align: right; }
+    .q-opts { display: flex; flex-direction: column; gap: 0.45rem; }
+    .q-opts button {
+      border: 1px solid var(--border); background: var(--white); border-radius: 10px;
+      padding: 0.65rem 1rem; font-size: 0.92rem; font-family: 'Tajawal', sans-serif;
+      text-align: right; cursor: pointer; transition: all 0.2s; color: var(--text);
+    }
+    .q-opts button:hover { background: var(--gold-pale); border-color: var(--gold-light); }
+    .q-opts button.q-correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 600; }
+    .q-opts button.q-wrong { border-color: #c53030; background: #fde8e8; color: #c53030; }
+    .q-opts button.q-off { pointer-events: none; opacity: 0.6; }
+    .q-feedback { margin-top: 0.5rem; font-weight: 700; font-size: 0.86rem; min-height: 1.3em; }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap { text-align: center; margin-top: 1.5rem; }
+    .quiz-retry-btn {
+      display: inline-block; background: var(--navy); color: #fff; border: none; border-radius: 10px;
+      padding: 0.75rem 2.2rem; font-size: 1rem; font-family: 'Tajawal', sans-serif;
+      font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover { background: #14293f; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { text-align: center; color: var(--text-light); font-size: 0.82rem; border-top: 1px solid var(--border); padding: 2rem 1.5rem; margin-top: 3rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>نزول الوحي والدعوة السرية</h1>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">نزول الوحي والدعوة السرية</span>
+  </nav>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section>
+      <h2>لماذا هذا الفصل هو لحظة التحول الكبرى؟</h2>
+      <p>
+        كل ما قرأته حتى الآن — الجغرافيا، القبائل، المجتمع الجاهلي، النسب الشريف — كان تمهيدًا
+        لهذه اللحظة: ليلة في غار حراء تغيّر بعدها تاريخ البشرية. المباركفوري يصف هنا كيف بدأ الوحي،
+        وكيف تلقّى النبي ﷺ أول كلمات القرآن، وكيف انطلقت الدعوة سرًّا ثلاث سنوات كاملة
+        بُني فيها الأساس الذي حمل كل ما جاء بعده.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح القراءة</span>
+        <p>
+          ركّز على «الترتيب»: لماذا بدأ بـ«اقرأ» وليس بـ«قاتل» أو «احكم»؟ لماذا ثلاث سنوات
+          سرًّا قبل الجهر؟ لماذا فُتر الوحي ثم عاد؟ كل خطوة في هذا الفصل منهج تربوي ستراه
+          يتكرر في بناء أي حركة إصلاحية ناجحة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ إرهاصات النبوة ═══════ -->
+
+    <section>
+      <h2>إرهاصات النبوة — تهيئة النفس للمهمة</h2>
+      <p>
+        لم يأتِ الوحي فجأة دون مقدمات. هيّأ الله نبيّه ﷺ تدريجيًّا حتى تكون نفسه مستعدة
+        لتحمّل ثقل الرسالة:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">الرؤيا الصادقة</p>
+          <p class="flow-text">
+            بدأ النبي ﷺ يرى رؤى في المنام تتحقق كفلق الصبح — واضحة لا لبس فيها.
+            استمرت هذه المرحلة ستة أشهر، وهي نصف سنة من سنوات الوحي الـ٢٣.
+            لذا قالت عائشة: «أول ما بُدئ به رسول الله ﷺ من الوحي الرؤيا الصالحة».
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">حبّ الخلوة والتأمل</p>
+          <p class="flow-text">
+            حُبِّب إليه ﷺ الخلاء، فكان يأخذ طعامه ويصعد إلى <strong>غار حراء</strong>
+            في جبل النور (شمال مكة) يتحنّث فيه — أي يتعبّد — الليالي ذوات العدد.
+            كان يبتعد عن ضجيج مكة ووثنيتها ليتأمل في خلق السماوات والأرض.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">تسليم الحجر والشجر</p>
+          <p class="flow-text">
+            روى مسلم أن النبي ﷺ قال: «إني لأعرف حجرًا بمكة كان يسلّم عليّ قبل أن أُبعث».
+            إشارات خارقة بدأت تحيط به قبل نزول الوحي تؤكّد أن شيئًا عظيمًا يقترب.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">المنهج التربوي</span>
+        <p>
+          التدرّج هو القاعدة: رؤيا ← خلوة ← إشارات كونية ← ثم الوحي الكامل. الله لا يُلقي
+          المهمة دفعة واحدة بل يُعدّ صاحبها نفسيًّا وروحيًّا. هذا التدرّج نفسه ستراه في تحريم الخمر
+          وفي تشريع الصلاة وفي مراحل الجهاد — نمط قرآني ثابت.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ ليلة غار حراء ═══════ -->
+
+    <section>
+      <h2>ليلة غار حراء — «اقرأ»</h2>
+      <p>
+        في رمضان، والنبي ﷺ في الأربعين من عمره، جاءه جبريل عليه السلام في الغار.
+        ما حدث في تلك الليلة رواه النبي ﷺ بنفسه ونقلته عائشة في أصحّ الروايات:
+      </p>
+      <ul>
+        <li><strong>الضمّة الأولى:</strong> قال جبريل: «اقرأ». قال النبي ﷺ: «ما أنا بقارئ». فأخذه جبريل فغطّه (ضمّه بشدة) حتى بلغ منه الجهد، ثم أرسله.</li>
+        <li><strong>الضمّة الثانية:</strong> قال: «اقرأ». قال: «ما أنا بقارئ». فغطّه الثانية حتى بلغ منه الجهد، ثم أرسله.</li>
+        <li><strong>الضمّة الثالثة:</strong> قال: «اقرأ». قال: «ما أنا بقارئ». فغطّه الثالثة ثم أرسله فقال: ﴿اقرأ باسم ربك الذي خلق · خلق الإنسان من علق · اقرأ وربك الأكرم · الذي علّم بالقلم · علّم الإنسان ما لم يعلم﴾.</li>
+      </ul>
+      <div class="insight">
+        <span class="insight-label">لماذا «اقرأ» وليس كلمة أخرى؟</span>
+        <p>
+          أول كلمة في الرسالة الخاتمة ليست «قاتل» ولا «احكم» ولا «تاجر» — بل «اقرأ».
+          والنبي ﷺ أمّي لا يقرأ ولا يكتب، فالأمر ليس قراءة كتاب بل قراءة باسم الله —
+          أي: افهم الكون من خلال الله. هذا يؤسّس لأن الإسلام رسالة علم وتعلّم قبل كل شيء.
+          وسورة العلق التي نزلت أولًا ذكرت «القلم» و«العلم» — رسالة واضحة عن أولوية المعرفة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الرجوع إلى خديجة ═══════ -->
+
+    <section>
+      <h2>الرجوع إلى خديجة — أول مَن آمنت</h2>
+      <p>
+        نزل النبي ﷺ من الغار وفؤاده يرجف. ذهب إلى
+        <a class="person-link" href="persons.html">خديجة بنت خويلد</a>
+        رضي الله عنها فقال: «زمّلوني زمّلوني!» فزمّلته حتى ذهب عنه الروع. ثم أخبرها الخبر
+        وقال: «لقد خشيتُ على نفسي». فقالت خديجة كلمتها الخالدة:
+      </p>
+      <div class="insight">
+        <span class="insight-label">كلمة خديجة التاريخية</span>
+        <p>
+          «كلّا والله، لا يخزيك الله أبدًا. إنك لتصل الرحم، وتحمل الكَلّ، وتُكسب المعدوم،
+          وتَقري الضيف، وتُعين على نوائب الحق». استدلّت بأخلاقه على أن الله لن يُسلمه لشرّ.
+          هذا أعظم «اختبار شخصية» في التاريخ: زوجة تعرف زوجها ٢٥ سنة وتشهد له بصدق فطرته.
+        </p>
+      </div>
+      <p>
+        ثم انطلقت به خديجة إلى ابن عمها
+        <a class="person-link" href="persons.html">ورقة بن نوفل</a>
+        — وكان شيخًا كبيرًا قد تنصّر وكان يكتب الإنجيل بالعبرية. فلما سمع ورقة ما حدث قال:
+        «هذا الناموس الذي أنزل الله على موسى!» — أي جبريل. ثم قال: «يا ليتني فيها جَذَعًا
+        (شابًّا)، ليتني أكون حيًّا إذ يُخرجك قومك». فتعجّب النبي ﷺ: «أوَمُخرجيّ هم؟» قال:
+        «نعم، لم يأتِ رجل قط بمثل ما جئتَ به إلا عُودي».
+      </p>
+      <div class="connection">
+        <span class="connection-label">نبوءة ورقة تتحقق</span>
+        <p>
+          كلمة ورقة «يُخرجك قومك» ستتحقق حرفيًّا بعد ١٣ سنة في الهجرة إلى المدينة.
+          والنبي ﷺ سيخرج من مكة وهو يلتفت إليها ويقول: «والله إنك لأحبّ أرض الله إليّ،
+          ولولا أن أهلك أخرجوني منك ما خرجت». تذكّر هذه النبوءة عندما تصل لفصل الهجرة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ فترة الوحي ═══════ -->
+
+    <section>
+      <h2>فترة الوحي — الصمت الذي علّم الشوق</h2>
+      <p>
+        بعد نزول الآيات الأولى انقطع الوحي فترة — اختلف العلماء في مدتها لكنها كانت كافية
+        لتُحدث في النبي ﷺ حزنًا وشوقًا شديدين. كان يذهب إلى رؤوس الجبال يتطلّع إلى
+        السماء ينتظر جبريل.
+      </p>
+      <div class="insight">
+        <span class="insight-label">حكمة الفترة</span>
+        <p>
+          هذا الانقطاع المؤقت حقّق ثلاثة أشياء: أزال الرعب الأول وأعاد للنبي ﷺ هدوءه النفسي،
+          وزرع فيه الشوق العميق للوحي فلا يعود يخشاه بل يتوق إليه، وأكّد أن الوحي ليس من ذاته
+          بل من خارجه — لو كان يتخيّل لما انقطع.
+        </p>
+      </div>
+      <p>
+        ثم جاء جبريل مرة أخرى فنزلت سورة المدّثّر: ﴿يا أيها المدّثّر · قم فأنذر · وربّك فكبّر ·
+        وثيابك فطهّر · والرجز فاهجر﴾. هذه الآيات حملت الأمر بالإنذار — انتقل النبي ﷺ من
+        «اقرأ لنفسك» إلى «قم فأنذر غيرك». بدأت المهمة رسميًّا.
+      </p>
+      <div class="connection">
+        <span class="connection-label">المدّثّر = بداية التكليف</span>
+        <p>
+          بعض العلماء يعتبرون العلق بداية النبوة (معرفة) والمدّثّر بداية الرسالة (تكليف بالتبليغ).
+          هذا التمييز بين النبوة والرسالة ستجده عند ابن تيمية وغيره — وفهمه يوضّح لماذا
+          كان هناك فاصل زمني بين السورتين.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ أوائل المسلمين ═══════ -->
+
+    <section>
+      <h2>السابقون الأولون — مَن آمن في الأيام الأولى؟</h2>
+      <p>
+        بدأ النبي ﷺ يدعو مَن يثق بهم من أهله وأصحابه سرًّا. أوائل مَن استجاب يمثّلون
+        شريحة متنوعة من المجتمع — وهذا بحد ذاته رسالة:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F49A;</span>
+          <p class="visual-title">خديجة بنت خويلد</p>
+          <p class="visual-text">أول مَن آمن مطلقًا. سيّدة قريش وسند النبي ﷺ المادي والمعنوي طوال المرحلة المكية.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F466;</span>
+          <p class="visual-title">علي بن أبي طالب</p>
+          <p class="visual-text">أول مَن آمن من الصبيان. كان في العاشرة تقريبًا يعيش في كنف النبي ﷺ.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F9D4;</span>
+          <p class="visual-title">أبو بكر الصديق</p>
+          <p class="visual-text">أول مَن آمن من الرجال الأحرار البالغين. صدّق فورًا دون تردد — ولذلك لُقّب بالصدّيق.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x26D3;&#xFE0F;</span>
+          <p class="visual-title">زيد بن حارثة</p>
+          <p class="visual-text">أول مَن آمن من الموالي. كان مولى النبي ﷺ ثم تبنّاه قبل إلغاء التبنّي.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">الرسالة في التنوع</span>
+        <p>
+          لاحظ: امرأة (خديجة)، وصبي (علي)، ورجل حر من الأشراف (أبو بكر)، ومولى (زيد).
+          من اليوم الأول أعلن الإسلام أنه ليس حكرًا على فئة — بل لكل إنسان بصرف النظر عن
+          جنسه أو عمره أو طبقته الاجتماعية. هذا يكسر كل ما قرأته عن الطبقية في فصل المجتمع الجاهلي.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ دور أبي بكر ═══════ -->
+
+    <section>
+      <h2>أبو بكر — محرّك الدعوة السرية</h2>
+      <p>
+        <a class="person-link" href="persons.html">أبو بكر الصديق</a> لم يكتفِ بالإيمان بل
+        تحوّل إلى داعية نشط. كان تاجرًا محبوبًا ذا علاقات واسعة في قريش، فاستغلّ شبكته
+        الاجتماعية لنشر الدعوة. أسلم على يديه مجموعة ستصبح من أعظم أسماء الإسلام:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>الاسم</th>
+            <th>البطن القرشي</th>
+            <th>ستقابله في...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>عثمان بن عفان</strong></td>
+            <td>بنو أمية (عبد شمس)</td>
+            <td>ثالث الخلفاء الراشدين، ذو النورين</td>
+          </tr>
+          <tr>
+            <td><strong>الزبير بن العوام</strong></td>
+            <td>بنو أسد بن عبد العزى</td>
+            <td>حواريّ النبي ﷺ، من العشرة المبشرين</td>
+          </tr>
+          <tr>
+            <td><strong>عبد الرحمن بن عوف</strong></td>
+            <td>بنو زهرة</td>
+            <td>من العشرة المبشرين، أغنى الصحابة</td>
+          </tr>
+          <tr>
+            <td><strong>سعد بن أبي وقاص</strong></td>
+            <td>بنو زهرة</td>
+            <td>أول مَن رمى بسهم في سبيل الله، فاتح فارس</td>
+          </tr>
+          <tr>
+            <td><strong>طلحة بن عبيد الله</strong></td>
+            <td>بنو تيم</td>
+            <td>من العشرة المبشرين، بطل أُحد</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="connection">
+        <span class="connection-label">خمسة من العشرة المبشرين!</span>
+        <p>
+          خمسة من العشرة المبشرين بالجنة أسلموا بسبب أبي بكر وحده. هذا يوضّح لماذا قال النبي ﷺ:
+          «ما دعوتُ أحدًا إلى الإسلام إلا كانت فيه عنده كبوة وتردّد ونظر إلا أبا بكر».
+          وسيظل أبو بكر هو الذراع الأيمن في كل محطة: الهجرة، بدر، وفاة النبي ﷺ، والخلافة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الدعوة السرية ═══════ -->
+
+    <section>
+      <h2>ثلاث سنوات في الخفاء — لماذا السرّية؟</h2>
+      <p>
+        استمرت الدعوة سرًّا نحو ثلاث سنوات. لم يكن هذا خوفًا بل حكمة. فالنبي ﷺ كان يبني
+        نواة صلبة قبل المواجهة المفتوحة مع أقوى قوة في الجزيرة:
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>بناء القاعدة الصلبة</h4>
+          <p>المرحلة السرية أنتجت جيلًا مؤمنًا إيمانًا عميقًا — لا إيمان جماهير سطحي بل إيمان أفراد مختارين صُنعوا على عين الله.</p>
+        </article>
+        <article class="card">
+          <h4>التربية قبل المواجهة</h4>
+          <p>هؤلاء الأوائل تربّوا على القرآن المكي آية آية. صار إيمانهم راسخًا قبل أن تأتي الضربات — فلم تزعزعهم.</p>
+        </article>
+        <article class="card">
+          <h4>تجنّب الإبادة المبكرة</h4>
+          <p>لو واجه النبي ﷺ قريشًا من اليوم الأول بعشرة أتباع لسحقتهم. السرّية أتاحت للعدد أن ينمو حتى لا يمكن تجاهله.</p>
+        </article>
+        <article class="card">
+          <h4>اختراق كل الطبقات</h4>
+          <p>خلال ثلاث سنوات دخل الإسلام كل طبقات المجتمع: أشراف وعبيد ورجال ونساء وشباب — فلم يعد ممكنًا وصفه بحركة فئوية.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">درس استراتيجي</span>
+        <p>
+          السرّية ليست ضعفًا — بل تخطيط. كل حركة إصلاح ناجحة في التاريخ بدأت بمرحلة بناء
+          داخلي قبل الإعلان. النبي ﷺ لم يكن يختبئ بل كان يبني. الفرق كبير.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ دار الأرقم ═══════ -->
+
+    <section>
+      <h2>دار الأرقم بن أبي الأرقم — المقر السري</h2>
+      <p>
+        اتخذ النبي ﷺ دار <a class="person-link" href="persons.html">الأرقم بن أبي الأرقم</a>
+        المخزومي مقرًّا سريًّا للدعوة. كانت على جبل الصفا بعيدة عن أعين قريش. فيها كان
+        يجتمع بأصحابه ويعلّمهم القرآن ويصلّي بهم ويُربّيهم.
+      </p>
+      <ul>
+        <li><strong>الموقع:</strong> على جبل الصفا — مكان منعزل نسبيًّا عن مراكز قريش.</li>
+        <li><strong>صاحبها:</strong> الأرقم بن أبي الأرقم من بني مخزوم — نفس بطن أبي جهل! مما يدل على أن الإسلام اخترق حتى بطون الأعداء.</li>
+        <li><strong>وظيفتها:</strong> مدرسة ومسجد ومركز تنسيق — أول مؤسسة إسلامية في التاريخ.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">دار الأرقم ← المسجد النبوي</span>
+        <p>
+          ما كان يحدث في دار الأرقم من تعليم وصلاة واجتماع هو النواة التي ستتحول بعد الهجرة
+          إلى المسجد النبوي في المدينة — أول مؤسسة رسمية في الدولة الإسلامية. الفكرة نفسها
+          لكن على نطاق أوسع: مكان للعبادة والتعلم واتخاذ القرارات.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ أصناف المسلمين الأوائل ═══════ -->
+
+    <section>
+      <h2>أصناف المسلمين الأوائل — خريطة اجتماعية</h2>
+      <p>
+        بنهاية السنوات الثلاث كان عدد المسلمين قد تجاوز الأربعين. لكن الأهم من العدد هو
+        التنوع — فقد شمل الإسلام شرائح يستحيل أن تجتمع في الجاهلية على مشروع واحد:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F451;</span>
+          <p class="visual-title">أشراف قريش</p>
+          <p class="visual-text">أبو بكر، عثمان، طلحة، الزبير، سعد، عبد الرحمن — من أرقى البيوت وأغناها.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x26D3;&#xFE0F;</span>
+          <p class="visual-title">العبيد والموالي</p>
+          <p class="visual-text">بلال الحبشي، عمار بن ياسر وأمه سميّة، صهيب الرومي، خبّاب بن الأرتّ — الأكثر تعرضًا للتعذيب.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F469;</span>
+          <p class="visual-title">النساء</p>
+          <p class="visual-text">خديجة، فاطمة بنت الخطاب، أم الفضل زوجة العباس، سميّة بنت خيّاط — أول شهيدة في الإسلام.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F466;</span>
+          <p class="visual-title">الشباب والفتيان</p>
+          <p class="visual-text">علي بن أبي طالب، الأرقم بن أبي الأرقم، مصعب بن عمير — جيل الشباب الذي حمل الدعوة.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لماذا عُذّب الضعفاء أكثر؟</span>
+        <p>
+          قريش لم تستطع تعذيب أبي بكر أو عثمان لأن لهم قبائل تحميهم. لكن العبيد والموالي
+          لا قبيلة لهم — فكانوا هدفًا سهلًا. بلال كان يُلقى على الرمال المحرقة وتوضع الصخرة
+          على صدره وهو يقول: «أحَد، أحَد». هؤلاء دفعوا الثمن الأغلى وهم الأقل حظًّا في
+          المجتمع الجاهلي — وهذا بالضبط ما جعل الإسلام ثورة اجتماعية حقيقية.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ القرآن المكي ═══════ -->
+
+    <section>
+      <h2>القرآن المكي — ماذا كان يُعلّمهم؟</h2>
+      <p>
+        السور التي نزلت في هذه المرحلة (القرآن المكي المبكر) لها طابع مميز يختلف تمامًا عن
+        القرآن المدني. ركّزت على بناء العقيدة والإيمان:
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>التوحيد</h4>
+          <p>إثبات وجود الله ووحدانيته ونفي الشرك. آيات قصيرة قوية تهزّ الوجدان: ﴿قل هو الله أحد﴾.</p>
+        </article>
+        <article class="card">
+          <h4>اليوم الآخر</h4>
+          <p>تصوير مشاهد القيامة والجنة والنار بتفصيل حيّ يجعل السامع يشعر أنه يراها: سور القيامة والنبأ والتكوير.</p>
+        </article>
+        <article class="card">
+          <h4>قصص الأنبياء</h4>
+          <p>قصص عاد وثمود ونوح وإبراهيم — تحذير لقريش: أقوام أقوى منكم كذّبت فأُهلكت.</p>
+        </article>
+        <article class="card">
+          <h4>الأخلاق الأساسية</h4>
+          <p>الصدق والعدل ورعاية اليتيم والوفاء بالعهد — بناء إنسان جديد من الداخل قبل بناء مجتمع.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">المكي ← المدني</span>
+        <p>
+          القرآن المكي = عقيدة وأخلاق (بناء الإنسان). القرآن المدني = تشريع ونظام (بناء الدولة).
+          هذا الترتيب ليس مصادفة: الإسلام لم يبدأ بالقوانين بل بالإيمان — لأن القانون بلا إيمان
+          حبر على ورق. ستلاحظ هذا الفرق واضحًا عندما تقارن سور مكة القصيرة العاصفة
+          بسور المدينة الطويلة التفصيلية.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ نهاية المرحلة السرية ═══════ -->
+
+    <section>
+      <h2>نهاية المرحلة السرية — إلى أين بعد ذلك؟</h2>
+      <p>
+        بعد ثلاث سنوات من العمل السري صدر الأمر الإلهي بالجهر: ﴿فاصدع بما تؤمر وأعرض عن
+        المشركين﴾. كانت النواة جاهزة، والأساس متينًا، والنبي ﷺ مستعدًّا للمواجهة.
+        بدأت مرحلة جديدة ستكون أطول وأقسى — مرحلة الجهر بالدعوة ومواجهة قريش المفتوحة.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">السنة الأولى — نزول «اقرأ» وفترة الوحي</p>
+          <p class="flow-text">بدء الوحي في رمضان، ثم الفترة (انقطاع مؤقت)، ثم نزول «يا أيها المدثّر» وبدء التكليف.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">السنة الأولى — الثالثة: الدعوة الفردية</p>
+          <p class="flow-text">دعوة سرية بين المقربين والموثوقين. التعليم في دار الأرقم. نمو العدد إلى أكثر من أربعين.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">نهاية السنة الثالثة — أمر الجهر</p>
+          <p class="flow-text">﴿فاصدع بما تؤمر﴾ — وبدأ الفصل التالي: الدعوة العلنية وردّ فعل قريش العنيف.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section>
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. التدرّج الإلهي</h4>
+          <p>رؤيا ← خلوة ← وحي جزئي ← فترة ← وحي كامل ← دعوة سرية ← جهر. كل خطوة تبني على ما قبلها.</p>
+        </article>
+        <article class="card">
+          <h4>٢. «اقرأ» أولًا</h4>
+          <p>العلم والمعرفة قبل كل شيء — أول كلمة في الرسالة الخاتمة أمرٌ بالقراءة والتعلم.</p>
+        </article>
+        <article class="card">
+          <h4>٣. خديجة = السند الأول</h4>
+          <p>أول مَن آمن امرأة. ثبّتت النبي ﷺ في أصعب لحظة. بدون سندها لكانت البداية أقسى بكثير.</p>
+        </article>
+        <article class="card">
+          <h4>٤. أبو بكر = محرّك الدعوة</h4>
+          <p>خمسة من العشرة المبشرين أسلموا على يديه. لم ينتظر بل بادر — نموذج الداعية الأول.</p>
+        </article>
+        <article class="card">
+          <h4>٥. التنوع من اليوم الأول</h4>
+          <p>امرأة وصبي وشريف ومولى وعبد — الإسلام كسر حاجز الطبقية قبل أن يصبح دولة.</p>
+        </article>
+        <article class="card">
+          <h4>٦. السرّية = بناء لا ضعف</h4>
+          <p>ثلاث سنوات من التربية العميقة أنتجت جيلًا لا تزعزعه العواصف — وهذا ما سيثبت لاحقًا.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch7-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch7-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch7-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'إرهاصات النبوة وبدء الوحي',
+        questions: [
+          {
+            t: 'أول الوحي',
+            q: 'ما أول صور الوحي التي بُدئ بها النبي ﷺ قبل نزول جبريل؟',
+            o: ['سماع أصوات من السماء', 'الرؤيا الصادقة في المنام', 'رؤية نور في الغار', 'أحلام مزعجة متكررة'],
+            a: 1
+          },
+          {
+            t: 'غار حراء',
+            q: 'ماذا كان النبي ﷺ يفعل في غار حراء قبل البعثة؟',
+            o: ['يختبئ من أعدائه', 'يتحنّث (يتعبّد) ويتأمل بعيدًا عن وثنية مكة', 'يتاجر مع القوافل المارة', 'يعلّم الأطفال القراءة'],
+            a: 1
+          },
+          {
+            t: 'أول ما نزل',
+            q: 'ما أول آيات القرآن نزولًا؟',
+            o: ['﴿يا أيها المدثّر قم فأنذر﴾', '﴿بسم الله الرحمن الرحيم﴾', '﴿اقرأ باسم ربك الذي خلق﴾', '﴿قل هو الله أحد﴾'],
+            a: 2
+          },
+          {
+            t: 'الضمّات الثلاث',
+            q: 'ماذا فعل جبريل بالنبي ﷺ قبل أن يقرأ الآيات الأولى؟',
+            o: ['هزّ الغار ثلاث مرات', 'ضمّه (غطّه) ثلاث مرات حتى بلغ منه الجهد', 'لمس صدره ثلاث مرات', 'أشار إليه ثلاث مرات'],
+            a: 1
+          },
+          {
+            t: 'عمره عند البعثة',
+            q: 'كم كان عمر النبي ﷺ عند نزول الوحي؟',
+            o: ['ثلاثين سنة', 'خمسًا وثلاثين سنة', 'أربعين سنة', 'خمسًا وأربعين سنة'],
+            a: 2
+          }
+        ]
+      },
+      {
+        title: 'خديجة وورقة وفترة الوحي',
+        questions: [
+          {
+            t: 'ردّ فعل خديجة',
+            q: 'ماذا قالت خديجة عندما أخبرها النبي ﷺ بما حدث في الغار؟',
+            o: ['خافت وطلبت منه عدم العودة', 'طمأنته بأن الله لن يخزيه لأنه يصل الرحم ويحمل الكلّ', 'لم تصدّقه في البداية', 'أرسلته إلى طبيب'],
+            a: 1
+          },
+          {
+            t: 'ورقة بن نوفل',
+            q: 'ماذا قال ورقة بن نوفل عندما سمع ما حدث للنبي ﷺ؟',
+            o: ['هذا مرض يحتاج علاجًا', 'هذا الناموس (جبريل) الذي أنزل الله على موسى', 'هذا سحر من الجن', 'لا أعرف ما هذا'],
+            a: 1
+          },
+          {
+            t: 'نبوءة ورقة',
+            q: 'ماذا تنبّأ ورقة بن نوفل بشأن مصير النبي ﷺ مع قومه؟',
+            o: ['سيحبونه ويتبعونه فورًا', 'سيُخرجه قومه ويعادونه', 'سيصبح ملكًا على مكة', 'سيهاجر إلى الحبشة'],
+            a: 1
+          },
+          {
+            t: 'فترة الوحي',
+            q: 'ما الحكمة من انقطاع الوحي مؤقتًا بعد أول نزوله؟',
+            o: ['عقوبة للنبي ﷺ على تقصير', 'إزالة الرعب وزرع الشوق وإثبات أن الوحي ليس من ذاته', 'لم يكن هناك حكمة بل حدث عشوائيًّا', 'لأن جبريل كان مشغولًا'],
+            a: 1
+          },
+          {
+            t: 'سورة المدّثّر',
+            q: 'ما الذي أضافته سورة المدّثّر إلى التكليف النبوي؟',
+            o: ['أمرته بالقراءة فقط', 'أمرته بالإنذار والتبليغ — انتقل من المعرفة إلى الرسالة', 'أمرته بالهجرة فورًا', 'أمرته بالقتال'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'السابقون الأولون والدعوة السرية',
+        questions: [
+          {
+            t: 'أول المسلمين',
+            q: 'مَن أول مَن آمن بالنبي ﷺ مطلقًا؟',
+            o: ['أبو بكر الصديق', 'علي بن أبي طالب', 'خديجة بنت خويلد', 'زيد بن حارثة'],
+            a: 2
+          },
+          {
+            t: 'أبو بكر والدعوة',
+            q: 'كم من العشرة المبشرين بالجنة أسلموا على يد أبي بكر؟',
+            o: ['اثنان', 'ثلاثة', 'خمسة', 'سبعة'],
+            a: 2
+          },
+          {
+            t: 'دار الأرقم',
+            q: 'ما وظيفة دار الأرقم بن أبي الأرقم في المرحلة السرية؟',
+            o: ['مخزن للأسلحة', 'مقر سري للتعليم والصلاة والاجتماع', 'بيت للتجارة فقط', 'مكان لإيواء الفقراء'],
+            a: 1
+          },
+          {
+            t: 'بطن الأرقم',
+            q: 'من أي بطن قرشي كان الأرقم بن أبي الأرقم؟',
+            o: ['بنو هاشم', 'بنو أمية', 'بنو مخزوم — نفس بطن أبي جهل', 'بنو تيم'],
+            a: 2
+          },
+          {
+            t: 'مدة السرية',
+            q: 'كم استمرت مرحلة الدعوة السرية تقريبًا؟',
+            o: ['سنة واحدة', 'ثلاث سنوات', 'خمس سنوات', 'عشر سنوات'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'القرآن المكي ونهاية المرحلة',
+        questions: [
+          {
+            t: 'طابع القرآن المكي',
+            q: 'ما الموضوعات الرئيسية للقرآن المكي المبكر؟',
+            o: ['أحكام الزواج والطلاق والميراث', 'التوحيد واليوم الآخر وقصص الأنبياء والأخلاق', 'تنظيم الدولة والجيش والضرائب', 'أحكام التجارة والعقود'],
+            a: 1
+          },
+          {
+            t: 'الفرق المكي والمدني',
+            q: 'ما الفرق الجوهري بين القرآن المكي والمدني؟',
+            o: ['المكي أطول والمدني أقصر', 'المكي = عقيدة وأخلاق (بناء إنسان)، المدني = تشريع ونظام (بناء دولة)', 'لا فرق بينهما', 'المكي بالعربية والمدني بالعبرية'],
+            a: 1
+          },
+          {
+            t: 'آية الجهر',
+            q: 'ما الآية التي أمرت النبي ﷺ بالانتقال من السرية إلى الجهر؟',
+            o: ['﴿ادع إلى سبيل ربك بالحكمة﴾', '﴿فاصدع بما تؤمر وأعرض عن المشركين﴾', '﴿وأنذر عشيرتك الأقربين﴾', '﴿قم فأنذر﴾'],
+            a: 1
+          },
+          {
+            t: 'لماذا «اقرأ»؟',
+            q: 'لماذا كانت «اقرأ» أول كلمة في الرسالة رغم أن النبي ﷺ أمّي؟',
+            o: ['خطأ في الترتيب التاريخي', 'لأن المقصود القراءة باسم الله — أي فهم الكون من خلال الله، تأسيسًا لأولوية العلم', 'لأنه كان يعرف القراءة سرًّا', 'لاختبار طاعته فقط'],
+            a: 1
+          },
+          {
+            t: 'أول شهيدة',
+            q: 'مَن أول شهيدة في الإسلام؟',
+            o: ['خديجة بنت خويلد', 'فاطمة بنت الخطاب', 'سميّة بنت خيّاط أم عمار بن ياسر', 'أسماء بنت أبي بكر'],
+            a: 2
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch7-score');
+    const container = document.getElementById('ch7-quiz-container');
+    const retryBtn = document.getElementById('ch7-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «في غار حراء» و«الدعوة سرًّا» من كتاب «الرحيق المختوم»
+  </footer>
+
+</body>
+</html>

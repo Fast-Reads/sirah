@@ -3,175 +3,660 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>كتاب الرحيق المختوم</title>
+  <title>الرحيق المختوم — السيرة النبوية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      color-scheme: light;
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      background: #eef2f7;
-      color: #1d1d1d;
-      line-height: 1.8;
+      font-family: 'Tajawal', 'Segoe UI', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
     }
-    header {
-      background: linear-gradient(120deg, #0f4c75, #3282b8);
+
+    /* ── HEADER ── */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
       color: #fff;
-      padding: 3rem 1.5rem 4rem;
+      padding: 4rem 1.5rem 5rem;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-    header::after {
+    .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 100 100" opacity="0.05"%3E%3Ccircle cx="25" cy="25" r="25"/%3E%3C/svg%3E') repeat;
-      mix-blend-mode: screen;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
     }
-    header > * {
-      position: relative;
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
     }
-    main {
-      max-width: 1000px;
-      margin: 40px auto 60px;
-      padding: 0 1.5rem;
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.6rem;
     }
-    .panel {
-      background: #fff;
-      border-radius: 18px;
-      padding: 2.5rem;
-      box-shadow: 0 20px 55px rgba(15, 76, 117, 0.15);
-      margin-bottom: 2rem;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.4rem;
-      letter-spacing: 1px;
-    }
-    p.lead {
-      max-width: 700px;
-      margin: 1rem auto 0;
+    .hero .subtitle {
       font-size: 1.1rem;
-      color: #f0f5ff;
+      color: rgba(255,255,255,0.75);
+      max-width: 580px;
+      margin: 0 auto 1.5rem;
+      font-weight: 400;
     }
-    h2 {
-      color: #0f4c75;
-      margin-top: 0;
-      border-right: 5px solid #3282b8;
-      padding-right: 0.75rem;
-      display: inline-block;
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(184,134,11,0.15);
+      border: 1px solid rgba(184,134,11,0.3);
+      padding: 0.45rem 1.4rem;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      color: var(--gold-light);
     }
-    .sections-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    /* ── STICKY NAV ── */
+    .topnav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.25rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .topnav a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .topnav a:hover { background: var(--gold-pale); color: var(--navy); }
+    .topnav a.active-link { background: var(--navy); color: #fff; }
+    .topnav .nav-sep {
+      width: 1px;
+      background: var(--border);
+      margin: 0.3rem 0.2rem;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      display: flex;
       gap: 1.5rem;
-      margin-top: 1.5rem;
+      align-items: flex-start;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 24px var(--shadow);
     }
-    .section-card {
-      background: linear-gradient(135deg, #f7fbff, #e0f2ff);
-      border: 1px solid #d0e6ff;
-      border-radius: 16px;
-      padding: 1.75rem;
+    .about-icon {
+      width: 56px; height: 56px;
+      background: var(--gold-pale);
+      border: 2px solid var(--gold-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+      font-size: 1.5rem;
+    }
+    .about h2 {
+      font-family: 'Amiri', serif;
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .about p { color: var(--text-light); font-size: 0.93rem; line-height: 1.8; }
+
+    /* ── PROGRESS ── */
+    .progress {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.75rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+    .progress-track {
+      height: 8px;
+      background: #eee8dc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 100%;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--gold), #d4a017);
+      transition: width 1s ease;
+    }
+
+    /* ── PARTS / TIMELINE ── */
+    .parts { display: flex; flex-direction: column; gap: 1rem; }
+
+    .part {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 16px var(--shadow);
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+    .part:hover { box-shadow: 0 6px 28px rgba(30,58,95,0.12); }
+    .part-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.5rem;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s;
+    }
+    .part-header:hover { background: rgba(245,230,200,0.25); }
+    .part-num {
+      min-width: 52px; height: 36px;
+      padding: 0 0.6rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .part-info { flex: 1; }
+    .part-info h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.1rem;
+    }
+    .part-info small {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      font-weight: 400;
+    }
+    .part-arrow {
+      width: 24px; height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+    }
+    .part.open .part-arrow { transform: rotate(90deg); }
+
+    .chapters {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    .part.open .chapters { max-height: 3000px; }
+    .chapters-inner {
+      padding: 0 1.5rem 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.75rem;
+    }
+
+    /* ── CHAPTER CARDS ── */
+    .ch {
+      border-radius: 10px;
+      padding: 1.15rem 1.25rem;
       text-decoration: none;
       color: inherit;
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      gap: 0.3rem;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      background: var(--cream);
     }
-    .section-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 35px rgba(50, 130, 184, 0.25);
+    a.ch:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+      border-color: var(--gold-light);
     }
-    .section-card span {
-      color: #3282b8;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
+    .ch-num { font-size: 0.75rem; font-weight: 700; color: var(--gold); }
+    .ch-title { font-size: 0.98rem; font-weight: 700; color: var(--navy); }
+    .ch-desc { font-size: 0.84rem; color: var(--text-light); line-height: 1.65; }
+    .ch-status {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.15rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      width: fit-content;
     }
-    .section-card strong {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
+    .status-ready { background: #e8f5e9; color: #2e7d32; }
+    .status-soon { background: #f0ece4; color: #9e9e9e; }
+    .ch.locked { opacity: 0.6; cursor: default; }
+
+    /* ── Part Color Accents ── */
+    .part[data-color="navy"] .part-num { background: var(--navy); }
+    .part[data-color="plum"] .part-num { background: #5b2c6f; }
+    .part[data-color="emerald"] .part-num { background: #1a6844; }
+    .part[data-color="amber"] .part-num { background: #b7791f; }
+    .part[data-color="crimson"] .part-num { background: #922b21; }
+    .part[data-color="steel"] .part-num { background: #2471a3; }
+    .part[data-color="bronze"] .part-num { background: #7d6608; }
+
+    /* ── QUICK LINKS ── */
+    .quick {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 2.5rem;
     }
-    .section-card p {
-      margin: 0;
-      color: #3c4a57;
-      font-size: 0.95rem;
+    .ql {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      text-align: center;
     }
+    .ql:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+      border-color: var(--gold-light);
+    }
+    .ql-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: var(--gold-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.75rem;
+      color: var(--gold);
+      font-weight: 700;
+      font-family: 'Amiri', serif;
+      font-size: 1.3rem;
+    }
+    .ql h4 { font-size: 1rem; color: var(--navy); margin-bottom: 0.2rem; }
+    .ql p { font-size: 0.85rem; color: var(--text-light); }
+
+    /* ── FOOTER ── */
     footer {
       text-align: center;
-      color: #5e6d7c;
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-light);
+      font-size: 0.82rem;
+    }
+    footer span { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero { padding: 3rem 1.2rem 3.5rem; }
+      .about { flex-direction: column; align-items: center; text-align: center; }
+      .quick { grid-template-columns: 1fr; }
+      .topnav a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .chapters-inner { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>كتاب الرحيق المختوم</h1>
-    <p class="lead">
-      نظرة تفاعلية إلى أقسام الكتاب الحائز على جائزة السيرة النبوية، مع روابط تفصيلية لكل فصل.
-    </p>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>الرحيق المختوم</h1>
+    <p class="subtitle">رحلة تفاعلية عبر سيرة خير الأنام ﷺ من الجاهلية إلى الرفيق الأعلى</p>
+    <div class="hero-badge">
+      <span>&#9733;</span>
+      صفي الرحمن المباركفوري &mdash; الحائز على جائزة رابطة العالم الإسلامي
+    </div>
   </header>
 
-  <main>
-    <section class="panel">
-      <h2>عن الكتاب</h2>
-      <p>
-        «الرحيق المختوم» لمؤلفه صفي الرحمن المباركفوري من أبرز المراجع المعاصرة في السيرة النبوية.
-        يقدّم عرضًا موثّقًا لحياة النبي محمد ﷺ من خلال ترتيب منهجي يبدأ بخلفيات الجزيرة العربية وما شهدته من أحداث.
-        في هذه الصفحة ستجد الأقسام مرتبة للوصول إلى ملخصات تفصيلية لكل فصل.
-      </p>
-    </section>
+  <!-- Navigation -->
+  <nav class="topnav" id="topnav">
+    <a href="#part1">قبل البعثة</a>
+    <a href="#part2">النسب والمولد</a>
+    <a href="#part3">الدعوة المكية</a>
+    <a href="#part4">الهجرة</a>
+    <a href="#part5">الغزوات</a>
+    <a href="#part6">الفتح</a>
+    <a href="#part7">الوداع</a>
+    <div class="nav-sep"></div>
+    <a href="persons.html">معجم الأسماء</a>
+    <a href="quiz.html">اختبار</a>
+  </nav>
 
-    <section class="panel">
-      <h2>فصول الكتاب</h2>
-      <div class="sections-grid">
-        <a class="section-card" href="mowqe-al-arab.html">
-          <span>القسم الأول</span>
-          <strong>موقع العرب وأقوامها</strong>
-          <p>
-            استكشاف الحدود الجغرافية، الأهمية الاستراتيجية، وتشكّل المجتمع العربي قبيل البعثة.
-          </p>
-        </a>
-        <a class="section-card" href="al-hukm-walimara.html" style="background: linear-gradient(135deg, #fff5f7, #ffe1ee); border-color: #ffcadf;">
-          <span>القسم الثاني</span>
-          <strong>الحكم والإمارة في العرب</strong>
-          <p>
-            يستعرض أطر السلطة، من الملوك التابعين للقوى الكبرى إلى زعامات القبائل والحجاز قبيل البعثة.
-          </p>
-        </a>
+  <main>
+
+    <!-- About -->
+    <section class="about">
+      <div class="about-icon">&#9671;</div>
+      <div>
+        <h2>عن الكتاب</h2>
+        <p>
+          «الرحيق المختوم» من أبرز المراجع المعاصرة في السيرة النبوية، فاز بالمركز الأول
+          من بين 171 بحثًا في مسابقة رابطة العالم الإسلامي. يقدّم عرضًا موثّقًا ومنهجيًا
+          لحياة النبي محمد ﷺ. <strong>اضغط على أي قسم لاستكشاف فصوله.</strong>
+        </p>
       </div>
     </section>
+    <!-- ═══════ PARTS ═══════ -->
+    <div class="parts">
 
-    <section class="panel">
-      <h2>الشخصيات المحورية</h2>
-      <p>
-        يقدم «الرحيق المختوم» لمحات عن الشخصيات التي شكّلت تاريخ الجزيرة. استكشف سيرة إبراهيم عليه السلام بوصفه
-        حجر الأساس في نشأة العرب المستعربة وبناء البيت الحرام، مع تحديث الصفحة مستقبلًا لإضافة شخصيات أخرى.
-      </p>
-      <a href="persons.html" style="display:inline-block; margin-top:1rem; background:#0f4c75; color:#fff; text-decoration:none; padding:0.7rem 1.6rem; border-radius:30px; font-weight:600;">
-        الانتقال إلى دليل الشخصيات
-      </a>
-    </section>
+      <!-- Part I -->
+      <div class="part open" id="part1" data-color="navy">
+        <div class="part-header" onclick="togglePart(this)">
+          <div class="part-num">الأول</div>
+          <div class="part-info">
+            <h3>حياة العرب قبل الإسلام</h3>
+            <small>الموقع الجغرافي، الحكم، الديانات، المجتمع</small>
+          </div>
+          <div class="part-arrow">&#x276F;</div>
+        </div>
+        <div class="chapters"><div class="chapters-inner">
+          <a class="ch" href="mowqe-al-arab.html">
+            <span class="ch-num">الفصل الأول</span>
+            <span class="ch-title">موقع العرب وأقوامها</span>
+            <span class="ch-desc">الحدود الجغرافية والأهمية الاستراتيجية وتشكّل المجتمعات العربية</span>          </a>
+          <a class="ch" href="al-hukm-walimara.html">
+            <span class="ch-num">الفصل الثاني</span>
+            <span class="ch-title">الحكم والإمارة في العرب</span>
+            <span class="ch-desc">أطر السلطة من الملوك التابعين للقوى الكبرى إلى زعامات القبائل</span>          </a>
+          <a class="ch" href="al-diyanat.html">
+            <span class="ch-num">الفصل الثالث</span>
+            <span class="ch-title">الديانات عند العرب</span>
+            <span class="ch-desc">الوثنية وتطورها، بقايا دين إبراهيم، اليهودية والنصرانية في الجزيرة</span>          </a>
+          <a class="ch" href="suwar-mujtamaa.html">
+            <span class="ch-num">الفصل الرابع</span>
+            <span class="ch-title">صور من المجتمع الجاهلي</span>
+            <span class="ch-desc">العادات والتقاليد والحياة الاجتماعية والاقتصادية قبيل البعثة</span>          </a>
+        </div></div>
+      </div>
 
-    <section class="panel" style="background:#f9fbff;">
-      <h2>اختبر معلوماتك</h2>
-      <p>
-        جرّب اختبارًا قصيرًا يغطي أهم النقاط في موقعي «العرب وأقوامها» و«الحكم والإمارة». الأسئلة تعزز الفهم وتساعدك على
-        مراجعة الأسماء والأحداث بسهولة.
-      </p>
-      <a href="quiz.html" style="display:inline-block; margin-top:1rem; background:#3282b8; color:#fff; text-decoration:none; padding:0.7rem 1.8rem; border-radius:30px; font-weight:600;">
-        ابدأ الاختبار التجريبي
+      <!-- Part II -->
+      <div class="part" id="part2" data-color="plum">
+        <div class="part-header" onclick="togglePart(this)">
+          <div class="part-num">الثاني</div>
+          <div class="part-info">
+            <h3>النسب والمولد والنشأة</h3>
+            <small>سلسلة النسب الشريف وحياة الأربعين عامًا قبل البعثة</small>
+          </div>
+          <div class="part-arrow">&#x276F;</div>
+        </div>
+        <div class="chapters"><div class="chapters-inner">
+          <a class="ch" href="nasab-alnabi.html">
+            <span class="ch-num">الفصل الخامس</span>
+            <span class="ch-title">نسب النبي ﷺ وأسرته</span>
+            <span class="ch-desc">سلسلة النسب النبوي الشريف من عدنان إلى بني هاشم، وأسرة النبي ﷺ المباشرة</span>          </a>
+          <a class="ch" href="al-mawlid.html">
+            <span class="ch-num">الفصل السادس</span>
+            <span class="ch-title">المولد وأربعون عامًا قبل النبوة</span>
+            <span class="ch-desc">ولادته ﷺ ورضاعته ونشأته وشبابه وزواجه من خديجة وحياته حتى الأربعين</span>          </a>
+        </div></div>
+      </div>
+
+      <!-- Part III -->
+      <div class="part" id="part3" data-color="emerald">
+        <div class="part-header" onclick="togglePart(this)">
+          <div class="part-num">الثالث</div>
+          <div class="part-info">
+            <h3>الدعوة في العهد المكي</h3>
+            <small>من نزول الوحي إلى بيعة العقبة</small>
+          </div>
+          <div class="part-arrow">&#x276F;</div>
+        </div>
+        <div class="chapters"><div class="chapters-inner">
+          <a class="ch" href="nuzul-alwahy.html">
+            <span class="ch-num">الفصل السابع</span>
+            <span class="ch-title">نزول الوحي والدعوة السرية</span>
+            <span class="ch-desc">بدء الوحي في غار حراء والسنوات الثلاث الأولى من الدعوة سرًّا</span>          </a>
+          <a class="ch" href="al-jahr-biddawa.html">
+            <span class="ch-num">الفصل الثامن</span>
+            <span class="ch-title">الجهر بالدعوة ومواجهة قريش</span>
+            <span class="ch-desc">إعلان الدعوة وأساليب قريش في التعذيب والمقاومة وموقف المشركين</span>          </a>
+          <a class="ch" href="dar-al-arqam.html">
+            <span class="ch-num">الفصل التاسع</span>
+            <span class="ch-title">دار الأرقم والهجرة إلى الحبشة</span>
+            <span class="ch-desc">اتخاذ دار الأرقم مركزًا للدعوة وهجرة المسلمين الأولى والثانية</span>          </a>
+          <a class="ch" href="islam-hamza-wa-omar.html">
+            <span class="ch-num">الفصل العاشر</span>
+            <span class="ch-title">إسلام حمزة وعمر والمقاطعة</span>
+            <span class="ch-desc">دخول أبطال الإسلام وحصار بني هاشم في الشِّعب ثلاث سنوات</span>          </a>
+          <a class="ch" href="aam-alhuzn.html">
+            <span class="ch-num">الفصل الحادي عشر</span>
+            <span class="ch-title">عام الحزن والخروج إلى الطائف</span>
+            <span class="ch-desc">وفاة خديجة وأبي طالب ورحلة الطائف المؤلمة وعوامل الصبر</span>          </a>
+          <a class="ch" href="al-isra-wal-miraj.html">
+            <span class="ch-num">الفصل الثاني عشر</span>
+            <span class="ch-title">الإسراء والمعراج وبيعتا العقبة</span>
+            <span class="ch-desc">معجزة الإسراء والمعراج ولقاء الأنصار وتمهيد الطريق إلى المدينة</span>          </a>
+        </div></div>
+      </div>
+
+      <!-- Part IV -->
+      <div class="part" id="part4" data-color="amber">
+        <div class="part-header" onclick="togglePart(this)">
+          <div class="part-num">الرابع</div>
+          <div class="part-info">
+            <h3>الهجرة وبناء الدولة</h3>
+            <small>الانتقال إلى المدينة وتأسيس المجتمع الجديد</small>
+          </div>
+          <div class="part-arrow">&#x276F;</div>
+        </div>
+        <div class="chapters"><div class="chapters-inner">
+          <a class="ch" href="al-hijra.html">
+            <span class="ch-num">الفصل الثالث عشر</span>
+            <span class="ch-title">الهجرة إلى المدينة</span>
+            <span class="ch-desc">التخطيط والمسير من مكة إلى المدينة ووصول النبي ﷺ إلى قباء</span>          </a>
+          <a class="ch" href="bina-mujtamaa.html">
+            <span class="ch-num">الفصل الرابع عشر</span>
+            <span class="ch-title">بناء مجتمع جديد</span>
+            <span class="ch-desc">بناء المسجد النبوي والمؤاخاة بين المهاجرين والأنصار والمعاهدة مع اليهود</span>          </a>
+        </div></div>
+      </div>
+
+      <!-- Part V -->
+      <div class="part" id="part5" data-color="crimson">
+        <div class="part-header" onclick="togglePart(this)">
+          <div class="part-num">الخامس</div>
+          <div class="part-info">
+            <h3>الغزوات الكبرى</h3>
+            <small>بدر وأحد والأحزاب والحديبية</small>
+          </div>
+          <div class="part-arrow">&#x276F;</div>
+        </div>
+        <div class="chapters"><div class="chapters-inner">
+          <a class="ch" href="ghazwat-badr.html">
+            <span class="ch-num">الفصل الخامس عشر</span>
+            <span class="ch-title">غزوة بدر الكبرى</span>
+            <span class="ch-desc">أسباب الغزوة وأحداثها ونتائجها &mdash; أول مواجهة حاسمة في الإسلام</span>          </a>
+          <a class="ch" href="ghazwat-uhud.html">
+            <span class="ch-num">الفصل السادس عشر</span>
+            <span class="ch-title">غزوة أحد</span>
+            <span class="ch-desc">الدروس القاسية ومخالفة الرماة واستشهاد حمزة والثبات بعد المحنة</span>          </a>
+          <a class="ch" href="ghazwat-al-ahzab.html">
+            <span class="ch-num">الفصل السابع عشر</span>
+            <span class="ch-title">غزوة الأحزاب وبني قريظة</span>
+            <span class="ch-desc">تحالف الأحزاب ضد المدينة وحفر الخندق وخيانة بني قريظة وعاقبتها</span>          </a>
+          <a class="ch" href="sulh-al-hudaybiyyah.html">
+            <span class="ch-num">الفصل الثامن عشر</span>
+            <span class="ch-title">صلح الحديبية</span>
+            <span class="ch-desc">المفاوضات وبنود الصلح وبيعة الرضوان &mdash; الفتح المبين</span>          </a>
+        </div></div>
+      </div>
+
+      <!-- Part VI -->
+      <div class="part" id="part6" data-color="steel">
+        <div class="part-header" onclick="togglePart(this)">
+          <div class="part-num">السادس</div>
+          <div class="part-info">
+            <h3>الفتح وانتشار الإسلام</h3>
+            <small>فتح مكة وحنين وتبوك ووفود العرب</small>
+          </div>
+          <div class="part-arrow">&#x276F;</div>
+        </div>
+        <div class="chapters"><div class="chapters-inner">
+          <a class="ch" href="fath-makkah.html">
+            <span class="ch-num">الفصل التاسع عشر</span>
+            <span class="ch-title">فتح مكة</span>
+            <span class="ch-desc">أسباب الفتح والمسيرة الظافرة ودخول مكة وتطهير الكعبة من الأصنام</span>          </a>
+          <a class="ch" href="ghazwat-hunayn.html">
+            <span class="ch-num">الفصل العشرون</span>
+            <span class="ch-title">غزوة حنين وحصار الطائف</span>
+            <span class="ch-desc">مواجهة هوازن وثقيف بعد الفتح مباشرة ودروس الغرور والثبات</span>          </a>
+          <a class="ch" href="ghazwat-tabuk.html">
+            <span class="ch-num">الفصل الحادي والعشرون</span>
+            <span class="ch-title">غزوة تبوك</span>
+            <span class="ch-desc">التعبئة العظمى لمواجهة الروم وكشف المنافقين وجيش العسرة</span>          </a>
+          <a class="ch" href="aam-al-wufud.html">
+            <span class="ch-num">الفصل الثاني والعشرون</span>
+            <span class="ch-title">عام الوفود</span>
+            <span class="ch-desc">قدوم وفود العرب على النبي ﷺ ودخول الناس في دين الله أفواجًا</span>          </a>
+        </div></div>
+      </div>
+
+      <!-- Part VII -->
+      <div class="part" id="part7" data-color="bronze">
+        <div class="part-header" onclick="togglePart(this)">
+          <div class="part-num">السابع</div>
+          <div class="part-info">
+            <h3>الوداع والرفيق الأعلى</h3>
+            <small>حجة الوداع ووفاته ﷺ والبيت النبوي</small>
+          </div>
+          <div class="part-arrow">&#x276F;</div>
+        </div>
+        <div class="chapters"><div class="chapters-inner">
+          <a class="ch" href="hajjat-al-wadaa.html">
+            <span class="ch-num">الفصل الثالث والعشرون</span>
+            <span class="ch-title">حجة الوداع وإلى الرفيق الأعلى</span>
+            <span class="ch-desc">آخر حج للنبي ﷺ وخطبة الوداع ومرض الوفاة وانتقاله إلى جوار ربه</span>          </a>
+          <a class="ch" href="al-bayt-alnabawi.html">
+            <span class="ch-num">ملحق</span>
+            <span class="ch-title">البيت النبوي</span>
+            <span class="ch-desc">أزواج النبي ﷺ أمهات المؤمنين وأولاده وصفاته الخَلقية والخُلقية</span>          </a>
+        </div></div>
+      </div>
+
+    </div>
+
+    <!-- Quick Links -->
+    <div class="quick">
+      <a class="ql" href="persons.html">
+        <div class="ql-icon">&#9650;</div>
+        <h4>دليل الشخصيات</h4>
+        <p>الأعلام والشخصيات المحورية في السيرة</p>
       </a>
-    </section>
+      <a class="ql" href="quiz.html">
+        <div class="ql-icon">&#63;</div>
+        <h4>اختبر معلوماتك</h4>
+        <p>أسئلة تفاعلية لتعزيز الفهم والمراجعة</p>
+      </a>
+    </div>
+
   </main>
 
   <footer>
-    الصفحة الرئيسية لأقسام «الرحيق المختوم» — تم إنشاء المحتوى لأغراض التلخيص والدراسة.
+    الرحيق المختوم <span>&bull;</span> صفي الرحمن المباركفوري
+    <span>&bull;</span> تم إنشاء المحتوى لأغراض التلخيص والدراسة
   </footer>
+
+  <script>
+    function togglePart(header) {
+      header.closest('.part').classList.toggle('open');
+    }
+
+    // Active nav highlight on scroll
+    const parts = document.querySelectorAll('.part[id]');
+    const navLinks = document.querySelectorAll('.topnav a[href^="#"]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(l =>
+            l.classList.toggle('active-link', l.getAttribute('href') === '#' + e.target.id)
+          );
+        }
+      });
+    }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
+    parts.forEach(p => observer.observe(p));
+
+    // Smooth scroll + auto-open
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(link.getAttribute('href'));
+        if (t) {
+          if (!t.classList.contains('open')) t.classList.add('open');
+          t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>

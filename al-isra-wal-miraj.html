@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الإسراء والمعراج وبيعتا العقبة — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#1e3a5f;--navy-deep:#0d1b2a;--gold:#b8860b;--gold-light:#f5e6c8;--gold-pale:#fdf6e3;--cream:#faf8f2;--white:#ffffff;--text:#2d3436;--text-light:#636e72;--border:#e8e0d4;--shadow:rgba(30,58,95,0.08);--radius:14px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased}
+    .hero{background:linear-gradient(160deg,#0a1628 0%,#132f4c 40%,#1e3a5f 100%);color:#fff;padding:3.5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 20% 30%,rgba(184,134,11,0.3) 50%,transparent 50%),radial-gradient(1px 1px at 60% 20%,rgba(255,255,255,0.15) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 80% 60%,rgba(184,134,11,0.2) 50%,transparent 50%),radial-gradient(1px 1px at 40% 70%,rgba(255,255,255,0.1) 50%,transparent 50%),radial-gradient(1px 1px at 10% 80%,rgba(255,255,255,0.12) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 90% 40%,rgba(184,134,11,0.15) 50%,transparent 50%);background-size:200px 200px;animation:twinkle 8s ease-in-out infinite alternate}
+    @keyframes twinkle{from{opacity:0.6}to{opacity:1}}
+    .hero>*{position:relative;z-index:1}
+    .hero-ornament{width:60px;height:3px;background:var(--gold);margin:0 auto 1.5rem;border-radius:2px}
+    .hero h1{font-family:'Amiri',serif;font-size:2.4rem;font-weight:700;letter-spacing:0.5px}
+    .hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.7);max-width:620px;margin:0.8rem auto 0}
+    .breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:0.6rem 1rem;display:flex;justify-content:center;align-items:center;gap:0.4rem;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px var(--shadow)}
+    .breadcrumb a{text-decoration:none;color:var(--text-light);font-size:0.85rem;font-weight:500;padding:0.4rem 0.85rem;border-radius:8px;transition:all 0.2s;white-space:nowrap}
+    .breadcrumb a:hover{background:var(--gold-pale);color:var(--navy)}
+    .breadcrumb .sep{color:var(--border);font-size:0.8rem}
+    .breadcrumb .current{font-size:0.85rem;font-weight:700;color:var(--navy)}
+    .toc{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;max-width:880px;margin:1.5rem auto 0;padding:0 1.5rem}
+    .toc a{padding:0.4rem 1rem;border-radius:8px;background:var(--white);border:1px solid var(--border);color:var(--navy);text-decoration:none;font-size:0.85rem;font-weight:500;transition:all 0.2s}
+    .toc a:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    main{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem 1rem}
+    section{margin-bottom:1.5rem}
+    h2{font-family:'Amiri',serif;color:var(--navy);border-right:3px solid var(--gold);padding-right:0.75rem;margin-top:2.5rem;margin-bottom:0.8rem;font-size:1.5rem}
+    h3{font-family:'Amiri',serif;color:var(--navy);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.5rem}
+    p{color:var(--text);text-align:justify;font-size:1rem;margin:0.5rem 0 1.5rem}
+    ul{list-style:none;padding:0;margin:0 0 1.5rem}
+    ul li{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.6rem;border-right:3px solid var(--gold-light)}
+    .visual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0 0.5rem}
+    .visual-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s}
+    .visual-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px var(--shadow)}
+    .visual-icon{font-size:2rem;margin-bottom:0.4rem;display:block}
+    .visual-title{font-weight:600;margin:0 0 0.35rem;color:var(--navy)}
+    .visual-text{margin:0;color:var(--text-light);line-height:1.5;font-size:0.95rem}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0 1.5rem}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.3rem;transition:transform 0.2s ease,box-shadow 0.2s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px var(--shadow)}
+    .card h4{margin:0 0 0.4rem;color:var(--navy);font-size:1rem;font-weight:700}
+    .card p{margin:0;font-size:0.95rem;color:var(--text-light)}
+    .flowline{border-right:3px solid var(--gold-light);margin-top:1.3rem;padding-right:1.3rem}
+    .flow-item{position:relative;margin-bottom:1.2rem;padding:0.8rem 1rem 0.8rem 0;background:var(--white);border:1px solid var(--border);border-radius:10px;transition:box-shadow 0.2s ease}
+    .flow-item:hover{box-shadow:0 8px 20px var(--shadow)}
+    .flow-item::before{content:"";position:absolute;right:-1.6rem;top:50%;transform:translateY(-50%);width:14px;height:14px;background:var(--gold);border:3px solid var(--white);border-radius:50%;box-shadow:0 0 0 2px var(--gold-light)}
+    .flow-title{margin:0;color:var(--navy);font-weight:600}
+    .flow-text{margin:0.3rem 0 0;font-size:0.95rem;color:var(--text-light);line-height:1.6}
+    .tribe-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:0.95rem}
+    .tribe-table th{background:var(--navy);color:#fff;padding:0.75rem 1rem;text-align:right;font-family:'Amiri',serif;font-weight:700}
+    .tribe-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--border);background:var(--white)}
+    .tribe-table tr:hover td{background:var(--gold-pale)}
+    .insight{background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .insight-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--gold);margin-bottom:0.4rem}
+    .insight p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    .connection{background:linear-gradient(135deg,#eef3f9 0%,#f5f0e8 100%);border:1px solid #d4dce8;border-right:3px solid var(--navy);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .connection-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--navy);margin-bottom:0.4rem}
+    .connection p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    a.person-link{color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-light);padding-bottom:0.05rem}
+    a.person-link:hover{color:var(--navy);border-bottom-color:var(--navy)}
+    blockquote{background:var(--gold-pale);border-right:4px solid var(--gold);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1rem 0 1.5rem;font-family:'Amiri',serif;font-size:1.1rem;color:var(--navy);line-height:2}
+    .quiz-wrapper{margin-top:3rem;padding-top:2.5rem;border-top:2px solid var(--gold-light)}
+    .quiz-wrapper>h2{text-align:center;border-right:none;padding-right:0;font-size:1.6rem;margin-bottom:0.3rem}
+    .quiz-intro{text-align:center;color:var(--text-light);font-size:0.92rem;margin:0 auto 1.5rem;max-width:600px}
+    .quiz-score-bar{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 12px var(--shadow);display:flex;justify-content:space-between;align-items:center}
+    .quiz-score-bar span{font-size:0.9rem;color:var(--text-light);font-weight:500}
+    .quiz-score-bar .q-score{font-family:'Amiri',serif;font-size:1.15rem;color:var(--navy);font-weight:700}
+    .quiz-section-block{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1rem;box-shadow:0 4px 24px var(--shadow);overflow:hidden}
+    .quiz-section-block summary{cursor:pointer;padding:1rem 1.4rem;font-weight:700;font-size:1.02rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;transition:background 0.2s;list-style:none}
+    .quiz-section-block summary::-webkit-details-marker{display:none}
+    .quiz-section-block summary::marker{content:""}
+    .quiz-section-block summary:hover{background:rgba(245,230,200,0.25)}
+    .quiz-section-block summary .q-arrow{transition:transform 0.3s;font-size:0.8rem;color:var(--text-light)}
+    .quiz-section-block[open] summary .q-arrow{transform:rotate(90deg)}
+    .q-section-body{padding:0 1.4rem 1.4rem}
+    .q-card{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:1.15rem 1.3rem;margin-top:0.9rem}
+    .q-card h4{margin:0 0 0.35rem;color:var(--navy);font-size:0.95rem;font-weight:700}
+    .q-card p{margin:0 0 0.75rem;font-size:0.92rem;color:var(--text);text-align:right}
+    .q-opts{display:flex;flex-direction:column;gap:0.45rem}
+    .q-opts button{border:1px solid var(--border);background:var(--white);border-radius:10px;padding:0.65rem 1rem;font-size:0.92rem;font-family:'Tajawal',sans-serif;text-align:right;cursor:pointer;transition:all 0.2s;color:var(--text)}
+    .q-opts button:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    .q-opts button.q-correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:600}
+    .q-opts button.q-wrong{border-color:#c53030;background:#fde8e8;color:#c53030}
+    .q-opts button.q-off{pointer-events:none;opacity:0.6}
+    .q-feedback{margin-top:0.5rem;font-weight:700;font-size:0.86rem;min-height:1.3em}
+    .q-feedback.q-correct{color:#2e7d32}
+    .q-feedback.q-wrong{color:#c53030}
+    .quiz-retry-wrap{text-align:center;margin-top:1.5rem}
+    .quiz-retry-btn{display:inline-block;background:var(--navy);color:#fff;border:none;border-radius:10px;padding:0.75rem 2.2rem;font-size:1rem;font-family:'Tajawal',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s,transform 0.2s}
+    .quiz-retry-btn:hover{background:#14293f;transform:translateY(-2px)}
+    footer{text-align:center;color:var(--text-light);font-size:0.82rem;border-top:1px solid var(--border);padding:2rem 1.5rem;margin-top:3rem}
+    @media(max-width:700px){.hero h1{font-size:1.9rem}.hero{padding:2.5rem 1.2rem 3rem}main{padding:1.5rem 1rem 1rem}.visual-grid,.card-grid{grid-template-columns:1fr}.breadcrumb a{font-size:0.78rem;padding:0.35rem 0.6rem}.tribe-table{font-size:0.85rem}.quiz-score-bar{flex-direction:column;gap:0.5rem;text-align:center}.q-section-body{padding:0 1rem 1rem}.toc{gap:0.35rem}}
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>الإسراء والمعراج وبيعتا العقبة</h1>
+    <p class="subtitle">من أعظم معجزات النبوة إلى اللقاء الذي غيّر مجرى التاريخ — الطريق من مكة إلى المدينة يبدأ هنا</p>
+  </header>
+
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">الإسراء والمعراج وبيعتا العقبة</span>
+  </nav>
+
+  <div class="toc">
+    <a href="#why">لماذا هذا الفصل؟</a>
+    <a href="#context">السياق</a>
+    <a href="#isra">الإسراء</a>
+    <a href="#miraj">المعراج</a>
+    <a href="#prayer">فرض الصلاة</a>
+    <a href="#reaction">ردّ قريش</a>
+    <a href="#yathrib">بداية يثرب</a>
+    <a href="#aqaba1">العقبة الأولى</a>
+    <a href="#musab">مصعب السفير</a>
+    <a href="#aqaba2">العقبة الثانية</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section id="why">
+      <h2>لماذا هذا الفصل مهم؟</h2>
+      <p>
+        هذا الفصل هو نقطة التحول الكبرى في السيرة المكية. بعد سنوات من الاضطهاد بلغت ذروتها في «عام الحزن»
+        بوفاة خديجة وأبي طالب ثم رفض أهل الطائف، جاءت معجزة الإسراء والمعراج تثبيتًا ربّانيًا للنبي ﷺ.
+        ثم — في نفس موسم الحج تقريبًا — بدأت اللقاءات التي ستفتح باب الهجرة: بيعتا العقبة. هنا ينتهي عهد
+        الصبر ويبدأ عهد التمكين.
+      </p>
+      <div class="insight">
+        <span class="insight-label">خريطة الفصل</span>
+        <p>
+          الإسراء والمعراج = تثبيت من الله للنبي ﷺ بعد أشد سنوات حياته. بيعة العقبة الأولى = أول
+          اتفاق مع أهل يثرب. بيعة العقبة الثانية = التعاقد على الهجرة والحماية العسكرية. ثلاث محطات
+          متتالية ترسم الطريق من مكة إلى المدينة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ السياق ═══════ -->
+
+    <section id="context">
+      <h2>السياق — لماذا جاءت المعجزة الآن؟</h2>
+      <p>
+        لفهم عظمة الإسراء والمعراج لا بد من فهم ما سبقها. في السنة العاشرة من البعثة توالت على النبي ﷺ
+        ضربات لم يشهد لها مثيلًا:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">وفاة أبي طالب — سقوط الدرع القبلي</p>
+          <p class="flow-text">
+            مات عمّه الذي حماه من قريش ١٣ سنة. بعد وفاته تجرأت قريش على إيذائه مباشرة
+            بما لم تكن تجرؤ عليه من قبل.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">وفاة خديجة — سقوط السند العاطفي</p>
+          <p class="flow-text">
+            ماتت زوجته التي كانت أول من آمن به وأقوى سند له في أحلك الليالي.
+            سمّى النبي ﷺ هذا العام «عام الحزن».
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">رحلة الطائف — الرفض القاسي</p>
+          <p class="flow-text">
+            خرج إلى ثقيف يبحث عن نصرة بديلة، فردّوه بأقسى طريقة وأغروا صبيانهم وعبيدهم
+            برميه بالحجارة حتى أدموا قدميه الشريفتين.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الإسراء والمعراج — التعويض الإلهي</p>
+          <p class="flow-text">
+            في هذا الظلام الدامس جاء الضوء الإلهي: رحلة خارقة تجاوزت حدود الأرض والسماء
+            لتُري النبي ﷺ من آيات ربه الكبرى وتثبّت قلبه.
+          </p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">نمط ثابت في السيرة</span>
+        <p>
+          كلما بلغ الابتلاء ذروته جاء الفرج الإلهي. هذا النمط سيتكرر: ظلام شِعب أبي طالب ← نهايته،
+          محاولة الاغتيال ← نجاة الهجرة، حصار الأحزاب ← انكسار التحالف. الإسراء والمعراج
+          هو أعظم تطبيق لهذا النمط: أشد أزمة في حياته ← أعظم معجزة في تاريخه.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الإسراء ═══════ -->
+
+    <section id="isra">
+      <h2>الإسراء — من المسجد الحرام إلى المسجد الأقصى</h2>
+      <p>
+        في ليلة واحدة أسرى الله بعبده من المسجد الحرام في مكة إلى المسجد الأقصى في بيت المقدس.
+        جاءه جبريل عليه السلام بالبُراق — دابة بيضاء فوق الحمار ودون البغل، تضع حافرها عند منتهى طرفها —
+        فركبه النبي ﷺ وانطلق في رحلة أسرع من الريح.
+      </p>
+      <ul>
+        <li><strong>الانطلاق:</strong> من المسجد الحرام ليلًا على ظهر البُراق مع جبريل عليه السلام.</li>
+        <li><strong>الوصول:</strong> إلى المسجد الأقصى في بيت المقدس — مسافة شهر في لحظات.</li>
+        <li><strong>إمامة الأنبياء:</strong> صلّى النبي ﷺ إمامًا بالأنبياء جميعًا في المسجد الأقصى — إشارة إلى أن رسالته خاتمة وجامعة لكل الرسالات.</li>
+        <li><strong>الدليل:</strong> وصف النبي ﷺ المسجد الأقصى لقريش وصفًا دقيقًا رغم أنه لم يزره قبلها، وأخبرهم عن قافلة في الطريق لم تصل بعد.</li>
+      </ul>
+      <div class="insight">
+        <span class="insight-label">لماذا المسجد الأقصى؟</span>
+        <p>
+          الإسراء إلى بيت المقدس ربط الرسالة بأرض الأنبياء قبلها. المسجد الأقصى ليس مجرد محطة —
+          بل رمز لانتقال الإمامة الروحية من بني إسرائيل إلى هذا النبي وأمته. صلاته إمامًا بالأنبياء
+          تعني أنه وارث كل الرسالات السابقة وخاتمها.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ المعراج ═══════ -->
+
+    <section id="miraj">
+      <h2>المعراج — الصعود عبر السماوات السبع</h2>
+      <p>
+        من المسجد الأقصى عُرج بالنبي ﷺ إلى السماوات العلا. في كل سماء لقي نبيًا سلّم عليه
+        ورحّب به. هذا اللقاء يرسم خريطة النبوة من آدم إلى محمد ﷺ:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x0031;&#xFE0F;&#x20E3;</span>
+          <p class="visual-title">السماء الأولى</p>
+          <p class="visual-text"><strong>آدم</strong> عليه السلام — أبو البشرية. رحّب بالنبي ﷺ وأقرّ بنبوته.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x0032;&#xFE0F;&#x20E3;</span>
+          <p class="visual-title">السماء الثانية</p>
+          <p class="visual-text"><strong>عيسى ويحيى</strong> عليهما السلام — ابنا الخالة، رمز التواضع والزهد.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x0033;&#xFE0F;&#x20E3;</span>
+          <p class="visual-title">السماء الثالثة</p>
+          <p class="visual-text"><strong>يوسف</strong> عليه السلام — الذي أوتي شطر الحُسن.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x0034;&#xFE0F;&#x20E3;</span>
+          <p class="visual-title">السماء الرابعة</p>
+          <p class="visual-text"><strong>إدريس</strong> عليه السلام — ﴿وَرَفَعْنَاهُ مَكَانًا عَلِيًّا﴾.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x0035;&#xFE0F;&#x20E3;</span>
+          <p class="visual-title">السماء الخامسة</p>
+          <p class="visual-text"><strong>هارون</strong> عليه السلام — أخو موسى ووزيره.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x0036;&#xFE0F;&#x20E3;</span>
+          <p class="visual-title">السماء السادسة</p>
+          <p class="visual-text"><strong>موسى</strong> عليه السلام — كليم الله، وسيكون له دور في تخفيف الصلاة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x0037;&#xFE0F;&#x20E3;</span>
+          <p class="visual-title">السماء السابعة</p>
+          <p class="visual-text"><strong>إبراهيم</strong> عليه السلام — خليل الله، مسندًا ظهره إلى البيت المعمور.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">سدرة المنتهى</span>
+        <p>
+          بعد السماء السابعة وصل النبي ﷺ إلى سدرة المنتهى — المكان الذي لم يتجاوزه مخلوق قبله.
+          هناك رأى من آيات ربه الكبرى، وهناك فُرضت الصلاة. هذا المقام الذي لم يبلغه جبريل نفسه
+          يُظهر منزلة محمد ﷺ عند ربه — وهو التعويض الأعظم عن كل ما لاقاه من البشر.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ فرض الصلاة ═══════ -->
+
+    <section id="prayer">
+      <h2>فرض الصلاة — هدية المعراج</h2>
+      <p>
+        عند سدرة المنتهى فرض الله على النبي ﷺ وأمته خمسين صلاة في اليوم والليلة. وفي طريق عودته
+        مرّ بموسى عليه السلام فنصحه بالرجوع وطلب التخفيف، فتردد النبي ﷺ بين ربه وموسى حتى صارت
+        خمس صلوات بأجر خمسين:
+      </p>
+      <blockquote>
+        قال الله تعالى: «هي خمسٌ وهي خمسون، لا يُبدَّل القول لديّ.»
+      </blockquote>
+      <div class="insight">
+        <span class="insight-label">لماذا فُرضت الصلاة هناك؟</span>
+        <p>
+          كل الفرائض الأخرى نزلت عبر جبريل إلى الأرض، لكن الصلاة فُرضت في أعلى مقام بلغه بشر —
+          بلا واسطة. هذا يدل على مكانتها: هي الصلة المباشرة بين العبد وربه، فناسب أن تُفرض في لحظة
+          الصلة المباشرة بين الله ونبيه. ودور موسى في التخفيف يُظهر تكامل الرسالات ورحمة الأنبياء
+          ببعضهم وبأممهم.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ ردّ فعل قريش ═══════ -->
+
+    <section id="reaction">
+      <h2>ردّ فعل قريش — ولقب الصِّدِّيق</h2>
+      <p>
+        لما أخبر النبي ﷺ قريشًا بما حدث ليلًا كان ردّ فعلهم متوقعًا: التكذيب والسخرية.
+        قالوا: نحن نضرب أكباد الإبل إلى بيت المقدس شهرًا ذهابًا وشهرًا إيابًا، وتزعم أنك
+        أتيتها في ليلة واحدة؟! وارتدّ بعض ضعاف الإيمان.
+      </p>
+      <ul>
+        <li><strong>المكذّبون:</strong> اتخذها أبو جهل ورؤوس قريش فرصة للتشهير. ذهبوا إلى أبي بكر يستفزونه: «أتصدق صاحبك أنه ذهب إلى بيت المقدس وعاد في ليلة؟»</li>
+        <li><strong>أبو بكر الصدّيق:</strong> قال كلمته الخالدة: <strong>«إن كان قال ذلك فقد صدق. إني لأصدّقه فيما هو أبعد من ذلك — أصدّقه في خبر السماء يأتيه بُكرة وعشيًّا.»</strong> فسُمّي من يومها <strong>«الصدّيق»</strong>.</li>
+        <li><strong>الامتحان:</strong> وصف النبي ﷺ المسجد الأقصى وصفًا دقيقًا — جلّاه الله بين عينيه — وأخبرهم عن قافلة قادمة بأوصاف محددة، فجاءت كما وصف.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">لقب يلازمه إلى الأبد</span>
+        <p>
+          لقب «الصدّيق» الذي نالَه أبو بكر في هذه اللحظة سيكون عنوانًا لحياته كلها: أول من
+          آمن، وأول من صدّق الإسراء، وأول من بايع يوم السقيفة بعد وفاة النبي ﷺ، وأول
+          خليفة. كل «أول» في حياته مبنيٌّ على هذا التصديق المطلق.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ بداية يثرب ═══════ -->
+
+    <section id="yathrib">
+      <h2>بداية الطريق إلى يثرب</h2>
+      <p>
+        في مواسم الحج كان النبي ﷺ يعرض نفسه على القبائل يطلب النصرة والإيواء. رفضه أكثرهم،
+        لكن في السنة الحادية عشرة من البعثة التقى بستة نفر من الخزرج عند العقبة بمنى. كان يهود
+        يثرب يحدّثونهم عن نبي آخر الزمان، فلما سمعوا النبي ﷺ قالوا: «والله إنه للنبي الذي
+        تُوعدكم به يهود، فلا يسبقنّكم إليه!»
+      </p>
+      <div class="insight">
+        <span class="insight-label">لماذا الخزرج تحديدًا؟</span>
+        <p>
+          تذكّر من فصل «موقع العرب»: الأوس والخزرج قحطانيون هاجروا من اليمن إلى يثرب. كانوا
+          في حرب أهلية طاحنة (يوم بُعاث) أنهكتهم. وكان اليهود يهددونهم بنبي آخر الزمان.
+          هذا السياق — الإنهاك من الحرب + معرفة فكرة النبوة من اليهود — جعلهم أكثر استعدادًا
+          لقبول الرسالة من أي قبيلة أخرى.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ بيعة العقبة الأولى ═══════ -->
+
+    <section id="aqaba1">
+      <h2>بيعة العقبة الأولى — بيعة النساء</h2>
+      <p>
+        في العام التالي (السنة الثانية عشرة من البعثة) جاء اثنا عشر رجلًا من الأوس والخزرج
+        والتقوا بالنبي ﷺ عند العقبة في منى وبايعوه على ما سُمّي «بيعة النساء» — لأنها لم تتضمن
+        شرط القتال، بل كانت بيعة على الإيمان والأخلاق:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr><th>بنود البيعة</th><th>المعنى</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ألا نشرك بالله شيئًا</td><td>التوحيد — أساس كل شيء</td></tr>
+          <tr><td>ألا نسرق</td><td>حفظ الأموال والأمانات</td></tr>
+          <tr><td>ألا نزني</td><td>حفظ الأعراض والأنساب</td></tr>
+          <tr><td>ألا نقتل أولادنا</td><td>تحريم الوأد وحفظ الأرواح</td></tr>
+          <tr><td>ألا نأتي ببهتان نفتريه</td><td>الصدق ونبذ الكذب والافتراء</td></tr>
+          <tr><td>ألا نعصيه في معروف</td><td>السمع والطاعة فيما يرضي الله</td></tr>
+        </tbody>
+      </table>
+      <div class="connection">
+        <span class="connection-label">لماذا سُمّيت بيعة النساء؟</span>
+        <p>
+          سُمّيت كذلك لأنها تشبه بيعة النساء التي ستأتي يوم فتح مكة — بيعة على الإيمان والأخلاق
+          بلا شرط القتال. هذا التدرج مقصود: أولًا بناء الأساس الأخلاقي، ثم في البيعة الثانية
+          يأتي الالتزام العسكري. النبي ﷺ لم يطلب القتال قبل أن يتأسس الإيمان.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ مصعب السفير ═══════ -->
+
+    <section id="musab">
+      <h2>مصعب بن عمير — أول سفير في الإسلام</h2>
+      <p>
+        بعد بيعة العقبة الأولى أرسل النبي ﷺ مع المبايعين <a class="person-link" href="persons.html">مصعب بن عمير</a>
+        ليعلّم أهل يثرب القرآن ويدعوهم إلى الإسلام. مصعب هو ذلك الشاب الذي كان أنعم فتيان قريش
+        فتركه كله لأجل الإسلام. حقق نجاحًا مذهلًا في المدينة:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4D6;</span>
+          <p class="visual-title">تعليم القرآن</p>
+          <p class="visual-text">نزل في بيت أسعد بن زرارة وبدأ يعلّم الناس القرآن ويصلي بهم.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F91D;</span>
+          <p class="visual-title">إسلام سادة يثرب</p>
+          <p class="visual-text">أسلم على يده <strong>سعد بن معاذ</strong> سيد الأوس و<strong>أسيد بن حضير</strong> — فأسلمت بطون بأكملها.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3D8;&#xFE0F;</span>
+          <p class="visual-title">التحول الجماعي</p>
+          <p class="visual-text">لم يبقَ بيت من بيوت الأنصار إلا وفيه مسلمون — خلال أشهر قليلة فقط.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">سعد بن معاذ — المحور</span>
+        <p>
+          إسلام سعد بن معاذ كان نقطة تحول. قال لقومه بني عبد الأشهل: «كلام رجالكم ونسائكم عليّ
+          حرام حتى تؤمنوا بالله ورسوله!» فأسلمت الدار بأكملها. سعد نفسه سيكون الحكم في بني قريظة
+          بعد غزوة الأحزاب — وعند وفاته سيقول النبي ﷺ: «اهتزّ لموته عرش الرحمن.»
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ بيعة العقبة الثانية ═══════ -->
+
+    <section id="aqaba2">
+      <h2>بيعة العقبة الثانية — بيعة الحرب</h2>
+      <p>
+        في موسم حج السنة الثالثة عشرة من البعثة جاء ٧٣ رجلًا وامرأتان من يثرب — الأوس والخزرج
+        معًا — وواعدوا النبي ﷺ ليلًا عند العقبة في منى. تسللوا بعد ثلث الليل الأول — ثلاثة ثلاثة
+        وأربعة أربعة حتى لا يلفتوا الانتباه — والتقوا بالنبي ﷺ وعمّه العباس.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">كلمة العباس بن عبد المطلب</p>
+          <p class="flow-text">
+            افتتح العباس — وكان على دين قومه — بتحذير الأنصار: «إن محمدًا منا حيث قد علمتم،
+            وقد منعناه. فإن كنتم ترون أنكم وافون بما دعوتموه إليه ومانعوه ممن خالفه فأنتم
+            وما تحملتم، وإن كنتم ترون أنكم مسلموه فمن الآن فدعوه.»
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">شروط البيعة</p>
+          <p class="flow-text">
+            بايعوا على السمع والطاعة في المنشط والمكره، والنفقة في العسر واليسر، والأمر
+            بالمعروف والنهي عن المنكر، وأن يمنعوا النبي ﷺ مما يمنعون منه أنفسهم وأهليهم —
+            أي <strong>الحماية العسكرية الكاملة</strong>.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">سؤال أبي الهيثم بن التيهان</p>
+          <p class="flow-text">
+            سأل: «يا رسول الله، إن بيننا وبين الرجال — يعني اليهود — حبالًا وإنا قاطعوها،
+            فهل عسيت إن نحن فعلنا ذلك ثم أظهرك الله أن ترجع إلى قومك وتدعنا؟» فتبسم النبي ﷺ
+            وقال: <strong>«بل الدم الدم والهدم الهدم، أنا منكم وأنتم مني.»</strong>
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">اختيار النقباء الاثني عشر</p>
+          <p class="flow-text">
+            اختار النبي ﷺ ١٢ نقيبًا — ٩ من الخزرج و٣ من الأوس — ليكونوا كفلاء على قومهم
+            ومسؤولين عن تنظيم الاستقبال والإيواء.
+          </p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">من البيعة إلى الهجرة</span>
+        <p>
+          هذه البيعة هي الأساس القانوني والعسكري للهجرة. بعدها مباشرة بدأ النبي ﷺ يأذن للمسلمين
+          بالهجرة إلى يثرب أفرادًا وجماعات، حتى لم يبقَ في مكة إلا هو وأبو بكر وعلي والمستضعفون.
+          ثم جاءت ليلة الهجرة — ومؤامرة دار الندوة — والخروج إلى غار ثور.
+          كل هذا سنراه في الفصل القادم.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. بعد العسر يسر</h4>
+          <p>أشد سنة في حياة النبي ﷺ (عام الحزن) تلتها أعظم معجزة (الإسراء والمعراج).</p>
+        </article>
+        <article class="card">
+          <h4>٢. الصلاة هدية السماء</h4>
+          <p>فُرضت في أعلى مقام بلغه بشر — مكانتها فوق كل العبادات الأخرى.</p>
+        </article>
+        <article class="card">
+          <h4>٣. أبو بكر الصدّيق</h4>
+          <p>لقبه ليس مجرد اسم — بل موقف تاريخي من التصديق المطلق بلا تردد.</p>
+        </article>
+        <article class="card">
+          <h4>٤. يثرب كانت مهيّأة</h4>
+          <p>الحرب الأهلية + معرفة النبوة من اليهود جعلت الأنصار أكثر قبولًا للإسلام.</p>
+        </article>
+        <article class="card">
+          <h4>٥. بيعة أولى ثم ثانية</h4>
+          <p>تدرّج محكم: أخلاق أولًا ← ثم حماية عسكرية. البناء قبل التصعيد.</p>
+        </article>
+        <article class="card">
+          <h4>٦. مصعب أول سفير</h4>
+          <p>شاب واحد حوّل مدينة بأكملها — الكفاءة الفردية يمكن أن تصنع ثورة.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch12-score">٠ / ٢٠</span>
+      </div>
+      <div id="ch12-quiz-container"></div>
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch12-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+  (function(){
+    const toArabicNum=n=>n.toString().replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+    const sections=[
+      {title:'الإسراء والمعراج',questions:[
+        {t:'سياق الإسراء',q:'ما الأحداث التي سبقت الإسراء والمعراج مباشرة؟',o:['فتح مكة وحنين','وفاة أبي طالب وخديجة ورفض الطائف (عام الحزن)','غزوة بدر','الهجرة إلى الحبشة'],a:1},
+        {t:'البُراق',q:'ما هو البُراق الذي ركبه النبي ﷺ في رحلة الإسراء؟',o:['حصان مجنّح من نار','دابة بيضاء فوق الحمار ودون البغل تضع حافرها عند منتهى طرفها','سحابة بيضاء','طائر عظيم'],a:1},
+        {t:'إمامة الأنبياء',q:'ماذا فعل النبي ﷺ في المسجد الأقصى؟',o:['بنى مسجدًا جديدًا','صلّى إمامًا بجميع الأنبياء','التقى بأهل بيت المقدس','تلقّى الوحي'],a:1},
+        {t:'إبراهيم في المعراج',q:'في أي سماء لقي النبي ﷺ إبراهيم عليه السلام؟',o:['الأولى','الرابعة','السادسة','السابعة — مسندًا ظهره إلى البيت المعمور'],a:3},
+        {t:'سدرة المنتهى',q:'ما هي سدرة المنتهى؟',o:['شجرة في الجنة يأكل منها أهلها','المقام الأعلى الذي بلغه النبي ﷺ ولم يتجاوزه مخلوق قبله','مكان في المسجد الأقصى','اسم للسماء السابعة'],a:1}
+      ]},
+      {title:'فرض الصلاة وردّ فعل قريش',questions:[
+        {t:'العدد الأول',q:'كم صلاة فُرضت أولًا قبل التخفيف؟',o:['خمس صلوات','عشر صلوات','خمسون صلاة','مئة صلاة'],a:2},
+        {t:'دور موسى',q:'من النبي الذي نصح محمدًا ﷺ بطلب التخفيف من الصلوات؟',o:['إبراهيم عليه السلام','عيسى عليه السلام','موسى عليه السلام','آدم عليه السلام'],a:2},
+        {t:'العدد النهائي',q:'كم استقر عدد الصلوات المفروضة؟',o:['ثلاث صلوات','خمس صلوات بأجر خمسين','عشر صلوات','سبع صلوات'],a:1},
+        {t:'لقب الصدّيق',q:'لماذا سُمّي أبو بكر بالصدّيق؟',o:['لأنه أول من أسلم','لأنه صدّق الإسراء والمعراج فورًا دون تردد','لأنه صادق في التجارة','لأنه أنقذ بلالًا'],a:1},
+        {t:'دليل الإسراء',q:'كيف أثبت النبي ﷺ لقريش صدق رحلته؟',o:['أراهم معجزة أخرى','وصف المسجد الأقصى بدقة وأخبرهم عن قافلة لم تصل بعد','جاء بحجر من بيت المقدس','شهد له جبريل أمامهم'],a:1}
+      ]},
+      {title:'بيعة العقبة الأولى ومصعب',questions:[
+        {t:'اللقاء الأول',q:'كم رجلًا من الخزرج التقوا بالنبي ﷺ أول مرة عند العقبة؟',o:['ثلاثة','ستة','اثنا عشر','ثلاثة وسبعون'],a:1},
+        {t:'سبب استعداد يثرب',q:'لماذا كان أهل يثرب أكثر استعدادًا لقبول الإسلام من غيرهم؟',o:['لأنهم أغنياء','لأنهم أنهكتهم الحرب الأهلية وعرفوا فكرة النبوة من اليهود','لأنهم زاروا مكة كثيرًا','لأنهم كانوا يعبدون الله وحده'],a:1},
+        {t:'عدد بيعة العقبة الأولى',q:'كم رجلًا شاركوا في بيعة العقبة الأولى؟',o:['ستة','اثنا عشر','ثلاثة وسبعون','أربعون'],a:1},
+        {t:'بنود البيعة الأولى',q:'لماذا سُمّيت بيعة العقبة الأولى «بيعة النساء»؟',o:['لأن النساء فقط بايعن','لأنها لم تتضمن شرط القتال — كبيعة النساء يوم الفتح','لأنها تمت في حضور النساء فقط','لأن خديجة أشرفت عليها'],a:1},
+        {t:'مصعب بن عمير',q:'ما المهمة التي أرسل النبي ﷺ مصعبَ بن عمير لأجلها إلى يثرب؟',o:['قيادة جيش','تعليم القرآن والدعوة إلى الإسلام','التجسس على اليهود','جمع الأموال'],a:1}
+      ]},
+      {title:'بيعة العقبة الثانية وبداية الهجرة',questions:[
+        {t:'عدد العقبة الثانية',q:'كم شخصًا حضر بيعة العقبة الثانية من أهل يثرب؟',o:['١٢ رجلًا','٤٠ رجلًا','٧٣ رجلًا وامرأتان','١٠٠ رجل'],a:2},
+        {t:'كلمة العباس',q:'ما الذي قاله العباس بن عبد المطلب للأنصار في بيعة العقبة؟',o:['أعلن إسلامه','حذّرهم من عاقبة التعهد وأكد أنهم إن عجزوا فليدعوه','رفض البيعة','طلب منهم المال'],a:1},
+        {t:'الدم الدم',q:'ما معنى قول النبي ﷺ: «الدم الدم والهدم الهدم، أنا منكم وأنتم مني»؟',o:['دعوة للقتال الفوري','تأكيد أنه لن يتخلى عنهم — مصيره مصيرهم وحرمته حرمتهم','طلب الثأر من قريش','تهديد لليهود'],a:1},
+        {t:'النقباء',q:'كم نقيبًا اختار النبي ﷺ من بين الأنصار؟',o:['ستة','عشرة','اثني عشر — ٩ من الخزرج و٣ من الأوس','عشرين'],a:2},
+        {t:'ما بعد البيعة',q:'ماذا فعل النبي ﷺ بعد بيعة العقبة الثانية مباشرة؟',o:['هاجر فورًا','أذن للمسلمين بالهجرة إلى يثرب أفرادًا وجماعات','أعلن الحرب على قريش','ذهب إلى الطائف مرة أخرى'],a:1}
+      ]}
+    ];
+    function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+    const totalQ=sections.reduce((s,sec)=>s+sec.questions.length,0);
+    let correct=0,answered=0;
+    const scoreEl=document.getElementById('ch12-score'),container=document.getElementById('ch12-quiz-container'),retryBtn=document.getElementById('ch12-retry');
+    function updateScore(){scoreEl.textContent=toArabicNum(correct)+' / '+toArabicNum(totalQ)}
+    function buildQuiz(){
+      correct=0;answered=0;container.innerHTML='';retryBtn.style.display='none';updateScore();
+      let qNum=0;
+      sections.forEach(function(sec,sIdx){
+        const details=document.createElement('details');details.className='quiz-section-block';if(sIdx===0)details.open=true;
+        const summary=document.createElement('summary');summary.innerHTML=sec.title+'<span class="q-arrow">&#x276F;</span>';details.appendChild(summary);
+        const body=document.createElement('div');body.className='q-section-body';
+        var qs=sec.questions.slice();shuffle(qs);
+        qs.forEach(function(item){
+          qNum++;
+          var card=document.createElement('article');card.className='q-card';
+          var h=document.createElement('h4');h.textContent='سؤال '+toArabicNum(qNum)+': '+item.t;card.appendChild(h);
+          var p=document.createElement('p');p.textContent=item.q;card.appendChild(p);
+          var optsDiv=document.createElement('div');optsDiv.className='q-opts';
+          var fb=document.createElement('div');fb.className='q-feedback';
+          var indices=item.o.map(function(_,i){return i});shuffle(indices);
+          indices.forEach(function(origIdx){
+            var btn=document.createElement('button');btn.textContent=item.o[origIdx];
+            btn.addEventListener('click',function(){
+              if(card.dataset.done)return;card.dataset.done='1';answered++;
+              optsDiv.querySelectorAll('button').forEach(function(b){b.classList.add('q-off')});
+              optsDiv.querySelectorAll('button').forEach(function(b,bIdx){if(indices[bIdx]===item.a)b.classList.add('q-correct')});
+              if(origIdx===item.a){btn.classList.add('q-correct');fb.textContent='إجابة صحيحة!';fb.className='q-feedback q-correct';correct++}
+              else{btn.classList.add('q-wrong');fb.textContent='إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';fb.className='q-feedback q-wrong'}
+              updateScore();if(answered===totalQ)retryBtn.style.display='inline-block';
+            });optsDiv.appendChild(btn);
+          });
+          card.appendChild(optsDiv);card.appendChild(fb);body.appendChild(card);
+        });
+        details.appendChild(body);container.appendChild(details);
+      });
+    }
+    retryBtn.addEventListener('click',function(){buildQuiz();document.getElementById('quiz-root').scrollIntoView({behavior:'smooth'})});
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>أُعِدَّ الملخص استنادًا إلى فصل «الإسراء والمعراج وبيعتا العقبة» من كتاب «الرحيق المختوم»</footer>
+
+</body>
+</html>

@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فتح مكة — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .hero .subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 620px;
+      margin: 0.8rem auto 0;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .breadcrumb a:hover {
+      background: var(--gold-pale);
+      color: var(--navy);
+    }
+    .breadcrumb .sep {
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+    .breadcrumb .current {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* TOC */
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      max-width: 880px;
+      margin: 1.5rem auto 0;
+      padding: 0 1.5rem;
+    }
+    .toc a {
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
+    }
+
+    /* SECTIONS */
+    section { margin-bottom: 1.5rem; }
+    h2 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--text);
+      text-align: justify;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    /* LISTS */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    ul li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+    }
+
+    /* VISUAL GRID */
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .visual-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .visual-icon {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .visual-title {
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+    }
+    .visual-text {
+      margin: 0;
+      color: var(--text-light);
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow);
+    }
+    .card h4 {
+      margin: 0 0 0.4rem;
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* FLOW TIMELINE */
+    .flowline {
+      border-right: 3px solid var(--gold-light);
+      margin-top: 1.3rem;
+      padding-right: 1.3rem;
+    }
+    .flow-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover {
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+    .flow-item::before {
+      content: "";
+      position: absolute;
+      right: -1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .flow-title {
+      margin: 0;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .flow-text {
+      margin: 0.3rem 0 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+    }
+    .tribe-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tribe-table tr:hover td {
+      background: var(--gold-pale);
+    }
+
+    /* INSIGHT / CONNECTION BOX */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .insight p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .connection p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* PERSON LINK */
+    a.person-link {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 0.05rem;
+    }
+    a.person-link:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+    }
+
+    /* BLOCKQUOTE */
+    blockquote {
+      background: var(--gold-pale);
+      border-right: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 1rem 0 1.5rem;
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      line-height: 2;
+    }
+
+    /* QUIZ */
+    .quiz-wrapper {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--gold-light);
+    }
+    .quiz-wrapper > h2 {
+      text-align: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+    .quiz-intro {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin: 0 auto 1.5rem;
+      max-width: 600px;
+    }
+    .quiz-score-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .quiz-score-bar span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .quiz-score-bar .q-score {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .quiz-section-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer;
+      padding: 1rem 1.4rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow {
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body {
+      padding: 0 1.4rem 1.4rem;
+    }
+    .q-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.3rem;
+      margin-top: 0.9rem;
+    }
+    .q-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .q-card p {
+      margin: 0 0 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      text-align: right;
+    }
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .q-opts button {
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      font-size: 0.92rem;
+      font-family: 'Tajawal', sans-serif;
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text);
+    }
+    .q-opts button:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+    .q-opts button.q-correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .q-opts button.q-wrong {
+      border-color: #c53030;
+      background: #fde8e8;
+      color: #c53030;
+    }
+    .q-opts button.q-off {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .q-feedback {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      font-size: 0.86rem;
+      min-height: 1.3em;
+    }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .quiz-retry-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2.2rem;
+      font-size: 1rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover {
+      background: #14293f;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+      .toc { gap: 0.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>فتح مكة</h1>
+    <p class="subtitle">المسيرة الظافرة التي أنهت عقدين من الصراع — عشرة آلاف مقاتل يدخلون مكة فلا تُراق قطرة دم ويُعلن العفو العام</p>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">فتح مكة</span>
+  </nav>
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <a href="#why">لماذا هذا الفصل؟</a>
+    <a href="#causes">أسباب الفتح</a>
+    <a href="#march">التجهيز والمسير</a>
+    <a href="#abu-sufyan">إسلام أبي سفيان</a>
+    <a href="#entry">دخول مكة</a>
+    <a href="#kaaba">تطهير الكعبة</a>
+    <a href="#pardon">العفو العام</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section id="why">
+      <h2>لماذا هذا الفصل مهم؟</h2>
+      <p>
+        فتح مكة هو اللحظة التي تلتقي فيها كل خيوط السيرة: الاضطهاد في مكة، والهجرة، وبدر وأحد
+        والأحزاب، وصلح الحديبية — كلها كانت تقود إلى هذه الساعة. في رمضان من السنة الثامنة للهجرة
+        دخل النبي ﷺ مكة على رأس عشرة آلاف مقاتل — أكبر جيش عرفته الجزيرة — فلم يقتل ولم يثأر
+        ولم يسبِ. بل وقف على باب الكعبة وقال لأعدائه: «اذهبوا فأنتم الطلقاء.» هذا الفصل يكشف
+        كيف يُنتصر بلا انتقام، وكيف يربح القائد الحقيقي القلوب بعد أن ربح المعركة.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح الفهم</span>
+        <p>
+          فتح مكة لم يكن غزوة بالمعنى العسكري — بل كان استعادة سلمية لأقدس بقعة في الإسلام.
+          النبي ﷺ خطّط لكل تفصيلة لتجنب القتال: التحرك السري، الجيش الضخم الذي يجعل المقاومة
+          عبثية، وعرض الأمان لمن دخل بيته. النتيجة: أعظم فتح في التاريخ بأقل الخسائر —
+          لم يُقتل إلا اثنا عشر رجلًا من قريش وثلاثة من المسلمين في اشتباك جانبي واحد.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ أسباب الفتح ═══════ -->
+
+    <section id="causes">
+      <h2>أسباب الفتح — كيف نقضت قريش العهد</h2>
+      <p>
+        صلح الحديبية نصّ على أن من شاء دخل في عقد النبي ﷺ ومن شاء دخل في عقد قريش.
+        فدخلت <strong>خزاعة</strong> في حلف النبي ﷺ، ودخلت <strong>بنو بكر</strong> في حلف قريش.
+        ثم وقع ما غيّر كل شيء:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">العداوة القديمة</p>
+          <p class="flow-text">
+            كان بين خزاعة وبني بكر ثأر قديم من الجاهلية. وجدت بنو بكر في الهدنة فرصة للانتقام
+            من خزاعة وهم آمنون مطمئنون.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الاعتداء على خزاعة</p>
+          <p class="flow-text">
+            بيّتت بنو بكر خزاعة ليلًا عند ماء يُقال له «الوتير» وقتلوا منهم عددًا.
+            والأخطر: أمدّتهم قريش بالسلاح والرجال سرًّا — وقاتل معهم بعض سادة قريش متنكرين.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">خزاعة تستغيث بالنبي ﷺ</p>
+          <p class="flow-text">
+            جاء <a class="person-link" href="persons.html">عمرو بن سالم الخزاعي</a> إلى المدينة
+            يستنجد بالنبي ﷺ ويُنشد أبياتًا يصف فيها الاعتداء. فقال النبي ﷺ: «نُصرتَ يا عمرو بن سالم.»
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">قريش تحاول إنقاذ الموقف</p>
+          <p class="flow-text">
+            أدركت قريش خطورة ما فعلت. أرسلت <a class="person-link" href="persons.html">أبا سفيان</a>
+            إلى المدينة لتجديد الصلح وتمديده. لكن النبي ﷺ لم يردّ عليه، وكذلك أبو بكر وعمر وعلي
+            — رفض الجميع التفاوض. عاد أبو سفيان خائبًا.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لماذا رفض النبي ﷺ التجديد؟</span>
+        <p>
+          لأن قريشًا هي من نقضت العهد بإعانة بني بكر على خزاعة — حليفة المسلمين. قبول التجديد
+          يعني أن قريشًا تستطيع خرق العهد ثم تجديده كلما أرادت دون عاقبة. النبي ﷺ كان يعرف
+          أن هذه هي الفرصة الإلهية لتحرير مكة — البيت الحرام — دون إراقة دماء.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ التجهيز والمسير ═══════ -->
+
+    <section id="march">
+      <h2>التجهيز والمسير — السرية المطلقة</h2>
+      <p>
+        أمر النبي ﷺ بالتجهيز للمسير دون أن يُعلن وجهته. وطلب من المسلمين الاستعداد
+        في رمضان من السنة الثامنة. تجمّع جيش ضخم لم تعرف الجزيرة مثله:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x2694;&#xFE0F;</span>
+          <p class="visual-title">١٠ آلاف مقاتل</p>
+          <p class="visual-text">أكبر جيش إسلامي حتى تلك اللحظة — من المهاجرين والأنصار وقبائل حليفة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F910;</span>
+          <p class="visual-title">سرية مطلقة</p>
+          <p class="visual-text">لم يُعلن النبي ﷺ الوجهة لأحد. وأغلق كل الطرق المؤدية إلى مكة لمنع وصول الأخبار.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F525;</span>
+          <p class="visual-title">عشرة آلاف نار</p>
+          <p class="visual-text">أمر النبي ﷺ كل رجل أن يوقد نارًا عند مرّ الظهران — فرأت قريش عشرة آلاف نار تشتعل في الليل.</p>
+        </article>
+      </div>
+
+      <h3>حادثة حاطب بن أبي بلتعة</h3>
+      <p>
+        كشف الوحي أن <a class="person-link" href="persons.html">حاطب بن أبي بلتعة</a> أرسل رسالة
+        إلى قريش يُخبرهم بمسير النبي ﷺ. فأرسل النبي ﷺ
+        <a class="person-link" href="persons.html">عليًّا</a> و<a class="person-link" href="persons.html">الزبير</a>
+        فأدركا المرأة التي تحمل الرسالة واستخرجاها من ضفائر شعرها. استأذن عمر في قتل حاطب
+        فقال النبي ﷺ: «إنه قد شهد بدرًا، وما يدريك لعل الله اطّلع على أهل بدر فقال: اعملوا ما شئتم فقد غفرت لكم.»
+      </p>
+      <div class="connection">
+        <span class="connection-label">درس في التعامل مع الخطأ</span>
+        <p>
+          حاطب لم يكن منافقًا — بل كان بدريًّا مخلصًا أخطأ بدافع الخوف على أهله في مكة.
+          النبي ﷺ فرّق بين الخيانة المبنية على النفاق والخطأ المبني على الضعف البشري.
+          هذا المنهج — العدل لا الانتقام، والسياق لا الظاهر — هو ما سيُطبَّق على مكة كلها بعد ساعات.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ إسلام أبي سفيان ═══════ -->
+
+    <section id="abu-sufyan">
+      <h2>إسلام أبي سفيان — سيد قريش يستسلم</h2>
+      <p>
+        عند مرّ الظهران — على بُعد مرحلة من مكة — أمر النبي ﷺ الجيش بإيقاد النيران.
+        خرج <a class="person-link" href="persons.html">أبو سفيان بن حرب</a> يستطلع مصدر هذه
+        النيران فأُسر وأُحضر إلى النبي ﷺ:
+      </p>
+      <blockquote>
+        قال النبي ﷺ: «يا أبا سفيان، ألم يأنِ لك أن تعلم أنه لا إله إلا الله؟»
+        قال: بأبي أنت وأمي، ما أحلمك وأكرمك وأوصلك! أمّا هذه فقد كان في النفس منها شيء.
+        قال: «ألم يأنِ لك أن تعلم أني رسول الله؟»
+        قال: بأبي أنت وأمي، أمّا هذه ففي النفس منها بعد.
+        فقال <a class="person-link" href="persons.html">العباس</a>: ويحك أسلم! فأسلم.
+      </blockquote>
+      <div class="insight">
+        <span class="insight-label">لماذا أمّنه النبي ﷺ ومنحه مكانة؟</span>
+        <p>
+          قال النبي ﷺ: «من دخل دار أبي سفيان فهو آمن.» لماذا يمنح عدوه اللدود هذا الشرف؟
+          لأن أبا سفيان سيد قريش — وإذا رأى الناس أن سيدهم مُكرَّم ومُؤمَّن فسيستسلمون بلا قتال.
+          النبي ﷺ لم يكن يفتح مدينة فقط — بل كان يفتح قلوبًا. وأمر العباس أن يحبس أبا سفيان
+          عند مضيق الوادي ليرى الجيش الإسلامي يمرّ أمامه كتيبة كتيبة — فيعرف أن المقاومة عبث.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ دخول مكة ═══════ -->
+
+    <section id="entry">
+      <h2>دخول مكة — من أربعة محاور</h2>
+      <p>
+        قسّم النبي ﷺ الجيش إلى أربع فرق تدخل مكة من جهاتها الأربع في وقت واحد، مع أمر صارم:
+        <strong>«لا تقاتلوا إلا من قاتلكم.»</strong>
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>القائد</th>
+            <th>الجهة</th>
+            <th>ما حدث</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a class="person-link" href="persons.html">خالد بن الوليد</a></td>
+            <td>الجنوب (أسفل مكة)</td>
+            <td>الوحيد الذي واجه مقاومة — اشتبكت مجموعة من قريش بقيادة عكرمة وصفوان. قُتل ١٢ من قريش و٣ من المسلمين.</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">الزبير بن العوام</a></td>
+            <td>الشمال (أعلى مكة)</td>
+            <td>دخل دون قتال. أُمر بغرز الراية عند الحَجون حتى يأتيه النبي ﷺ.</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">أبو عبيدة بن الجراح</a></td>
+            <td>الوسط</td>
+            <td>دخل بسلام تام — لم يواجه أي مقاومة.</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">سعد بن عبادة</a> ثم ابنه <a class="person-link" href="persons.html">قيس</a></td>
+            <td>كَداء (غرب)</td>
+            <td>نُزع اللواء من سعد بعد أن قال «اليوم يوم الملحمة» وأُعطي لابنه قيس — لا ملحمة بل رحمة.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="connection">
+        <span class="connection-label">لماذا نُزع اللواء من سعد بن عبادة؟</span>
+        <p>
+          حين مرّ سعد بأبي سفيان قال: «اليوم يوم الملحمة، اليوم تُستحلّ الكعبة.» فشكاه أبو سفيان
+          للنبي ﷺ. فأخذ النبي ﷺ اللواء منه وأعطاه ابنه قيسًا — حفظًا لمكانة سعد وإلغاءً
+          لخطابه في آن واحد. ثم قال ﷺ: «بل اليوم يوم المرحمة، اليوم يُعزّ الله فيه قريشًا.»
+          القائد الحقيقي لا ينتصر بالتشفّي بل بالرحمة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ تطهير الكعبة ═══════ -->
+
+    <section id="kaaba">
+      <h2>تطهير الكعبة — إزالة ٣٦٠ صنمًا</h2>
+      <p>
+        دخل النبي ﷺ المسجد الحرام وطاف بالبيت سبعًا على راحلته، وحول الكعبة ٣٦٠ صنمًا.
+        فجعل يُشير إليها بقوسه وهي تتساقط وهو يتلو:
+      </p>
+      <blockquote>
+        ﴿وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ إِنَّ الْبَاطِلَ كَانَ زَهُوقًا﴾ — سورة الإسراء: ٨١
+      </blockquote>
+      <ul>
+        <li><strong>تحطيم الأصنام:</strong> كُسرت الأصنام الـ٣٦٠ وأُزيلت الصور والتماثيل من داخل الكعبة وخارجها — عاد البيت إلى ما بناه إبراهيم عليه السلام.</li>
+        <li><strong>مفتاح الكعبة:</strong> طلب النبي ﷺ المفتاح من <a class="person-link" href="persons.html">عثمان بن طلحة</a> ففتح الكعبة ودخلها وصلّى فيها ركعتين. ثم أعاد المفتاح لعثمان وقال: «خذوها يا بني طلحة خالدة تالدة، لا ينزعها منكم إلا ظالم» — مفتاح الكعبة في ذريتهم إلى اليوم.</li>
+        <li><strong>الأذان فوق الكعبة:</strong> أمر <a class="person-link" href="persons.html">بلالًا</a> أن يصعد فوق الكعبة ويؤذّن — العبد الحبشي الذي عُذّب في مكة يصدح بالتوحيد من أعلى بيت الله. لحظة لا مثيل لها في التاريخ.</li>
+        <li><strong>خطبة الفتح:</strong> خطب النبي ﷺ في الناس فألغى كل دماء الجاهلية ومآثرها: «كل دم في الجاهلية موضوع، وكل ربا في الجاهلية موضوع.» صفحة جديدة بالكامل.</li>
+      </ul>
+      <div class="insight">
+        <span class="insight-label">بلال فوق الكعبة — الرمزية الثورية</span>
+        <p>
+          قبل سنوات كان <a class="person-link" href="persons.html">بلال</a> يُسحب على رمال مكة
+          الحارقة ويُوضع الصخر على صدره وهو يقول: «أحد، أحد.» واليوم يقف فوق الكعبة —
+          أقدس مكان عند العرب — ويؤذن. القرشيون الذين عذّبوه يسمعونه من أسفل.
+          هذا المشهد وحده يلخّص رسالة الإسلام: لا فضل لعربي على أعجمي إلا بالتقوى.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ العفو العام ═══════ -->
+
+    <section id="pardon">
+      <h2>العفو العام — «اذهبوا فأنتم الطلقاء»</h2>
+      <p>
+        بعد تطهير الكعبة جاءت اللحظة الأعظم. اجتمعت قريش — الذين عذّبوا وقتلوا وحاصروا وطاردوا
+        المسلمين عشرين عامًا — ينتظرون مصيرهم. فسألهم النبي ﷺ:
+      </p>
+      <blockquote>
+        «يا معشر قريش، ما ترون أني فاعل بكم؟»
+        قالوا: أخ كريم وابن أخ كريم.
+        قال: «اذهبوا فأنتم الطلقاء.»
+      </blockquote>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F54A;&#xFE0F;</span>
+          <p class="visual-title">العفو الشامل</p>
+          <p class="visual-text">لم يُقتل أحد ولم يُصادر مال ولم يُسبَ أحد — عفو مطلق عن كل جرائم عشرين سنة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3E0;</span>
+          <p class="visual-title">الأمان العام</p>
+          <p class="visual-text">من أغلق بابه فهو آمن، ومن دخل المسجد فهو آمن، ومن دخل دار أبي سفيان فهو آمن.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x2764;</span>
+          <p class="visual-title">فتح القلوب</p>
+          <p class="visual-text">دخل الناس في دين الله أفواجًا — لأنهم رأوا عدلًا ورحمة لا انتقامًا وثأرًا.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F31F;</span>
+          <p class="visual-title">يوسف ﷺ نموذجًا</p>
+          <p class="visual-text">كما قال يوسف لإخوته: ﴿لا تثريب عليكم اليوم﴾ — قال محمد ﷺ لقريش: «اذهبوا فأنتم الطلقاء.»</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">ما بعد الفتح — حنين وتبوك</span>
+        <p>
+          فتح مكة لم يكن نهاية المسير بل بداية مرحلة جديدة. بعد أسابيع قليلة ستواجه الإسلام
+          هوازن وثقيف في غزوة حنين — لحظة كادت تتحول إلى هزيمة بسبب العُجب بالكثرة.
+          ثم ستأتي تبوك — المواجهة مع الروم — والتي ستكشف المنافقين وتمتحن الإيمان.
+          فتح مكة خاتمة العهد المكي وبداية عهد الانتشار العالمي.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. نقض قريش للعهد</h4>
+          <p>أعانت قريش بني بكر على خزاعة حليفة المسلمين — فانتقض صلح الحديبية بفعل قريش نفسها.</p>
+        </article>
+        <article class="card">
+          <h4>٢. السرية المطلقة</h4>
+          <p>تحرّك ١٠ آلاف مقاتل دون أن تعلم قريش — وحادثة حاطب كادت تكشف السر لولا الوحي.</p>
+        </article>
+        <article class="card">
+          <h4>٣. إسلام أبي سفيان</h4>
+          <p>سيد قريش أسلم عند مرّ الظهران ومُنح شرف الأمان — استراتيجية فتح القلوب قبل المدن.</p>
+        </article>
+        <article class="card">
+          <h4>٤. دخول بلا قتال</h4>
+          <p>أربعة محاور — اشتباك وحيد جنوبًا. «لا تقاتلوا إلا من قاتلكم» — ١٢ قتيلًا فقط من قريش.</p>
+        </article>
+        <article class="card">
+          <h4>٥. ٣٦٠ صنمًا تسقط</h4>
+          <p>طُهّرت الكعبة وأذّن بلال من فوقها — العبد المعذَّب يصدح بالتوحيد من أقدس مكان.</p>
+        </article>
+        <article class="card">
+          <h4>٦. «أنتم الطلقاء»</h4>
+          <p>عفو شامل عن كل قريش — لا قتل ولا سبي ولا مصادرة. ففتح القلوب ودخل الناس أفواجًا.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch19-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch19-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch19-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'أسباب الفتح والتجهيز',
+        questions: [
+          {
+            t: 'سبب نقض العهد',
+            q: 'ما السبب المباشر لانتقاض صلح الحديبية؟',
+            o: ['قريش هاجمت المدينة', 'أعانت قريش بني بكر على خزاعة حليفة المسلمين', 'رفض قريش دخول المسلمين للعمرة', 'اغتيال رسول النبي ﷺ'],
+            a: 1
+          },
+          {
+            t: 'خزاعة وبنو بكر',
+            q: 'في أي حلف دخلت خزاعة وفي أي حلف دخلت بنو بكر؟',
+            o: ['خزاعة في حلف قريش، وبنو بكر في حلف المسلمين', 'خزاعة في حلف النبي ﷺ، وبنو بكر في حلف قريش', 'كلاهما في حلف قريش', 'كلاهما في حلف النبي ﷺ'],
+            a: 1
+          },
+          {
+            t: 'رسالة حاطب',
+            q: 'ماذا فعل حاطب بن أبي بلتعة قبل الفتح؟',
+            o: ['رفض المشاركة في الجيش', 'أرسل رسالة لقريش يخبرهم بمسير النبي ﷺ', 'هاجر إلى الحبشة', 'حاول اغتيال أبي سفيان'],
+            a: 1
+          },
+          {
+            t: 'عفو النبي عن حاطب',
+            q: 'لماذا عفا النبي ﷺ عن حاطب رغم إرساله الرسالة؟',
+            o: ['لأنه اعتذر فورًا', 'لأنه شهد بدرًا ولعل الله غفر لأهل بدر', 'لأن الرسالة لم تصل', 'لأنه كان مريضًا'],
+            a: 1
+          },
+          {
+            t: 'أبو سفيان في المدينة',
+            q: 'ماذا حدث حين جاء أبو سفيان إلى المدينة لتجديد الصلح؟',
+            o: ['قبل النبي ﷺ التجديد بشروط', 'رفض النبي ﷺ وأبو بكر وعمر وعلي التفاوض — وعاد خائبًا', 'أسلم أبو سفيان في المدينة', 'سُجن حتى يوم الفتح'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'المسير وإسلام أبي سفيان',
+        questions: [
+          {
+            t: 'حجم الجيش',
+            q: 'كم كان عدد جيش المسلمين في فتح مكة تقريبًا؟',
+            o: ['ثلاثة آلاف', 'خمسة آلاف', 'عشرة آلاف', 'ثلاثون ألفًا'],
+            a: 2
+          },
+          {
+            t: 'عشرة آلاف نار',
+            q: 'لماذا أمر النبي ﷺ كل رجل بإيقاد نار عند مرّ الظهران؟',
+            o: ['للتدفئة في البرد', 'لإرعاب قريش بحجم الجيش الضخم', 'لطهي الطعام', 'كإشارة لخالد بن الوليد'],
+            a: 1
+          },
+          {
+            t: 'إسلام أبي سفيان',
+            q: 'أين أسلم أبو سفيان بن حرب؟',
+            o: ['في المدينة المنورة', 'عند الكعبة', 'عند مرّ الظهران بعد أن رأى الجيش', 'في بيته بمكة'],
+            a: 2
+          },
+          {
+            t: 'دار أبي سفيان',
+            q: 'لماذا قال النبي ﷺ «من دخل دار أبي سفيان فهو آمن»؟',
+            o: ['لأن أبا سفيان طلب ذلك شرطًا لإسلامه', 'ليُكرم سيد قريش فيستسلم الناس بلا قتال', 'لأن دار أبي سفيان كانت أكبر بيت في مكة', 'لأنه عمّ النبي ﷺ'],
+            a: 1
+          },
+          {
+            t: 'توقيت الفتح',
+            q: 'في أي شهر وسنة كان فتح مكة؟',
+            o: ['شوال، السنة السابعة للهجرة', 'رمضان، السنة الثامنة للهجرة', 'ذو الحجة، السنة التاسعة', 'محرم، السنة العاشرة'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'دخول مكة وتطهير الكعبة',
+        questions: [
+          {
+            t: 'عدد المحاور',
+            q: 'على كم محور قسّم النبي ﷺ الجيش لدخول مكة؟',
+            o: ['محورين', 'ثلاثة محاور', 'أربعة محاور', 'خمسة محاور'],
+            a: 2
+          },
+          {
+            t: 'الاشتباك الوحيد',
+            q: 'من قاد المحور الذي واجه مقاومة ومن أي جهة دخل؟',
+            o: ['الزبير من الشمال', 'خالد بن الوليد من الجنوب (أسفل مكة)', 'أبو عبيدة من الوسط', 'سعد بن عبادة من الغرب'],
+            a: 1
+          },
+          {
+            t: 'سعد بن عبادة',
+            q: 'لماذا نُزع اللواء من سعد بن عبادة وأُعطي لابنه؟',
+            o: ['لأنه تأخر عن الموعد', 'لأنه قال «اليوم يوم الملحمة» والنبي ﷺ أراد الرحمة لا الملحمة', 'لأنه أصيب في الطريق', 'لأن ابنه أكفأ عسكريًّا'],
+            a: 1
+          },
+          {
+            t: 'عدد الأصنام',
+            q: 'كم صنمًا كان حول الكعبة وطُهّرت منها؟',
+            o: ['١٠٠ صنم', '٢٠٠ صنم', '٣٦٠ صنمًا', '٥٠٠ صنم'],
+            a: 2
+          },
+          {
+            t: 'مفتاح الكعبة',
+            q: 'ماذا فعل النبي ﷺ بمفتاح الكعبة بعد فتحها؟',
+            o: ['احتفظ به لنفسه', 'أعطاه لعلي بن أبي طالب', 'أعاده لعثمان بن طلحة وجعله في ذريته خالدًا', 'أعطاه لبلال'],
+            a: 2
+          }
+        ]
+      },
+      {
+        title: 'العفو العام والنتائج',
+        questions: [
+          {
+            t: 'أذان بلال',
+            q: 'أين أذّن بلال يوم فتح مكة؟',
+            o: ['في المسجد النبوي', 'في دار الأرقم', 'فوق الكعبة', 'عند جبل حراء'],
+            a: 2
+          },
+          {
+            t: 'كلمة العفو',
+            q: 'ماذا قال النبي ﷺ لقريش حين سألهم: ما ترون أني فاعل بكم؟',
+            o: ['ستُحاسبون على أفعالكم', 'اذهبوا فأنتم الطلقاء', 'عليكم دفع الدية عن كل مسلم قتلتموه', 'ستُنفون من مكة'],
+            a: 1
+          },
+          {
+            t: 'الآية المتلوّة',
+            q: 'ما الآية التي تلاها النبي ﷺ وهو يُشير إلى الأصنام فتتساقط؟',
+            o: ['﴿قل هو الله أحد﴾', '﴿جاء الحق وزهق الباطل إن الباطل كان زهوقًا﴾', '﴿إنا فتحنا لك فتحًا مبينًا﴾', '﴿ألم نشرح لك صدرك﴾'],
+            a: 1
+          },
+          {
+            t: 'خسائر الفتح',
+            q: 'كم كانت خسائر فتح مكة تقريبًا؟',
+            o: ['لم يُقتل أحد إطلاقًا', '١٢ من قريش و٣ من المسلمين في اشتباك جانبي واحد', 'مئات القتلى من الطرفين', 'عشرات من المسلمين فقط'],
+            a: 1
+          },
+          {
+            t: 'أثر العفو',
+            q: 'ما أثر العفو العام على مستقبل الإسلام؟',
+            o: ['لم يكن له أثر كبير', 'أضعف موقف المسلمين', 'دخل الناس في دين الله أفواجًا لأنهم رأوا رحمة لا انتقامًا', 'هرب كثير من قريش خارج مكة'],
+            a: 2
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch19-score');
+    const container = document.getElementById('ch19-quiz-container');
+    const retryBtn = document.getElementById('ch19-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «فتح مكة» من كتاب «الرحيق المختوم»
+  </footer>
+
+</body>
+</html>

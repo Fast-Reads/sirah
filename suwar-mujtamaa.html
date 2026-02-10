@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صور من المجتمع الجاهلي — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .breadcrumb a:hover {
+      background: var(--gold-pale);
+      color: var(--navy);
+    }
+    .breadcrumb .sep {
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+    .breadcrumb .current {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--text);
+      text-align: justify;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    /* LISTS */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    ul li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+    }
+
+    /* VISUAL GRID */
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .visual-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .visual-icon {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .visual-title {
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+    }
+    .visual-text {
+      margin: 0;
+      color: var(--text-light);
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow);
+    }
+    .card h4 {
+      margin: 0 0 0.4rem;
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* FLOW TIMELINE */
+    .flowline {
+      border-right: 3px solid var(--gold-light);
+      margin-top: 1.3rem;
+      padding-right: 1.3rem;
+    }
+    .flow-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover {
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+    .flow-item::before {
+      content: "";
+      position: absolute;
+      right: -1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .flow-title {
+      margin: 0;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .flow-text {
+      margin: 0.3rem 0 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+    }
+    .tribe-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tribe-table tr:hover td {
+      background: var(--gold-pale);
+    }
+
+    /* ── INSIGHT / CONNECTION BOX ── */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .insight p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* connection variant — links forward to later chapters */
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .connection p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* PERSON LINK */
+    a.person-link {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 0.05rem;
+    }
+    a.person-link:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+    }
+
+    /* ── QUIZ ── */
+    .quiz-wrapper {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--gold-light);
+    }
+    .quiz-wrapper > h2 {
+      text-align: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+    .quiz-intro {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin: 0 auto 1.5rem;
+      max-width: 600px;
+    }
+    .quiz-score-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .quiz-score-bar span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .quiz-score-bar .q-score {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .quiz-section-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer;
+      padding: 1rem 1.4rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow {
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body {
+      padding: 0 1.4rem 1.4rem;
+    }
+    .q-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.3rem;
+      margin-top: 0.9rem;
+    }
+    .q-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .q-card p {
+      margin: 0 0 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      text-align: right;
+    }
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .q-opts button {
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      font-size: 0.92rem;
+      font-family: 'Tajawal', sans-serif;
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text);
+    }
+    .q-opts button:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+    .q-opts button.q-correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .q-opts button.q-wrong {
+      border-color: #c53030;
+      background: #fde8e8;
+      color: #c53030;
+    }
+    .q-opts button.q-off {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .q-feedback {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      font-size: 0.86rem;
+      min-height: 1.3em;
+    }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .quiz-retry-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2.2rem;
+      font-size: 1rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover {
+      background: #14293f;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>صور من المجتمع الجاهلي</h1>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">صور من المجتمع الجاهلي</span>
+  </nav>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section>
+      <h2>لماذا نحتاج هذا الفصل قبل البعثة؟</h2>
+      <p>
+        لا يمكن أن تفهم عظمة ما جاء به النبي ﷺ إلا إذا عرفتَ الواقع الذي جاء ليغيّره.
+        المباركفوري يرسم هنا صورة شاملة للمجتمع العربي قبيل البعثة: كيف كانوا يعيشون؟
+        ماذا يأكلون ويشربون؟ كيف يتعاملون مع المرأة والضعيف؟ ما الذي كانوا يفخرون به وما الذي
+        يخجلون منه؟ هذه الصورة هي «الخلفية» التي ستجعل كل آية قرآنية وكل موقف نبوي
+        أعمق معنًى وأوضح سياقًا.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح القراءة</span>
+        <p>
+          المجتمع الجاهلي لم يكن شرًّا محضًا — كانت فيه أخلاق نبيلة حقيقية (كرم، شجاعة، وفاء)
+          إلى جانب ظلم فادح (وأد البنات، عبودية، ثأر لا ينتهي). الإسلام لم يهدم كل شيء بل
+          أبقى الحسن وأزال القبيح — وهذا منهج نبوي ستراه في كل فصل لاحق.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الحياة الاجتماعية ═══════ -->
+
+    <section>
+      <h2>البنية الاجتماعية: القبيلة فوق كل شيء</h2>
+      <p>
+        القبيلة كانت الوحدة السياسية والاجتماعية الأساسية عند العرب. لم تكن هناك دولة مركزية
+        ولا قانون مكتوب — القبيلة هي الحكومة والجيش والمحكمة والهوية. الانتماء القبلي يحدد
+        كل شيء: مَن تتزوج، مَن تحارب، مَن تحمي، ومَن تقتل.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F451;</span>
+          <p class="visual-title">الأشراف والسادة</p>
+          <p class="visual-text">رؤساء القبائل وأصحاب النسب الرفيع. يقودون ويُطاعون ويتحملون أعباء الضيافة والديات.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F465;</span>
+          <p class="visual-title">عامة الناس</p>
+          <p class="visual-text">أفراد القبيلة الأحرار. يتمتعون بحماية القبيلة ويشاركون في حروبها وقراراتها.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F91D;</span>
+          <p class="visual-title">الموالي والحلفاء</p>
+          <p class="visual-text">غرباء انضموا للقبيلة بالحلف أو الولاء. حقوقهم أقل لكنهم يحظون بالحماية.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x26D3;&#xFE0F;</span>
+          <p class="visual-title">العبيد والإماء</p>
+          <p class="visual-text">أسرى حرب أو مشترون من أسواق النخاسة. لا حقوق لهم ويُعاملون كممتلكات.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">لماذا هذا مهم لاحقًا؟</span>
+        <p>
+          أوائل المسلمين كانوا من كل هذه الطبقات: أبو بكر من الأشراف، وصهيب من الموالي، وبلال
+          من العبيد. الإسلام كسر هذا التصنيف الطبقي بآية واحدة: ﴿إنّ أكرمكم عند الله أتقاكم﴾.
+          عندما تقرأ قصة تعذيب بلال وعمار، ستفهم أن الأسياد كانوا يعذبون عبيدهم لأنهم رأوا
+          في إسلامهم تمردًا على النظام الاجتماعي بأكمله — لا مجرد تغيير دين.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ العصبية القبلية ═══════ -->
+
+    <section>
+      <h2>العصبية القبلية: «انصر أخاك ظالمًا أو مظلومًا»</h2>
+      <p>
+        العصبية كانت أقوى رابطة في المجتمع الجاهلي. الفرد يقف مع قبيلته في كل شيء — حقًّا
+        كان أو باطلًا. هذه العصبية أنتجت حروبًا استمرت عقودًا بسبب أتفه الأسباب:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">حرب البسوس — ٤٠ سنة</p>
+          <p class="flow-text">
+            بين بكر وتغلب (من ربيعة). بدأت بقتل ناقة لامرأة تُدعى البسوس، فقُتل كليب سيد تغلب
+            انتقامًا، فاشتعلت حرب لم تنطفئ أربعين عامًا.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">حرب داحس والغبراء — ١٠٠ سنة</p>
+          <p class="flow-text">
+            بين عبس وذبيان (من غطفان). سببها غش في سباق خيل، فتحولت إلى ثأر متبادل
+            امتد نحو مئة عام حتى تدخل الحكماء.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">حرب بعاث — آخر الحروب</p>
+          <p class="flow-text">
+            بين الأوس والخزرج في يثرب. وقعت قبل الهجرة بخمس سنوات تقريبًا، وأنهكت الفريقين
+            حتى صاروا يتوقون لقائد يوحّدهم.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">المفارقة العجيبة</span>
+        <p>
+          حرب بعاث — التي بدت كارثة — كانت في الحقيقة «تمهيدًا إلهيًّا» للهجرة. لأن الحرب أنهكت
+          الأوس والخزرج وجعلتهم يبحثون عن حلّ خارجي، فلما سمعوا بالنبي ﷺ في موسم الحج
+          كانوا أكثر الناس استعدادًا لقبول رسالته. النبي ﷺ نفسه أشار إلى ذلك.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ المرأة في الجاهلية ═══════ -->
+
+    <section>
+      <h2>المرأة في الجاهلية: بين الاحترام والظلم</h2>
+      <p>
+        وضع المرأة في الجاهلية لم يكن واحدًا — تفاوت بين قبيلة وأخرى وبين طبقة وأخرى.
+        لكن الصورة العامة كانت قاتمة في جوانب كثيرة:
+      </p>
+
+      <h3>أنكحة الجاهلية الفاسدة</h3>
+      <p>
+        ذكرت عائشة رضي الله عنها أن النكاح في الجاهلية كان على أربعة أنحاء، واحد منها فقط
+        هو الذي أقرّه الإسلام (نكاح الخطبة والمهر والولي). أما الثلاثة الأخرى فكانت
+        أشكالًا مهينة تُعامل فيها المرأة كسلعة أو وسيلة لاستيلاد النسب الرفيع.
+      </p>
+
+      <h3>وأد البنات</h3>
+      <p>
+        أبشع عادات الجاهلية على الإطلاق. بعض القبائل كانت تدفن البنت الصغيرة حية خوفًا من
+        العار أو الفقر. القرآن صوّر هذا المشهد بآية تقشعر لها الأبدان: ﴿وإذا الموءودة سُئلت ·
+        بأي ذنب قُتلت﴾. لكن يجب التنبيه أن الوأد لم يكن عامًا في كل القبائل — بعض القبائل
+        أنكرته وعابته، وبعض الأفراد كانوا يشترون البنات من آبائهن لإنقاذهن.
+      </p>
+      <div class="connection">
+        <span class="connection-label">صدى في السيرة</span>
+        <p>
+          عندما تقرأ أن النبي ﷺ أنجب أربع بنات وكان يقوم لفاطمة إذا دخلت ويقبّل يدها ويُجلسها
+          مكانه، ستدرك أنه كان يهدم ثقافة الوأد بسلوكه اليومي قبل أن يهدمها بالتشريع.
+          وعندما تقرأ عن عمر بن الخطاب وهو يبكي لتذكّره أنه وأد ابنته في الجاهلية، ستفهم
+          عمق التحول الذي أحدثه الإسلام في النفوس.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الحياة الاقتصادية ═══════ -->
+
+    <section>
+      <h2>الحياة الاقتصادية: التجارة عصب الحياة</h2>
+      <p>
+        النشاط الاقتصادي تفاوت بحسب البيئة — فالبدوي يرعى والحضري يتاجر والمزارع في اليمن
+        والمدينة والطائف يزرع. لكن التجارة كانت أعلى الأنشطة مكانة، وقريش سيّدتها.
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>التجارة — قريش والرحلتان</h4>
+          <p>رحلة الشتاء إلى اليمن والحبشة، ورحلة الصيف إلى الشام. نظّمها هاشم بن عبد مناف وجعل لقريش «إيلاف» — عهود أمان مع القبائل على طول الطريق.</p>
+        </article>
+        <article class="card">
+          <h4>الرعي — حياة البادية</h4>
+          <p>الإبل والغنم والخيل عماد حياة البدو. والإبل خصوصًا كانت عملة ومركبة وطعامًا وشرابًا ومهرًا وديةً — وأثمن ما يملك العربي.</p>
+        </article>
+        <article class="card">
+          <h4>الزراعة — محدودة لكنها حاضرة</h4>
+          <p>المدينة اشتهرت بالنخيل والتمر، والطائف بالعنب والفاكهة، واليمن بالبُنّ والبخور. لكن الزراعة ظلت أقل مكانة من التجارة والرعي.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">الإيلاف — عبقرية هاشم</span>
+        <p>
+          «الإيلاف» نظام أمّنت به قريش قوافلها: اتفاقيات حماية مع كل القبائل التي تمر بها القوافل،
+          مقابل حصة من أرباح التجارة. هذا النظام جعل قريشًا أغنى قبيلة في الجزيرة رغم أن أرضها
+          صحراء قاحلة. القرآن أشار إليه: ﴿لإيلاف قريش · إيلافهم رحلة الشتاء والصيف﴾.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الأسواق ═══════ -->
+
+    <section>
+      <h2>الأسواق العربية — ملتقى التجارة والثقافة</h2>
+      <p>
+        الأسواق لم تكن مجرد أماكن بيع وشراء — بل كانت مهرجانات ثقافية وأدبية وسياسية. أشهرها
+        ثلاثة أسواق تقام قبل موسم الحج سنويًّا:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>السوق</th>
+            <th>الموقع</th>
+            <th>التوقيت</th>
+            <th>الأهمية</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>عكاظ</strong></td>
+            <td>بين مكة والطائف</td>
+            <td>شوال — ٢٠ يومًا</td>
+            <td>أعظم أسواق العرب. فيه تُعلّق القصائد ويُفتخر بالأنساب ويُحتكم في الخصومات.</td>
+          </tr>
+          <tr>
+            <td><strong>مجنّة</strong></td>
+            <td>قرب مكة</td>
+            <td>ذو القعدة — ١٠ أيام</td>
+            <td>محطة وسطى بين عكاظ وذي المجاز، وفيه أيضًا تجارة وشعر.</td>
+          </tr>
+          <tr>
+            <td><strong>ذو المجاز</strong></td>
+            <td>قرب عرفة</td>
+            <td>أول ٨ أيام من ذي الحجة</td>
+            <td>آخر الأسواق قبل الحج مباشرة — بوابة الدخول إلى مكة.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="connection">
+        <span class="connection-label">هنا بدأت الدعوة العلنية</span>
+        <p>
+          النبي ﷺ استغل هذه الأسواق في بداية دعوته. كان يذهب إلى عكاظ ومجنة وذي المجاز
+          يعرض نفسه على القبائل قبيلة قبيلة ويقول: «مَن يؤويني حتى أبلّغ رسالة ربي؟»
+          — وأبو لهب يمشي خلفه ويقول: «لا تصدّقوه!». في إحدى هذه المواسم التقى بنفر من
+          الخزرج فكانت بيعة العقبة الأولى — بذرة الهجرة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الأخلاق الحسنة ═══════ -->
+
+    <section>
+      <h2>الأخلاق الحسنة — ما أبقاه الإسلام</h2>
+      <p>
+        العرب — رغم الوثنية والجاهلية — تحلّوا بأخلاق رفيعة حقيقية. وهذه الأخلاق هي التي
+        جعلت الإسلام يجد أرضًا خصبة عندهم. النبي ﷺ قال: «إنما بُعثت لأتمّم مكارم الأخلاق»
+        — أي أن هناك مكارم موجودة جاء ليُكملها لا ليخترعها:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F37D;&#xFE0F;</span>
+          <p class="visual-title">الكرم</p>
+          <p class="visual-text">أعلى الأخلاق عند العرب. يذبح الرجل ناقته لضيف واحد. حاتم الطائي صار مثلًا عالميًّا.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x2694;&#xFE0F;</span>
+          <p class="visual-title">الشجاعة</p>
+          <p class="visual-text">الجبن أسوأ عار. العربي يقاتل حتى الموت ولا يفرّ. عنترة وعمرو بن ود أمثلة حية.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F91D;</span>
+          <p class="visual-title">الوفاء بالعهد</p>
+          <p class="visual-text">العهد عند العربي مقدّس. السموأل ضحّى بابنه ولم يخن أمانة امرئ القيس.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3E0;</span>
+          <p class="visual-title">حماية الجار</p>
+          <p class="visual-text">الجار له حرمة كحرمة الأهل. مَن استجار بقبيلة حُمي ولو كان عدوًّا.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4AA;</span>
+          <p class="visual-title">الإباء والأنفة</p>
+          <p class="visual-text">يأبى العربي الذل ويرفض الضيم. هذه الأنفة ستكون سلاحًا ذا حدّين أمام الدعوة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3AF;</span>
+          <p class="visual-title">المروءة</p>
+          <p class="visual-text">مجموعة شمائل: الصدق وعفة اللسان والنجدة وإغاثة الملهوف والصبر على الشدائد.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">حلف الفضول — مثال حي</span>
+        <p>
+          حلف الفضول أبرز تجلٍّ لهذه الأخلاق: تحالفت بطون من قريش في دار عبد الله بن جدعان
+          على نصرة المظلوم ورد الحقوق. النبي ﷺ حضره قبل البعثة وقال بعدها:
+          «لقد شهدتُ في دار ابن جدعان حِلفًا لو دُعيتُ به في الإسلام لأجبت».
+          هذا يعني أن الإسلام يُقرّ كل عمل خير حتى لو صدر من غير مسلمين.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الأخلاق السيئة ═══════ -->
+
+    <section>
+      <h2>الأخلاق السيئة — ما جاء الإسلام ليزيله</h2>
+      <p>
+        في المقابل، كان المجتمع الجاهلي غارقًا في ممارسات مدمّرة. هذه ليست «عادات بريئة»
+        بل كانت تنخر بنية المجتمع وتجعله بحاجة ماسة إلى إصلاح جذري:
+      </p>
+      <ul>
+        <li><strong>الخمر:</strong> شرب الخمر كان عاديًّا بل مفخرة. الشعراء يتغنّون بها والمجالس تدور حولها. القرآن حرّمها بالتدريج على ثلاث مراحل — وهذا منهج تربوي ستراه لاحقًا.</li>
+        <li><strong>الميسر (القمار):</strong> مرتبط بالخمر ارتباطًا وثيقًا. كانوا يتقامرون على كل شيء حتى على أزواجهم وأولادهم.</li>
+        <li><strong>وأد البنات:</strong> دفن البنات أحياء خوفًا من العار أو الفقر — وقد تقدّم الحديث عنه.</li>
+        <li><strong>النهب والسلب:</strong> الغارة على القبائل الأخرى لسلب ممتلكاتها كانت مصدر رزق معتاد عند كثير من البدو، بل مصدر فخر.</li>
+        <li><strong>الثأر العمياء:</strong> القتل بالقتل بلا حدود — يُقتل بريء من قبيلة القاتل انتقامًا، فتتسلسل الحرب عقودًا.</li>
+        <li><strong>الربا الفاحش:</strong> إذا عجز المدين عن السداد ضاعفوا عليه الدين. «أتربي أم تقضي؟» — عبارتهم الشهيرة.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">التدرّج في التشريع</span>
+        <p>
+          لاحظ أن كثيرًا من هذه الآفات لم يُحرّمها الإسلام دفعة واحدة. الخمر مثلًا نزل تحريمها
+          على ثلاث مراحل: إشارة إلى أن فيها إثمًا (البقرة) ← نهي عن الصلاة بها (النساء)
+          ← تحريم قاطع (المائدة). هذا التدرج سيكون نمطًا ستلاحظه في فصول التشريع المدني.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الحياة الثقافية ═══════ -->
+
+    <section>
+      <h2>الحياة الثقافية: الشعر ديوان العرب</h2>
+      <p>
+        في مجتمع لا يقرأ ولا يكتب — كانت اللغة المنطوقة هي كل شيء. الشعر والخطابة
+        والأنساب هي العلوم الثلاثة التي برع فيها العرب:
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>الشعر — سلاح ودرع</h4>
+          <p>الشاعر لسان قبيلته. يمدح فيرفع ويهجو فيضع. القصيدة العظيمة تُعلَّق على أستار الكعبة (المعلقات). الشعر أقوى وسيلة إعلامية عرفها العرب.</p>
+        </article>
+        <article class="card">
+          <h4>الخطابة — فصاحة المنبر</h4>
+          <p>الخطيب يقف في الأسواق والمحافل يفصل في الخصومات ويحرّض على الحرب أو السلم. البلاغة العربية بلغت ذروتها قبيل الإسلام.</p>
+        </article>
+        <article class="card">
+          <h4>علم الأنساب — هوية الفرد</h4>
+          <p>العربي يحفظ نسبه عشرين جدًّا أو أكثر. خطأ في النسب يشعل حربًا. وهذا العلم سيخدم حفظ الأحاديث لاحقًا عبر الأسانيد.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لماذا نزل القرآن بالعربية؟</span>
+        <p>
+          هذه البيئة اللغوية الاستثنائية هي السبب المباشر: القرآن نزل بأفصح لغة عرفها البشر
+          في أفصح فترة عرفتها تلك اللغة — ليكون التحدي في محلّه. العرب كانوا خبراء اللغة
+          فلما عجزوا عن الإتيان بمثل القرآن كان ذلك أبلغ حجة. تحدّي القرآن البلاغي
+          لا يُفهم إلا في سياق مجتمع كان الشعر فيه أعلى الفنون.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ حلف الفضول ═══════ -->
+
+    <section>
+      <h2>حلف الفضول — بارقة أمل في الظلام</h2>
+      <p>
+        ليس كل شيء في الجاهلية كان سيّئًا. قبل البعثة بعشرين سنة تقريبًا وقع حادث كشف عن ضمير
+        حيّ في المجتمع: رجل يمني جاء مكة ببضاعة فاشتراها منه
+        <a class="person-link" href="persons.html">العاص بن وائل</a> ولم يدفع ثمنها.
+        استنجد الرجل بقريش فتحالفت بطون: بنو هاشم، وبنو زهرة، وبنو تيم، وبنو المطلب، وبنو أسد
+        في دار <a class="person-link" href="persons.html">عبد الله بن جدعان</a> على:
+      </p>
+      <ul>
+        <li><strong>نصرة المظلوم</strong> في مكة حتى يأخذ حقه.</li>
+        <li><strong>ألا يُظلم غريب</strong> في مكة ما داموا أحياء.</li>
+        <li><strong>الوقوف صفًّا واحدًا</strong> ضد كل ظالم مهما كانت قبيلته.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">موقف نبوي خالد</span>
+        <p>
+          حضر النبي ﷺ هذا الحلف وهو في العشرين من عمره. وبعد البعثة قال: «لقد شهدتُ في دار
+          عبد الله بن جدعان حلفًا ما أحبّ أن لي به حُمر النعم، ولو أُدعى به في الإسلام لأجبت».
+          هذا يؤسّس لمبدأ إسلامي عظيم: العدل والحق ليسا حكرًا على المسلمين — كل عمل خيّر
+          يُقرّ ويُحتَرم بصرف النظر عن مصدره.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ صورة شاملة ═══════ -->
+
+    <section>
+      <h2>الصورة الشاملة — مجتمع ينتظر المُنقذ</h2>
+      <p>
+        إذا جمعتَ كل هذه الخيوط تظهر صورة مجتمع فيه تناقضات حادة: كرم بلا حدود لكن ظلم بلا حدود
+        أيضًا، شجاعة مذهلة لكنها تُوظَّف في قتل الأبرياء، فصاحة خارقة لكنها تُستخدم في الهجاء
+        والتفاخر. كان المجتمع يحتاج مَن يأخذ هذه الطاقة الهائلة ويوجّهها — وهذا بالضبط ما فعله
+        النبي ﷺ.
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>الجانب</th>
+            <th>في الجاهلية</th>
+            <th>ما فعله الإسلام</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>الكرم</td>
+            <td>للتفاخر والمباهاة</td>
+            <td>وجّهه للإنفاق في سبيل الله ورعاية الفقراء</td>
+          </tr>
+          <tr>
+            <td>الشجاعة</td>
+            <td>للغارات والثأر</td>
+            <td>وجّهها للجهاد المشروع والدفاع عن المستضعفين</td>
+          </tr>
+          <tr>
+            <td>العصبية</td>
+            <td>للقبيلة ظالمة أو مظلومة</td>
+            <td>حوّلها إلى أخوّة إيمانية تتجاوز القبيلة واللون</td>
+          </tr>
+          <tr>
+            <td>الفصاحة</td>
+            <td>للهجاء والتفاخر</td>
+            <td>وظّفها في الدعوة والشعر الإسلامي (حسان بن ثابت)</td>
+          </tr>
+          <tr>
+            <td>المرأة</td>
+            <td>توأد وتُورث كمتاع</td>
+            <td>كرّمها بالميراث والمهر والحقوق</td>
+          </tr>
+          <tr>
+            <td>العبودية</td>
+            <td>نظام طبقي جامد</td>
+            <td>جعل تحرير الرقاب كفّارة وعبادة وفضيلة</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section>
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. القبيلة = الدولة</h4>
+          <p>لا حكومة ولا قانون — القبيلة هي كل شيء. هذا يفسّر صعوبة الدعوة: مَن يترك قبيلته يفقد كل شيء.</p>
+        </article>
+        <article class="card">
+          <h4>٢. طبقات جامدة</h4>
+          <p>أشراف وعبيد ولا حراك. الإسلام كسر هذا بـ«لا فضل لعربي على أعجمي إلا بالتقوى».</p>
+        </article>
+        <article class="card">
+          <h4>٣. أخلاق مزدوجة</h4>
+          <p>كرم وشجاعة ووفاء — لكن أيضًا خمر وميسر ووأد وظلم. الإسلام أبقى الحسن وأزال القبيح.</p>
+        </article>
+        <article class="card">
+          <h4>٤. الأسواق = الإعلام</h4>
+          <p>عكاظ ومجنّة وذو المجاز منابر الدعوة الأولى — هناك التقى النبي ﷺ بالأنصار.</p>
+        </article>
+        <article class="card">
+          <h4>٥. ذروة الفصاحة</h4>
+          <p>القرآن تحدّى أمة الشعر في ميدانها — ومعرفة هذا السياق تجعل الإعجاز أوضح.</p>
+        </article>
+        <article class="card">
+          <h4>٦. مجتمع جاهز للتغيير</h4>
+          <p>الحروب والظلم أنهكا الجميع — والأرواح تبحث عمّن يوحّدها ويعدل بينها.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch4-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch4-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch4-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'البنية الاجتماعية والعصبية القبلية',
+        questions: [
+          {
+            t: 'الوحدة الأساسية',
+            q: 'ما الوحدة السياسية والاجتماعية الأساسية في المجتمع الجاهلي؟',
+            o: ['الدولة المركزية', 'القبيلة', 'المدينة', 'الأسرة النووية'],
+            a: 1
+          },
+          {
+            t: 'الطبقات الاجتماعية',
+            q: 'كيف كان المجتمع الجاهلي مقسّمًا اجتماعيًّا؟',
+            o: ['طبقة واحدة متساوية', 'أشراف وعامة وموالٍ وعبيد', 'حكام ومحكومون فقط', 'علماء وجهّال فقط'],
+            a: 1
+          },
+          {
+            t: 'العصبية القبلية',
+            q: 'ما معنى «انصر أخاك ظالمًا أو مظلومًا» في الجاهلية؟',
+            o: ['ساعد أخاك على العدل في الحالتين', 'قف مع قبيلتك سواء كانت على حق أو باطل', 'انصح أخاك إذا ظلم', 'حارب عدوك فقط إذا ظُلمت'],
+            a: 1
+          },
+          {
+            t: 'حرب البسوس',
+            q: 'ما السبب المباشر لحرب البسوس التي استمرت ٤٠ سنة؟',
+            o: ['صراع على زعامة القبيلة', 'قتل ناقة لامرأة تدعى البسوس ثم قتل كليب', 'خلاف على مصادر المياه', 'سرقة قوافل تجارية'],
+            a: 1
+          },
+          {
+            t: 'حرب بعاث',
+            q: 'لماذا كانت حرب بعاث بين الأوس والخزرج «تمهيدًا إلهيًّا» للهجرة؟',
+            o: ['لأنها قضت على كل سكان يثرب', 'لأنها أنهكت الطرفين فصاروا يبحثون عن قائد يوحّدهم', 'لأنها جعلت يثرب مدينة غنية', 'لأنها أدت إلى إسلام أهل يثرب مباشرة'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'المرأة والعادات الاجتماعية',
+        questions: [
+          {
+            t: 'وأد البنات',
+            q: 'ما المقصود بوأد البنات في الجاهلية؟',
+            o: ['حرمان البنت من التعليم', 'دفن البنت الصغيرة حية خوفًا من العار أو الفقر', 'تزويج البنت دون رضاها', 'منع البنت من الميراث فقط'],
+            a: 1
+          },
+          {
+            t: 'الآية القرآنية',
+            q: 'ما الآية التي صوّر بها القرآن فاجعة الوأد؟',
+            o: ['﴿ولا تقتلوا أولادكم من إملاق﴾', '﴿وإذا الموءودة سُئلت بأي ذنب قُتلت﴾', '﴿وإذا بُشّر أحدهم بالأنثى ظلّ وجهه مسودًّا﴾', '﴿إنّ أكرمكم عند الله أتقاكم﴾'],
+            a: 1
+          },
+          {
+            t: 'أنكحة الجاهلية',
+            q: 'كم نوعًا كان النكاح في الجاهلية حسب رواية عائشة رضي الله عنها؟',
+            o: ['نوعان', 'ثلاثة أنواع', 'أربعة أنحاء', 'ستة أنواع'],
+            a: 2
+          },
+          {
+            t: 'موقف النبي ﷺ من البنات',
+            q: 'كيف كان النبي ﷺ يعامل بناته ردًّا على ثقافة الوأد؟',
+            o: ['تجاهل الموضوع لأنه انتهى', 'كان يقوم لفاطمة ويقبّلها ويجلسها مكانه', 'لم يكن له بنات أصلًا', 'عاملهن كبقية أطفال القبيلة'],
+            a: 1
+          },
+          {
+            t: 'الوأد والقبائل',
+            q: 'هل كان الوأد عامًّا في كل القبائل العربية؟',
+            o: ['نعم، كل القبائل مارسته', 'لا، بعض القبائل أنكرته وبعض الأفراد كانوا ينقذون البنات', 'كان خاصًّا بقريش فقط', 'لم يكن موجودًا أصلًا بل هو مبالغة'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'الحياة الاقتصادية والأسواق',
+        questions: [
+          {
+            t: 'رحلتا قريش',
+            q: 'ما رحلتا الشتاء والصيف اللتان ذُكرتا في القرآن؟',
+            o: ['رحلة الحج ورحلة العمرة', 'رحلة الشتاء إلى اليمن والحبشة ورحلة الصيف إلى الشام', 'رحلة إلى فارس ورحلة إلى الروم', 'رحلة البحث عن الماء ورحلة الرعي'],
+            a: 1
+          },
+          {
+            t: 'نظام الإيلاف',
+            q: 'ما نظام «الإيلاف» الذي ابتكره هاشم بن عبد مناف؟',
+            o: ['نظام ضرائب على سكان مكة', 'اتفاقيات حماية مع القبائل على طريق القوافل مقابل حصة من الأرباح', 'نظام عسكري لحراسة الكعبة', 'معاهدة سلام بين قريش ويثرب'],
+            a: 1
+          },
+          {
+            t: 'أعظم الأسواق',
+            q: 'ما أعظم أسواق العرب الذي كانت تُعلّق فيه القصائد ويُفتخر بالأنساب؟',
+            o: ['سوق مجنّة', 'سوق ذي المجاز', 'سوق عكاظ', 'سوق دومة الجندل'],
+            a: 2
+          },
+          {
+            t: 'الأسواق والدعوة',
+            q: 'كيف استغل النبي ﷺ الأسواق العربية؟',
+            o: ['تاجر فيها فقط', 'عرض نفسه على القبائل فيها داعيًا إلى الله', 'منع الناس من دخولها', 'لم يذهب إليها أبدًا'],
+            a: 1
+          },
+          {
+            t: 'الاقتصاد البدوي',
+            q: 'ما أثمن ما يملكه العربي البدوي؟',
+            o: ['الذهب والفضة', 'الأرض الزراعية', 'الإبل — عملة ومركبة وطعام ومهر ودية', 'الخيول فقط'],
+            a: 2
+          }
+        ]
+      },
+      {
+        title: 'الأخلاق والثقافة وحلف الفضول',
+        questions: [
+          {
+            t: 'مكارم الأخلاق',
+            q: 'ماذا قصد النبي ﷺ بقوله «إنما بُعثت لأتمّم مكارم الأخلاق»؟',
+            o: ['أن العرب لم يكن لديهم أخلاق أصلًا', 'أن هناك مكارم موجودة جاء ليُكملها لا ليخترعها', 'أنه جاء بأخلاق جديدة تمامًا', 'أنه بُعث لتعليم القراءة والكتابة'],
+            a: 1
+          },
+          {
+            t: 'حلف الفضول',
+            q: 'ما الذي تعاهدت عليه بطون قريش في حلف الفضول؟',
+            o: ['محاربة الفرس والروم', 'نصرة المظلوم في مكة وألّا يُظلم غريب', 'تقسيم أرباح التجارة بالتساوي', 'منع اليهود من دخول مكة'],
+            a: 1
+          },
+          {
+            t: 'موقف النبي ﷺ من الحلف',
+            q: 'ماذا قال النبي ﷺ عن حلف الفضول بعد البعثة؟',
+            o: ['رفضه لأنه من أعمال الجاهلية', 'قال: لو دُعيتُ به في الإسلام لأجبت', 'لم يعلّق عليه إطلاقًا', 'أمر بإلغائه وتأسيس حلف جديد'],
+            a: 1
+          },
+          {
+            t: 'تحريم الخمر',
+            q: 'كيف حرّم الإسلام الخمر؟',
+            o: ['دفعة واحدة في آية واحدة', 'بالتدريج على ثلاث مراحل', 'تركها للاختيار الشخصي', 'حرّمها على النساء فقط'],
+            a: 1
+          },
+          {
+            t: 'الشعر والقرآن',
+            q: 'لماذا كان تحدّي القرآن البلاغي حجة بالغة على العرب؟',
+            o: ['لأن العرب لا يعرفون الشعر أصلًا', 'لأنهم كانوا أفصح أمة وخبراء اللغة فعجزهم عن الإتيان بمثله أكبر حجة', 'لأن القرآن كان مكتوبًا وهم أميون', 'لأنه نزل بلغة غير عربية'],
+            a: 1
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch4-score');
+    const container = document.getElementById('ch4-quiz-container');
+    const retryBtn = document.getElementById('ch4-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              // highlight correct answer
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «صور من المجتمع الجاهلي» من كتاب «الرحيق المختوم»
+  </footer>
+
+</body>
+</html>

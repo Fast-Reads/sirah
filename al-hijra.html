@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الهجرة إلى المدينة — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#1e3a5f;--navy-deep:#0d1b2a;--gold:#b8860b;--gold-light:#f5e6c8;--gold-pale:#fdf6e3;--cream:#faf8f2;--white:#ffffff;--text:#2d3436;--text-light:#636e72;--border:#e8e0d4;--shadow:rgba(30,58,95,0.08);--radius:14px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased}
+    .hero{background:linear-gradient(160deg,#0a1628 0%,#132f4c 40%,#1e3a5f 100%);color:#fff;padding:3.5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 20% 30%,rgba(184,134,11,.3) 50%,transparent 50%),radial-gradient(1px 1px at 60% 20%,rgba(255,255,255,.15) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 80% 60%,rgba(184,134,11,.2) 50%,transparent 50%),radial-gradient(1px 1px at 40% 70%,rgba(255,255,255,.1) 50%,transparent 50%),radial-gradient(1px 1px at 10% 80%,rgba(255,255,255,.12) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 90% 40%,rgba(184,134,11,.15) 50%,transparent 50%);background-size:200px 200px;animation:twinkle 8s ease-in-out infinite alternate}
+    @keyframes twinkle{from{opacity:.6}to{opacity:1}}
+    .hero>*{position:relative;z-index:1}
+    .hero-ornament{width:60px;height:3px;background:var(--gold);margin:0 auto 1.5rem;border-radius:2px}
+    .hero h1{font-family:'Amiri',serif;font-size:2.4rem;font-weight:700;letter-spacing:.5px}
+    .breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:.6rem 1rem;display:flex;justify-content:center;align-items:center;gap:.4rem;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px var(--shadow)}
+    .breadcrumb a{text-decoration:none;color:var(--text-light);font-size:.85rem;font-weight:500;padding:.4rem .85rem;border-radius:8px;transition:all .2s;white-space:nowrap}
+    .breadcrumb a:hover{background:var(--gold-pale);color:var(--navy)}
+    .breadcrumb .sep{color:var(--border);font-size:.8rem}
+    .breadcrumb .current{font-size:.85rem;font-weight:700;color:var(--navy)}
+    main{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem 1rem}
+    section{margin-bottom:1.5rem}
+    h2{font-family:'Amiri',serif;color:var(--navy);border-right:3px solid var(--gold);padding-right:.75rem;margin-top:2.5rem;margin-bottom:.8rem;font-size:1.5rem}
+    h3{font-family:'Amiri',serif;color:var(--navy);font-size:1.15rem;margin-top:1.5rem;margin-bottom:.5rem}
+    p{color:var(--text);text-align:justify;font-size:1rem;margin:.5rem 0 1.5rem}
+    ul{list-style:none;padding:0;margin:0 0 1.5rem}
+    ul li{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:.6rem;border-right:3px solid var(--gold-light)}
+    .visual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0 .5rem}
+    .visual-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;text-align:center;transition:transform .2s,box-shadow .2s}
+    .visual-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px var(--shadow)}
+    .visual-icon{font-size:2rem;margin-bottom:.4rem;display:block}
+    .visual-title{font-weight:600;margin:0 0 .35rem;color:var(--navy)}
+    .visual-text{margin:0;color:var(--text-light);line-height:1.5;font-size:.95rem}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0 1.5rem}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.3rem;transition:transform .2s ease,box-shadow .2s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px var(--shadow)}
+    .card h4{margin:0 0 .4rem;color:var(--navy);font-size:1rem;font-weight:700}
+    .card p{margin:0;font-size:.95rem;color:var(--text-light)}
+    .flowline{border-right:3px solid var(--gold-light);margin-top:1.3rem;padding-right:1.3rem}
+    .flow-item{position:relative;margin-bottom:1.2rem;padding:.8rem 1rem .8rem 0;background:var(--white);border:1px solid var(--border);border-radius:10px;transition:box-shadow .2s ease}
+    .flow-item:hover{box-shadow:0 8px 20px var(--shadow)}
+    .flow-item::before{content:"";position:absolute;right:-1.6rem;top:50%;transform:translateY(-50%);width:14px;height:14px;background:var(--gold);border:3px solid var(--white);border-radius:50%;box-shadow:0 0 0 2px var(--gold-light)}
+    .flow-title{margin:0;color:var(--navy);font-weight:600}
+    .flow-text{margin:.3rem 0 0;font-size:.95rem;color:var(--text-light);line-height:1.6}
+    .tribe-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.95rem}
+    .tribe-table th{background:var(--navy);color:#fff;padding:.75rem 1rem;text-align:right;font-family:'Amiri',serif;font-weight:700}
+    .tribe-table td{padding:.7rem 1rem;border-bottom:1px solid var(--border);background:var(--white)}
+    .tribe-table tr:hover td{background:var(--gold-pale)}
+    .insight{background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .insight-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:.92rem;color:var(--gold);margin-bottom:.4rem}
+    .insight p{margin:0;font-size:.95rem;color:var(--text);line-height:1.75}
+    .connection{background:linear-gradient(135deg,#eef3f9 0%,#f5f0e8 100%);border:1px solid #d4dce8;border-right:3px solid var(--navy);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .connection-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:.4rem}
+    .connection p{margin:0;font-size:.95rem;color:var(--text);line-height:1.75}
+    a.person-link{color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-light);padding-bottom:.05rem}
+    a.person-link:hover{color:var(--navy);border-bottom-color:var(--navy)}
+    .quiz-wrapper{margin-top:3rem;padding-top:2.5rem;border-top:2px solid var(--gold-light)}
+    .quiz-wrapper>h2{text-align:center;border-right:none;padding-right:0;font-size:1.6rem;margin-bottom:.3rem}
+    .quiz-intro{text-align:center;color:var(--text-light);font-size:.92rem;margin:0 auto 1.5rem;max-width:600px}
+    .quiz-score-bar{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 12px var(--shadow);display:flex;justify-content:space-between;align-items:center}
+    .quiz-score-bar span{font-size:.9rem;color:var(--text-light);font-weight:500}
+    .quiz-score-bar .q-score{font-family:'Amiri',serif;font-size:1.15rem;color:var(--navy);font-weight:700}
+    .quiz-section-block{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1rem;box-shadow:0 4px 24px var(--shadow);overflow:hidden}
+    .quiz-section-block summary{cursor:pointer;padding:1rem 1.4rem;font-weight:700;font-size:1.02rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;transition:background .2s;list-style:none}
+    .quiz-section-block summary::-webkit-details-marker{display:none}
+    .quiz-section-block summary::marker{content:""}
+    .quiz-section-block summary:hover{background:rgba(245,230,200,.25)}
+    .quiz-section-block summary .q-arrow{transition:transform .3s;font-size:.8rem;color:var(--text-light)}
+    .quiz-section-block[open] summary .q-arrow{transform:rotate(90deg)}
+    .q-section-body{padding:0 1.4rem 1.4rem}
+    .q-card{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:1.15rem 1.3rem;margin-top:.9rem}
+    .q-card h4{margin:0 0 .35rem;color:var(--navy);font-size:.95rem;font-weight:700}
+    .q-card p{margin:0 0 .75rem;font-size:.92rem;color:var(--text);text-align:right}
+    .q-opts{display:flex;flex-direction:column;gap:.45rem}
+    .q-opts button{border:1px solid var(--border);background:var(--white);border-radius:10px;padding:.65rem 1rem;font-size:.92rem;font-family:'Tajawal',sans-serif;text-align:right;cursor:pointer;transition:all .2s;color:var(--text)}
+    .q-opts button:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    .q-opts button.q-correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:600}
+    .q-opts button.q-wrong{border-color:#c53030;background:#fde8e8;color:#c53030}
+    .q-opts button.q-off{pointer-events:none;opacity:.6}
+    .q-feedback{margin-top:.5rem;font-weight:700;font-size:.86rem;min-height:1.3em}
+    .q-feedback.q-correct{color:#2e7d32}
+    .q-feedback.q-wrong{color:#c53030}
+    .quiz-retry-wrap{text-align:center;margin-top:1.5rem}
+    .quiz-retry-btn{display:inline-block;background:var(--navy);color:#fff;border:none;border-radius:10px;padding:.75rem 2.2rem;font-size:1rem;font-family:'Tajawal',sans-serif;font-weight:600;cursor:pointer;transition:background .2s,transform .2s}
+    .quiz-retry-btn:hover{background:#14293f;transform:translateY(-2px)}
+    footer{text-align:center;color:var(--text-light);font-size:.82rem;border-top:1px solid var(--border);padding:2rem 1.5rem;margin-top:3rem}
+    @media(max-width:700px){
+      .hero h1{font-size:1.9rem}.hero{padding:2.5rem 1.2rem 3rem}main{padding:1.5rem 1rem 1rem}
+      .visual-grid,.card-grid{grid-template-columns:1fr}.breadcrumb a{font-size:.78rem;padding:.35rem .6rem}
+      .tribe-table{font-size:.85rem}.quiz-score-bar{flex-direction:column;gap:.5rem;text-align:center}
+      .q-section-body{padding:0 1rem 1rem}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>الهجرة إلى المدينة</h1>
+  </header>
+
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">الهجرة إلى المدينة</span>
+  </nav>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section>
+      <h2>لماذا هذا الفصل مهم؟</h2>
+      <p>
+        الهجرة ليست مجرد انتقال جغرافي من مكة إلى المدينة — بل هي أعظم نقطة تحوّل في تاريخ
+        الإسلام. قبلها كان المسلمون أقلية مضطهدة بلا أرض ولا دولة. بعدها ستولد أول دولة إسلامية
+        ويُبنى المسجد النبوي ويُصاغ دستور المدينة. هذا الفصل يروي أدق تفاصيل الرحلة: التخطيط
+        المحكم، والمؤامرة التي أحبطها الله، والمعجزات في الطريق، والاستقبال المهيب في المدينة.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح القراءة</span>
+        <p>
+          الهجرة درسٌ في التوازن بين التوكل والأخذ بالأسباب. النبي ﷺ خطّط بعناية بشرية كاملة
+          — الدليل، والمبيت البديل، وطريق الساحل — ثم توكّل على الله. لاحظ هذا التوازن في
+          كل خطوة: لا أسباب بلا توكل، ولا توكل بلا أسباب.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ هجرة الصحابة ═══════ -->
+
+    <section>
+      <h2>هجرة الصحابة — موجة الانتقال الهادئ</h2>
+      <p>
+        بعد بيعة العقبة الثانية أذن النبي ﷺ لأصحابه بالهجرة إلى يثرب، فبدأوا يخرجون أفرادًا
+        وجماعات سرًّا. خلال أسابيع فرغت مكة من معظم المسلمين، ولم يبقَ فيها إلا النبي ﷺ
+        و<a class="person-link" href="persons.html">أبو بكر</a>
+        و<a class="person-link" href="persons.html">علي بن أبي طالب</a>
+        وعدد قليل من المستضعفين.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F6B6;</span>
+          <p class="visual-title">أول المهاجرين</p>
+          <p class="visual-text">أبو سلمة بن عبد الأسد — هاجر قبل بيعة العقبة الثانية بسنة، وكان أسبق المهاجرين.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F46A;</span>
+          <p class="visual-title">صهيب الرومي</p>
+          <p class="visual-text">منعته قريش فترك لهم ماله كله. قال النبي ﷺ: «ربح البيع أبا يحيى».</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F494;</span>
+          <p class="visual-title">أم سلمة</p>
+          <p class="visual-text">فرّقت قريش بينها وبين زوجها وولدها. ظلت سنة تبكي حتى أشفقوا عليها فأطلقوها.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">تضحية المهاجرين</span>
+        <p>
+          هؤلاء تركوا بيوتهم وأموالهم وعشائرهم لأجل دينهم. هذه التضحية هي السبب الذي جعل القرآن
+          يخصّهم بالثناء: ﴿للفقراء المهاجرين الذين أُخرجوا من ديارهم وأموالهم يبتغون فضلًا من الله
+          ورضوانًا﴾. وهي السبب الذي جعل النبي ﷺ يؤاخي بينهم وبين الأنصار — لأنهم جاءوا بلا شيء.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ مؤامرة دار الندوة ═══════ -->
+
+    <section>
+      <h2>مؤامرة دار الندوة — ليلة القرار</h2>
+      <p>
+        لما رأت قريش المسلمين يتسللون إلى يثرب أدركت أن خطرًا وجوديًّا يتشكّل: قوة منظمة
+        بقيادة محمد ﷺ في مدينة على طريق تجارتهم. فاجتمع ساداتها في
+        دار الندوة — مجلس قريش الذي بناه
+        <a class="person-link" href="persons.html">قصي بن كلاب</a> — للتشاور في أمره.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">الاقتراح الأول: الحبس</p>
+          <p class="flow-text">
+            قالوا: نحبسه في بيت ونسدّ عليه حتى يموت. رُفض: سيعلم بنو هاشم فيقاتلوننا.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الاقتراح الثاني: النفي</p>
+          <p class="flow-text">
+            قالوا: نُخرجه من مكة ونريح أنفسنا. رُفض: سيجمع الناس حوله في مكان آخر ثم يعود.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الاقتراح الثالث: القتل الجماعي</p>
+          <p class="flow-text">
+            اقترح أبو جهل: نأخذ من كل قبيلة شابًّا قويًّا فيضربوه ضربة رجل واحد، فيتفرق دمه
+            في القبائل فلا يستطيع بنو هاشم محاربتهم جميعًا. وافقوا عليه بالإجماع.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">إبطال الله للمؤامرة</span>
+        <p>
+          أوحى الله إلى نبيه بالمؤامرة وأذن له بالهجرة. قال تعالى: ﴿وإذ يمكر بك الذين كفروا
+          ليثبتوك أو يقتلوك أو يخرجوك ويمكرون ويمكر الله والله خير الماكرين﴾. لاحظ أن الآية
+          لخّصت الاقتراحات الثلاثة بالترتيب: الحبس (يثبتوك)، القتل (يقتلوك)، النفي (يخرجوك).
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ ليلة الهجرة ═══════ -->
+
+    <section>
+      <h2>ليلة الهجرة — أدق عملية في التاريخ</h2>
+      <p>
+        جاء النبي ﷺ إلى بيت <a class="person-link" href="persons.html">أبي بكر</a> في ساعة غير
+        معتادة — وقت الظهيرة — وأخبره بالإذن. بكى أبو بكر من الفرح وقال: «الصحبة يا رسول الله!»
+        وكان قد جهّز راحلتين منذ أشهر انتظارًا لهذه اللحظة. ثم رتّب النبي ﷺ خطة محكمة:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>المهمة</th>
+            <th>المكلَّف</th>
+            <th>الدور</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>المبيت في الفراش</td>
+            <td><a class="person-link" href="persons.html">علي بن أبي طالب</a></td>
+            <td>نام في فراش النبي ﷺ متغطيًا ببرده الأخضر ليخدع الراصدين ويردّ الأمانات لأهلها</td>
+          </tr>
+          <tr>
+            <td>الدليل في الطريق</td>
+            <td>عبد الله بن أُريقط</td>
+            <td>مشرك أمين خبير بالطرق — استأجراه ليقودهما عبر طريق الساحل غير المعتاد</td>
+          </tr>
+          <tr>
+            <td>الأخبار والاستطلاع</td>
+            <td>عبد الله بن أبي بكر</td>
+            <td>يقضي النهار في مكة يتسمّع أخبار قريش ثم يأتيهما ليلًا في الغار</td>
+          </tr>
+          <tr>
+            <td>الطعام</td>
+            <td>أسماء بنت أبي بكر</td>
+            <td>تحمل لهما الطعام إلى الغار ليلًا — شقّت نطاقها لربط الطعام فلُقّبت «ذات النطاقين»</td>
+          </tr>
+          <tr>
+            <td>محو الأثر</td>
+            <td>عامر بن فُهيرة</td>
+            <td>مولى أبي بكر — يسوق الغنم على آثارهم حتى يمحوها عن أعين المتعقبين</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="connection">
+        <span class="connection-label">فدائية علي بن أبي طالب</span>
+        <p>
+          نوم علي في فراش النبي ﷺ مع علمه بأن عشرات المسلحين يحاصرون البيت ينتظرون خروج صاحبه
+          ليقتلوه — هذا أعلى درجات الفداء. وهو ابن أبي طالب الذي كفل النبي ﷺ منذ طفولته.
+          التضحية تنتقل من الأب إلى الابن. ستراه لاحقًا يحمل لواء المسلمين في كل معركة كبرى.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخروج والغار ═══════ -->
+
+    <section>
+      <h2>الخروج من مكة وغار ثور</h2>
+      <p>
+        خرج النبي ﷺ من بيته في جوف الليل والمشركون على بابه. أخذ حفنة من تراب ونثرها على
+        رؤوسهم وهو يقرأ: ﴿وجعلنا من بين أيديهم سدًّا ومن خلفهم سدًّا فأغشيناهم فهم لا يبصرون﴾
+        — فلم يره أحد منهم. انطلق إلى بيت أبي بكر ثم اتجها جنوبًا نحو غار ثور — عكس اتجاه
+        المدينة تمامًا — لتضليل المطاردين.
+      </p>
+
+      <h3>ثلاث ليالٍ في الغار</h3>
+      <p>
+        اختبأ النبي ﷺ وأبو بكر في غار ثور ثلاث ليالٍ. وصل المطاردون إلى باب الغار حتى لو
+        نظر أحدهم تحت قدميه لرآهما. ارتعد قلب أبي بكر خوفًا على النبي ﷺ لا على نفسه، فقال
+        النبي ﷺ الكلمة الخالدة:
+      </p>
+      <ul>
+        <li>
+          <strong>«لا تحزن إن الله معنا»</strong> — هذه الكلمة خلّدها القرآن في سورة التوبة (٤٠).
+          ثقة مطلقة بالله في أحلك اللحظات.
+        </li>
+        <li>
+          <strong>العنكبوت والحمامة:</strong> ذكرت الروايات أن الله أمر عنكبوتًا فنسجت على فم
+          الغار وحمامة فباضت عند مدخله، فرأى المطاردون ذلك وانصرفوا ظنًّا أن الغار فارغ.
+        </li>
+      </ul>
+      <div class="insight">
+        <span class="insight-label">الأسباب والتوكل معًا</span>
+        <p>
+          لاحظ: النبي ﷺ لم يبقَ في بيته ويقول «الله يحميني». بل أعدّ خطة من سبعة عناصر (المبيت
+          البديل، الدليل، الاستخبارات، التموين، محو الأثر، تغيير الاتجاه، الاختباء). ثم حين نُفّذت
+          كل الأسباب وجاء المطاردون رغم ذلك — عندها قال: «لا تحزن إن الله معنا». الأسباب أولًا،
+          ثم التوكل حين تعجز الأسباب. هذا منهج يتكرر في كل السيرة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ سراقة بن مالك ═══════ -->
+
+    <section>
+      <h2>سراقة بن مالك — من مطارد إلى شاهد</h2>
+      <p>
+        بعد ثلاث ليالٍ خرجا من الغار واتجها شمالًا عبر طريق الساحل. جعلت قريش مكافأة ضخمة
+        لمن يأتي بهما: مائة ناقة. طمع سراقة بن مالك الكناني في المكافأة فتتبّع أثرهما على
+        فرسه حتى اقترب منهما.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">ساخت قوائم الفرس</p>
+          <p class="flow-text">
+            كلما اقترب سراقة ساخت يدا فرسه في الأرض حتى كادت تسقط به. حاول ثلاث مرات
+            وفي كل مرة يحدث الأمر نفسه. أدرك أن هذا الرجل ممنوع.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">طلب الأمان</p>
+          <p class="flow-text">
+            نادى سراقة يطلب الأمان. فأمّنه النبي ﷺ، فسأله: هل لي من شيء إن ظهر أمرك؟
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">وعد بسواري كسرى</p>
+          <p class="flow-text">
+            قال له النبي ﷺ: «كيف بك إذا لبست سواري كسرى؟». وعد من مطارَد في الصحراء بأن
+            هذا البدوي سيلبس أساور ملك فارس! عاد سراقة وصار يضلّل المطاردين عنهما.
+          </p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">تحقّق الوعد بعد ٢٠ سنة</span>
+        <p>
+          في خلافة <a class="person-link" href="persons.html">عمر بن الخطاب</a> سقطت الإمبراطورية
+          الفارسية وجيء بكنوز كسرى إلى المدينة. أحضر عمر سواري كسرى وألبسها سراقة بن مالك
+          أمام الناس تحقيقًا لوعد النبي ﷺ. تأمّل المشهد: بدوي من بني كنانة يلبس أساور
+          أعظم ملوك الأرض — لأن نبيًّا مطاردًا في صحراء وعده بذلك قبل عشرين سنة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الوصول إلى قباء ═══════ -->
+
+    <section>
+      <h2>قباء — أول محطة في دار الهجرة</h2>
+      <p>
+        بعد رحلة استغرقت نحو أسبوع عبر طريق الساحل، وصل النبي ﷺ وأبو بكر إلى قباء — قرية
+        على أطراف المدينة — يوم الاثنين ١٢ ربيع الأول (٢٤ سبتمبر ٦٢٢م). أقام فيها أربعة عشر
+        يومًا عند بني عمرو بن عوف.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F54C;</span>
+          <p class="visual-title">مسجد قباء</p>
+          <p class="visual-text">أول مسجد أُسّس في الإسلام. قال تعالى: ﴿لمسجد أُسّس على التقوى من أول يوم أحق أن تقوم فيه﴾.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F91D;</span>
+          <p class="visual-title">استقبال الأنصار</p>
+          <p class="visual-text">كان الأنصار يخرجون كل يوم إلى الحرّة ينتظرون وصوله حتى يردّهم حر الظهيرة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4C5;</span>
+          <p class="visual-title">بداية التاريخ الهجري</p>
+          <p class="visual-text">هذا الحدث أصبح مبدأ التقويم الإسلامي الذي اعتمده عمر بن الخطاب لاحقًا.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">أول جمعة في الإسلام</span>
+        <p>
+          حين غادر قباء متّجهًا إلى المدينة أدركته صلاة الجمعة في ديار بني سالم بن عوف، فصلّاها
+          هناك — وكانت أول جمعة يصليها في المدينة. وخطب فيها أول خطبة جمعة في الإسلام.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ دخول المدينة ═══════ -->
+
+    <section>
+      <h2>دخول المدينة — يوم لم تشهد المدينة مثله</h2>
+      <p>
+        حين دخل النبي ﷺ المدينة خرج أهلها عن بكرة أبيهم — رجالًا ونساءً وأطفالًا — وصعد الغلمان
+        والجواري على السطوح ينشدون:
+      </p>
+      <ul>
+        <li>
+          <strong>«طلع البدر علينا / من ثنيّات الوداع»</strong> — أنشودة الاستقبال الشهيرة. صوّرت
+          فرحة لم تعرف المدينة مثلها قبل ولا بعد.
+        </li>
+        <li>
+          <strong>«وجب الشكر علينا / ما دعا لله داع»</strong> — كل بيت في المدينة أراد أن ينزل
+          النبي ﷺ عنده، فكان يقول: «دعوها فإنها مأمورة» — يعني الناقة.
+        </li>
+      </ul>
+
+      <h3>اختيار المكان — الناقة تقرر</h3>
+      <p>
+        ترك النبي ﷺ ناقته القصواء تمشي دون أن يوجّهها. كلما مرّ على حي تعلّق به أهله:
+        «أقم عندنا يا رسول الله»، فيقول: «خلّوا سبيلها فإنها مأمورة». حتى بركت الناقة في مربد
+        (ساحة لتجفيف التمر) يملكه غلامان يتيمان من بني النجار. هناك سيُبنى المسجد النبوي.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">بروك الناقة</p>
+          <p class="flow-text">
+            بركت في مربد سهل وسهيل — غلامين يتيمين من بني النجار. اشترى النبي ﷺ الأرض
+            منهما رغم أنهما عرضاها هدية — رفض أن يأخذ أرضًا بلا ثمن.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الإقامة عند أبي أيوب</p>
+          <p class="flow-text">
+            نزل ﷺ ضيفًا على <a class="person-link" href="persons.html">أبي أيوب الأنصاري</a>
+            في أقرب بيت للمربد. أصرّ أبو أيوب أن يسكن النبي ﷺ الطابق الأرضي، وسكن هو فوقه —
+            وظلّ يبكي من القلق أن يمشي فوق رأس رسول الله ﷺ.
+          </p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">المسجد النبوي — قلب الدولة</span>
+        <p>
+          المربد الذي بركت فيه الناقة سيصبح المسجد النبوي — مسجد ومدرسة ومقر حكم ومركز شورى
+          ودار ضيافة. في الفصل القادم سترى كيف بنى النبي ﷺ بيديه هذا المسجد مع أصحابه، وكيف أصبح
+          قلب الحضارة الإسلامية الجديدة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section>
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. تضحية المهاجرين</h4>
+          <p>تركوا الأوطان والأموال والعشائر — وهذا أساس مكانتهم في الإسلام.</p>
+        </article>
+        <article class="card">
+          <h4>٢. تخطيط + توكل</h4>
+          <p>النبي ﷺ أخذ بكل الأسباب البشرية ثم توكّل. هذا منهج كل المسلمين.</p>
+        </article>
+        <article class="card">
+          <h4>٣. فدائية علي</h4>
+          <p>نام في الفراش وهو يعلم أن القتلة على الباب — أعلى درجات الفداء.</p>
+        </article>
+        <article class="card">
+          <h4>٤. «لا تحزن إن الله معنا»</h4>
+          <p>كلمة خالدة في غار ثور — الثقة بالله حين تعجز كل الأسباب.</p>
+        </article>
+        <article class="card">
+          <h4>٥. سراقة وسواري كسرى</h4>
+          <p>وعد النبي ﷺ وهو مطارَد بأن هذا الرجل سيلبس أساور ملك فارس — وتحقق.</p>
+        </article>
+        <article class="card">
+          <h4>٦. الناقة مأمورة</h4>
+          <p>اختيار مكان المسجد النبوي لم يكن بشريًّا — الناقة بركت حيث أراد الله.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch13-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch13-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch13-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+  (function(){
+    const toArabicNum=n=>n.toString().replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+    const sections=[
+      {title:'هجرة الصحابة ومؤامرة دار الندوة',questions:[
+        {t:'أول المهاجرين',q:'مَن كان أول مَن هاجر إلى المدينة من أصحاب النبي ﷺ؟',o:['عمر بن الخطاب','مصعب بن عمير','أبو سلمة بن عبد الأسد','بلال بن رباح'],a:2},
+        {t:'صهيب الرومي',q:'ماذا فعل صهيب الرومي حين منعته قريش من الهجرة؟',o:['قاتلهم حتى فرّ','ترك لهم ماله كله مقابل السماح له بالرحيل','تظاهر بالبقاء ثم هرب ليلًا','بقي في مكة ولم يهاجر'],a:1},
+        {t:'مكان الاجتماع',q:'أين اجتمعت قريش للتآمر على قتل النبي ﷺ؟',o:['عند الكعبة','في دار أبي سفيان','في دار الندوة','على جبل أبي قبيس'],a:2},
+        {t:'اقتراح أبي جهل',q:'ما خطة أبي جهل لقتل النبي ﷺ؟',o:['يقتله هو بنفسه سرًّا','شاب من كل قبيلة يضربونه معًا فيتفرق دمه في القبائل','ينفونه إلى الطائف','يسممون طعامه'],a:1},
+        {t:'الآية الجامعة',q:'ما الآية التي لخّصت اقتراحات قريش الثلاثة (الحبس والقتل والنفي)؟',o:['﴿إن الذين كفروا ينفقون أموالهم...﴾','﴿وإذ يمكر بك الذين كفروا ليثبتوك أو يقتلوك أو يخرجوك﴾','﴿وقال الذين كفروا لرسلهم لنخرجنكم...﴾','﴿إلا تنصروه فقد نصره الله﴾'],a:1}
+      ]},
+      {title:'ليلة الهجرة وخطة الخروج',questions:[
+        {t:'بكاء أبي بكر',q:'لماذا بكى أبو بكر حين أخبره النبي ﷺ بالإذن بالهجرة؟',o:['خوفًا من قريش','فرحًا بالصحبة — قال: الصحبة يا رسول الله','حزنًا على ترك مكة','لم يبكِ'],a:1},
+        {t:'المبيت في الفراش',q:'مَن نام في فراش النبي ﷺ ليلة الهجرة؟',o:['أبو بكر الصديق','الزبير بن العوام','علي بن أبي طالب','زيد بن حارثة'],a:2},
+        {t:'دليل الطريق',q:'مَن كان دليل النبي ﷺ وأبي بكر في طريق الهجرة؟',o:['عبد الله بن أبي بكر','عبد الله بن أُريقط — مشرك أمين','عامر بن فُهيرة','سراقة بن مالك'],a:1},
+        {t:'ذات النطاقين',q:'لماذا لُقّبت أسماء بنت أبي بكر بـ«ذات النطاقين»؟',o:['لأنها كانت تلبس نطاقين دائمًا','لأنها شقّت نطاقها لربط الطعام للنبي ﷺ وأبي بكر','لأنها خاطت ثوبين للهجرة','لأنها ربطت حملين على الناقة'],a:1},
+        {t:'محو الأثر',q:'مَن كان يسوق الغنم على آثار النبي ﷺ وأبي بكر لمحوها؟',o:['أسماء بنت أبي بكر','عبد الله بن أبي بكر','عامر بن فُهيرة','عبد الله بن أُريقط'],a:2}
+      ]},
+      {title:'غار ثور وسراقة',questions:[
+        {t:'اتجاه الغار',q:'لماذا اتجه النبي ﷺ جنوبًا نحو غار ثور وليس شمالًا نحو المدينة؟',o:['لأن الغار كان أقرب','لتضليل المطاردين الذين سيبحثون شمالًا','لأن الطريق الشمالي مسدود','لم يكن يعرف الاتجاه'],a:1},
+        {t:'مدة الاختباء',q:'كم ليلة اختبأ النبي ﷺ وأبو بكر في غار ثور؟',o:['ليلة واحدة','ليلتين','ثلاث ليالٍ','أسبوعًا'],a:2},
+        {t:'لا تحزن',q:'ماذا قال النبي ﷺ لأبي بكر حين وصل المشركون إلى باب الغار؟',o:['اصبر حتى يذهبوا','لا تحزن إن الله معنا','سنخرج ونقاتلهم','ابقَ صامتًا'],a:1},
+        {t:'العنكبوت',q:'ما الذي أبعد المشركين عن دخول غار ثور حسب الروايات؟',o:['حرّاس مسلحون','عنكبوت نسجت على بابه وحمامة باضت عنده','ظلام شديد منعهم من الرؤية','صخرة سدّت المدخل'],a:1},
+        {t:'سواري كسرى',q:'ماذا وعد النبي ﷺ سراقة بن مالك حين لحق بهما؟',o:['مائة ناقة','وعده بسواري كسرى','جعله قائدًا عسكريًّا','لم يعده بشيء'],a:1}
+      ]},
+      {title:'الوصول ودخول المدينة',questions:[
+        {t:'تاريخ الوصول',q:'متى وصل النبي ﷺ إلى قباء تقريبًا؟',o:['١ محرم','١٢ ربيع الأول','١٥ رمضان','٢٧ رجب'],a:1},
+        {t:'مسجد قباء',q:'ما أهمية مسجد قباء؟',o:['أكبر مساجد المدينة','أول مسجد أُسّس على التقوى في الإسلام','مسجد خاص بالأنصار','مسجد بناه أبو بكر'],a:1},
+        {t:'أنشودة الاستقبال',q:'ماذا أنشد أهل المدينة عند دخول النبي ﷺ؟',o:['﴿إنا فتحنا لك فتحًا مبينًا﴾','«طلع البدر علينا من ثنيّات الوداع»','«لبيك اللهم لبيك»','لم ينشدوا شيئًا'],a:1},
+        {t:'الناقة مأمورة',q:'كيف اختار النبي ﷺ مكان نزوله في المدينة؟',o:['اختار أغنى حي','ترك الناقة تسير دون توجيه حتى بركت','سأل أكبر شيخ في المدينة','نزل في أول بيت رآه'],a:1},
+        {t:'أبو أيوب',q:'عند مَن نزل النبي ﷺ ضيفًا في المدينة حتى بُني المسجد؟',o:['سعد بن معاذ','سعد بن عبادة','أبو أيوب الأنصاري','أسعد بن زرارة'],a:2}
+      ]}
+    ];
+    function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+    const totalQ=sections.reduce((s,sec)=>s+sec.questions.length,0);
+    let correct=0,answered=0;
+    const scoreEl=document.getElementById('ch13-score'),container=document.getElementById('ch13-quiz-container'),retryBtn=document.getElementById('ch13-retry');
+    function updateScore(){scoreEl.textContent=toArabicNum(correct)+' / '+toArabicNum(totalQ)}
+    function buildQuiz(){
+      correct=0;answered=0;container.innerHTML='';retryBtn.style.display='none';updateScore();
+      let qNum=0;
+      sections.forEach(function(sec,sIdx){
+        const details=document.createElement('details');details.className='quiz-section-block';if(sIdx===0)details.open=true;
+        const summary=document.createElement('summary');summary.innerHTML=sec.title+'<span class="q-arrow">&#x276F;</span>';details.appendChild(summary);
+        const body=document.createElement('div');body.className='q-section-body';
+        var qs=sec.questions.slice();shuffle(qs);
+        qs.forEach(function(item){
+          qNum++;
+          var card=document.createElement('article');card.className='q-card';
+          var h=document.createElement('h4');h.textContent='سؤال '+toArabicNum(qNum)+': '+item.t;card.appendChild(h);
+          var p=document.createElement('p');p.textContent=item.q;card.appendChild(p);
+          var optsDiv=document.createElement('div');optsDiv.className='q-opts';
+          var fb=document.createElement('div');fb.className='q-feedback';
+          var indices=item.o.map(function(_,i){return i});shuffle(indices);
+          indices.forEach(function(origIdx){
+            var btn=document.createElement('button');btn.textContent=item.o[origIdx];
+            btn.addEventListener('click',function(){
+              if(card.dataset.done)return;card.dataset.done='1';answered++;
+              optsDiv.querySelectorAll('button').forEach(function(b){b.classList.add('q-off')});
+              optsDiv.querySelectorAll('button').forEach(function(b,bIdx){if(indices[bIdx]===item.a)b.classList.add('q-correct')});
+              if(origIdx===item.a){btn.classList.add('q-correct');fb.textContent='إجابة صحيحة!';fb.className='q-feedback q-correct';correct++}
+              else{btn.classList.add('q-wrong');fb.textContent='إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';fb.className='q-feedback q-wrong'}
+              updateScore();if(answered===totalQ)retryBtn.style.display='inline-block';
+            });optsDiv.appendChild(btn);
+          });
+          card.appendChild(optsDiv);card.appendChild(fb);body.appendChild(card);
+        });
+        details.appendChild(body);container.appendChild(details);
+      });
+    }
+    retryBtn.addEventListener('click',function(){buildQuiz();document.getElementById('quiz-root').scrollIntoView({behavior:'smooth'})});
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>أُعِدَّ الملخص استنادًا إلى فصل «الهجرة إلى المدينة» من كتاب «الرحيق المختوم»</footer>
+
+</body>
+</html>

@@ -3,136 +3,1043 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شخصيات من الرحيق المختوم</title>
+  <title>معجم الأسماء — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      background: #eef2f7;
-      color: #1f2933;
-      line-height: 1.8;
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
     }
-    header {
-      background: linear-gradient(135deg, #1b4332, #40916c);
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
       color: #fff;
-      padding: 3rem 1.5rem 4rem;
+      padding: 3.5rem 1.5rem 4rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .hero .subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 580px;
+      margin: 0.5rem auto 0;
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .breadcrumb a:hover { background: var(--gold-pale); color: var(--navy); }
+    .breadcrumb .sep { color: var(--border); font-size: 0.8rem; }
+    .breadcrumb .current { font-size: 0.85rem; font-weight: 700; color: var(--navy); }
+
+    /* MAIN */
     main {
-      max-width: 1100px;
-      margin: -50px auto 60px;
-      padding: 0 1.5rem;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
     }
-    .panel {
-      background: #fff;
-      border-radius: 18px;
-      padding: 2.5rem;
-      box-shadow: 0 15px 40px rgba(27, 67, 50, 0.15);
+
+    /* SEARCH */
+    .search-box {
+      position: relative;
       margin-bottom: 2rem;
     }
-    h1 {
-      margin: 0;
-      font-size: 2.4rem;
+    .search-box input {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1rem;
+      background: var(--white);
+      color: var(--text);
+      transition: border-color 0.2s;
+      outline: none;
     }
-    p.lead {
-      max-width: 720px;
-      margin: 1rem auto 0;
-      color: #e9f5ef;
+    .search-box input:focus {
+      border-color: var(--gold);
     }
-    h2 {
-      color: #1b4332;
-      border-right: 5px solid #40916c;
-      padding-right: 0.75rem;
-      display: inline-block;
-      margin-top: 0;
+    .search-box input::placeholder {
+      color: var(--text-light);
     }
-    .people-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    .person-card {
-      background: linear-gradient(145deg, #fbfefc, #ecf7f1);
-      border-radius: 16px;
-      padding: 1.8rem;
-      border: 1px solid #d8efe2;
-      color: inherit;
-      text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
-    }
-    .person-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 38px rgba(64, 145, 108, 0.25);
-    }
-    .person-card strong {
-      font-size: 1.2rem;
-      color: #1b4332;
-      margin-bottom: 0.4rem;
-    }
-    .person-card span {
-      color: #40916c;
-      font-size: 0.95rem;
-      margin-bottom: 0.6rem;
-    }
-    .person-card p {
-      margin: 0;
-      color: #3e4c59;
-      font-size: 0.95rem;
-    }
-    nav {
+    .search-count {
       text-align: center;
-      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 0.5rem;
     }
-    nav a {
-      margin: 0 0.5rem;
-      text-decoration: none;
+    .search-count.hidden { display: none; }
+
+    /* CATEGORY FILTERS */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .filter-btn {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover { border-color: var(--gold-light); color: var(--navy); }
+    .filter-btn.active {
+      background: var(--navy);
       color: #fff;
-      background: #1b4332;
-      padding: 0.55rem 1.2rem;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      transition: background 0.2s ease;
+      border-color: var(--navy);
     }
-    nav a:hover {
-      background: #132a20;
+
+    /* SECTIONS */
+    h2 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    .category-section { margin-bottom: 1rem; }
+    .category-section.hidden { display: none; }
+
+    /* NAME ENTRIES */
+    .name-entry {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+      transition: box-shadow 0.2s;
+    }
+    .name-entry:hover {
+      box-shadow: 0 4px 16px var(--shadow);
+    }
+    .name-entry.hidden { display: none; }
+    .name-entry .name-title {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 0.2rem;
+    }
+    .name-entry .name-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: var(--gold-pale);
+      color: var(--gold);
+      padding: 0.1rem 0.5rem;
+      border-radius: 6px;
+      margin-bottom: 0.3rem;
+    }
+    .name-entry .name-def {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .name-entry a.detail-link {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid var(--gold-light);
+    }
+    .name-entry a.detail-link:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>سير شخصيات من «الرحيق المختوم»</h1>
-    <p class="lead">دليل تفاعلي للتعريف بالشخصيات المحورية المذكورة في السيرة، مع روابط تفصيلية لكل شخصية.</p>
-    <nav>
-      <a href="index.html">الصفحة الرئيسة للكتاب</a>
-      <a href="mowqe-al-arab.html">موقع العرب وأقوامها</a>
-    </nav>
+
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>معجم الأسماء</h1>
+    <p class="subtitle">دليل مرجعي سريع لكل شخصية وُردت في «الرحيق المختوم» — ابحث عن أي اسم للتعرف عليه</p>
   </header>
 
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">معجم الأسماء</span>
+  </nav>
+
   <main>
-    <section class="panel">
-      <h2>الشخصيات المتاحة</h2>
-      <p>
-        سيتم إثراء هذه القائمة تدريجيًا. يمكنك البدء بسيرة خليل الرحمن إبراهيم عليه السلام للاطلاع على رحلاته
-        وهجراته ودوره في تأسيس المجتمع المكي الذي انبثقت منه القبائل المستعربة.
-      </p>
-      <div class="people-grid">
-        <a class="person-card" href="ibrahim.html">
-          <strong>إبراهيم عليه السلام</strong>
-          <span>أبو الأنبياء ومؤسس البيت الحرام</span>
-          <p>
-            من موطنه في العراق إلى الحجاز، رحلة إيمانية أثمرت بناء الكعبة وترسيخ جذور العرب المستعربة.
-          </p>
-        </a>
-        <div class="person-card" style="opacity:0.6; cursor:not-allowed;">
-          <strong>شخصيات أخرى</strong>
-          <span>قريبًا</span>
-          <p>سيتم إضافة السير الخاصة بالأنبياء والرموز الذين وردوا في فصول الكتاب.</p>
-        </div>
+
+    <!-- Search -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="ابحث عن اسم... (مثلاً: خالد، خديجة، أبو سفيان)" oninput="filterNames()" />
+      <p class="search-count hidden" id="searchCount"></p>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterCategory('all', this)">الكل</button>
+      <button class="filter-btn" onclick="filterCategory('prophet', this)">أنبياء</button>
+      <button class="filter-btn" onclick="filterCategory('ancestor', this)">أجداد النبي ﷺ</button>
+      <button class="filter-btn" onclick="filterCategory('family', this)">آل البيت</button>
+      <button class="filter-btn" onclick="filterCategory('companion', this)">صحابة</button>
+      <button class="filter-btn" onclick="filterCategory('women', this)">نساء</button>
+      <button class="filter-btn" onclick="filterCategory('quraysh-leader', this)">قادة قريش</button>
+      <button class="filter-btn" onclick="filterCategory('historical', this)">شخصيات تاريخية</button>
+      <button class="filter-btn" onclick="filterCategory('king', this)">ملوك ورؤساء</button>
+      <button class="filter-btn" onclick="filterCategory('tribe-leader', this)">زعماء قبائل</button>
+    </div>
+
+    <!-- ═══════ الأنبياء والرسل ═══════ -->
+
+    <div class="category-section" data-cat="prophet">
+      <h2>الأنبياء والرسل</h2>
+
+      <div class="name-entry" data-cat="prophet" data-name="محمد ﷺ رسول الله النبي خاتم">
+        <p class="name-title">محمد ﷺ</p>
+        <span class="name-tag">خاتم الأنبياء</span>
+        <p class="name-def">
+          محمد بن عبد الله بن عبد المطلب، خاتم الأنبياء والمرسلين. وُلد في مكة عام الفيل (٥٧١م)، بُعث
+          في الأربعين، هاجر إلى المدينة، وأسس الدولة الإسلامية. توفي سنة ١١هـ. محور الكتاب بالكامل.
+        </p>
       </div>
-    </section>
+
+      <div class="name-entry" data-cat="prophet" data-name="إبراهيم عليه السلام أبو الأنبياء الخليل">
+        <p class="name-title">إبراهيم عليه السلام</p>
+        <span class="name-tag">أبو الأنبياء</span>
+        <p class="name-def">
+          خليل الرحمن، هاجر من العراق إلى الحجاز وأسكن ابنه إسماعيل في مكة. بنى الكعبة المشرفة
+          مع إسماعيل. جد العرب المستعربة والنبي ﷺ. رحلته أسست المجتمع المكي بالكامل.
+        </p>
+        <a class="detail-link" href="ibrahim.html">قراءة تفصيلية ←</a>
+      </div>
+
+      <div class="name-entry" data-cat="prophet" data-name="إسماعيل عليه السلام بن إبراهيم أبو العرب المستعربة">
+        <p class="name-title">إسماعيل عليه السلام</p>
+        <span class="name-tag">أبو العرب المستعربة</span>
+        <p class="name-def">
+          ابن إبراهيم من هاجر، أسكنه أبوه في مكة طفلًا. تعلم العربية من جرهم وتزوج منهم.
+          أنجب اثني عشر ولدًا، من نسله (عبر قيدار) جاء عدنان ثم قريش ثم النبي ﷺ.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="prophet" data-name="هود عليه السلام قوم عاد">
+        <p class="name-title">هود عليه السلام</p>
+        <span class="name-tag">نبي</span>
+        <p class="name-def">
+          نبي أُرسل إلى قوم عاد في الأحقاف (جنوب الجزيرة). كذّبوه فأهلكهم الله بريح صرصر.
+          يُذكر في سياق العرب البائدة كتحذير لقريش.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="prophet" data-name="صالح عليه السلام قوم ثمود الناقة">
+        <p class="name-title">صالح عليه السلام</p>
+        <span class="name-tag">نبي</span>
+        <p class="name-def">
+          نبي أُرسل إلى ثمود في الحِجر (شمال الحجاز). آتاه الله الناقة آية، فعقروها فأهلكتهم الصيحة.
+          كانت قريش تمر على ديارهم في رحلاتها التجارية.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="prophet" data-name="عيسى عليه السلام المسيح ابن مريم">
+        <p class="name-title">عيسى عليه السلام</p>
+        <span class="name-tag">نبي</span>
+        <p class="name-def">
+          المسيح ابن مريم. يُذكر في سياق النصرانية التي انتشرت في نجران واليمن وبين بعض قبائل العرب
+          قبل الإسلام، وفي حوار النجاشي مع جعفر بن أبي طالب عن مريم.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="prophet" data-name="موسى عليه السلام بني إسرائيل">
+        <p class="name-title">موسى عليه السلام</p>
+        <span class="name-tag">نبي</span>
+        <p class="name-def">
+          كليم الله. يُذكر في سياق اليهود الذين سكنوا يثرب وخيبر، وفي حديث ورقة بن نوفل عند
+          بدء الوحي: «هذا الناموس الذي نزّل الله على موسى».
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══════ أجداد النبي ﷺ وسلسلة النسب ═══════ -->
+
+    <div class="category-section" data-cat="ancestor">
+      <h2>أجداد النبي ﷺ وسلسلة النسب</h2>
+
+      <div class="name-entry" data-cat="ancestor" data-name="عدنان جد الجد الأعلى">
+        <p class="name-title">عدنان</p>
+        <span class="name-tag">الجد الأعلى</span>
+        <p class="name-def">
+          من نسل قيدار بن إسماعيل. الجد الذي تنتهي عنده أنساب العرب العدنانيين باتفاق.
+          الجد الحادي والعشرون في سلسلة نسب النبي ﷺ.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="ancestor" data-name="نزار بن معد بن عدنان">
+        <p class="name-title">نزار بن معد</p>
+        <span class="name-tag">جد القبائل الأربع</span>
+        <p class="name-def">
+          حفيد عدنان. منه تفرعت الشعب الأربع الكبرى: إياد، أنمار، ربيعة، ومضر.
+          مضر هي الفرع الذي خرجت منه قريش.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="ancestor" data-name="مضر بن نزار قبيلة">
+        <p class="name-title">مضر بن نزار</p>
+        <span class="name-tag">أبو فرع النبي ﷺ</span>
+        <p class="name-def">
+          أعظم فروع نزار وأوسعها انتشارًا. انقسمت ذريته إلى قيس عيلان وإلياس. من إلياس
+          جاءت كنانة ثم قريش.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="ancestor" data-name="فهر بن مالك قريش النضر كنانة">
+        <p class="name-title">فهر بن مالك (قريش)</p>
+        <span class="name-tag">جد قريش</span>
+        <p class="name-def">
+          فهر بن مالك بن النضر بن كنانة. يُعرف بـ«قريش»، وكل من ينتسب إليه فهو قرشي.
+          منه تفرعت بطون قريش كلها.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="ancestor" data-name="قصي بن كلاب مؤسس مكة دار الندوة">
+        <p class="name-title">قصي بن كلاب</p>
+        <span class="name-tag">مؤسس نظام مكة</span>
+        <p class="name-def">
+          جمع قريشًا المتفرقة وأسكنها بطن مكة حول الكعبة. انتزع سدانة الحرم من خزاعة. أسس
+          دار الندوة (مجلس الشورى)، ونظّم السقاية والرفادة واللواء والحجابة. كل نظام مكة الذي
+          عرفه النبي ﷺ بناه قصي.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="ancestor" data-name="عبد مناف بن قصي">
+        <p class="name-title">عبد مناف بن قصي</p>
+        <span class="name-tag">جد</span>
+        <p class="name-def">
+          ابن قصي، ورث السقاية والرفادة. أبناؤه الأربعة أسسوا فروع قريش العليا: عبد شمس (أبو سفيان)،
+          نوفل، المطلب، وهاشم (جد النبي ﷺ).
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="ancestor" data-name="هاشم بن عبد مناف رحلة الشتاء والصيف">
+        <p class="name-title">هاشم بن عبد مناف</p>
+        <span class="name-tag">جد بني هاشم</span>
+        <p class="name-def">
+          نظّم رحلتَي الشتاء والصيف التجاريتين (المذكورتين في سورة قريش). أكسب قريشًا ثروة
+          وحلفاء. مات في غزة أثناء رحلة تجارية. إليه يُنسب بنو هاشم.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="ancestor" data-name="عبد المطلب بن هاشم شيبة الحمد زمزم أبرهة الفيل">
+        <p class="name-title">عبد المطلب بن هاشم</p>
+        <span class="name-tag">جد النبي ﷺ المباشر</span>
+        <p class="name-def">
+          اسمه شيبة الحمد. أعاد حفر بئر زمزم بعد أن طُمست. واجه أبرهة الحبشي حين غزا مكة
+          بالفيل وقال: «للبيت ربٌّ يحميه». سيد قريش في زمانه. نذر ذبح أحد أبنائه ففُدي عبد الله
+          (والد النبي ﷺ) بمائة من الإبل. كفل حفيده محمدًا ﷺ بعد وفاة والديه.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="ancestor" data-name="عبد الله بن عبد المطلب والد النبي">
+        <p class="name-title">عبد الله بن عبد المطلب</p>
+        <span class="name-tag">والد النبي ﷺ</span>
+        <p class="name-def">
+          أصغر أبناء عبد المطلب وأحبهم إليه. هو الذبيح الذي فُدي بمائة ناقة. تزوج آمنة بنت وهب.
+          توفي قبل ولادة النبي ﷺ أو بعدها بقليل (والنبي ﷺ جنين أو رضيع).
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══════ آل البيت وأعمام النبي ═══════ -->
+
+    <div class="category-section" data-cat="family">
+      <h2>آل البيت وأعمام النبي ﷺ</h2>
+
+      <div class="name-entry" data-cat="family" data-name="أبو طالب بن عبد المطلب عم النبي كافل">
+        <p class="name-title">أبو طالب بن عبد المطلب</p>
+        <span class="name-tag">عم النبي ﷺ وكافله</span>
+        <p class="name-def">
+          كفل النبي ﷺ بعد وفاة عبد المطلب. حماه من قريش طوال الفترة المكية رغم عدم إسلامه.
+          وفاته في «عام الحزن» كانت نقطة تحول أزالت الحماية القبلية عن النبي ﷺ.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="family companion" data-name="حمزة بن عبد المطلب أسد الله سيد الشهداء أحد">
+        <p class="name-title">حمزة بن عبد المطلب</p>
+        <span class="name-tag">أسد الله وسيد الشهداء</span>
+        <p class="name-def">
+          عم النبي ﷺ. أسلم غضبًا لإهانة أبي جهل للنبي ﷺ، ثم ثبت على إيمانه. أبلى بلاءً عظيمًا
+          في بدر. استُشهد في أحد وقتله وحشي بن حرب. لُقّب بأسد الله وسيد الشهداء.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="family companion" data-name="العباس بن عبد المطلب عم السقاية">
+        <p class="name-title">العباس بن عبد المطلب</p>
+        <span class="name-tag">عم النبي ﷺ</span>
+        <p class="name-def">
+          تولى السقاية في مكة. أسلم قبل الفتح (وقيل كان يُسرّ إسلامه). ساعد في بيعة العقبة
+          حين استوثق من الأنصار. كان مع النبي ﷺ يوم فتح مكة ويوم حنين.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="family" data-name="أبو لهب عبد العزى بن عبد المطلب تبت يدا">
+        <p class="name-title">أبو لهب</p>
+        <span class="name-tag">عم النبي ﷺ — عدوه</span>
+        <p class="name-def">
+          عبد العزى بن عبد المطلب. العم الوحيد الذي عادى النبي ﷺ علنًا. نزلت فيه سورة المسد.
+          رفض حماية النبي ﷺ بعد وفاة أبي طالب، مما أجبره على البحث عن ملاذ خارج مكة.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="family companion" data-name="علي بن أبي طالب أول من أسلم من الصبيان الإمام رابع الخلفاء">
+        <p class="name-title">علي بن أبي طالب</p>
+        <span class="name-tag">ابن عم النبي ﷺ ورابع الخلفاء</span>
+        <p class="name-def">
+          ابن عم النبي ﷺ وزوج فاطمة. أول من أسلم من الصبيان. نام في فراش النبي ﷺ ليلة الهجرة.
+          حامل اللواء في كثير من الغزوات. رابع الخلفاء الراشدين.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="family companion" data-name="جعفر بن أبي طالب ذو الجناحين الطيار الحبشة مؤتة">
+        <p class="name-title">جعفر بن أبي طالب</p>
+        <span class="name-tag">ذو الجناحين</span>
+        <p class="name-def">
+          ابن عم النبي ﷺ. قاد المهاجرين إلى الحبشة وخطب أمام النجاشي خطبته الشهيرة عن الإسلام.
+          استُشهد قائدًا في غزوة مؤتة وقُطعت يداه فلُقّب بذي الجناحين.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="family women" data-name="فاطمة الزهراء بنت محمد سيدة نساء أهل الجنة">
+        <p class="name-title">فاطمة الزهراء</p>
+        <span class="name-tag">بنت النبي ﷺ</span>
+        <p class="name-def">
+          أصغر بنات النبي ﷺ وأحبهن إليه. زوجة علي بن أبي طالب وأم الحسن والحسين.
+          سيدة نساء أهل الجنة. توفيت بعد النبي ﷺ بستة أشهر.
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══════ الصحابة ═══════ -->
+
+    <div class="category-section" data-cat="companion">
+      <h2>الصحابة</h2>
+
+      <div class="name-entry" data-cat="companion" data-name="أبو بكر الصديق عبد الله بن أبي قحافة أول الخلفاء الراشدين بنو تيم الهجرة الغار">
+        <p class="name-title">أبو بكر الصديق</p>
+        <span class="name-tag">أول الخلفاء — بنو تيم</span>
+        <p class="name-def">
+          عبد الله بن أبي قحافة. أول من آمن من الرجال. صاحب النبي ﷺ في الغار أثناء الهجرة.
+          أنفق ماله كله في سبيل الإسلام وأعتق بلالًا. أول الخلفاء الراشدين.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="عمر بن الخطاب الفاروق بنو عدي ثاني الخلفاء">
+        <p class="name-title">عمر بن الخطاب</p>
+        <span class="name-tag">الفاروق — بنو عدي</span>
+        <p class="name-def">
+          ثاني الخلفاء الراشدين. كان من ألدّ أعداء الإسلام ثم أسلم فأعزّ الله به المسلمين وجهروا بالصلاة
+          لأول مرة. عُرف بالعدل والحزم. قال النبي ﷺ: «لو كان بعدي نبي لكان عمر».
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="عثمان بن عفان ذو النورين بنو أمية ثالث الخلفاء الهجرتين">
+        <p class="name-title">عثمان بن عفان</p>
+        <span class="name-tag">ذو النورين — بنو أمية</span>
+        <p class="name-def">
+          ثالث الخلفاء الراشدين. من بني أمية (فرع عبد شمس). تزوج ابنتين للنبي ﷺ (رقية ثم أم كلثوم).
+          هاجر الهجرتين. جهّز جيش العسرة (تبوك). جمع القرآن في مصحف واحد.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="خالد بن الوليد سيف الله المسلول بنو مخزوم فتح أحد">
+        <p class="name-title">خالد بن الوليد</p>
+        <span class="name-tag">سيف الله — بنو مخزوم</span>
+        <p class="name-def">
+          ابن الوليد بن المغيرة المخزومي. كان فارس قريش، وهو الذي التف على المسلمين في أحد.
+          أسلم بعد الحديبية. قاد جيش مؤتة ثم فتح مكة وحنين. لم يُهزم في معركة قط.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="بلال بن رباح مؤذن الرسول الحبشي أحد أحد">
+        <p class="name-title">بلال بن رباح</p>
+        <span class="name-tag">مؤذن الرسول</span>
+        <p class="name-def">
+          من أوائل المسلمين. عُذّب في حرّ مكة وهو يردد «أحدٌ أحد». اشتراه أبو بكر وأعتقه.
+          أول مؤذن في الإسلام. رمز لأن الإسلام لا يفرق بين الناس بأعراقهم.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="مصعب بن عمير أول سفير داعية يثرب المدينة">
+        <p class="name-title">مصعب بن عمير</p>
+        <span class="name-tag">أول سفير في الإسلام</span>
+        <p class="name-def">
+          كان من أغنى شباب قريش وأجملهم. أسلم سرًا. أرسله النبي ﷺ إلى يثرب بعد بيعة العقبة الأولى
+          ليعلّم الناس الإسلام — فكان أول داعية يُرسل خارج مكة. استُشهد في أحد.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="زيد بن حارثة حِب الرسول مؤتة متبنى">
+        <p class="name-title">زيد بن حارثة</p>
+        <span class="name-tag">حِبّ رسول الله</span>
+        <p class="name-def">
+          كان مولى النبي ﷺ ثم تبنّاه قبل الإسلام. أول من أسلم من الموالي. الصحابي الوحيد الذي
+          ذُكر باسمه في القرآن. قاد جيش مؤتة واستُشهد فيها.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="سعد بن معاذ سيد الأوس الأنصار الخندق بنو قريظة">
+        <p class="name-title">سعد بن معاذ</p>
+        <span class="name-tag">سيد الأوس</span>
+        <p class="name-def">
+          سيد قبيلة الأوس في المدينة. أسلم على يد مصعب بن عمير فأسلمت الأوس كلها.
+          أُصيب في غزوة الخندق. حكم في بني قريظة. اهتز عرش الرحمن لموته.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="سعد بن عبادة سيد الخزرج الأنصار">
+        <p class="name-title">سعد بن عبادة</p>
+        <span class="name-tag">سيد الخزرج</span>
+        <p class="name-def">
+          سيد قبيلة الخزرج في المدينة. من أوائل الأنصار إسلامًا. حمل لواء الأنصار في الغزوات.
+          عُرف بالكرم والجود.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="عبد الرحمن بن عوف العشرة المبشرين بنو زهرة تاجر">
+        <p class="name-title">عبد الرحمن بن عوف</p>
+        <span class="name-tag">من العشرة المبشرين — بنو زهرة</span>
+        <p class="name-def">
+          من أوائل المسلمين ومن العشرة المبشرين بالجنة. من بني زهرة (أخوال النبي ﷺ).
+          أغنى الصحابة، هاجر بلا مال فآخى النبي ﷺ بينه وبين سعد بن الربيع الأنصاري.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="سعد بن أبي وقاص أول سهم أول رمية العشرة">
+        <p class="name-title">سعد بن أبي وقاص</p>
+        <span class="name-tag">من العشرة المبشرين — بنو زهرة</span>
+        <p class="name-def">
+          من أوائل المسلمين. أول من رمى بسهم في سبيل الله. قاد الجيوش في فتح فارس (معركة القادسية).
+          خال النبي ﷺ من جهة بني زهرة.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="عمار بن ياسر أول شهيدة أم عمار المعذبين">
+        <p class="name-title">عمار بن ياسر</p>
+        <span class="name-tag">من المستضعفين الأوائل</span>
+        <p class="name-def">
+          من أوائل المسلمين. عُذّب هو وأبوه ياسر وأمه سمية عذابًا شديدًا. أمه سمية أول شهيدة في الإسلام.
+          قال لهم النبي ﷺ: «صبرًا آل ياسر فإن موعدكم الجنة».
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="صهيب الرومي هجرة فداء مال">
+        <p class="name-title">صهيب الرومي</p>
+        <span class="name-tag">من المستضعفين</span>
+        <p class="name-def">
+          أسلم مبكرًا وعُذّب. عند الهجرة منعته قريش فترك لهم ماله كله مقابل السماح له بالرحيل.
+          قال النبي ﷺ: «ربح البيع أبا يحيى».
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="خباب بن الأرت حداد معذب">
+        <p class="name-title">خباب بن الأرت</p>
+        <span class="name-tag">من المستضعفين الأوائل</span>
+        <p class="name-def">
+          من أوائل المسلمين. كان حدادًا. عذّبه مولاه بوضع الجمر على ظهره. من الذين شكوا إلى
+          النبي ﷺ شدة التعذيب فقال: «قد كان من قبلكم يُمشط بأمشاط الحديد».
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="companion" data-name="أبو ذر الغفاري جندب غفار زاهد رابع أو خامس">
+        <p class="name-title">أبو ذر الغفاري</p>
+        <span class="name-tag">من السابقين الأوائل</span>
+        <p class="name-def">
+          من قبيلة غفار (كانت قبيلة قطّاع طرق). جاء إلى مكة يبحث عن النبي ﷺ فأسلم مبكرًا.
+          أعلن إسلامه في الحرم فضُرب حتى أُغمي عليه. عُرف بالزهد والصدق.
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══════ النساء البارزات ═══════ -->
+
+    <div class="category-section" data-cat="women">
+      <h2>النساء البارزات</h2>
+
+      <div class="name-entry" data-cat="women" data-name="آمنة بنت وهب أم النبي بنو زهرة">
+        <p class="name-title">آمنة بنت وهب</p>
+        <span class="name-tag">أم النبي ﷺ</span>
+        <p class="name-def">
+          من بني زهرة. تزوجها عبد الله بن عبد المطلب. توفيت والنبي ﷺ في السادسة من عمره
+          بالأبواء (بين مكة والمدينة) وهي عائدة من زيارة أخوال أبيه في يثرب.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="women" data-name="حليمة السعدية مرضعة النبي بني سعد هوازن البادية">
+        <p class="name-title">حليمة السعدية</p>
+        <span class="name-tag">مرضعة النبي ﷺ</span>
+        <p class="name-def">
+          من بني سعد بن بكر (فرع من هوازن). أرضعت النبي ﷺ في البادية أربع سنوات.
+          رأت بركات عجيبة منذ أخذته. في عهدها وقعت حادثة شق الصدر.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="women" data-name="خديجة بنت خويلد أم المؤمنين الأولى زوجة">
+        <p class="name-title">خديجة بنت خويلد</p>
+        <span class="name-tag">أم المؤمنين الأولى</span>
+        <p class="name-def">
+          أولى زوجات النبي ﷺ وأحبهن إليه. سيدة تجارة ثرية من قريش. أول من آمن به على الإطلاق.
+          ساندته بمالها ونفسها طوال ١٥ عامًا. وفاتها في «عام الحزن» كانت أعظم خسارة شخصية للنبي ﷺ.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="women" data-name="عائشة بنت أبي بكر أم المؤمنين الصديقة الفقيهة">
+        <p class="name-title">عائشة بنت أبي بكر</p>
+        <span class="name-tag">أم المؤمنين</span>
+        <p class="name-def">
+          بنت أبي بكر الصديق. أكثر أمهات المؤمنين رواية للحديث. نزلت فيها آيات التبرئة في حادثة الإفك.
+          أعلم النساء بالفقه والحديث. في حجرتها توفي النبي ﷺ ودُفن.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="women" data-name="سمية بنت خياط أول شهيدة أم عمار ياسر">
+        <p class="name-title">سمية بنت خياط</p>
+        <span class="name-tag">أول شهيدة في الإسلام</span>
+        <p class="name-def">
+          أم عمار بن ياسر. عُذّبت في مكة لإسلامها. طعنها أبو جهل بحربة فقتلها، فكانت أول شهيدة
+          في الإسلام. رمز للثبات على الحق مهما كان الثمن.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="women" data-name="هند بنت عتبة زوجة أبي سفيان أحد بطن حمزة">
+        <p class="name-title">هند بنت عتبة</p>
+        <span class="name-tag">زوجة أبي سفيان</span>
+        <p class="name-def">
+          من ألدّ عدوات الإسلام في مكة. لاكت كبد حمزة يوم أحد ثأرًا لأبيها عتبة الذي قُتل في بدر.
+          أسلمت يوم فتح مكة.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="women" data-name="هاجر أم إسماعيل زمزم مكة">
+        <p class="name-title">هاجر</p>
+        <span class="name-tag">أم إسماعيل</span>
+        <p class="name-def">
+          زوجة إبراهيم وأم إسماعيل. أسكنها إبراهيم مع رضيعها في وادي مكة القاحل. سعت بين
+          الصفا والمروة بحثًا عن ماء ففجّر الله زمزم. سعيها صار ركنًا من أركان الحج.
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══════ قادة قريش والمعارضة ═══════ -->
+
+    <div class="category-section" data-cat="quraysh-leader">
+      <h2>قادة قريش والمعارضة</h2>
+
+      <div class="name-entry" data-cat="quraysh-leader" data-name="أبو جهل عمرو بن هشام فرعون الأمة بنو مخزوم بدر">
+        <p class="name-title">أبو جهل (عمرو بن هشام)</p>
+        <span class="name-tag">فرعون هذه الأمة — بنو مخزوم</span>
+        <p class="name-def">
+          ألدّ أعداء النبي ﷺ. قاد حملة التعذيب والمقاطعة والحصار. سماه النبي ﷺ «فرعون هذه الأمة».
+          قُتل في غزوة بدر على يد معاذ ومعوذ ابني عفراء.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="quraysh-leader" data-name="أبو سفيان صخر بن حرب بنو عبد شمس بنو أمية بدر أحد الأحزاب فتح">
+        <p class="name-title">أبو سفيان بن حرب</p>
+        <span class="name-tag">زعيم المعارضة — بنو عبد شمس</span>
+        <p class="name-def">
+          سيد بني عبد شمس. قاد قريشًا بعد بدر — في أحد والأحزاب. قائد القافلة التي أشعلت بدرًا.
+          أسلم ليلة فتح مكة حين رأى الجيش الإسلامي. جعل النبي ﷺ داره أمانًا.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="quraysh-leader" data-name="عتبة بن ربيعة شيخ قريش بدر مبارزة">
+        <p class="name-title">عتبة بن ربيعة</p>
+        <span class="name-tag">شيخ من قريش</span>
+        <p class="name-def">
+          من كبار سادات قريش. حاول التفاوض مع النبي ﷺ بعروض دنيوية (المال والملك)
+          فرفضها النبي ﷺ وقرأ عليه أول سورة فصّلت فأُبهت. قُتل في مبارزة بدر.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="quraysh-leader" data-name="الوليد بن المغيرة بنو مخزوم سحر أساطير الأولين">
+        <p class="name-title">الوليد بن المغيرة</p>
+        <span class="name-tag">أبو خالد بن الوليد — بنو مخزوم</span>
+        <p class="name-def">
+          من أثرى رجال قريش وأكثرهم وجاهة. سمع القرآن فأُعجب به ثم قال تحت الضغط: «إن هذا إلا سحر يؤثر».
+          نزلت فيه آيات من سورة المدثر. أبو خالد بن الوليد (سيف الله).
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="quraysh-leader" data-name="أمية بن خلف بلال تعذيب بدر">
+        <p class="name-title">أمية بن خلف</p>
+        <span class="name-tag">معذّب بلال</span>
+        <p class="name-def">
+          سيد من بني جمح. هو الذي كان يعذّب بلال بن رباح بوضع الصخرة على صدره في الرمضاء.
+          قُتل في غزوة بدر.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="quraysh-leader" data-name="سهيل بن عمرو خطيب قريش الحديبية صلح">
+        <p class="name-title">سهيل بن عمرو</p>
+        <span class="name-tag">خطيب قريش</span>
+        <p class="name-def">
+          خطيب قريش وأبرز مفاوضيها. هو الذي فاوض النبي ﷺ في صلح الحديبية واشترط شروطًا
+          بدت قاسية على المسلمين. أسلم لاحقًا وحسن إسلامه.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="quraysh-leader" data-name="عمرو بن العاص فتح مصر داهية أسلم">
+        <p class="name-title">عمرو بن العاص</p>
+        <span class="name-tag">داهية قريش</span>
+        <p class="name-def">
+          من أدهى العرب. أرسلته قريش إلى النجاشي ليردّ المهاجرين. أسلم بعد الحديبية.
+          فتح مصر وولي عليها. من القادة العسكريين والسياسيين البارزين.
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══════ شخصيات تاريخية ═══════ -->
+
+    <div class="category-section" data-cat="historical">
+      <h2>شخصيات تاريخية</h2>
+
+      <div class="name-entry" data-cat="historical" data-name="ورقة بن نوفل نصراني بشارة الوحي خديجة">
+        <p class="name-title">ورقة بن نوفل</p>
+        <span class="name-tag">ابن عم خديجة</span>
+        <p class="name-def">
+          نصراني من قريش قرأ الكتب السماوية. ذهبت إليه خديجة بعد نزول الوحي الأول فقال:
+          «هذا الناموس الذي أنزل الله على موسى، يا ليتني أكون حيًا إذ يخرجك قومك».
+          بشّر النبي ﷺ بنبوته ثم مات بعد ذلك بقليل.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="historical" data-name="أبرهة الأشرم الحبشي أصحاب الفيل الكعبة هدم عام الفيل">
+        <p class="name-title">أبرهة الأشرم</p>
+        <span class="name-tag">صاحب الفيل</span>
+        <p class="name-def">
+          قائد حبشي حكم اليمن. بنى كنيسة القُلّيس ليصرف العرب عن الكعبة. لما فشل، جهّز جيشًا
+          بالفيلة لهدم الكعبة عام ولادة النبي ﷺ. أهلكه الله بطير أبابيل (سورة الفيل).
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="historical" data-name="عمرو بن لحي خزاعة أصنام وثنية هبل أول من أدخل">
+        <p class="name-title">عمرو بن لحي الخزاعي</p>
+        <span class="name-tag">مُدخل الوثنية</span>
+        <p class="name-def">
+          سيد خزاعة حين كانت تتولى مكة. أول من أدخل عبادة الأصنام إلى الجزيرة العربية —
+          جلب هُبَل من الشام ونصبه على الكعبة. غيّر ملة إبراهيم وأفسد دين العرب.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="historical" data-name="عمران بن عمرو مزيقياء الأزد هجرة سد مأرب">
+        <p class="name-title">عمران بن عمرو (مزيقياء)</p>
+        <span class="name-tag">قائد هجرة الأزد</span>
+        <p class="name-def">
+          قاد أكبر موجة هجرة قحطانية من اليمن قبل انهيار سد مأرب. تفرقت ذريته: ثعلبة إلى يثرب
+          (منه الأوس والخزرج)، خزاعة إلى مكة، جفنة إلى الشام (الغساسنة).
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="historical" data-name="وحشي بن حرب قاتل حمزة أحد">
+        <p class="name-title">وحشي بن حرب</p>
+        <span class="name-tag">قاتل حمزة</span>
+        <p class="name-def">
+          عبد حبشي ماهر بالحربة. قتل حمزة بن عبد المطلب في غزوة أحد بتحريض من هند بنت عتبة.
+          أسلم بعد الفتح. قتل مسيلمة الكذاب في حروب الردة بنفس الحربة.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="historical" data-name="أبو غبشان الخزاعي باع سدانة الكعبة قصي">
+        <p class="name-title">أبو غبشان الخزاعي</p>
+        <span class="name-tag">آخر سدنة خزاعة</span>
+        <p class="name-def">
+          آخر من تولى سدانة الكعبة من خزاعة. باع حق السدانة لقصي بن كلاب مقابل زقّ خمر (في رواية).
+          صار المثل يُضرب به: «أخسر من صفقة أبي غبشان».
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══════ ملوك ورؤساء ═══════ -->
+
+    <div class="category-section" data-cat="king">
+      <h2>ملوك ورؤساء</h2>
+
+      <div class="name-entry" data-cat="king" data-name="النجاشي أصحمة ملك الحبشة هجرة المسلمين جعفر لجوء">
+        <p class="name-title">النجاشي (أصحمة)</p>
+        <span class="name-tag">ملك الحبشة</span>
+        <p class="name-def">
+          ملك الحبشة العادل. آوى المسلمين في هجرتهم الأولى والثانية ورفض تسليمهم لقريش.
+          أسلم سرًا. صلى عليه النبي ﷺ صلاة الغائب حين بلغه نعيه.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="king" data-name="هرقل قيصر الروم البيزنطي أبو سفيان رسالة">
+        <p class="name-title">هرقل (قيصر)</p>
+        <span class="name-tag">إمبراطور الروم</span>
+        <p class="name-def">
+          إمبراطور الدولة الرومية (البيزنطية). أرسل إليه النبي ﷺ رسالة يدعوه فيها إلى الإسلام.
+          استجوب أبا سفيان عن النبي ﷺ وأدرك صدقه لكنه لم يُسلم خوفًا على ملكه.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="king" data-name="كسرى أبرويز ملك فارس مزّق الرسالة كتاب النبي">
+        <p class="name-title">كسرى (أبرويز)</p>
+        <span class="name-tag">ملك فارس</span>
+        <p class="name-def">
+          ملك الإمبراطورية الفارسية. أرسل إليه النبي ﷺ رسالة فمزّقها غضبًا. قال النبي ﷺ:
+          «مزّق الله ملكه». مات مقتولًا على يد ابنه بعد ذلك بقليل.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="king" data-name="المقوقس عظيم مصر القبط رسالة مارية">
+        <p class="name-title">المقوقس</p>
+        <span class="name-tag">عظيم مصر</span>
+        <p class="name-def">
+          حاكم مصر (عظيم القبط). أرسل إليه النبي ﷺ رسالة فلم يُسلم لكنه أحسن الرد وأرسل
+          هدايا منها مارية القبطية التي تزوجها النبي ﷺ.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="king" data-name="الحارث بن أبي شمر الغساني ملك غسان الشام">
+        <p class="name-title">الحارث بن أبي شمر الغساني</p>
+        <span class="name-tag">ملك الغساسنة</span>
+        <p class="name-def">
+          ملك الغساسنة في جنوب الشام (تابع للروم). أرسل إليه النبي ﷺ رسالة فرفضها. قتل رسول
+          النبي ﷺ الحارث بن عمير الأزدي — وهو السبب المباشر لغزوة مؤتة.
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══════ زعماء قبائل ═══════ -->
+
+    <div class="category-section" data-cat="tribe-leader">
+      <h2>زعماء قبائل ووفود</h2>
+
+      <div class="name-entry" data-cat="tribe-leader companion" data-name="عدي بن حاتم الطائي حاتم الكرم طيء وفد">
+        <p class="name-title">عدي بن حاتم الطائي</p>
+        <span class="name-tag">ابن حاتم الطائي — طيء</span>
+        <p class="name-def">
+          ابن حاتم الطائي المشهور بالكرم. كان نصرانيًا. فرّ من المسلمين ثم جاء إلى النبي ﷺ
+          وأسلم في عام الوفود. أدخل قبيلة طيء كلها في الإسلام.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="tribe-leader" data-name="الأشعث بن قيس كندة وفد حضرموت">
+        <p class="name-title">الأشعث بن قيس</p>
+        <span class="name-tag">سيد كندة</span>
+        <p class="name-def">
+          سيد قبيلة كندة. قدم على النبي ﷺ في وفد كندة وأسلم. ارتد بعد وفاة النبي ﷺ ثم عاد
+          إلى الإسلام. شارك في فتوحات العراق والشام.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="tribe-leader" data-name="مسيلمة الكذاب بنو حنيفة اليمامة مدعي النبوة">
+        <p class="name-title">مسيلمة الكذاب</p>
+        <span class="name-tag">بنو حنيفة — اليمامة</span>
+        <p class="name-def">
+          ادّعى النبوة في اليمامة وكتب إلى النبي ﷺ يطلب مشاركته في الأمر. قُتل في حروب الردة
+          على يد وحشي بن حرب وضربه أبو دجانة.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="tribe-leader companion" data-name="ضماد الأزدي أزد شنوءة راقي جن">
+        <p class="name-title">ضماد الأزدي</p>
+        <span class="name-tag">أزد شنوءة</span>
+        <p class="name-def">
+          جاء مكة يرقي من الجنون. سمعت قريش فقالوا: اذهب إلى محمد فإنه مجنون. فلما سمع
+          كلام النبي ﷺ قال: «والله لقد سمعت قول الكهنة وقول السحرة فما سمعت مثل هذا» وأسلم.
+        </p>
+      </div>
+
+      <div class="name-entry" data-cat="tribe-leader companion" data-name="أبو موسى الأشعري الأشعريون يمن">
+        <p class="name-title">أبو موسى الأشعري</p>
+        <span class="name-tag">الأشعريون — اليمن</span>
+        <p class="name-def">
+          من قبيلة الأشعريين اليمنية. هاجر إلى الحبشة ثم المدينة. حسن الصوت بالقرآن.
+          ولي البصرة والكوفة. قال النبي ﷺ فيه: «لقد أُوتي مزمارًا من مزامير آل داود».
+        </p>
+      </div>
+    </div>
+
   </main>
+
+  <footer>
+    معجم الأسماء — «الرحيق المختوم» لصفي الرحمن المباركفوري
+  </footer>
+
+  <script>
+    function filterNames() {
+      var query = document.getElementById('searchInput').value.trim();
+      var entries = document.querySelectorAll('.name-entry');
+      var sections = document.querySelectorAll('.category-section');
+      var count = 0;
+
+      if (!query) {
+        entries.forEach(function(e) { e.classList.remove('hidden'); });
+        sections.forEach(function(s) { s.classList.remove('hidden'); });
+        document.getElementById('searchCount').classList.add('hidden');
+        return;
+      }
+
+      sections.forEach(function(s) { s.classList.remove('hidden'); });
+
+      entries.forEach(function(e) {
+        var name = e.getAttribute('data-name') || '';
+        var def = e.querySelector('.name-def');
+        var text = name + ' ' + (def ? def.textContent : '');
+        if (text.indexOf(query) !== -1) {
+          e.classList.remove('hidden');
+          count++;
+        } else {
+          e.classList.add('hidden');
+        }
+      });
+
+      // hide empty sections
+      sections.forEach(function(s) {
+        var visible = s.querySelectorAll('.name-entry:not(.hidden)');
+        if (visible.length === 0) {
+          s.classList.add('hidden');
+        }
+      });
+
+      var el = document.getElementById('searchCount');
+      el.textContent = count === 0 ? 'لا توجد نتائج' : count + ' نتيجة';
+      el.classList.remove('hidden');
+    }
+
+    function filterCategory(cat, btn) {
+      var entries = document.querySelectorAll('.name-entry');
+      var sections = document.querySelectorAll('.category-section');
+      var buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      document.getElementById('searchInput').value = '';
+      document.getElementById('searchCount').classList.add('hidden');
+
+      if (cat === 'all') {
+        entries.forEach(function(e) { e.classList.remove('hidden'); });
+        sections.forEach(function(s) { s.classList.remove('hidden'); });
+        return;
+      }
+
+      entries.forEach(function(e) {
+        var cats = e.getAttribute('data-cat') || '';
+        if (cats.indexOf(cat) !== -1) {
+          e.classList.remove('hidden');
+        } else {
+          e.classList.add('hidden');
+        }
+      });
+
+      sections.forEach(function(s) {
+        var visible = s.querySelectorAll('.name-entry:not(.hidden)');
+        if (visible.length === 0) {
+          s.classList.add('hidden');
+        } else {
+          s.classList.remove('hidden');
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>

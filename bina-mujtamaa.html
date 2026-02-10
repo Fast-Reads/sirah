@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بناء مجتمع جديد — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .hero .subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 620px;
+      margin: 0.8rem auto 0;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .breadcrumb a:hover {
+      background: var(--gold-pale);
+      color: var(--navy);
+    }
+    .breadcrumb .sep {
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+    .breadcrumb .current {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* TOC */
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      max-width: 880px;
+      margin: 1.5rem auto 0;
+      padding: 0 1.5rem;
+    }
+    .toc a {
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
+    }
+
+    /* SECTIONS */
+    section { margin-bottom: 1.5rem; }
+    h2 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--text);
+      text-align: justify;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    /* LISTS */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    ul li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+    }
+
+    /* VISUAL GRID */
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .visual-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .visual-icon {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .visual-title {
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+    }
+    .visual-text {
+      margin: 0;
+      color: var(--text-light);
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow);
+    }
+    .card h4 {
+      margin: 0 0 0.4rem;
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* FLOW TIMELINE */
+    .flowline {
+      border-right: 3px solid var(--gold-light);
+      margin-top: 1.3rem;
+      padding-right: 1.3rem;
+    }
+    .flow-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover {
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+    .flow-item::before {
+      content: "";
+      position: absolute;
+      right: -1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .flow-title {
+      margin: 0;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .flow-text {
+      margin: 0.3rem 0 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+    }
+    .tribe-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tribe-table tr:hover td {
+      background: var(--gold-pale);
+    }
+
+    /* INSIGHT / CONNECTION BOX */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .insight p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .connection p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* PERSON LINK */
+    a.person-link {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 0.05rem;
+    }
+    a.person-link:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+    }
+
+    /* BLOCKQUOTE */
+    blockquote {
+      background: var(--gold-pale);
+      border-right: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 1rem 0 1.5rem;
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      line-height: 2;
+    }
+
+    /* QUIZ */
+    .quiz-wrapper {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--gold-light);
+    }
+    .quiz-wrapper > h2 {
+      text-align: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+    .quiz-intro {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin: 0 auto 1.5rem;
+      max-width: 600px;
+    }
+    .quiz-score-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .quiz-score-bar span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .quiz-score-bar .q-score {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .quiz-section-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer;
+      padding: 1rem 1.4rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow {
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body {
+      padding: 0 1.4rem 1.4rem;
+    }
+    .q-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.3rem;
+      margin-top: 0.9rem;
+    }
+    .q-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .q-card p {
+      margin: 0 0 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      text-align: right;
+    }
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .q-opts button {
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      font-size: 0.92rem;
+      font-family: 'Tajawal', sans-serif;
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text);
+    }
+    .q-opts button:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+    .q-opts button.q-correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .q-opts button.q-wrong {
+      border-color: #c53030;
+      background: #fde8e8;
+      color: #c53030;
+    }
+    .q-opts button.q-off {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .q-feedback {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      font-size: 0.86rem;
+      min-height: 1.3em;
+    }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .quiz-retry-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2.2rem;
+      font-size: 1rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover {
+      background: #14293f;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+      .toc { gap: 0.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>بناء مجتمع جديد</h1>
+    <p class="subtitle">كيف حوّل النبي ﷺ مدينة متناحرة إلى أول دولة إسلامية ببناء المسجد والمؤاخاة ووثيقة المدينة</p>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">بناء مجتمع جديد</span>
+  </nav>
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <a href="#why">لماذا هذا الفصل؟</a>
+    <a href="#mosque">بناء المسجد النبوي</a>
+    <a href="#brotherhood">المؤاخاة</a>
+    <a href="#charter">وثيقة المدينة</a>
+    <a href="#adhan">الأذان</a>
+    <a href="#structure">تنظيم المجتمع</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section id="why">
+      <h2>لماذا هذا الفصل مهم؟</h2>
+      <p>
+        وصل النبي ﷺ إلى المدينة مهاجرًا — لكنه لم يصل كلاجئ يبحث عن مأوى، بل كقائد يحمل مشروعًا
+        حضاريًا متكاملًا. في أسابيع قليلة بعد الوصول بدأ يبني أركان مجتمع جديد لم يعرف التاريخ مثيلًا
+        له: مسجد يكون مركزًا للعبادة والحكم والتعليم، ونظام مؤاخاة يكسر حواجز العصبية القبلية،
+        ووثيقة دستورية تنظّم العلاقة بين المسلمين واليهود وبقية سكان المدينة. هذا الفصل يكشف كيف
+        يُبنى مجتمع من الصفر — وكيف تتحول مدينة كانت تنزف من حروب الأوس والخزرج إلى عاصمة أول دولة إسلامية.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح الفهم</span>
+        <p>
+          ترتيب الخطوات يكشف العبقرية: أولًا المسجد (المحور الروحي والسياسي)، ثم المؤاخاة
+          (اللُّحمة الاجتماعية)، ثم الوثيقة (الإطار القانوني). هذا التسلسل — عقيدة ← مجتمع ← قانون —
+          هو نموذج بناء الدول الناجحة عبر التاريخ. النبي ﷺ لم يبدأ بالسلطة بل بدأ بالمسجد — لأن
+          الدولة التي لا أساس روحيًّا لها بناءٌ على رمل.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ بناء المسجد النبوي ═══════ -->
+
+    <section id="mosque">
+      <h2>بناء المسجد النبوي — أول لبنة في الدولة</h2>
+      <p>
+        حين أناخت ناقة النبي ﷺ في مربد (ساحة تجفيف التمر) لغلامين يتيمين من بني النجار، قال:
+        «هذا المنزل إن شاء الله.» فاشترى الأرض وبدأ البناء بنفسه مع أصحابه. لم يكن المسجد مجرد
+        مكان صلاة — بل كان البرلمان والمحكمة والجامعة ومركز القيادة في آنٍ واحد.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">شراء الأرض</p>
+          <p class="flow-text">
+            كانت الأرض لغلامين يتيمين: سهل وسُهيل. أراد الغلامان التبرع بها لكن النبي ﷺ أصرّ على دفع
+            ثمنها — عشرة دنانير دفعها <a class="person-link" href="persons.html">أبو بكر الصديق</a>.
+            أول درس: لا استغلال حتى لكرم الناس، والحق يُحفظ حتى لليتيم.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">تسوية الأرض وإزالة القبور</p>
+          <p class="flow-text">
+            كان في الأرض نخل وقبور للمشركين وخِرَب. فأمر النبي ﷺ بنبش قبور المشركين ونقلها،
+            وقطع النخل ووُضعت جذوعه قبلةً للمسجد. سُوّيت الأرض وبدأ العمل الجماعي.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">البناء بالمشاركة</p>
+          <p class="flow-text">
+            عمل النبي ﷺ بيده ينقل اللَّبِن (الطوب) والحجارة مع أصحابه. كانوا يرتجزون وهم يبنون:
+            «اللهم لا عيش إلا عيش الآخرة، فاغفر للأنصار والمهاجرة.» جدران من لَبِن، وأعمدة من جذوع
+            النخل، وسقف من جريد النخل والطين.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">حجرات أمهات المؤمنين</p>
+          <p class="flow-text">
+            بُنيت على جانب المسجد حجرات لأزواج النبي ﷺ من اللَّبِن وجريد النخل — بيوت بسيطة
+            لا ترف فيها. القائد يسكن بجوار مسجده — لا قصور بعيدة عن الناس.
+          </p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">المسجد: أكثر من مكان صلاة</span>
+        <p>
+          المسجد النبوي لم يكن مجرد مصلّى — بل كان مقرّ الحكم الذي تُناقش فيه قرارات الحرب والسلم،
+          والجامعة التي يجلس فيها أهل الصُّفَّة يتعلمون القرآن، والمحكمة التي تُفصل فيها الخصومات،
+          والمستشفى الميداني الذي عُولج فيه الجرحى في الغزوات. هذا التعدد الوظيفي سيظهر في كل حدث
+          مدني قادم — من غزوة بدر إلى فتح مكة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ المؤاخاة ═══════ -->
+
+    <section id="brotherhood">
+      <h2>المؤاخاة بين المهاجرين والأنصار</h2>
+      <p>
+        بعد بناء المسجد جاءت الخطوة الثانية: حلّ مشكلة المهاجرين الذين تركوا كل شيء في مكة —
+        بيوتهم وأموالهم وتجارتهم — ووصلوا المدينة بلا شيء. الحل النبوي كان عبقريًّا:
+        <strong>المؤاخاة</strong> — ربط كل مهاجري بأنصاري يصبح أخاه في كل شيء، يتقاسمان المال
+        والبيت والعمل. آخى النبي ﷺ بين خمسة وأربعين مهاجريًّا وخمسة وأربعين أنصاريًّا (وقيل أكثر).
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>المهاجر</th>
+            <th>الأنصاري</th>
+            <th>ما يميّز هذه المؤاخاة</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a class="person-link" href="persons.html">أبو بكر الصديق</a></td>
+            <td><a class="person-link" href="persons.html">خارجة بن زيد</a></td>
+            <td>الصدّيق مع أحد كبار الخزرج</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">عمر بن الخطاب</a></td>
+            <td><a class="person-link" href="persons.html">عتبان بن مالك</a></td>
+            <td>الفاروق مع بطل من بني سالم</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">عبد الرحمن بن عوف</a></td>
+            <td><a class="person-link" href="persons.html">سعد بن الربيع</a></td>
+            <td>عرض سعد نصف ماله وإحدى زوجتيه — فرفض عبد الرحمن وقال: دلّني على السوق</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">عثمان بن عفان</a></td>
+            <td><a class="person-link" href="persons.html">أوس بن ثابت</a></td>
+            <td>ذو النورين مع أخي حسّان بن ثابت</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">سلمان الفارسي</a></td>
+            <td><a class="person-link" href="persons.html">أبو الدرداء</a></td>
+            <td>الفارسي مع الأنصاري — كسر حاجز العرق والقومية</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">لماذا نجحت المؤاخاة حيث فشلت كل محاولات التوحيد قبلها؟</span>
+        <p>
+          العرب قبل الإسلام كانوا يعرفون «الحِلف» القبلي — لكنه كان مبنيًّا على المصلحة وينتهي
+          بانتهائها. المؤاخاة مختلفة جذريًّا: أساسها العقيدة لا المصلحة، ونطاقها يشمل المال والسكن
+          والإرث (في البداية كان الأخ المؤاخى يرث أخاه حتى نُسخ ذلك بآية المواريث). سعد بن الربيع عرض
+          نصف ماله على عبد الرحمن بن عوف — وهذا مستوى من السخاء لم تعرفه المجتمعات القبلية. لكن
+          عبد الرحمن رفض وقال: «دلّني على السوق» — فجمع بين العزة والاستقلال، وأصبح من أغنى تجار المدينة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ وثيقة المدينة ═══════ -->
+
+    <section id="charter">
+      <h2>وثيقة المدينة — أول دستور مدني في التاريخ</h2>
+      <p>
+        بعد تثبيت اللُّحمة الداخلية بين المسلمين بالمؤاخاة، جاءت الخطوة الثالثة: تنظيم العلاقة مع
+        غير المسلمين — وخاصة اليهود الذين كانوا يشكّلون جزءًا كبيرًا من سكان المدينة (بنو قينقاع وبنو
+        النضير وبنو قريظة). كتب النبي ﷺ وثيقة تُعدّ أول عقد اجتماعي مدني مكتوب في التاريخ العربي.
+        أبرز بنودها:
+      </p>
+      <ul>
+        <li><strong>الأمة الواحدة:</strong> المهاجرون والأنصار أمة واحدة من دون الناس — لكل فريق ديته وعرفه الداخلي.</li>
+        <li><strong>حرية الدين:</strong> لليهود دينهم وللمسلمين دينهم — لا إكراه في المعتقد.</li>
+        <li><strong>الدفاع المشترك:</strong> إذا هوجمت المدينة يدافع الجميع — مسلمون ويهود — عنها معًا.</li>
+        <li><strong>تحريم الإجارة:</strong> لا يُجير أحدٌ قرشيًّا أو ماله ولا يحول دون مؤمن — لقطع أي تواصل مع قريش المعادية.</li>
+        <li><strong>المرجعية العليا:</strong> إذا وقع خلاف بين أطراف الوثيقة فالمرجع هو الله ورسوله ﷺ — أي السلطة المركزية للدولة.</li>
+        <li><strong>تحريم الحرب الداخلية:</strong> يثرب حرامٌ جوفها على أهل هذه الصحيفة — لا قتال داخلي.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">لماذا ستنقض اليهود هذه الوثيقة؟</span>
+        <p>
+          رغم عدالة الوثيقة، لم يلتزم بها اليهود طويلًا. بنو قينقاع سيُنقضون العهد بعد بدر، وبنو
+          النضير سيحاولون اغتيال النبي ﷺ بعد أحد، وبنو قريظة سيخونون في أخطر لحظة: أثناء حصار
+          الأحزاب للمدينة. كل خيانة ستكون بعد انتصار المسلمين — وكأنهم كانوا يراهنون على هزيمة الإسلام.
+          هذه الأحداث ستُدرس في فصول الغزوات القادمة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الأذان ═══════ -->
+
+    <section id="adhan">
+      <h2>الأذان — صوت الدولة الجديدة</h2>
+      <p>
+        مع تشكّل المجتمع الجديد ظهرت حاجة عملية: كيف يُعلَم الناس بوقت الصلاة؟ تشاور النبي ﷺ
+        مع أصحابه — اقترح بعضهم الناقوس (كالنصارى) وبعضهم البوق (كاليهود) وبعضهم إيقاد نار.
+        لكن الله اختار طريقة فريدة لا تشبه أي أمة: الأذان — صوت بشري يصدح بالتوحيد خمس مرات في اليوم.
+      </p>
+      <blockquote>
+        رأى <a class="person-link" href="persons.html">عبد الله بن زيد بن عبد ربه</a> رؤيا فيها
+        رجل يحمل ناقوسًا فعلّمه كلمات الأذان. فلما أخبر النبي ﷺ قال: «إنها لرؤيا حق إن شاء الله،
+        فقم مع <a class="person-link" href="persons.html">بلال</a> فألقها عليه فإنه أندى صوتًا منك.»
+        فلما أذّن بلال سمعه <a class="person-link" href="persons.html">عمر بن الخطاب</a> فجاء يجرّ
+        رداءه وقال: والذي بعثك بالحق لقد رأيت مثل الذي رأى!
+      </blockquote>
+      <div class="insight">
+        <span class="insight-label">لماذا الأذان وليس أي وسيلة أخرى؟</span>
+        <p>
+          الناقوس والبوق أدوات — لكن الأذان رسالة. كل جملة فيه تحمل معنى عقديًّا: «الله أكبر» تعلن
+          سيادة الله، و«أشهد أن لا إله إلا الله» تنفي الشرك، و«أشهد أن محمدًا رسول الله» تثبت
+          النبوة، و«حيّ على الصلاة» دعوة للعمل، و«حيّ على الفلاح» وعد بالنجاح. الأذان ليس إعلامًا
+          بالوقت فحسب — بل إعلان يومي متكرر بهوية الأمة. واختيار
+          <a class="person-link" href="persons.html">بلال الحبشي</a> — العبد الأسود المعتَق — أول
+          مؤذن في الإسلام كان رسالة ثورية: في هذا الدين لا عبرة بلون ولا نسب بل بالتقوى والصوت الجميل.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ تنظيم المجتمع ═══════ -->
+
+    <section id="structure">
+      <h2>تنظيم المجتمع الجديد — المؤسسات الأولى</h2>
+      <p>
+        لم يتوقف البناء عند المسجد والمؤاخاة والوثيقة — بل أسس النبي ﷺ منظومة متكاملة حوّلت
+        المدينة من مجموعة قبائل متناحرة إلى دولة ذات مؤسسات:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F54C;</span>
+          <p class="visual-title">المسجد: المركز</p>
+          <p class="visual-text">مقرّ العبادة والحكم والقضاء والتعليم — قلب الدولة النابض بالحياة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F91D;</span>
+          <p class="visual-title">المؤاخاة: التكافل</p>
+          <p class="visual-text">نظام ضمان اجتماعي ربط المهاجرين بالأنصار في المال والسكن والعمل.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4DC;</span>
+          <p class="visual-title">الوثيقة: الدستور</p>
+          <p class="visual-text">عقد اجتماعي ينظم الحقوق والواجبات بين كل سكان المدينة مسلمين وغيرهم.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4E2;</span>
+          <p class="visual-title">الأذان: الهوية</p>
+          <p class="visual-text">إعلان يومي خمس مرات يبث التوحيد في أرجاء المدينة ويميز المجتمع الجديد.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4DA;</span>
+          <p class="visual-title">الصُّفَّة: التعليم</p>
+          <p class="visual-text">ظلّة في المسجد يقيم فيها فقراء المهاجرين يتعلمون القرآن — أول جامعة إسلامية.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x2696;&#xFE0F;</span>
+          <p class="visual-title">السوق: الاستقلال</p>
+          <p class="visual-text">أنشأ المسلمون سوقهم الخاص بعد أن كانت الأسواق بيد اليهود — استقلال اقتصادي.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">من مجتمع إلى جيش — الخطوة التالية</span>
+        <p>
+          بعد أن ثبتت أركان المجتمع الداخلي — مسجد ومؤاخاة ووثيقة وأذان — جاء التهديد الخارجي.
+          قريش لن تسكت عن دولة ناشئة تهدد مكانتها التجارية والدينية. الفصول القادمة ستشهد التحول
+          من بناء السلم إلى الدفاع المسلح: السرايا الأولى ثم غزوة بدر الكبرى — أول مواجهة حاسمة
+          ستحدد مصير الإسلام.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. المسجد أولًا</h4>
+          <p>أول فعل بعد الوصول: بناء المسجد النبوي. ليس مجرد مصلّى بل مركز حكم وتعليم وقضاء — قلب الدولة.</p>
+        </article>
+        <article class="card">
+          <h4>٢. المؤاخاة: ضمان اجتماعي</h4>
+          <p>ربط كل مهاجري بأنصاري يتقاسمان المال والسكن. سعد بن الربيع عرض نصف ماله — وعبد الرحمن بن عوف طلب السوق فقط.</p>
+        </article>
+        <article class="card">
+          <h4>٣. وثيقة المدينة: أول دستور</h4>
+          <p>عقد مكتوب ينظم العلاقة بين المسلمين واليهود وبقية السكان: حرية الدين، دفاع مشترك، مرجعية واحدة.</p>
+        </article>
+        <article class="card">
+          <h4>٤. الأذان: هوية صوتية</h4>
+          <p>رؤيا عبد الله بن زيد أقرّها النبي ﷺ. بلال الحبشي أول مؤذن — رسالة مساواة تتكرر خمس مرات يوميًّا.</p>
+        </article>
+        <article class="card">
+          <h4>٥. التسلسل المنهجي</h4>
+          <p>عقيدة (مسجد) ← مجتمع (مؤاخاة) ← قانون (وثيقة) ← هوية (أذان). نموذج بناء الدول من الداخل إلى الخارج.</p>
+        </article>
+        <article class="card">
+          <h4>٦. تمهيد للمواجهة</h4>
+          <p>بعد بناء الداخل جاء التهديد الخارجي: قريش لن تسكت — والسرايا الأولى ثم بدر ستحدد مصير الإسلام.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch14-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch14-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch14-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'بناء المسجد النبوي',
+        questions: [
+          {
+            t: 'مكان المسجد',
+            q: 'أين بركت ناقة النبي ﷺ — وأصبح موضع المسجد النبوي؟',
+            o: ['في حديقة أبي أيوب الأنصاري', 'في مربد (ساحة تجفيف تمر) لغلامين يتيمين من بني النجار', 'عند بئر بُضاعة', 'في سوق المدينة القديم'],
+            a: 1
+          },
+          {
+            t: 'ثمن الأرض',
+            q: 'من دفع ثمن أرض المسجد النبوي؟',
+            o: ['الأنصار جمعوا المال', 'النبي ﷺ من ماله الخاص', 'أبو بكر الصديق — عشرة دنانير', 'عثمان بن عفان'],
+            a: 2
+          },
+          {
+            t: 'مواد البناء',
+            q: 'مما بُنيت جدران المسجد النبوي وأعمدته وسقفه؟',
+            o: ['حجر وخشب مستورد', 'لَبِن (طوب) وجذوع نخل وجريد', 'رخام وأعمدة حجرية', 'خيام كبيرة من الجلد'],
+            a: 1
+          },
+          {
+            t: 'عمل النبي ﷺ',
+            q: 'ما دور النبي ﷺ في بناء المسجد؟',
+            o: ['أشرف فقط من بعيد', 'عمل بيده ينقل اللَّبِن والحجارة مع أصحابه', 'فوّض العمل للأنصار', 'رسم التصميم ولم يشارك في البناء'],
+            a: 1
+          },
+          {
+            t: 'وظائف المسجد',
+            q: 'أي من هذه لم تكن من وظائف المسجد النبوي؟',
+            o: ['مقرّ الحكم والقرارات العسكرية', 'مكان العبادة والصلاة', 'سوق للتجارة الحرة', 'مركز للتعليم والقضاء'],
+            a: 2
+          }
+        ]
+      },
+      {
+        title: 'المؤاخاة بين المهاجرين والأنصار',
+        questions: [
+          {
+            t: 'مفهوم المؤاخاة',
+            q: 'ما المقصود بالمؤاخاة التي أسسها النبي ﷺ؟',
+            o: ['تحالف عسكري بين القبائل', 'ربط كل مهاجري بأنصاري يتقاسمان المال والسكن والعمل', 'اتفاق تجاري بين مكة والمدينة', 'زواج المهاجرين من الأنصاريات فقط'],
+            a: 1
+          },
+          {
+            t: 'عبد الرحمن بن عوف',
+            q: 'ماذا قال عبد الرحمن بن عوف حين عرض عليه سعد بن الربيع نصف ماله؟',
+            o: ['قبل العرض فورًا', 'رفض وقال: دلّني على السوق', 'طلب ثلث المال فقط', 'غضب واعتبرها إهانة'],
+            a: 1
+          },
+          {
+            t: 'سلمان وأبو الدرداء',
+            q: 'ما الرسالة من مؤاخاة سلمان الفارسي مع أبي الدرداء الأنصاري؟',
+            o: ['تقوية العلاقات التجارية', 'كسر حاجز العرق والقومية — الإسلام فوق العصبية', 'كانت مصادفة بلا قصد', 'تقريب فارس من العرب سياسيًّا'],
+            a: 1
+          },
+          {
+            t: 'الإرث في المؤاخاة',
+            q: 'ما حكم الإرث في المؤاخاة في البداية؟',
+            o: ['لم يكن هناك إرث أبدًا', 'كان الأخ المؤاخى يرث أخاه — ثم نُسخ بآية المواريث', 'كان الإرث للمسجد فقط', 'كان الإرث اختياريًّا'],
+            a: 1
+          },
+          {
+            t: 'سبب المؤاخاة',
+            q: 'لماذا كانت المؤاخاة ضرورية؟',
+            o: ['لزيادة عدد الجيش', 'لأن المهاجرين تركوا كل شيء في مكة ووصلوا بلا مال ولا بيت', 'لمنافسة اليهود تجاريًّا', 'لإرضاء الأنصار فقط'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'وثيقة المدينة',
+        questions: [
+          {
+            t: 'وصف الوثيقة',
+            q: 'ما وثيقة المدينة؟',
+            o: ['معاهدة حربية ضد قريش', 'أول عقد اجتماعي مدني مكتوب ينظم العلاقة بين سكان المدينة', 'اتفاق تجاري مع اليهود', 'كتاب ديني يُقرأ في المسجد'],
+            a: 1
+          },
+          {
+            t: 'حرية الدين',
+            q: 'ماذا نصّت الوثيقة بشأن اليهود دينيًّا؟',
+            o: ['يجب عليهم اعتناق الإسلام', 'لليهود دينهم وللمسلمين دينهم — لا إكراه', 'يُمنعون من ممارسة شعائرهم', 'عليهم دفع ضريبة دينية'],
+            a: 1
+          },
+          {
+            t: 'الدفاع المشترك',
+            q: 'ما موقف الوثيقة من الدفاع عن المدينة؟',
+            o: ['المسلمون وحدهم يدافعون', 'الدفاع مشترك — مسلمون ويهود معًا', 'كل طرف يدافع عن نفسه', 'اليهود يدفعون مالًا بدل المشاركة'],
+            a: 1
+          },
+          {
+            t: 'المرجعية العليا',
+            q: 'ما المرجعية العليا عند الخلاف حسب الوثيقة؟',
+            o: ['مجلس شيوخ القبائل', 'كبير حاخامات اليهود', 'الله ورسوله ﷺ — أي السلطة المركزية', 'كل طرف يحكم بعرفه'],
+            a: 2
+          },
+          {
+            t: 'نقض العهد',
+            q: 'أي القبائل اليهودية كانت أول من نقض العهد مع النبي ﷺ؟',
+            o: ['بنو النضير', 'بنو قريظة', 'بنو قينقاع', 'يهود خيبر'],
+            a: 2
+          }
+        ]
+      },
+      {
+        title: 'الأذان وتنظيم المجتمع',
+        questions: [
+          {
+            t: 'رؤيا الأذان',
+            q: 'من رأى رؤيا كلمات الأذان التي أقرّها النبي ﷺ؟',
+            o: ['بلال بن رباح', 'عمر بن الخطاب', 'عبد الله بن زيد بن عبد ربه', 'أبو بكر الصديق'],
+            a: 2
+          },
+          {
+            t: 'أول مؤذن',
+            q: 'من أول مؤذن في الإسلام ولماذا اختاره النبي ﷺ؟',
+            o: ['عبد الله بن زيد لأنه صاحب الرؤيا', 'بلال بن رباح لأنه أندى صوتًا', 'عمر بن الخطاب لهيبته', 'أبو هريرة لحفظه'],
+            a: 1
+          },
+          {
+            t: 'تأكيد عمر',
+            q: 'ماذا قال عمر حين سمع أذان بلال لأول مرة؟',
+            o: ['أنكر الأذان واقترح الناقوس', 'قال: والذي بعثك بالحق لقد رأيت مثل الذي رأى', 'طلب تغيير الكلمات', 'لم يعلّق على شيء'],
+            a: 1
+          },
+          {
+            t: 'أهل الصُّفَّة',
+            q: 'ما الصُّفَّة في المسجد النبوي؟',
+            o: ['مخزن للسلاح', 'ظلّة يقيم فيها فقراء المهاجرين يتعلمون القرآن', 'غرفة خاصة بالنبي ﷺ', 'ساحة للتجارة'],
+            a: 1
+          },
+          {
+            t: 'تسلسل البناء',
+            q: 'ما الترتيب الصحيح لخطوات بناء المجتمع الجديد؟',
+            o: ['وثيقة ← مؤاخاة ← مسجد ← أذان', 'مسجد ← مؤاخاة ← وثيقة ← أذان', 'أذان ← مسجد ← وثيقة ← مؤاخاة', 'مؤاخاة ← وثيقة ← أذان ← مسجد'],
+            a: 1
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch14-score');
+    const container = document.getElementById('ch14-quiz-container');
+    const retryBtn = document.getElementById('ch14-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «بناء مجتمع جديد» من كتاب «الرحيق المختوم»
+  </footer>
+
+</body>
+</html>

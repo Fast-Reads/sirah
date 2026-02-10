@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الجهر بالدعوة ومواجهة قريش — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .hero .subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 620px;
+      margin: 0.8rem auto 0;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .breadcrumb a:hover {
+      background: var(--gold-pale);
+      color: var(--navy);
+    }
+    .breadcrumb .sep {
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+    .breadcrumb .current {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* TOC */
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      max-width: 880px;
+      margin: 1.5rem auto 0;
+      padding: 0 1.5rem;
+    }
+    .toc a {
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
+    }
+
+    /* SECTIONS */
+    section { margin-bottom: 1.5rem; }
+    h2 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: var(--text);
+      text-align: justify;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    /* LISTS */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    ul li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+    }
+
+    /* VISUAL GRID */
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .visual-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .visual-icon {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .visual-title {
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+    }
+    .visual-text {
+      margin: 0;
+      color: var(--text-light);
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow);
+    }
+    .card h4 {
+      margin: 0 0 0.4rem;
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* FLOW TIMELINE */
+    .flowline {
+      border-right: 3px solid var(--gold-light);
+      margin-top: 1.3rem;
+      padding-right: 1.3rem;
+    }
+    .flow-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover {
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+    .flow-item::before {
+      content: "";
+      position: absolute;
+      right: -1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .flow-title {
+      margin: 0;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .flow-text {
+      margin: 0.3rem 0 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+    }
+    .tribe-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tribe-table tr:hover td {
+      background: var(--gold-pale);
+    }
+
+    /* INSIGHT / CONNECTION BOX */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .insight p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .connection p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* PERSON LINK */
+    a.person-link {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 0.05rem;
+    }
+    a.person-link:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+    }
+
+    /* BLOCKQUOTE */
+    blockquote {
+      background: var(--gold-pale);
+      border-right: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 1rem 0 1.5rem;
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      line-height: 2;
+    }
+
+    /* QUIZ */
+    .quiz-wrapper {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--gold-light);
+    }
+    .quiz-wrapper > h2 {
+      text-align: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+    .quiz-intro {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin: 0 auto 1.5rem;
+      max-width: 600px;
+    }
+    .quiz-score-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .quiz-score-bar span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .quiz-score-bar .q-score {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .quiz-section-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer;
+      padding: 1rem 1.4rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow {
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body {
+      padding: 0 1.4rem 1.4rem;
+    }
+    .q-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.3rem;
+      margin-top: 0.9rem;
+    }
+    .q-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .q-card p {
+      margin: 0 0 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      text-align: right;
+    }
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .q-opts button {
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      font-size: 0.92rem;
+      font-family: 'Tajawal', sans-serif;
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text);
+    }
+    .q-opts button:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+    .q-opts button.q-correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .q-opts button.q-wrong {
+      border-color: #c53030;
+      background: #fde8e8;
+      color: #c53030;
+    }
+    .q-opts button.q-off {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .q-feedback {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      font-size: 0.86rem;
+      min-height: 1.3em;
+    }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .quiz-retry-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2.2rem;
+      font-size: 1rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover {
+      background: #14293f;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+      .toc { gap: 0.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>الجهر بالدعوة ومواجهة قريش</h1>
+    <p class="subtitle">من الصعود على الصفا إلى تعذيب المستضعفين: كيف أعلن النبي ﷺ رسالته وكيف ردّت قريش</p>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">الجهر بالدعوة ومواجهة قريش</span>
+  </nav>
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <a href="#why">لماذا هذا الفصل؟</a>
+    <a href="#command">الأمر بالجهر</a>
+    <a href="#safa">على جبل الصفا</a>
+    <a href="#strategies">أساليب قريش</a>
+    <a href="#abutalib">الوفود إلى أبي طالب</a>
+    <a href="#stand">الموقف الحاسم</a>
+    <a href="#torture">تعذيب المستضعفين</a>
+    <a href="#steadfast">ثبات الصحابة</a>
+    <a href="#propaganda">حرب الدعاية</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section id="why">
+      <h2>لماذا هذا الفصل مهم؟</h2>
+      <p>
+        بعد ثلاث سنوات من الدعوة السرية كوّن النبي ﷺ نواة صلبة من المؤمنين. الآن يأتي الأمر الإلهي
+        بالمواجهة العلنية، وهنا تبدأ أخطر مرحلة في السيرة المكية: صراع مفتوح بين التوحيد والجاهلية
+        داخل أسوار مدينة واحدة. فهمُ هذا الفصل يكشف لك أنماط المقاومة التي سيواجهها الإسلام
+        في كل عصر — السخرية، والتفاوض، والتعذيب، والدعاية المضادة — وكيف تعامل معها النبي ﷺ.
+      </p>
+      <div class="insight">
+        <span class="insight-label">القاعدة</span>
+        <p>
+          كل أسلوب استخدمته قريش في هذا الفصل سيتكرر بأشكال مختلفة لاحقًا: التعذيب سيتطور إلى
+          المقاطعة، ثم إلى محاولة الاغتيال، ثم إلى الحرب المفتوحة. لكن البذرة هنا — وفهمها يجعلك
+          تتوقع كل ما سيأتي.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الأمر بالجهر ═══════ -->
+
+    <section id="command">
+      <h2>الأمر الإلهي بالجهر</h2>
+      <p>
+        بعد ثلاث سنوات من الدعوة السرية، أنزل الله تعالى الأمر بالمواجهة العلنية في آيتين حاسمتين:
+      </p>
+      <ul>
+        <li><strong>﴿فَاصْدَعْ بِمَا تُؤْمَرُ وَأَعْرِضْ عَنِ الْمُشْرِكِينَ﴾</strong> [الحجر: ٩٤] — أمرٌ بالإعلان الصريح والمفاصلة.</li>
+        <li><strong>﴿وَأَنذِرْ عَشِيرَتَكَ الْأَقْرَبِينَ﴾</strong> [الشعراء: ٢١٤] — البداية من الأقربين، لأن من يقنع عائلته يستطيع إقناع العالم.</li>
+        <li><strong>﴿وَاخْفِضْ جَنَاحَكَ لِمَنِ اتَّبَعَكَ مِنَ الْمُؤْمِنِينَ﴾</strong> [الشعراء: ٢١٥] — التواضع مع الأتباع أساس القيادة.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">لماذا ثلاث سنوات سرًّا أولًا؟</span>
+        <p>
+          الدعوة السرية لم تكن ضعفًا بل استراتيجية: بناء نواة صلبة من المؤمنين الراسخين قبل المواجهة.
+          لو جاء الجهر من اليوم الأول لكان النبي ﷺ وحيدًا أمام قريش بأكملها. لكنه الآن يملك
+          عشرات المؤمنين المستعدين للتضحية — وهذا النمط «التأسيس ثم الإعلان» سيتكرر في المدينة:
+          بناء الدولة أولًا ثم الجهاد.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الصعود على الصفا ═══════ -->
+
+    <section id="safa">
+      <h2>على جبل الصفا — اللحظة الفارقة</h2>
+      <p>
+        استجابة للأمر الإلهي، صعد النبي ﷺ على جبل الصفا — وهو المكان الذي يتجمع عنده الناس
+        عند إعلان الأخبار العاجلة — ونادى بطون قريش بأسمائها واحدًا واحدًا:
+        «يا بني عبد المطلب، يا بني عبد مناف، يا بني فهر...» حتى اجتمعوا. ثم سألهم سؤالًا محوريًا:
+      </p>
+      <blockquote>
+        «أرأيتكم لو أخبرتكم أن خيلًا بالوادي تريد أن تغير عليكم، أكنتم مصدقيّ؟»
+        قالوا: نعم، ما جربنا عليك إلا صدقًا.
+        قال: «فإني نذير لكم بين يدي عذاب شديد.»
+      </blockquote>
+      <p>
+        فقام <a class="person-link" href="persons.html">أبو لهب</a> وقال: «تبًّا لك سائر اليوم! ألهذا جمعتنا؟!»
+        فنزلت سورة المسد ردًّا مباشرًا: ﴿تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ﴾.
+      </p>
+      <div class="insight">
+        <span class="insight-label">بلاغة المنهج</span>
+        <p>
+          لاحظ الأسلوب النبوي: سأل أولًا عن مصداقيته فأقرّوا بها جميعًا، ثم بنى على هذا الإقرار
+          رسالته. هذا أسلوب حجاجي محكم: استدرج الخصم إلى الاعتراف بالمقدمة ثم ألزمه بالنتيجة.
+          قريش لم تستطع أن تقول «أنت كاذب» لأنها أقرّت بصدقه قبل ثوانٍ.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ أساليب قريش ═══════ -->
+
+    <section id="strategies">
+      <h2>أساليب قريش في المواجهة</h2>
+      <p>
+        لم تواجه قريش الدعوة بأسلوب واحد، بل جرّبت ترسانة كاملة من الأساليب تدرجت من الأخف إلى الأعنف.
+        المباركفوري يرصدها بترتيب يكشف عقلية قريش السياسية:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F923;</span>
+          <p class="visual-title">السخرية والاستهزاء</p>
+          <p class="visual-text">وصفوه بالمجنون والساحر والشاعر والكذاب. أرادوا تشويه صورته قبل أن يسمعه الناس.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4B0;</span>
+          <p class="visual-title">التفاوض والإغراء</p>
+          <p class="visual-text">عرضوا عليه المال والملك والنساء مقابل التوقف. ظنوا أن الدعوة مشروع دنيوي.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F50A;</span>
+          <p class="visual-title">الدعاية المضادة</p>
+          <p class="visual-text">نشروا التحذيرات في مواسم الحج لصد القبائل عن سماعه. حرب إعلامية منظمة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F91D;</span>
+          <p class="visual-title">الضغط على أبي طالب</p>
+          <p class="visual-text">ذهبوا إليه مرات يطلبون كف ابن أخيه أو تسليمه. استهدفوا الحماية القبلية.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x26D3;&#xFE0F;</span>
+          <p class="visual-title">تعذيب المستضعفين</p>
+          <p class="visual-text">عجزوا عن المساس بالنبي ﷺ فانتقموا من أتباعه الضعفاء: الموالي والعبيد ومن لا عشيرة له.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F6AB;</span>
+          <p class="visual-title">الأذى المباشر</p>
+          <p class="visual-text">ألقوا سلا الجزور على ظهره وهو يصلي، وأمسكوا بتلابيبه عند الكعبة، وآذوا بناته.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">تصاعد منطقي</span>
+        <p>
+          لاحظ التدرج: سخرية ← تفاوض ← ضغط قبلي ← تعذيب ← أذى مباشر. كل فشل يدفع قريشًا
+          إلى المستوى التالي. هذا التصاعد سيستمر في الفصول القادمة: مقاطعة ← محاولة اغتيال ←
+          حرب مفتوحة (بدر وأحد والأحزاب). فهم التصاعد هنا يفهم كل ما بعده.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الوفود إلى أبي طالب ═══════ -->
+
+    <section id="abutalib">
+      <h2>وفود قريش إلى أبي طالب</h2>
+      <p>
+        أبو طالب كان رئيس بني هاشم ودرع النبي ﷺ القبلي. لم يستطع أحد أن يمسّ محمدًا ﷺ دون
+        إذن أبي طالب — لأن ذلك يعني حربًا مع بني هاشم بأكملهم. لذلك اتجهت قريش إلى أبي طالب
+        في محاولات متكررة:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">الوفد الأول — التحذير</p>
+          <p class="flow-text">
+            جاء سادة قريش إلى أبي طالب وقالوا: «إن ابن أخيك قد سبّ آلهتنا وعاب ديننا وسفّه
+            أحلامنا وضلّل آباءنا، فإما أن تكفّه عنا وإما أن تخلّي بيننا وبينه.» فردّهم أبو طالب ردًّا
+            جميلًا، ولم يتخلَّ عن ابن أخيه.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الوفد الثاني — التهديد</p>
+          <p class="flow-text">
+            عادوا بنبرة أشد: «والله لا نصبر على شتم آبائنا وتسفيه أحلامنا وعيب آلهتنا حتى تكفّه
+            عنا أو ننازله وإياك في ذلك حتى يهلك أحد الفريقين.» وهنا أحس أبو طالب بخطورة الموقف.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الوفد الثالث — المقايضة</p>
+          <p class="flow-text">
+            جاءوا بعرض جديد: «خذ عمارة بن الوليد بن المغيرة — أنهد فتى في قريش وأجمله — فتبنّاه
+            وسلّم إلينا ابن أخيك هذا الذي خالف دينك.» فقال أبو طالب: «والله لبئس ما تسوموني!
+            أتعطوني ابنكم أغذوه لكم وأعطيكم ابني تقتلونه!»
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">أبو طالب: الدرع الذي لم يؤمن</span>
+        <p>
+          أبو طالب لم يسلم، لكن حمايته كانت ركيزة الدعوة. بدونها لكان النبي ﷺ قُتل أو أُجبر
+          على الصمت. هذا يكشف كيف يسخّر الله الأسباب: رجل على ملة قومه يحمي رسالة التوحيد لأن
+          العرف القبلي يمنعه من التخلي عن ابن أخيه. الحماية القبلية — التي هي من أعراف الجاهلية —
+          صارت أداة لحفظ الإسلام في أضعف مراحله.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الموقف الحاسم ═══════ -->
+
+    <section id="stand">
+      <h2>موقف النبي ﷺ الحاسم</h2>
+      <p>
+        بعد الوفد الثاني، شعر أبو طالب بثقل الموقف، فذهب إلى النبي ﷺ وأخبره بما قالت قريش وأن
+        طاقته لم تعد تتحمل. ظنّ النبي ﷺ أن عمّه سيتخلى عنه، فقال الكلمة التي تختصر كل فصول
+        السيرة المكية:
+      </p>
+      <blockquote>
+        «يا عمّ، والله لو وضعوا الشمس في يميني والقمر في يساري على أن أترك هذا الأمر حتى
+        يُظهره الله أو أهلك فيه ما تركته.»
+      </blockquote>
+      <p>
+        ثم استعبر وبكى وقام، فناداه أبو طالب وقال: «اذهب يا ابن أخي فقل ما أحببت، فوالله
+        لا أُسلمك لشيء أبدًا.»
+      </p>
+      <div class="connection">
+        <span class="connection-label">ما بعد هذا الموقف</span>
+        <p>
+          هذا الحوار حسم الأمر: أبو طالب قرر حماية النبي ﷺ مهما كلّفه. لكن قريشًا لن تستسلم —
+          بل ستتحول إلى أساليب أعنف: تعذيب الأتباع الضعفاء، ثم المقاطعة الشاملة لبني هاشم
+          في شعب أبي طالب (الفصل القادم). ووفاة أبي طالب لاحقًا في «عام الحزن» ستُزيل هذا الدرع
+          وتفتح الباب أمام محاولة الاغتيال التي ستؤدي إلى الهجرة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ تعذيب المستضعفين ═══════ -->
+
+    <section id="torture">
+      <h2>تعذيب المستضعفين — أبشع صفحات المرحلة</h2>
+      <p>
+        لما عجزت قريش عن النيل من النبي ﷺ بسبب حماية أبي طالب، اتجهت إلى أتباعه الذين لا عشيرة
+        تحميهم — الموالي والعبيد ومن أسلم من البطون الضعيفة. كان التعذيب وحشيًا ومنهجيًا، يهدف
+        إلى إرسال رسالة لكل من يفكر في الإسلام:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>الصحابي</th>
+            <th>معذِّبه</th>
+            <th>نوع التعذيب</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>بلال بن رباح</strong></td>
+            <td>أمية بن خلف</td>
+            <td>كان يُخرجه في رمضاء مكة ويضع الصخرة العظيمة على صدره ويقول: لا تزال هكذا حتى تموت أو تكفر بمحمد. وبلال يردد: «أحَدٌ.. أحَد»</td>
+          </tr>
+          <tr>
+            <td><strong>سمية بنت خيّاط</strong></td>
+            <td>أبو جهل</td>
+            <td>طعنها بحربة في قُبلها فماتت — <strong>أول شهيدة في الإسلام</strong></td>
+          </tr>
+          <tr>
+            <td><strong>ياسر بن عامر</strong></td>
+            <td>قريش</td>
+            <td>عُذِّب هو وزوجته سمية وابنه عمار حتى مات تحت التعذيب</td>
+          </tr>
+          <tr>
+            <td><strong>عمار بن ياسر</strong></td>
+            <td>قريش</td>
+            <td>كان يُكوى بالنار ويُغطّس في الماء حتى يغيب وعيه. مرّ بهم النبي ﷺ فقال: «صبرًا آل ياسر فإن موعدكم الجنة»</td>
+          </tr>
+          <tr>
+            <td><strong>خبّاب بن الأرت</strong></td>
+            <td>أم أنمار</td>
+            <td>كُوي بالحديد المحمّى حتى أطفأت ظهره الجمر. يُريهم ظهره بعد سنين فيرون آثار الكيّ</td>
+          </tr>
+          <tr>
+            <td><strong>مصعب بن عمير</strong></td>
+            <td>أمه</td>
+            <td>كان أنعم فتى في قريش، فحرمته أمه من كل شيء حتى تيبّس جلده وتشقق</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">لماذا المستضعفون تحديدًا؟</span>
+        <p>
+          قريش لم تكن تعذب أبا بكر أو عمر (قبل إسلامه) بهذه الطريقة لأن لهم عشائر تحميهم. الهدف
+          كان مزدوجًا: كسر إرادة المستضعفين أنفسهم، وإرسال رسالة ترهيب لكل حرّ يفكر في الإسلام.
+          لكن النتيجة جاءت عكسية: صمود بلال وآل ياسر صار أقوى دعاية للإيمان — دليلٌ حيّ على أن
+          هذا الدين يستحق التضحية.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ ثبات الصحابة ═══════ -->
+
+    <section id="steadfast">
+      <h2>ثبات الصحابة — البذرة التي لم تمت</h2>
+      <p>
+        رغم شراسة التعذيب، لم يرتد أحد من المعذَّبين عن إيمانه الحقيقي. بعضهم نطق بكلمة الكفر
+        تحت الإكراه — كعمار بن ياسر — فنزل فيه قوله تعالى: ﴿إِلَّا مَنْ أُكْرِهَ وَقَلْبُهُ مُطْمَئِنٌّ
+        بِالْإِيمَانِ﴾ [النحل: ١٠٦]، فأباح الله النطق بالكفر عند الإكراه ما دام القلب ثابتًا.
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>بلال و«أحَدٌ أحَد»</h4>
+          <p>تحت الصخرة المحمّاة يردد كلمة التوحيد. اشتراه أبو بكر وأعتقه ليصبح مؤذن الإسلام الأول.</p>
+        </article>
+        <article class="card">
+          <h4>آل ياسر والجنة</h4>
+          <p>أسرة بأكملها تُعذَّب. النبي ﷺ لا يملك إلا الدعاء لهم: «صبرًا آل ياسر فإن موعدكم الجنة.»</p>
+        </article>
+        <article class="card">
+          <h4>أبو بكر يشتري الحرية</h4>
+          <p>أنفق أبو بكر ماله في عتق المستضعفين: بلال وعامر بن فهيرة وأم عُبيس وزِنّيرة وغيرهم.</p>
+        </article>
+        <article class="card">
+          <h4>مصعب يترك النعيم</h4>
+          <p>من أنعم فتيان قريش إلى أشدهم فقرًا. حرمته أمه كل شيء فلم يتراجع عن إيمانه.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">من التعذيب إلى القيادة</span>
+        <p>
+          <strong>بلال</strong> سيصبح مؤذن الرسول ﷺ في المدينة ويصعد فوق الكعبة يوم الفتح.
+          <strong>عمار</strong> سيقاتل في بدر وأحد والأحزاب ويشهد له النبي ﷺ بالجنة.
+          <strong>خبّاب</strong> سيغدو من كبار الصحابة ورواة الحديث.
+          <strong>مصعب</strong> سيكون أول سفير للإسلام في المدينة ويُستشهد حاملًا اللواء في أُحد.
+          المعذَّبون اليوم هم قادة الغد.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ حرب الدعاية ═══════ -->
+
+    <section id="propaganda">
+      <h2>حرب الدعاية في مواسم الحج</h2>
+      <p>
+        لم تكتفِ قريش بالعنف الجسدي، بل شنّت حربًا إعلامية منظمة لمنع انتشار الدعوة خارج مكة.
+        كان موسم الحج يجمع العرب من كل مكان، فخشيت قريش أن يسمعوا النبي ﷺ:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">اجتماع الوليد بن المغيرة</p>
+          <p class="flow-text">
+            جمع الوليد سادة قريش قبل موسم الحج وقال: «إن وفود العرب ستقدم عليكم فاجتمعوا
+            على رأي واحد فيه ولا تختلفوا فيكذّب بعضكم بعضًا.» اقترحوا: كاهن؟ مجنون؟ شاعر؟
+            ساحر؟ فاتفقوا على أنه «ساحر يفرّق بين المرء وأهله».
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">التحذير عند أبواب مكة</p>
+          <p class="flow-text">
+            وزّعت قريش رجالًا على مداخل مكة يحذّرون كل وافد من سماع محمد ﷺ.
+            لكن هذا التحذير ذاته أثار فضول كثيرين فذهبوا يستمعون سرًّا.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">النضر بن الحارث — الدعاية المضادة</p>
+          <p class="flow-text">
+            كان يجلس بعد النبي ﷺ في كل مجلس ويقصّ على الناس أخبار ملوك فارس والروم
+            ليصرفهم عن القرآن. فنزلت: ﴿وَمِنَ النَّاسِ مَن يَشْتَرِي لَهْوَ الْحَدِيثِ﴾ [لقمان: ٦].
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">المفارقة: الدعاية ضده نشرت خبره</span>
+        <p>
+          كل محاولة لإسكات الدعوة جاءت بنتيجة عكسية. تحذير قريش للحجّاج جعلهم يسألون: مَن هذا
+          الذي يستحق كل هذا الاهتمام؟ فيذهبون ليسمعوا بأنفسهم. وهكذا وصلت الدعوة إلى يثرب
+          عبر الأوس والخزرج الذين سمعوا في الحج — وكان هذا بداية طريق الهجرة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الأذى المباشر للنبي ﷺ ═══════ -->
+
+    <section>
+      <h2>الأذى المباشر للنبي ﷺ</h2>
+      <p>
+        رغم حماية أبي طالب، لم يسلم النبي ﷺ من الأذى كليًا. تجرّأ عليه بعض صناديد قريش
+        بأفعال لم تصل إلى القتل لكنها كانت مهينة ومؤلمة:
+      </p>
+      <ul>
+        <li><strong>سلا الجزور:</strong> بينما كان ساجدًا عند الكعبة، وضع عقبة بن أبي معيط سلا الجزور (الأحشاء القذرة) على ظهره حتى جاءت فاطمة رضي الله عنها فأزالته عنه وهي تبكي.</li>
+        <li><strong>الخنق عند الكعبة:</strong> أقبل عقبة بن أبي معيط ولوى ثوبه في عنقه فخنقه خنقًا شديدًا حتى جاء أبو بكر ودفعه وقال: «أتقتلون رجلًا أن يقول ربي الله؟!»</li>
+        <li><strong>إلقاء القاذورات:</strong> كان جيران النبي ﷺ من المشركين يلقون القاذورات أمام بابه وعلى طعامه.</li>
+        <li><strong>أبو جهل والحجر:</strong> هدّد بأن يطأ عنق النبي ﷺ أو يرمي رأسه بحجر وهو ساجد، لكنه حين اقترب رجع يتّقي بيديه ويقول إن بينه وبينه خندقًا من نار.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">حماية إلهية</span>
+        <p>
+          رغم كل هذا الأذى، لم يصل أحد إلى قتله. الحماية كانت مزدوجة: قبلية من أبي طالب،
+          وإلهية مباشرة كما في حادثة أبي جهل. هذا المزج بين الأسباب الظاهرة والحفظ الإلهي
+          نمط ثابت في السيرة — سيتكرر في الهجرة (غار ثور) وفي بدر وفي كل المحطات الحاسمة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. التأسيس ثم الإعلان</h4>
+          <p>ثلاث سنوات سرية بنت نواة صلبة قبل المواجهة. التأسيس قبل التصعيد منهج نبوي.</p>
+        </article>
+        <article class="card">
+          <h4>٢. الحجة قبل القوة</h4>
+          <p>النبي ﷺ على الصفا استدرج قريشًا بالمنطق: أقرّوا بصدقه ثم فاجأهم بالرسالة.</p>
+        </article>
+        <article class="card">
+          <h4>٣. أساليب المقاومة نمطية</h4>
+          <p>سخرية ← تفاوض ← ضغط ← تعذيب ← دعاية. كل فشل يدفع إلى تصعيد أعنف.</p>
+        </article>
+        <article class="card">
+          <h4>٤. الحماية القبلية حاسمة</h4>
+          <p>أبو طالب لم يسلم لكن حمايته أبقت الدعوة حية. الله يسخّر الأسباب ولو من غير المؤمنين.</p>
+        </article>
+        <article class="card">
+          <h4>٥. المعذَّبون قادة الغد</h4>
+          <p>بلال وعمار وخبّاب ومصعب — من التعذيب إلى القيادة والأذان والسفارة واللواء.</p>
+        </article>
+        <article class="card">
+          <h4>٦. الدعاية تنقلب على أصحابها</h4>
+          <p>تحذيرات قريش في الحج أثارت فضول العرب ووصلت الدعوة إلى يثرب — بداية طريق الهجرة.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch8-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch8-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch8-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'الأمر بالجهر والصعود على الصفا',
+        questions: [
+          {
+            t: 'مدة الدعوة السرية',
+            q: 'كم سنة استمرت الدعوة السرية قبل الجهر؟',
+            o: ['سنة واحدة', 'ثلاث سنوات', 'خمس سنوات', 'سبع سنوات'],
+            a: 1
+          },
+          {
+            t: 'آية الجهر',
+            q: 'ما الآية التي أمرت النبي ﷺ بالجهر بالدعوة؟',
+            o: ['﴿ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ﴾', '﴿فَاصْدَعْ بِمَا تُؤْمَرُ وَأَعْرِضْ عَنِ الْمُشْرِكِينَ﴾', '﴿قُلْ هَٰذِهِ سَبِيلِي أَدْعُو إِلَى اللَّهِ﴾', '﴿وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً﴾'],
+            a: 1
+          },
+          {
+            t: 'مكان الإعلان',
+            q: 'أين صعد النبي ﷺ ليعلن دعوته لقريش علنًا؟',
+            o: ['غار حراء', 'جبل الصفا', 'الكعبة المشرفة', 'دار الأرقم'],
+            a: 1
+          },
+          {
+            t: 'سؤال النبي ﷺ',
+            q: 'ماذا سأل النبي ﷺ قريشًا قبل إعلان رسالته على الصفا؟',
+            o: ['سألهم عن آلهتهم', 'سألهم: لو أخبرتكم أن خيلًا بالوادي تريد أن تغير عليكم أكنتم مصدقيّ؟', 'سألهم عن تجارتهم مع الشام', 'سألهم من يتبعه منهم'],
+            a: 1
+          },
+          {
+            t: 'ردّ أبي لهب',
+            q: 'ماذا قال أبو لهب عندما أعلن النبي ﷺ دعوته على الصفا؟',
+            o: ['قال: سنفكر في أمرك', 'قال: تبًّا لك سائر اليوم! ألهذا جمعتنا؟', 'قال: أنت ساحر', 'انسحب دون أن يقول شيئًا'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'أساليب قريش ووفودها إلى أبي طالب',
+        questions: [
+          {
+            t: 'التدرج في المقاومة',
+            q: 'ما الترتيب الصحيح لأساليب قريش في مواجهة الدعوة؟',
+            o: ['تعذيب ← تفاوض ← سخرية ← حرب', 'سخرية ← تفاوض ← ضغط قبلي ← تعذيب', 'حرب ← تفاوض ← سخرية ← مقاطعة', 'مقاطعة ← تعذيب ← تفاوض ← حرب'],
+            a: 1
+          },
+          {
+            t: 'سبب حماية أبي طالب',
+            q: 'لماذا لم تستطع قريش قتل النبي ﷺ في هذه المرحلة؟',
+            o: ['لأنه كان يختبئ في غار حراء', 'لأن أبا طالب رئيس بني هاشم يحميه وقتله يعني حربًا أهلية', 'لأن الرومان كانوا يحمونه', 'لأنه كان يملك جيشًا'],
+            a: 1
+          },
+          {
+            t: 'عرض المقايضة',
+            q: 'ماذا عرضت قريش على أبي طالب في الوفد الثالث؟',
+            o: ['المال الكثير مقابل إسكات النبي ﷺ', 'أن يأخذ عمارة بن الوليد بديلًا ويسلّم لهم محمدًا ﷺ', 'أن يُخرج النبي ﷺ من مكة', 'أن يتقاسموا الحكم معه'],
+            a: 1
+          },
+          {
+            t: 'الكلمة الحاسمة',
+            q: 'ماذا قال النبي ﷺ لعمه أبي طالب عندما خشي أن يتخلى عنه؟',
+            o: ['سأهاجر إلى بلد آخر', 'والله لو وضعوا الشمس في يميني والقمر في يساري على أن أترك هذا الأمر ما تركته', 'اتركني وشأني يا عم', 'سأدعو سرًّا من الآن'],
+            a: 1
+          },
+          {
+            t: 'ردّ أبي طالب',
+            q: 'ما كان ردّ أبي طالب بعد أن سمع كلمة النبي ﷺ الحاسمة؟',
+            o: ['طرده من بيته', 'قال: اذهب يا ابن أخي فقل ما أحببت فوالله لا أسلمك لشيء أبدًا', 'أسلم فورًا', 'طلب مهلة للتفكير'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'تعذيب المستضعفين وثباتهم',
+        questions: [
+          {
+            t: 'بلال بن رباح',
+            q: 'من الذي كان يعذب بلالًا؟ وماذا كان بلال يردد؟',
+            o: ['أبو جهل — وكان يردد: لا إله إلا الله', 'أمية بن خلف — وكان يردد: أحَدٌ أحَد', 'أبو سفيان — وكان يردد: الله أكبر', 'عتبة بن ربيعة — وكان صامتًا'],
+            a: 1
+          },
+          {
+            t: 'أول شهيدة',
+            q: 'من هي أول شهيدة في الإسلام؟ ومن قتلها؟',
+            o: ['خديجة بنت خويلد — ماتت مرضًا', 'سمية بنت خياط — طعنها أبو جهل بحربة', 'فاطمة بنت النبي — قتلها أبو لهب', 'أم عبيس — عذبها عمر قبل إسلامه'],
+            a: 1
+          },
+          {
+            t: 'آل ياسر',
+            q: 'ماذا قال النبي ﷺ لآل ياسر وهم يُعذَّبون؟',
+            o: ['قاتلوهم بأيديكم', 'صبرًا آل ياسر فإن موعدكم الجنة', 'اهربوا إلى الحبشة', 'اكفروا بألسنتكم'],
+            a: 1
+          },
+          {
+            t: 'خبّاب بن الأرت',
+            q: 'ما نوع التعذيب الذي تعرض له خبّاب بن الأرت؟',
+            o: ['أُلقي من جبل', 'كُوي بالحديد المحمّى حتى أطفأت ظهره الجمر', 'حُبس في سجن مظلم', 'مُنع من الطعام أسبوعًا'],
+            a: 1
+          },
+          {
+            t: 'أبو بكر والعتق',
+            q: 'ماذا فعل أبو بكر الصديق لإنقاذ المستضعفين؟',
+            o: ['شكاهم إلى أبي طالب', 'أنفق ماله في شراء العبيد المعذبين وإعتاقهم', 'هدّد قريشًا بالحرب', 'هرّبهم خارج مكة سرًّا'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'حرب الدعاية والأذى المباشر والدروس',
+        questions: [
+          {
+            t: 'اجتماع الوليد',
+            q: 'على أي وصف اتفقت قريش للنبي ﷺ لتحذير الحجاج؟',
+            o: ['مجنون', 'شاعر', 'ساحر يفرّق بين المرء وأهله', 'كاهن يتكلم بالجن'],
+            a: 2
+          },
+          {
+            t: 'النضر بن الحارث',
+            q: 'ماذا كان يفعل النضر بن الحارث لصرف الناس عن القرآن؟',
+            o: ['يسبّ النبي ﷺ علنًا', 'يجلس بعد النبي ﷺ ويقصّ أخبار ملوك فارس والروم', 'يرشو الناس بالمال', 'يهدد من يستمع بالقتل'],
+            a: 1
+          },
+          {
+            t: 'سلا الجزور',
+            q: 'من الذي وضع سلا الجزور على ظهر النبي ﷺ وهو ساجد؟',
+            o: ['أبو جهل', 'أبو لهب', 'عقبة بن أبي معيط', 'أمية بن خلف'],
+            a: 2
+          },
+          {
+            t: 'أبو جهل والنار',
+            q: 'ماذا حدث لأبي جهل عندما حاول إيذاء النبي ﷺ وهو ساجد؟',
+            o: ['نجح في إيذائه', 'رجع يتّقي بيديه وقال إن بينه وبينه خندقًا من نار', 'منعه أبو طالب بالقوة', 'هرب خوفًا من الصحابة'],
+            a: 1
+          },
+          {
+            t: 'الدعاية العكسية',
+            q: 'ما النتيجة غير المتوقعة لتحذيرات قريش في مواسم الحج؟',
+            o: ['خاف الناس ولم يقترب أحد من النبي ﷺ', 'أثارت فضول العرب فذهبوا يستمعون ووصلت الدعوة إلى يثرب', 'انضم سادة القبائل لقريش ضد النبي ﷺ', 'توقف الحجاج عن القدوم إلى مكة'],
+            a: 1
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch8-score');
+    const container = document.getElementById('ch8-quiz-container');
+    const retryBtn = document.getElementById('ch8-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «الجهر بالدعوة» من كتاب «الرحيق المختوم»
+  </footer>
+
+</body>
+</html>

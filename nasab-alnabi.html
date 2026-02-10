@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نسب النبي ﷺ وأسرته — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament { width: 60px; height: 3px; background: var(--gold); margin: 0 auto 1.5rem; border-radius: 2px; }
+    .hero h1 { font-family: 'Amiri', serif; font-size: 2.4rem; font-weight: 700; }
+    .hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.7); max-width: 620px; margin: 0.8rem auto 0; }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex; justify-content: center; align-items: center; gap: 0.4rem; flex-wrap: wrap;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a { text-decoration: none; color: var(--text-light); font-size: 0.85rem; font-weight: 500; padding: 0.4rem 0.85rem; border-radius: 8px; transition: all 0.2s; white-space: nowrap; }
+    .breadcrumb a:hover { background: var(--gold-pale); color: var(--navy); }
+    .breadcrumb .sep { color: var(--border); font-size: 0.8rem; }
+    .breadcrumb .current { font-size: 0.85rem; font-weight: 700; color: var(--navy); }
+
+    /* TOC */
+    .toc { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; max-width: 880px; margin: 1.5rem auto 0; padding: 0 1.5rem; }
+    .toc a { padding: 0.4rem 1rem; border-radius: 8px; background: var(--white); border: 1px solid var(--border); color: var(--navy); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; }
+    .toc a:hover { background: var(--gold-pale); border-color: var(--gold-light); }
+
+    /* MAIN */
+    main { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem 1rem; }
+
+    /* SECTIONS */
+    section { margin-bottom: 1.5rem; }
+    h2 { font-family: 'Amiri', serif; color: var(--navy); border-right: 3px solid var(--gold); padding-right: 0.75rem; margin-top: 2.5rem; margin-bottom: 0.8rem; font-size: 1.5rem; }
+    h3 { font-family: 'Amiri', serif; color: var(--navy); font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    p { color: var(--text); text-align: justify; font-size: 1rem; margin: 0.5rem 0 1.5rem; }
+
+    /* LISTS */
+    ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+    ul li { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 0.6rem; border-right: 3px solid var(--gold-light); }
+
+    /* VISUAL GRID */
+    .visual-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0 0.5rem; }
+    .visual-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+    .visual-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
+    .visual-icon { font-size: 2rem; margin-bottom: 0.4rem; display: block; }
+    .visual-title { font-weight: 600; margin: 0 0 0.35rem; color: var(--navy); }
+    .visual-text { margin: 0; color: var(--text-light); line-height: 1.5; font-size: 0.95rem; }
+
+    /* CARD GRID */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
+    .card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.3rem; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px var(--shadow); }
+    .card h4 { margin: 0 0 0.4rem; color: var(--navy); font-size: 1rem; font-weight: 700; }
+    .card p { margin: 0; font-size: 0.95rem; color: var(--text-light); }
+
+    /* FLOW TIMELINE */
+    .flowline { border-right: 3px solid var(--gold-light); margin-top: 1.3rem; padding-right: 1.3rem; }
+    .flow-item { position: relative; margin-bottom: 1.2rem; padding: 0.8rem 1rem 0.8rem 0; background: var(--white); border: 1px solid var(--border); border-radius: 10px; transition: box-shadow 0.2s ease; }
+    .flow-item:hover { box-shadow: 0 8px 20px var(--shadow); }
+    .flow-item::before { content: ""; position: absolute; right: -1.6rem; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; background: var(--gold); border: 3px solid var(--white); border-radius: 50%; box-shadow: 0 0 0 2px var(--gold-light); }
+    .flow-title { margin: 0; color: var(--navy); font-weight: 600; }
+    .flow-text { margin: 0.3rem 0 0; font-size: 0.95rem; color: var(--text-light); line-height: 1.6; }
+
+    /* TABLE */
+    .tribe-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.95rem; }
+    .tribe-table th { background: var(--navy); color: #fff; padding: 0.75rem 1rem; text-align: right; font-family: 'Amiri', serif; font-weight: 700; }
+    .tribe-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); background: var(--white); }
+    .tribe-table tr:hover td { background: var(--gold-pale); }
+
+    /* INSIGHT / CONNECTION */
+    .insight { background: var(--gold-pale); border: 1px solid var(--gold-light); border-radius: 12px; padding: 1.2rem 1.4rem; margin: 1rem 0 1.8rem; }
+    .insight-label { display: inline-block; font-family: 'Amiri', serif; font-weight: 700; font-size: 0.92rem; color: var(--gold); margin-bottom: 0.4rem; }
+    .insight p { margin: 0; font-size: 0.95rem; color: var(--text); line-height: 1.75; }
+    .connection { background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%); border: 1px solid #d4dce8; border-right: 3px solid var(--navy); border-radius: 12px; padding: 1.2rem 1.4rem; margin: 1rem 0 1.8rem; }
+    .connection-label { display: inline-block; font-family: 'Amiri', serif; font-weight: 700; font-size: 0.92rem; color: var(--navy); margin-bottom: 0.4rem; }
+    .connection p { margin: 0; font-size: 0.95rem; color: var(--text); line-height: 1.75; }
+
+    /* PERSON LINK */
+    a.person-link { color: var(--gold); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold-light); padding-bottom: 0.05rem; }
+    a.person-link:hover { color: var(--navy); border-bottom-color: var(--navy); }
+
+    /* QUIZ */
+    .quiz-wrapper { margin-top: 3rem; padding-top: 2.5rem; border-top: 2px solid var(--gold-light); }
+    .quiz-wrapper > h2 { text-align: center; border-right: none; padding-right: 0; font-size: 1.6rem; margin-bottom: 0.3rem; }
+    .quiz-intro { text-align: center; color: var(--text-light); font-size: 0.92rem; margin: 0 auto 1.5rem; max-width: 600px; }
+    .quiz-score-bar { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 12px var(--shadow); display: flex; justify-content: space-between; align-items: center; }
+    .quiz-score-bar span { font-size: 0.9rem; color: var(--text-light); font-weight: 500; }
+    .quiz-score-bar .q-score { font-family: 'Amiri', serif; font-size: 1.15rem; color: var(--navy); font-weight: 700; }
+    .quiz-section-block { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 1rem; box-shadow: 0 4px 24px var(--shadow); overflow: hidden; }
+    .quiz-section-block summary { cursor: pointer; padding: 1rem 1.4rem; font-weight: 700; font-size: 1.02rem; color: var(--navy); display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; list-style: none; }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow { transition: transform 0.3s; font-size: 0.8rem; color: var(--text-light); }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body { padding: 0 1.4rem 1.4rem; }
+    .q-card { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 1.15rem 1.3rem; margin-top: 0.9rem; }
+    .q-card h4 { margin: 0 0 0.35rem; color: var(--navy); font-size: 0.95rem; font-weight: 700; }
+    .q-card p { margin: 0 0 0.75rem; font-size: 0.92rem; color: var(--text); text-align: right; }
+    .q-opts { display: flex; flex-direction: column; gap: 0.45rem; }
+    .q-opts button { border: 1px solid var(--border); background: var(--white); border-radius: 10px; padding: 0.65rem 1rem; font-size: 0.92rem; font-family: 'Tajawal', sans-serif; text-align: right; cursor: pointer; transition: all 0.2s; color: var(--text); }
+    .q-opts button:hover { background: var(--gold-pale); border-color: var(--gold-light); }
+    .q-opts button.q-correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 600; }
+    .q-opts button.q-wrong { border-color: #c53030; background: #fde8e8; color: #c53030; }
+    .q-opts button.q-off { pointer-events: none; opacity: 0.6; }
+    .q-feedback { margin-top: 0.5rem; font-weight: 700; font-size: 0.86rem; min-height: 1.3em; }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap { text-align: center; margin-top: 1.5rem; }
+    .quiz-retry-btn { display: inline-block; background: var(--navy); color: #fff; border: none; border-radius: 10px; padding: 0.75rem 2.2rem; font-size: 1rem; font-family: 'Tajawal', sans-serif; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+    .quiz-retry-btn:hover { background: #14293f; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { text-align: center; color: var(--text-light); font-size: 0.82rem; border-top: 1px solid var(--border); padding: 2rem 1.5rem; margin-top: 3rem; }
+
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+      .toc { gap: 0.35rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>نسب النبي ﷺ وأسرته</h1>
+    <p class="subtitle">سلسلة النسب الشريف من عدنان إلى بني هاشم، والمحطات الكبرى التي صنعت البيت الذي وُلد فيه خاتم الأنبياء ﷺ</p>
+  </header>
+
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">نسب النبي ﷺ وأسرته</span>
+  </nav>
+
+  <div class="toc">
+    <a href="#why">لماذا النسب؟</a>
+    <a href="#chain">سلسلة النسب</a>
+    <a href="#hashim">هاشم والإيلاف</a>
+    <a href="#muttalib">عبد المطلب</a>
+    <a href="#zamzam">حفر زمزم</a>
+    <a href="#vow">نذر الذبح</a>
+    <a href="#elephant">عام الفيل</a>
+    <a href="#abdullah">عبد الله وآمنة</a>
+    <a href="#uncles">أعمام النبي ﷺ</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════ لماذا النسب؟ ═══════ -->
+
+    <section id="why">
+      <h2>لماذا نبدأ بالنسب؟</h2>
+      <p>
+        النسب عند العرب ليس مجرد شجرة عائلة — بل هو نظام الولاء والحماية والهوية.
+        معرفة نسب النبي ﷺ تفسّر لك: لماذا حماه أبو طالب رغم عدم إسلامه؟ لماذا لم تستطع قريش
+        قتله بسهولة؟ لماذا كان بنو هاشم في الشِّعب؟ ولماذا قال ﷺ: «إن الله اصطفى كنانة من
+        ولد إسماعيل، واصطفى قريشًا من كنانة، واصطفى من قريش بني هاشم، واصطفاني من بني هاشم»
+        (صحيح مسلم).
+      </p>
+      <div class="insight">
+        <span class="insight-label">المفتاح</span>
+        <p>
+          كل اسم في سلسلة النسب ستقابله لاحقًا في حدث محوري: قصي أسس النظام، هاشم بنى الاقتصاد،
+          عبد المطلب أعاد زمزم وواجه أبرهة، أبو طالب حمى الدعوة. ليس المطلوب الحفظ — بل بناء
+          «خريطة عائلة» تجعل بقية السيرة أوضح.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ سلسلة النسب ═══════ -->
+
+    <section id="chain">
+      <h2>سلسلة النسب الشريف</h2>
+      <p>
+        النسب المتفق عليه بين العلماء يبدأ من عدنان وينتهي بالنبي ﷺ. المحطات الأبرز
+        في هذه السلسلة هي التي صنعت أحداثًا مفصلية:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">عدنان ← معد ← نزار ← مُضَر ← إلياس</p>
+          <p class="flow-text">الجذور العليا. من إلياس تفرع فِهر (قريش) عبر مُدركة ← خزيمة ← كنانة ← النضر ← مالك ← فِهر.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">فِهر (قريش) ← غالب ← لؤي ← كعب ← مُرّة ← كلاب</p>
+          <p class="flow-text">الحلقات الوسطى. من كلاب جاء الرجل الذي غيّر وجه مكة.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">قصي بن كلاب — مؤسس مكة</p>
+          <p class="flow-text">جمع قريشًا، انتزع سدانة الكعبة من خزاعة، أسس دار الندوة والسقاية والرفادة واللواء والحجابة.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">عبد مناف ← هاشم — صانع الإيلاف</p>
+          <p class="flow-text">نظّم رحلة الشتاء والصيف. اسمه الحقيقي عمرو، ولُقّب «هاشمًا» لأنه هشم الثريد للحجاج.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">عبد المطلب بن هاشم — سيد قريش</p>
+          <p class="flow-text">حفر زمزم، نذر ذبح أحد أبنائه، واجه أبرهة عام الفيل. جدّ النبي ﷺ المباشر.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">عبد الله بن عبد المطلب — والد النبي ﷺ</p>
+          <p class="flow-text">الذبيح الذي فُدي بمئة ناقة. تزوج آمنة بنت وهب وتوفي قبل مولد النبي ﷺ أو بعده بقليل.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">محمد ﷺ — خاتم الأنبياء</p>
+          <p class="flow-text">من أشرف بيت في أشرف بطن في أشرف قبيلة في أقدس بقعة عند العرب.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ هاشم والإيلاف ═══════ -->
+
+    <section id="hashim">
+      <h2>هاشم ورحلة الإيلاف — كيف صارت مكة عاصمة اقتصادية؟</h2>
+      <p>
+        <a class="person-link" href="persons.html">هاشم بن عبد مناف</a> هو الذي حوّل مكة من مركز ديني فقط
+        إلى عاصمة تجارية. اسمه الحقيقي عمرو، ولُقّب «هاشمًا» لأنه كان يهشم الثريد ويُطعم الحجاج
+        في مواسم الحج. لكن إنجازه الأكبر كان تنظيم <strong>رحلة الشتاء والصيف</strong>:
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>رحلة الشتاء</h4>
+          <p>قافلة تجارية إلى اليمن والحبشة في الشتاء. حصل هاشم على اتفاقيات أمان من ملوك الطريق تحمي تجار قريش.</p>
+        </article>
+        <article class="card">
+          <h4>رحلة الصيف</h4>
+          <p>قافلة إلى الشام وغزة في الصيف. كسب هاشم عهود أمان من الغساسنة والروم لتمر القوافل بسلام.</p>
+        </article>
+        <article class="card">
+          <h4>الإيلاف</h4>
+          <p>منظومة اتفاقيات تجارية آمنة — هي التي يشير إليها القرآن: «لإيلاف قريش، إيلافهم رحلة الشتاء والصيف» (قريش).</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">سورة قريش تتحدث عن هاشم</span>
+        <p>
+          عندما تقرأ «لإيلاف قريش» فأنت تقرأ عن إنجاز هاشم تحديدًا. الله يُذكّر قريشًا بنعمتين:
+          الأمن التجاري (الإيلاف) والأمن الروحي (البيت الحرام). وقريش بعد هاشم صارت أغنى قبيلة
+          في الجزيرة — وهذا الغنى هو ما جعلها تتكبّر لاحقًا عن قبول الدعوة.
+        </p>
+      </div>
+      <p>
+        توفي هاشم في غزة أثناء رحلة تجارية، وكان قد تزوج في المدينة من <strong>سلمى بنت عمرو النجارية</strong>
+        فأنجبت له <strong>شيبة</strong> — الذي سيُعرف لاحقًا بـ<strong>عبد المطلب</strong>. ربّته أمه في المدينة
+        حتى جاء عمّه المطلب فأخذه إلى مكة، وظنّ الناس أنه عبده فلقّبوه «عبد المطلب».
+      </p>
+    </section>
+
+    <!-- ═══════ عبد المطلب ═══════ -->
+
+    <section id="muttalib">
+      <h2>عبد المطلب — سيد مكة بلا منازع</h2>
+      <p>
+        <a class="person-link" href="persons.html">عبد المطلب بن هاشم</a> هو جدّ النبي ﷺ المباشر،
+        وأعظم زعماء قريش في عصره. ثلاثة أحداث كبرى صنعت هيبته وأثرت في مسار السيرة:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4A7;</span>
+          <p class="visual-title">حفر زمزم</p>
+          <p class="visual-text">أعاد اكتشاف بئر زمزم بعد أن طمرتها جرهم قبل قرون. عزّز مكانته الروحية.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F52A;</span>
+          <p class="visual-title">نذر الذبح</p>
+          <p class="visual-text">نذر أن يذبح أحد أبنائه إن بلغوا عشرة. وقعت القرعة على عبد الله والد النبي ﷺ.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F418;</span>
+          <p class="visual-title">عام الفيل</p>
+          <p class="visual-text">واجه أبرهة الحبشي بثبات وقال: «للبيت ربٌّ يحميه». وأهلك الله جيش الفيل.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════ حفر زمزم ═══════ -->
+
+    <section id="zamzam">
+      <h2>حفر زمزم — استعادة الرمز</h2>
+      <p>
+        لمّا طُردت جرهم من مكة ردمت بئر زمزم وأخفت معالمها، فظلت مطمورة قرونًا طويلة.
+        جاء عبد المطلب فرأى في المنام من يدلّه على موضعها، فحفر وحده مع ابنه الحارث
+        (لم يكن له يومها سوى ابن واحد) وسط سخرية قريش. لما تفجّر الماء اعترفت قريش
+        بحقه، لكنها نازعته فيها فاحتكموا إلى كاهنة بني سعد ثم استقر الأمر له.
+      </p>
+      <div class="insight">
+        <span class="insight-label">لماذا زمزم مفتاح؟</span>
+        <p>
+          السقاية (سقي الحجاج من زمزم) كانت أشرف مناصب مكة. عبد المطلب بحفره زمزم
+          استعاد هذا المنصب لبني هاشم، وظلت السقاية في يدهم حتى ورثها العباس بن عبد المطلب.
+          يوم فتح مكة سيقول النبي ﷺ للعباس: «اسقِ الحجاج» — استمرار لهذا الإرث الهاشمي.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ نذر الذبح ═══════ -->
+
+    <section id="vow">
+      <h2>نذر الذبح — كيف نجا والد النبي ﷺ؟</h2>
+      <p>
+        حين كان عبد المطلب يحفر زمزم وحيدًا مع ابنه الوحيد، شعر بضعف موقفه أمام قريش لقلة أولاده،
+        فنذر لله: إن رُزق عشرة أبناء وبلغوا معه ليمنعوه، ذبح أحدهم عند الكعبة.
+        تحقق النذر وبلغ أبناؤه عشرة، فأقرع بينهم فوقعت القرعة على <strong>عبد الله</strong> — أحبّ
+        أبنائه إليه ووالد النبي ﷺ المستقبلي.
+      </p>
+      <ul>
+        <li><strong>القرعة الأولى:</strong> خرج اسم عبد الله. رفض عبد المطلب قلبيًّا لكنه التزم بنذره. منعته قريش وأشارت عليه بالتحكيم.</li>
+        <li><strong>التحكيم:</strong> ذهبوا إلى عرّافة في المدينة فأشارت بأن يُقرع بين عبد الله والإبل، يبدأ بعشر ويزيد عشرًا في كل مرة حتى تقع القرعة على الإبل.</li>
+        <li><strong>الفداء:</strong> ظلت القرعة تخرج على عبد الله حتى بلغت الإبل مئة، فوقعت القرعة على الإبل فنحرها عبد المطلب. لذلك لُقّب عبد الله بـ«الذبيح».</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">الذبيحان</span>
+        <p>
+          قال النبي ﷺ: «أنا ابن الذبيحَين» — يعني إسماعيل عليه السلام (جدّه الأعلى الذي فُدي بكبش)
+          وعبد الله (أبوه الذي فُدي بمئة ناقة). القصتان تتقاطعان: إبراهيم نذر ذبح ابنه ففداه الله،
+          وعبد المطلب نذر ذبح ابنه ففداه الله. في كلتا الحالتين حُفظ النسل الذي سيخرج منه
+          النبي ﷺ — إعداد إلهي يمتد عبر الأجيال.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ عام الفيل ═══════ -->
+
+    <section id="elephant">
+      <h2>عام الفيل — الحماية الإلهية قبل المولد</h2>
+      <p>
+        قبل مولد النبي ﷺ بنحو خمسين يومًا (وقيل في عامه نفسه) زحف <strong>أبرهة الحبشي</strong>
+        بجيشه والفيل الضخم لهدم الكعبة. كان أبرهة قد بنى كنيسة «القُلَّيس» في صنعاء ليصرف
+        العرب عن الحج إلى مكة، لكنه فشل فقرر هدم البيت نفسه.
+      </p>
+      <p>
+        خرج عبد المطلب للقاء أبرهة. لما رآه أبرهة أجلسه بجانبه واحترمه. طلب عبد المطلب
+        إرجاع إبله التي أخذها الجيش. تعجّب أبرهة وقال: كنت أظنك تطلب مني ترك البيت!
+        فقال عبد المطلب كلمته الشهيرة: <strong>«أنا ربّ الإبل، وللبيت ربٌّ يحميه»</strong>.
+      </p>
+      <div class="insight">
+        <span class="insight-label">الحكمة في الجواب</span>
+        <p>
+          عبد المطلب لم يكن ضعيفًا — بل كان يفهم أن قوته العسكرية لا تكافئ جيش أبرهة.
+          لكنه كان واثقًا بحماية الله للبيت. هذا الثبات والتوكل سمة هاشمية ورثها الحفيد ﷺ
+          في أحلك لحظات الدعوة: ليلة الهجرة، ويوم بدر، ويوم حنين.
+        </p>
+      </div>
+      <p>
+        أرسل الله على جيش أبرهة طيرًا أبابيل ترميهم بحجارة من سجّيل، فجعلهم كعصف مأكول
+        (سورة الفيل). هذا الحدث رفع مكانة الكعبة وقريش في كل الجزيرة العربية، وصار «عام الفيل»
+        مرجعًا زمنيًّا يؤرّخ به العرب — ومنه يُحسب مولد النبي ﷺ.
+      </p>
+    </section>
+
+    <!-- ═══════ عبد الله وآمنة ═══════ -->
+
+    <section id="abdullah">
+      <h2>عبد الله وآمنة — والدا النبي ﷺ</h2>
+      <p>
+        بعد نجاة عبد الله من الذبح، زوّجه أبوه عبد المطلب من
+        <strong>آمنة بنت وهب</strong> من <strong>بني زهرة</strong> — أخوال النبي ﷺ.
+        كان وهب بن عبد مناف سيد بني زهرة، فاختار عبد المطلب أشرف بيت في قريش لابنه الذبيح.
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>عبد الله بن عبد المطلب</h4>
+          <p>
+            أحب أبناء عبد المطلب إليه. خرج في رحلة تجارية إلى الشام وفي طريق العودة مرض
+            في المدينة عند أخواله بني النجار وتوفي هناك. مات شابًّا قبل مولد ابنه ﷺ أو بعده بأشهر قليلة.
+          </p>
+        </article>
+        <article class="card">
+          <h4>آمنة بنت وهب</h4>
+          <p>
+            من أشرف نساء قريش نسبًا. حملت بالنبي ﷺ ولم ترَ من الحمل إلا خيرًا ونورًا.
+            توفيت والنبي ﷺ ابن ست سنوات في طريق عودتها من زيارة قبر عبد الله في المدينة،
+            في منطقة الأبواء بين مكة والمدينة.
+          </p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">يتيم بإعداد إلهي</span>
+        <p>
+          وُلد النبي ﷺ يتيم الأب، ثم فقد أمه وهو في السادسة، ثم فقد جده عبد المطلب وهو في الثامنة.
+          هذا اليُتم المبكّر أعدّه الله ليتعلق قلبه بربه وحده لا بمخلوق.
+          والقرآن يذكّره بذلك: «أَلَمْ يَجِدْكَ يَتِيمًا فَآوَى» (الضحى: ٦). كفالة جده ثم عمه
+          أبي طالب هي «الإيواء» الإلهي.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ أعمام النبي ﷺ ═══════ -->
+
+    <section id="uncles">
+      <h2>أعمام النبي ﷺ — خريطة العائلة</h2>
+      <p>
+        كان لعبد المطلب عشرة أبناء (وقيل اثنا عشر) وست بنات.
+        من أبنائه خرج أعمام النبي ﷺ الذين لعبوا أدوارًا حاسمة — بعضهم في صف الدعوة وبعضهم ضدها:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>العمّ</th>
+            <th>موقفه</th>
+            <th>ستقابله في...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>أبو طالب</td><td>حمى النبي ﷺ حتى مات لكنه لم يُسلم</td><td>الحماية المكية كاملة، عام الحزن</td></tr>
+          <tr><td>حمزة بن عبد المطلب</td><td>أسلم وصار أسد الله وسيد الشهداء</td><td>إسلام حمزة، غزوة أحد (استشهاده)</td></tr>
+          <tr><td>العباس بن عبد المطلب</td><td>أسلم متأخرًا، تولى السقاية</td><td>بيعة العقبة، فتح مكة</td></tr>
+          <tr><td>أبو لهب (عبد العُزّى)</td><td>أشد أعداء الدعوة من بني هاشم أنفسهم</td><td>سورة المسد، الإيذاء المبكّر</td></tr>
+          <tr><td>الزبير بن عبد المطلب</td><td>مات قبل البعثة</td><td>حلف الفضول (شارك فيه)</td></tr>
+          <tr><td>الحارث بن عبد المطلب</td><td>أكبر الأبناء، مات قبل البعثة</td><td>ذُكر في حفر زمزم</td></tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">بيت واحد منقسم</span>
+        <p>
+          لاحظ المفارقة: بنو هاشم أنفسهم لم يكونوا كتلة واحدة. أبو طالب يحمي لكنه لا يؤمن،
+          حمزة يؤمن ويقاتل، العباس يؤمن سرًّا ويعمل من الداخل، وأبو لهب يحارب ابن أخيه علنًا.
+          هذا الانقسام داخل البيت الواحد نموذج مصغّر لانقسام قريش ككل.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ أخوال النبي ﷺ ═══════ -->
+
+    <section>
+      <h2>عمّات النبي ﷺ وأخواله</h2>
+      <p>
+        كان لعبد المطلب ست بنات. المتفق على إسلامها
+        <strong>صفية بنت عبد المطلب</strong> (أم الزبير بن العوام). أما أخوال النبي ﷺ
+        فهم <strong>بنو زهرة</strong> — بطن أمه آمنة — ومنهم:
+      </p>
+      <ul>
+        <li><strong>سعد بن أبي وقاص الزُّهري:</strong> أحد العشرة المبشرين بالجنة، وأول من رمى بسهم في سبيل الله. خاله النبي ﷺ يفاخر به: «هذا خالي فليُرني امرؤ خاله».</li>
+        <li><strong>عبد الرحمن بن عوف الزُّهري:</strong> من أوائل المسلمين والعشرة المبشرين. تاجر عظيم أنفق ثروته في سبيل الله.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">بنو زهرة: أخوال وأنصار</span>
+        <p>
+          حين تقرأ عن سعد بن أبي وقاص وهو يفتح فارس، أو عبد الرحمن بن عوف وهو يموّل الجيوش،
+          تذكّر أنهم من بطن أخوال النبي ﷺ. العلاقة الخالية انعكست في نصرتهم المبكرة للدعوة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ حليمة السعدية ═══════ -->
+
+    <section>
+      <h2>حليمة السعدية — مرضعة النبي ﷺ</h2>
+      <p>
+        جرت عادة العرب أن يبعثوا أطفالهم إلى البادية لتقوى أجسامهم وتصفو ألسنتهم. فجاءت مرضعات
+        بني سعد بن بكر إلى مكة يطلبن الرُّضعاء. ولأن محمدًا ﷺ كان يتيم الأب، أعرضت عنه المرضعات
+        طمعًا في كرم الآباء الأغنياء. لم يبقَ إلا
+        <a class="person-link" href="persons.html">حليمة بنت أبي ذؤيب السعدية</a>
+        التي لم تجد رضيعًا غيره، فأخذته — وكانت أفقر القادمات.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">بركة ظاهرة</p>
+          <p class="flow-text">
+            ما إن ضمّته حليمة إلى صدرها حتى دَرّ لبنها بعد أن كان شحيحًا، وسمنت أتانها (حمارتها)
+            العجفاء، ودَرّت غنمها. لاحظ زوجها الحارث بن عبد العزّى التحوّل وقال: «يا حليمة، لقد
+            أخذتِ نسمة مباركة».
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">سنتان في بني سعد</p>
+          <p class="flow-text">
+            أمضى النبي ﷺ نحو سنتين في بادية بني سعد. تعلّم العربية الفصحى وصلب عوده في الصحراء.
+            ثم أعادته حليمة إلى أمه آمنة، لكنها طلبت إبقاءه خوفًا عليه من وباء مكة — فعاد معها.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">حادثة شق الصدر</p>
+          <p class="flow-text">
+            في بني سعد وقعت حادثة شق الصدر: جاء رجلان (ملكان) فشقّا صدره واستخرجا منه حظ الشيطان
+            وغسلاه بماء زمزم. خافت حليمة وأعادته إلى أمه. هذه الحادثة أعدّت قلبه ﷺ للنبوة.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لماذا البادية؟</span>
+        <p>
+          البادية صنعت لسان النبي ﷺ العربي الفصيح — قال: «أنا أعرب العرب، أنا من قريش ونشأت في
+          بني سعد بن بكر». الفصاحة التي اكتسبها في بني سعد ستكون أداته الأولى في الدعوة: القرآن
+          نزل بلسان عربي مبين، واحتاج حاملًا يتقن هذا اللسان.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. النسب اصطفاء</h4>
+          <p>من عدنان إلى بني هاشم — كل حلقة اصطفاء إلهي أوصل الرسالة لأشرف بيت في أشرف مكان.</p>
+        </article>
+        <article class="card">
+          <h4>٢. هاشم بنى الاقتصاد</h4>
+          <p>رحلة الشتاء والصيف (الإيلاف) جعلت قريشًا أغنى قبائل الجزيرة — وسورة قريش تُذكّر بهذا.</p>
+        </article>
+        <article class="card">
+          <h4>٣. عبد المطلب أعاد زمزم</h4>
+          <p>حفر زمزم أعاد لبني هاشم السقاية — أشرف مناصب مكة — وظلت فيهم حتى فتح مكة.</p>
+        </article>
+        <article class="card">
+          <h4>٤. ابن الذبيحَين</h4>
+          <p>إسماعيل وعبد الله فُديا بأمر الله. النسل النبوي محفوظ بعناية إلهية عبر الأجيال.</p>
+        </article>
+        <article class="card">
+          <h4>٥. عام الفيل</h4>
+          <p>الله حمى البيت قبل المولد. الحدث رفع مكانة قريش وصار مرجعًا زمنيًّا للجزيرة كلها.</p>
+        </article>
+        <article class="card">
+          <h4>٦. يتيم بإعداد إلهي</h4>
+          <p>فقد أباه وأمه وجده باكرًا — ليتعلق قلبه بربه وحده ويكون قدوة للمستضعفين.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════ اختبر فهمك ═══════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch5-score">٠ / ٢٠</span>
+      </div>
+      <div id="ch5-quiz-container"></div>
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch5-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'سلسلة النسب والمحطات الكبرى',
+        questions: [
+          {
+            t: 'الاصطفاء',
+            q: 'ما الحديث الذي يبيّن اصطفاء نسب النبي ﷺ؟',
+            o: ['«خيركم خيركم لأهله»', '«إن الله اصطفى كنانة من ولد إسماعيل، واصطفى قريشًا من كنانة، واصطفى من قريش بني هاشم، واصطفاني من بني هاشم»', '«المسلم أخو المسلم»', '«إنما الأعمال بالنيات»'],
+            a: 1
+          },
+          {
+            t: 'فِهر',
+            q: 'ما علاقة فِهر بقريش؟',
+            o: ['فِهر لقب آخر لعبد مناف', 'فِهر هو الجد الأعلى الذي تُنسب إليه قريش', 'فِهر أول من حكم المدينة', 'فِهر أخو هاشم'],
+            a: 1
+          },
+          {
+            t: 'قصي بن كلاب',
+            q: 'ما الإنجاز الرئيسي لقصي بن كلاب؟',
+            o: ['حفر بئر زمزم', 'جمع قريشًا وأسس نظام الحكم في مكة', 'قاد أول غزوة ضد الروم', 'بنى كنيسة القُلَّيس'],
+            a: 1
+          },
+          {
+            t: 'ترتيب النسب',
+            q: 'ما الترتيب الصحيح من الأقدم إلى الأحدث؟',
+            o: ['هاشم ← قصي ← عبد مناف ← عبد المطلب', 'عبد مناف ← قصي ← هاشم ← عبد المطلب', 'قصي ← عبد مناف ← هاشم ← عبد المطلب', 'عبد المطلب ← هاشم ← عبد مناف ← قصي'],
+            a: 2
+          },
+          {
+            t: 'بنو زهرة',
+            q: 'من هم بنو زهرة بالنسبة للنبي ﷺ؟',
+            o: ['أبناء عمومته من جهة أبيه', 'أخواله — بطن أمه آمنة بنت وهب', 'حلفاء قريش من خارج مكة', 'أصهاره من جهة خديجة'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'هاشم والإيلاف',
+        questions: [
+          {
+            t: 'لقب هاشم',
+            q: 'لماذا لُقّب عمرو بن عبد مناف بـ«هاشم»؟',
+            o: ['لأنه هَشَم جدار الكعبة وأعاد بناءه', 'لأنه كان يهشم الثريد ويُطعم الحجاج', 'لأنه هشم أعداءه في معركة كبرى', 'لأنه هشم الأصنام حول الكعبة'],
+            a: 1
+          },
+          {
+            t: 'الإيلاف',
+            q: 'ما المقصود بالإيلاف الذي أسسه هاشم؟',
+            o: ['معاهدة سلام بين قريش والأنصار', 'منظومة اتفاقيات تجارية آمنة مع ملوك الطرق', 'حلف عسكري ضد الفرس والروم', 'اتفاق ديني بين اليهود والمشركين'],
+            a: 1
+          },
+          {
+            t: 'سورة قريش',
+            q: 'ما السورة التي تشير إلى إنجاز هاشم التجاري؟',
+            o: ['سورة الفيل', 'سورة قريش', 'سورة المسد', 'سورة التكاثر'],
+            a: 1
+          },
+          {
+            t: 'عبد المطلب',
+            q: 'لماذا سُمّي شيبة بن هاشم بـ«عبد المطلب»؟',
+            o: ['لأنه وُلد في المطلب', 'لأن عمه المطلب جاء به من المدينة فظنه الناس عبده', 'لأنه كان يعبد في المطلب', 'اسم أطلقه عليه جده قصي'],
+            a: 1
+          },
+          {
+            t: 'وفاة هاشم',
+            q: 'أين توفي هاشم بن عبد مناف؟',
+            o: ['في مكة عند الكعبة', 'في المدينة عند أخواله', 'في غزة أثناء رحلة تجارية', 'في اليمن أثناء رحلة الشتاء'],
+            a: 2
+          }
+        ]
+      },
+      {
+        title: 'عبد المطلب وعام الفيل',
+        questions: [
+          {
+            t: 'حفر زمزم',
+            q: 'كيف عرف عبد المطلب موضع بئر زمزم المطمورة؟',
+            o: ['وجد خريطة من عهد إسماعيل', 'رأى في المنام من يدلّه على موضعها', 'أخبره كاهن من اليمن بموقعها', 'عثر عليها صدفة أثناء بناء بيت'],
+            a: 1
+          },
+          {
+            t: 'النذر',
+            q: 'لماذا نذر عبد المطلب ذبح أحد أبنائه؟',
+            o: ['لأنه أراد التقرب للأصنام', 'لأنه شعر بالضعف لقلة أبنائه عند حفر زمزم فنذر إن بلغوا عشرة ذبح أحدهم', 'لأن كاهنة أمرته بذلك', 'لأنه أراد تقليد إبراهيم عليه السلام'],
+            a: 1
+          },
+          {
+            t: 'الفداء',
+            q: 'بكم ناقة فُدي عبد الله بن عبد المطلب؟',
+            o: ['عشر نوق', 'خمسين ناقة', 'مئة ناقة', 'ثلاثمئة ناقة'],
+            a: 2
+          },
+          {
+            t: 'مقولة عبد المطلب',
+            q: 'ماذا قال عبد المطلب لأبرهة عندما جاء لهدم الكعبة؟',
+            o: ['«سأحاربك بكل قوتي»', '«أنا ربّ الإبل، وللبيت ربٌّ يحميه»', '«خذ الكعبة وأعطني مالي»', '«نحن أقوى منك يا أبرهة»'],
+            a: 1
+          },
+          {
+            t: 'نتيجة عام الفيل',
+            q: 'كيف أهلك الله جيش أبرهة؟',
+            o: ['بزلزال مدمّر', 'بطير أبابيل ترميهم بحجارة من سجّيل', 'بفيضان عظيم', 'بوباء أصابهم في الطريق'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'عبد الله وآمنة وأعمام النبي ﷺ',
+        questions: [
+          {
+            t: 'ابن الذبيحَين',
+            q: 'لماذا قال النبي ﷺ: «أنا ابن الذبيحَين»؟',
+            o: ['لأن أباه وجده قُتلا في الحروب', 'لأن جده إسماعيل فُدي بكبش وأباه عبد الله فُدي بمئة ناقة', 'لأنه ذبح قربانين في حجة الوداع', 'لأن عمَّيه حمزة والعباس كانا ذبيحَين'],
+            a: 1
+          },
+          {
+            t: 'وفاة عبد الله',
+            q: 'أين توفي عبد الله بن عبد المطلب؟',
+            o: ['في مكة بعد مولد النبي ﷺ', 'في المدينة عند أخواله بني النجار', 'في الطائف أثناء زيارة', 'في اليمن في رحلة الشتاء'],
+            a: 1
+          },
+          {
+            t: 'يُتم النبي ﷺ',
+            q: 'ما الآية التي تذكّر النبي ﷺ بيتمه؟',
+            o: ['«وَرَفَعْنَا لَكَ ذِكْرَكَ»', '«أَلَمْ يَجِدْكَ يَتِيمًا فَآوَى»', '«إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ»', '«وَالضُّحَى وَاللَّيْلِ إِذَا سَجَى»'],
+            a: 1
+          },
+          {
+            t: 'أبو طالب',
+            q: 'ما موقف أبي طالب من دعوة النبي ﷺ؟',
+            o: ['أسلم سرًّا وحارب قريشًا', 'حمى النبي ﷺ ودافع عنه لكنه لم يُسلم', 'عاداه وانضم لأبي جهل', 'هاجر إلى الحبشة مع المسلمين'],
+            a: 1
+          },
+          {
+            t: 'أبو لهب',
+            q: 'ما الذي ميّز موقف أبي لهب عن بقية أعمام النبي ﷺ؟',
+            o: ['كان محايدًا لا مع ولا ضد', 'كان أشد أعداء الدعوة من بني هاشم أنفسهم ونزلت فيه سورة المسد', 'أسلم متأخرًا بعد فتح مكة', 'هاجر إلى اليمن ولم يشارك'],
+            a: 1
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0, answered = 0;
+    const scoreEl = document.getElementById('ch5-score');
+    const container = document.getElementById('ch5-quiz-container');
+    const retryBtn = document.getElementById('ch5-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0; answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+              optsDiv.querySelectorAll('button').forEach(function(b) { b.classList.add('q-off'); });
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) b.classList.add('q-correct');
+              });
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+              if (answered === totalQ) retryBtn.style.display = 'inline-block';
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «نسب النبي ﷺ وأسرته» من كتاب «الرحيق المختوم»
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>غزوة أحد — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#1e3a5f;--navy-deep:#0d1b2a;--gold:#b8860b;--gold-light:#f5e6c8;--gold-pale:#fdf6e3;--cream:#faf8f2;--white:#ffffff;--text:#2d3436;--text-light:#636e72;--border:#e8e0d4;--shadow:rgba(30,58,95,0.08);--radius:14px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased}
+    .hero{background:linear-gradient(160deg,#0a1628 0%,#132f4c 40%,#1e3a5f 100%);color:#fff;padding:3.5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 20% 30%,rgba(184,134,11,0.3) 50%,transparent 50%),radial-gradient(1px 1px at 60% 20%,rgba(255,255,255,0.15) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 80% 60%,rgba(184,134,11,0.2) 50%,transparent 50%),radial-gradient(1px 1px at 40% 70%,rgba(255,255,255,0.1) 50%,transparent 50%),radial-gradient(1px 1px at 10% 80%,rgba(255,255,255,0.12) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 90% 40%,rgba(184,134,11,0.15) 50%,transparent 50%);background-size:200px 200px;animation:twinkle 8s ease-in-out infinite alternate}
+    @keyframes twinkle{from{opacity:0.6}to{opacity:1}}
+    .hero>*{position:relative;z-index:1}
+    .hero-ornament{width:60px;height:3px;background:var(--gold);margin:0 auto 1.5rem;border-radius:2px}
+    .hero h1{font-family:'Amiri',serif;font-size:2.4rem;font-weight:700;letter-spacing:0.5px}
+    .hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.7);max-width:620px;margin:0.8rem auto 0}
+    .breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:0.6rem 1rem;display:flex;justify-content:center;align-items:center;gap:0.4rem;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px var(--shadow)}
+    .breadcrumb a{text-decoration:none;color:var(--text-light);font-size:0.85rem;font-weight:500;padding:0.4rem 0.85rem;border-radius:8px;transition:all 0.2s;white-space:nowrap}
+    .breadcrumb a:hover{background:var(--gold-pale);color:var(--navy)}
+    .breadcrumb .sep{color:var(--border);font-size:0.8rem}
+    .breadcrumb .current{font-size:0.85rem;font-weight:700;color:var(--navy)}
+    .toc{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;max-width:880px;margin:1.5rem auto 0;padding:0 1.5rem}
+    .toc a{padding:0.4rem 1rem;border-radius:8px;background:var(--white);border:1px solid var(--border);color:var(--navy);text-decoration:none;font-size:0.85rem;font-weight:500;transition:all 0.2s}
+    .toc a:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    main{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem 1rem}
+    section{margin-bottom:1.5rem}
+    h2{font-family:'Amiri',serif;color:var(--navy);border-right:3px solid var(--gold);padding-right:0.75rem;margin-top:2.5rem;margin-bottom:0.8rem;font-size:1.5rem}
+    h3{font-family:'Amiri',serif;color:var(--navy);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.5rem}
+    p{color:var(--text);text-align:justify;font-size:1rem;margin:0.5rem 0 1.5rem}
+    ul{list-style:none;padding:0;margin:0 0 1.5rem}
+    ul li{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.6rem;border-right:3px solid var(--gold-light)}
+    .visual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0 0.5rem}
+    .visual-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s}
+    .visual-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px var(--shadow)}
+    .visual-icon{font-size:2rem;margin-bottom:0.4rem;display:block}
+    .visual-title{font-weight:600;margin:0 0 0.35rem;color:var(--navy)}
+    .visual-text{margin:0;color:var(--text-light);line-height:1.5;font-size:0.95rem}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0 1.5rem}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.3rem;transition:transform 0.2s ease,box-shadow 0.2s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px var(--shadow)}
+    .card h4{margin:0 0 0.4rem;color:var(--navy);font-size:1rem;font-weight:700}
+    .card p{margin:0;font-size:0.95rem;color:var(--text-light)}
+    .flowline{border-right:3px solid var(--gold-light);margin-top:1.3rem;padding-right:1.3rem}
+    .flow-item{position:relative;margin-bottom:1.2rem;padding:0.8rem 1rem 0.8rem 0;background:var(--white);border:1px solid var(--border);border-radius:10px;transition:box-shadow 0.2s ease}
+    .flow-item:hover{box-shadow:0 8px 20px var(--shadow)}
+    .flow-item::before{content:"";position:absolute;right:-1.6rem;top:50%;transform:translateY(-50%);width:14px;height:14px;background:var(--gold);border:3px solid var(--white);border-radius:50%;box-shadow:0 0 0 2px var(--gold-light)}
+    .flow-title{margin:0;color:var(--navy);font-weight:600}
+    .flow-text{margin:0.3rem 0 0;font-size:0.95rem;color:var(--text-light);line-height:1.6}
+    .tribe-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:0.95rem}
+    .tribe-table th{background:var(--navy);color:#fff;padding:0.75rem 1rem;text-align:right;font-family:'Amiri',serif;font-weight:700}
+    .tribe-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--border);background:var(--white)}
+    .tribe-table tr:hover td{background:var(--gold-pale)}
+    .insight{background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .insight-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--gold);margin-bottom:0.4rem}
+    .insight p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    .connection{background:linear-gradient(135deg,#eef3f9 0%,#f5f0e8 100%);border:1px solid #d4dce8;border-right:3px solid var(--navy);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .connection-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--navy);margin-bottom:0.4rem}
+    .connection p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    a.person-link{color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-light);padding-bottom:0.05rem}
+    a.person-link:hover{color:var(--navy);border-bottom-color:var(--navy)}
+    blockquote{background:var(--gold-pale);border-right:4px solid var(--gold);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1rem 0 1.5rem;font-family:'Amiri',serif;font-size:1.1rem;color:var(--navy);line-height:2}
+    .quiz-wrapper{margin-top:3rem;padding-top:2.5rem;border-top:2px solid var(--gold-light)}
+    .quiz-wrapper>h2{text-align:center;border-right:none;padding-right:0;font-size:1.6rem;margin-bottom:0.3rem}
+    .quiz-intro{text-align:center;color:var(--text-light);font-size:0.92rem;margin:0 auto 1.5rem;max-width:600px}
+    .quiz-score-bar{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 12px var(--shadow);display:flex;justify-content:space-between;align-items:center}
+    .quiz-score-bar span{font-size:0.9rem;color:var(--text-light);font-weight:500}
+    .quiz-score-bar .q-score{font-family:'Amiri',serif;font-size:1.15rem;color:var(--navy);font-weight:700}
+    .quiz-section-block{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1rem;box-shadow:0 4px 24px var(--shadow);overflow:hidden}
+    .quiz-section-block summary{cursor:pointer;padding:1rem 1.4rem;font-weight:700;font-size:1.02rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;transition:background 0.2s;list-style:none}
+    .quiz-section-block summary::-webkit-details-marker{display:none}
+    .quiz-section-block summary::marker{content:""}
+    .quiz-section-block summary:hover{background:rgba(245,230,200,0.25)}
+    .quiz-section-block summary .q-arrow{transition:transform 0.3s;font-size:0.8rem;color:var(--text-light)}
+    .quiz-section-block[open] summary .q-arrow{transform:rotate(90deg)}
+    .q-section-body{padding:0 1.4rem 1.4rem}
+    .q-card{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:1.15rem 1.3rem;margin-top:0.9rem}
+    .q-card h4{margin:0 0 0.35rem;color:var(--navy);font-size:0.95rem;font-weight:700}
+    .q-card p{margin:0 0 0.75rem;font-size:0.92rem;color:var(--text);text-align:right}
+    .q-opts{display:flex;flex-direction:column;gap:0.45rem}
+    .q-opts button{border:1px solid var(--border);background:var(--white);border-radius:10px;padding:0.65rem 1rem;font-size:0.92rem;font-family:'Tajawal',sans-serif;text-align:right;cursor:pointer;transition:all 0.2s;color:var(--text)}
+    .q-opts button:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    .q-opts button.q-correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:600}
+    .q-opts button.q-wrong{border-color:#c53030;background:#fde8e8;color:#c53030}
+    .q-opts button.q-off{pointer-events:none;opacity:0.6}
+    .q-feedback{margin-top:0.5rem;font-weight:700;font-size:0.86rem;min-height:1.3em}
+    .q-feedback.q-correct{color:#2e7d32}
+    .q-feedback.q-wrong{color:#c53030}
+    .quiz-retry-wrap{text-align:center;margin-top:1.5rem}
+    .quiz-retry-btn{display:inline-block;background:var(--navy);color:#fff;border:none;border-radius:10px;padding:0.75rem 2.2rem;font-size:1rem;font-family:'Tajawal',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s,transform 0.2s}
+    .quiz-retry-btn:hover{background:#14293f;transform:translateY(-2px)}
+    footer{text-align:center;color:var(--text-light);font-size:0.82rem;border-top:1px solid var(--border);padding:2rem 1.5rem;margin-top:3rem}
+    @media(max-width:700px){.hero h1{font-size:1.9rem}.hero{padding:2.5rem 1.2rem 3rem}main{padding:1.5rem 1rem 1rem}.visual-grid,.card-grid{grid-template-columns:1fr}.breadcrumb a{font-size:0.78rem;padding:0.35rem 0.6rem}.tribe-table{font-size:0.85rem}.quiz-score-bar{flex-direction:column;gap:0.5rem;text-align:center}.q-section-body{padding:0 1rem 1rem}.toc{gap:0.35rem}}
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>غزوة أحد</h1>
+    <p class="subtitle">الدروس القاسية في الانضباط والطاعة — كيف تحوّل نصر مؤكّد إلى محنة عظيمة بمخالفة أمر واحد</p>
+  </header>
+
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">غزوة أحد</span>
+  </nav>
+
+  <div class="toc">
+    <a href="#why">لماذا هذا الفصل؟</a>
+    <a href="#causes">أسباب الغزوة</a>
+    <a href="#quraysh-army">جيش قريش</a>
+    <a href="#plan">الخطة النبوية</a>
+    <a href="#munafiqun">انسحاب المنافقين</a>
+    <a href="#battle-start">بداية المعركة</a>
+    <a href="#archers">خطأ الرماة</a>
+    <a href="#hamza">مقتل حمزة وإصابة النبي ﷺ</a>
+    <a href="#steadfast">الثبات والانسحاب</a>
+    <a href="#lessons">الدروس</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <!-- 1. paragraph + insight -->
+    <section id="why">
+      <h2>لماذا ندرس هذا الفصل؟</h2>
+      <p>
+        غزوة أحد ليست مجرد معركة عسكرية — إنها أعمق درس تربوي في السيرة النبوية. في بدر انتصر المسلمون
+        وهم قلة، فدخل بعضهم في شعور بالزهو. في أحد سيتعلّمون أن النصر ليس حقًا مكتسبًا بل ثمرة
+        لطاعة الله ورسوله والانضباط الصارم. مخالفة أمر واحد — نزول الرماة عن الجبل — حوّلت نصرًا
+        ساحقًا إلى هزيمة مُرّة سقط فيها سبعون شهيدًا وأُصيب النبي ﷺ نفسه. هذا الفصل يكشف
+        كيف يتعامل الإسلام مع الهزيمة بصدق: لا تبرير ولا إنكار، بل مراجعة ذاتية قاسية نزلت
+        في ستين آية من سورة آل عمران.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح الفهم</span>
+        <p>
+          أحد ليست قصة هزيمة — بل قصة بناء أمة تتعلم من أخطائها. كل المبادئ التي ستحكم الدولة
+          الإسلامية لاحقًا — الشورى، والانضباط العسكري، وعدم التعلق بالغنائم، وطاعة القائد — ترسّخت
+          في نفوس الصحابة يوم أحد بالتجربة المؤلمة لا بالنظرية.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. flowline + connection -->
+    <section id="causes">
+      <h2>أسباب الغزوة — لماذا جاءت قريش؟</h2>
+      <p>
+        بعد الهزيمة المُذلّة في بدر فقدت قريش سبعين قتيلًا وسبعين أسيرًا من صناديدها، وتضررت
+        هيبتها أمام العرب. لم يكن أمامها إلا خيار واحد: الثأر أو فقدان مكانتها إلى الأبد.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">هزيمة بدر والثأر</p>
+          <p class="flow-text">قُتل في بدر زعماء كبار كأبي جهل وعتبة بن ربيعة وشيبة بن ربيعة. عائلاتهم أقسمت على الانتقام، ومنعت قريش النساء من البكاء على القتلى حتى لا يذهب حرّ الثأر.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">تمويل الحرب من قافلة أبي سفيان</p>
+          <p class="flow-text">القافلة التي نجت من المسلمين قبل بدر كانت تحمل أرباحًا ضخمة. قررت قريش تخصيص أرباحها كاملة — نحو ٥٠ ألف دينار — لتمويل حملة الانتقام.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">التحالفات القبلية</p>
+          <p class="flow-text">لم تكتفِ قريش بقوتها الذاتية بل استعانت بقبائل كنانة وتهامة وأحابيشها (حلفاؤها من القبائل المجاورة) لتشكيل جيش ضخم يفوق ما جمعته في بدر بأضعاف.</p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">ستقابل هذا لاحقًا</span>
+        <p>
+          نمط «التحالف القبلي الموسّع» سيتكرر بشكل أكبر في غزوة الأحزاب (الخندق)، حيث ستجمع
+          قريش عشرة آلاف مقاتل من قبائل متعددة. أحد كانت البروفة، والأحزاب ستكون المحاولة الأخيرة.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. ul + insight -->
+    <section id="quraysh-army">
+      <h2>جيش قريش — القوة والتنظيم</h2>
+      <p>
+        في شوال من السنة الثالثة للهجرة خرج جيش قريش من مكة بقوة لم تشهدها الجزيرة منذ زمن.
+        كان <a class="person-link" href="persons.html">أبو سفيان بن حرب</a> القائد العام، ومعه قادة ميدانيون أكفاء:
+      </p>
+      <ul>
+        <li><strong>العدد:</strong> ثلاثة آلاف مقاتل — ثلاثة أضعاف جيش بدر. معهم ٢٠٠ فارس و٧٠٠ دارع، وثلاثة آلاف بعير.</li>
+        <li><strong>القيادة:</strong> <a class="person-link" href="persons.html">أبو سفيان</a> قائدًا عامًّا، و<a class="person-link" href="persons.html">خالد بن الوليد</a> على خيّالة الميمنة، و<a class="person-link" href="persons.html">عكرمة بن أبي جهل</a> على الميسرة.</li>
+        <li><strong>النساء المحرّضات:</strong> خرج مع الجيش ١٥ امرأة بقيادة <a class="person-link" href="persons.html">هند بنت عتبة</a> زوجة أبي سفيان، يضربن بالدفوف ويُنشدن الأشعار لإلهاب حماس المقاتلين ومنعهم من الفرار.</li>
+        <li><strong>لواء المشركين:</strong> حمله بنو عبد الدار — وهم حملة اللواء التقليديون في قريش. سيُقتل منهم تسعة حاملين للراية واحدًا تلو الآخر في المعركة.</li>
+      </ul>
+      <div class="insight">
+        <span class="insight-label">لماذا خرجت النساء مع الجيش؟</span>
+        <p>
+          حضور النساء لم يكن عشوائيًا — كانت خطة نفسية محسوبة. هند فقدت أباها عتبة وعمها شيبة
+          وأخاها الوليد في بدر. وجود الأمهات والزوجات خلف الجيش يعني أن أي مقاتل يفكر في الفرار
+          سيواجه عار النساء. هذا الضغط النفسي جعل مقاتلي قريش يقاتلون بضراوة غير مسبوقة.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. visual-grid + connection -->
+    <section id="plan">
+      <h2>الخطة النبوية — الشورى والجبل</h2>
+      <p>
+        لما بلغ النبيَّ ﷺ خبر زحف قريش استشار أصحابه: هل نبقى في المدينة وندافع من داخلها، أم
+        نخرج لملاقاتهم؟ كان رأيه ﷺ البقاء في المدينة والقتال في شوارعها — حيث المدينة محصّنة
+        طبيعيًّا. لكن الشباب الذين فاتتهم بدر تحمّسوا للخروج، فنزل ﷺ عند رأي الأغلبية.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3D4;</span>
+          <p class="visual-title">جبل أحد كظهر</p>
+          <p class="visual-text">اختار النبي ﷺ موقعًا يجعل جبل أحد خلف المسلمين فلا يُؤتَوا من ورائهم، والمدينة أمامهم.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3F9;</span>
+          <p class="visual-title">٥٠ راميًا على عينين</p>
+          <p class="visual-text">وضع ﷺ ٥٠ راميًا على جبل الرماة (عينين) بقيادة <a class="person-link" href="persons.html">عبد الله بن جبير</a> لحماية الثغرة الوحيدة في الظهر.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x2694;</span>
+          <p class="visual-title">٧٠٠ مقاتل</p>
+          <p class="visual-text">خرج النبي ﷺ بألف مقاتل، لكن <a class="person-link" href="persons.html">عبد الله بن أُبي</a> انسحب بثلاثمئة، فبقي ٧٠٠ مقابل ٣٠٠٠.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F6E1;</span>
+          <p class="visual-title">أمر صارم للرماة</p>
+          <p class="visual-text">قال ﷺ للرماة: «لا تبرحوا مكانكم وإن رأيتمونا تخطّفنا الطير» — أمر واضح لا يحتمل التأويل.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">الشورى في أحد — درس دائم</span>
+        <p>
+          النبي ﷺ أخذ برأي الأغلبية رغم أن رأيه الشخصي كان مختلفًا. ثم لما لبس لأمته (درعه)
+          رفض التراجع حين عاد بعضهم يعتذرون ويطلبون البقاء، وقال: «ما كان لنبي إذا لبس لأمته
+          أن يضعها حتى يحكم الله بينه وبين عدوه». مبدأ الالتزام بالقرار بعد الشورى سيصبح
+          قاعدة في الفقه السياسي الإسلامي.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. blockquote + insight -->
+    <section id="munafiqun">
+      <h2>انسحاب المنافقين — أول كشف عملي للنفاق</h2>
+      <p>
+        في الطريق إلى أحد انسحب <a class="person-link" href="persons.html">عبد الله بن أُبي بن سلول</a> بثلث الجيش
+        (ثلاثمئة رجل) بحجة أن النبي ﷺ لم يأخذ برأيه في البقاء داخل المدينة. كان هذا أول انكشاف
+        عملي واسع لظاهرة النفاق في المجتمع المدني.
+      </p>
+      <blockquote>
+        قال ابن أُبي لأصحابه: «أطاعهم وعصاني! ما ندري علامَ نقتل أنفسنا ههنا أيها الناس؟» فانسحب
+        ومعه ثلاثمئة، فتبعهم <a class="person-link" href="persons.html">عبد الله بن عمرو بن حرام</a> يناشدهم:
+        «تعالوا قاتلوا في سبيل الله أو ادفعوا!» فقالوا: «لو نعلم أنكم تقاتلون لم نرجع.»
+      </blockquote>
+      <div class="insight">
+        <span class="insight-label">لماذا لم يُعاقبهم النبي ﷺ؟</span>
+        <p>
+          النبي ﷺ ترك ابن أُبي ينسحب دون عقوبة — وهذا قرار سياسي بالغ الحكمة. معاقبة ثلث الجيش
+          قبل المعركة ستشقّ الصف أكثر. وتركهم يذهبون كشفهم أمام المجتمع بلا حاجة إلى محاكمة.
+          بعد أحد أنزل الله: ﴿ما كَانَ اللَّهُ لِيَذَرَ الْمُؤْمِنِينَ عَلَى مَا أَنتُمْ عَلَيْهِ حَتَّى
+          يَمِيزَ الْخَبِيثَ مِنَ الطَّيِّبِ﴾ — أي أن المحنة كانت ضرورية لفرز الصادقين من المنافقين.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. tribe-table + connection -->
+    <section id="battle-start">
+      <h2>بداية المعركة — تفوّق المسلمين</h2>
+      <p>
+        بدأ القتال صباح يوم السبت ٧ شوال في السنة الثالثة للهجرة. في الجولة الأولى أبدى المسلمون
+        بطولات فائقة رغم قلتهم. حملة لواء قريش من بني عبد الدار سقطوا واحدًا تلو الآخر، وبدأ
+        جيش المشركين يتراجع وينهزم:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr><th>المبارز / الحدث</th><th>الدور</th><th>النتيجة</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a class="person-link" href="persons.html">حمزة بن عبد المطلب</a></td><td>أسد الله — قاتل في القلب بسيفين</td><td>حصد عددًا كبيرًا من المشركين قبل استشهاده</td></tr>
+          <tr><td><a class="person-link" href="persons.html">علي بن أبي طالب</a></td><td>حامل راية المسلمين</td><td>قاتل ببطولة فائقة ودافع عن النبي ﷺ</td></tr>
+          <tr><td><a class="person-link" href="persons.html">أبو دجانة</a></td><td>تقلّد سيف النبي ﷺ بعد أن طلب مقاتلًا يأخذ حقه</td><td>اخترق صفوف المشركين بعصابته الحمراء</td></tr>
+          <tr><td>حملة لواء بني عبد الدار</td><td>حملوا لواء قريش واحدًا بعد الآخر</td><td>قُتل منهم تسعة حتى سقط اللواء أرضًا</td></tr>
+          <tr><td>نساء قريش</td><td>كنّ يحرّضن خلف الجيش بالدفوف والأشعار</td><td>لما رأين الانهزام ولّين هاربات نحو الجبل</td></tr>
+        </tbody>
+      </table>
+      <div class="connection">
+        <span class="connection-label">سيف النبي ﷺ وأبو دجانة</span>
+        <p>
+          رفع النبي ﷺ سيفه وقال: «من يأخذ هذا السيف بحقه؟» فأحجم الناس حتى قام
+          <a class="person-link" href="persons.html">أبو دجانة سماك بن خرشة</a> فقال: «وما حقه يا رسول الله؟»
+          قال: «أن تضرب به العدو حتى ينحني». فأخذه وعصب رأسه بعصابة حمراء — كانت علامته
+          في الحرب أنه سيقاتل حتى الموت — ثم مشى يتبختر بين الصفّين. قال النبي ﷺ: «إنها لمِشية
+          يبغضها الله إلا في هذا الموطن.»
+        </p>
+      </div>
+    </section>
+
+    <!-- 7. flowline + insight -->
+    <section id="archers">
+      <h2>خطأ الرماة — نقطة التحول الكارثية</h2>
+      <p>
+        كان النصر حاسمًا في الجولة الأولى. المشركون انهزموا وفرّوا تاركين معسكرهم وغنائمهم.
+        لكن ما حدث بعد ذلك غيّر مجرى المعركة تمامًا في دقائق معدودة:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">الغنائم تُغري الرماة</p>
+          <p class="flow-text">رأى الرماة على جبل عينين أن المسلمين يجمعون الغنائم والمعركة «انتهت». فقال بعضهم: «ماذا نصنع هنا؟ انتهى القتال، هيّا ننزل للغنائم!»</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">تذكير عبد الله بن جبير</p>
+          <p class="flow-text">ذكّرهم قائدهم <a class="person-link" href="persons.html">عبد الله بن جبير</a> بأمر النبي ﷺ الصريح: «لا تبرحوا مكانكم.» لكن أغلبهم تأوّلوا الأمر وقالوا: «إنما أراد النبي ﷺ ألا ننزل قبل النصر وقد تحقق.»</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">نزول ٤٠ من ٥٠ راميًا</p>
+          <p class="flow-text">نزل أربعون راميًا تاركين مواقعهم. بقي عبد الله بن جبير مع عشرة فقط — عدد لا يكفي لحماية الثغرة.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">التفاف خالد بن الوليد</p>
+          <p class="flow-text">رصد <a class="person-link" href="persons.html">خالد بن الوليد</a> — بعينه العسكرية الفذة — خلوّ الجبل. فالتفّ بخيّالته من خلف الجبل، قتل عبد الله بن جبير ومن بقي معه، ثم هاجم المسلمين من ظهورهم.</p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">الدرس الذي لا يُنسى</span>
+        <p>
+          الأمر النبوي كان واضحًا لا يحتمل أي تأويل: «وإن رأيتمونا تخطّفنا الطير» — أي حتى لو رأيتم
+          أننا نُقتل لا تنزلوا. لكن الرماة اجتهدوا فأخطأوا — ظنوا أن الأمر مرتبط بظرف زال. هذه
+          الحادثة أصبحت القاعدة الذهبية في الفقه العسكري الإسلامي: أمر القائد لا يُعاد تأويله في
+          الميدان مهما تغيرت الظروف.
+        </p>
+      </div>
+    </section>
+
+    <!-- 8. ul + connection -->
+    <section id="hamza">
+      <h2>مقتل حمزة وإصابة النبي ﷺ</h2>
+      <p>
+        تحوّل المشهد في لحظات: المسلمون بين نارين — هجوم خالد من الخلف ورجوع جيش قريش من الأمام.
+        في هذه الفوضى وقعت أحداث مأساوية:
+      </p>
+      <ul>
+        <li><strong>استشهاد حمزة:</strong> اغتاله <a class="person-link" href="persons.html">وحشي بن حرب</a> — عبد حبشي أُمِر باستهداف حمزة تحديدًا مقابل حريته. رماه بحربة وهو يقاتل فأصابته في أسفل بطنه. ثم جاءت <a class="person-link" href="persons.html">هند بنت عتبة</a> فشقّت بطنه وأخرجت كبده ولاكتها ثأرًا لأبيها.</li>
+        <li><strong>إصابة النبي ﷺ:</strong> أُصيب ﷺ بحجر كسر رباعيته اليمنى السفلى وشقّ شفته، وغارت حلقتان من المِغفر في وجنته. سال الدم على وجهه الشريف فجعل يمسحه ويقول: «كيف يُفلح قوم شجّوا نبيّهم؟»</li>
+        <li><strong>إشاعة مقتل النبي ﷺ:</strong> صرخ أحدهم: «إن محمدًا قد قُتل!» فانهارت معنويات كثير من المسلمين وألقوا أسلحتهم. قُتل <a class="person-link" href="persons.html">مصعب بن عمير</a> حامل الراية — وكان يشبه النبي ﷺ — فظنّ المشركون أنهم قتلوا محمدًا.</li>
+        <li><strong>دفاع الحلقة المؤمنة:</strong> تحلّق حول النبي ﷺ نفر قليل يدافعون عنه بأجسادهم: <a class="person-link" href="persons.html">أبو بكر</a> و<a class="person-link" href="persons.html">طلحة بن عبيد الله</a> و<a class="person-link" href="persons.html">سعد بن أبي وقاص</a> و<a class="person-link" href="persons.html">أم عمارة نسيبة بنت كعب</a>. طلحة وحده أُصيب بأكثر من سبعين جرحًا وشُلّت يده وهو يحمي النبي ﷺ.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">وحشي وهند — المفارقة القادمة</span>
+        <p>
+          وحشي بن حرب الذي قتل حمزة سيُسلم يوم فتح مكة، وسيقتل بنفس الحربة مسيلمة الكذاب
+          في حروب الردة. وهند بنت عتبة ستُسلم أيضًا يوم الفتح وتبايع النبي ﷺ. التحوّلات
+          في السيرة لا تسير بخط مستقيم — الأعداء اليوم قد يكونون جنود الإسلام غدًا.
+        </p>
+      </div>
+    </section>
+
+    <!-- 9. visual-grid + insight -->
+    <section id="steadfast">
+      <h2>الثبات بعد المحنة</h2>
+      <p>
+        رغم هول المصيبة لم تكن نهاية المعركة نهاية الأمة. بل ظهرت نماذج من الثبات أضاءت
+        وسط الظلام:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4E2;</span>
+          <p class="visual-title">كعب بن مالك يصرخ</p>
+          <p class="visual-text">أول من عرف النبي ﷺ حيًّا كان <a class="person-link" href="persons.html">كعب بن مالك</a>، فصرخ: «يا معشر المسلمين أبشروا! هذا رسول الله ﷺ!» فعادت الروح إلى الصفوف.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F6E1;</span>
+          <p class="visual-title">الانسحاب المنظّم</p>
+          <p class="visual-text">انسحب النبي ﷺ مع أصحابه إلى شِعب جبل أحد في حركة دفاعية ذكية حمتهم من الملاحقة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F525;</span>
+          <p class="visual-title">أبو سفيان يتفاخر</p>
+          <p class="visual-text">صعد أبو سفيان ونادى: «أفيكم محمد؟» ثلاثًا. فقال النبي ﷺ: «لا تجيبوه.» ثم قال: «اعلُ هُبل!» فردّ عمر: «الله أعلى وأجلّ!»</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">الخروج إلى حمراء الأسد في اليوم التالي</span>
+        <p>
+          في اليوم التالي مباشرة — والمسلمون مثخنون بالجراح — أمر النبي ﷺ بالخروج لمطاردة
+          قريش حتى حمراء الأسد (على بُعد ٨ أميال من المدينة). لم يخرج إلا من شهد أحدًا.
+          الهدف: إرسال رسالة لقريش بأن المسلمين لم يُهزموا نفسيًّا. وفعلًا، لما بلغ
+          أبا سفيان أن المسلمين يلاحقونه قرر العودة إلى مكة دون محاولة دخول المدينة.
+          الآية نزلت: ﴿الَّذِينَ اسْتَجَابُوا لِلَّهِ وَالرَّسُولِ مِن بَعْدِ مَا أَصَابَهُمُ الْقَرْحُ﴾.
+        </p>
+      </div>
+    </section>
+
+    <!-- 10. card-grid + connection -->
+    <section id="lessons">
+      <h2>الدروس القرآنية — ٦٠ آية من آل عمران</h2>
+      <p>
+        لم يمرّ القرآن على أحد مرور الكرام — بل نزلت نحو ستين آية من سورة آل عمران (١٢١-١٧٩)
+        تُحلّل المعركة بدقة وتستخرج الدروس للأمة كلها:
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. الطاعة أساس النصر</h4>
+          <p>﴿وَلَقَدْ صَدَقَكُمُ اللَّهُ وَعْدَهُ إِذْ تَحُسُّونَهُم بِإِذْنِهِ حَتَّى إِذَا فَشِلْتُمْ وَتَنَازَعْتُمْ فِي الْأَمْرِ وَعَصَيْتُم﴾ — النصر كان محققًا ثم ضاع بالمعصية.</p>
+        </article>
+        <article class="card">
+          <h4>٢. حب الدنيا آفة</h4>
+          <p>﴿مِنكُم مَّن يُرِيدُ الدُّنْيَا وَمِنكُم مَّن يُرِيدُ الْآخِرَةَ﴾ — وصف قرآني صريح لانقسام الرماة بين من نزل للغنائم ومن ثبت.</p>
+        </article>
+        <article class="card">
+          <h4>٣. محمد رسول لا أكثر</h4>
+          <p>﴿وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ قَدْ خَلَتْ مِن قَبْلِهِ الرُّسُلُ أَفَإِن مَّاتَ أَوْ قُتِلَ انقَلَبْتُمْ﴾ — تعليق على انهيار من سمع خبر مقتله.</p>
+        </article>
+        <article class="card">
+          <h4>٤. تمحيص الصفوف</h4>
+          <p>﴿مَا كَانَ اللَّهُ لِيَذَرَ الْمُؤْمِنِينَ عَلَى مَا أَنتُمْ عَلَيْهِ حَتَّى يَمِيزَ الْخَبِيثَ مِنَ الطَّيِّبِ﴾ — المحنة كشفت المنافقين.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">أبو بكر وهذه الآية يوم وفاة النبي ﷺ</span>
+        <p>
+          الآية ﴿وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ﴾ التي نزلت بعد أحد هي نفسها التي سيتلوها
+          <a class="person-link" href="persons.html">أبو بكر الصديق</a> يوم وفاة النبي ﷺ حين انهار الناس —
+          فقال: «من كان يعبد محمدًا فإن محمدًا قد مات، ومن كان يعبد الله فإن الله حيّ لا يموت.»
+          الدرس الذي زُرع في أحد أثمر بعد عشر سنوات.
+        </p>
+      </div>
+    </section>
+
+    <!-- 11. card-grid (summary) -->
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. قريش جاءت بثلاثة آلاف</h4>
+          <p>ثأرًا لبدر بتمويل من أرباح قافلة أبي سفيان وتحالفات قبلية واسعة.</p>
+        </article>
+        <article class="card">
+          <h4>٢. الشورى ثم الالتزام</h4>
+          <p>النبي ﷺ نزل عند رأي الأغلبية بالخروج ثم رفض التراجع بعد القرار.</p>
+        </article>
+        <article class="card">
+          <h4>٣. ابن أُبي كشف المنافقين</h4>
+          <p>انسحاب ثلاثمئة قبل المعركة فضح النفاق وميّز الصادقين.</p>
+        </article>
+        <article class="card">
+          <h4>٤. خطأ الرماة حوّل النصر</h4>
+          <p>نزولهم عن الجبل مكّن خالد بن الوليد من الالتفاف وضرب المسلمين من الخلف.</p>
+        </article>
+        <article class="card">
+          <h4>٥. ٧٠ شهيدًا بينهم حمزة</h4>
+          <p>أُصيب النبي ﷺ وسقط سبعون شهيدًا أبرزهم حمزة ومصعب بن عمير.</p>
+        </article>
+        <article class="card">
+          <h4>٦. حمراء الأسد أعادت الهيبة</h4>
+          <p>الخروج لمطاردة قريش في اليوم التالي أرسل رسالة بأن المسلمين لم يُكسروا.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch16-score">٠ / ٢٠</span>
+      </div>
+      <div id="ch16-quiz-container"></div>
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch16-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+  (function(){
+    const toArabicNum=n=>n.toString().replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+    const sections=[
+      {title:'أسباب الغزوة وجيش قريش',questions:[
+        {t:'سبب غزوة أحد',q:'ما السبب الرئيسي لغزوة أحد؟',o:['منع القوافل التجارية','الثأر لهزيمة بدر','الاستيلاء على المدينة','نقض معاهدة'],a:1},
+        {t:'تمويل الحملة',q:'من أين موّلت قريش حملتها العسكرية في أحد؟',o:['من أموال الكعبة','من أرباح قافلة أبي سفيان التي نجت قبل بدر','من فارس','من تبرعات القبائل فقط'],a:1},
+        {t:'عدد جيش قريش',q:'كم بلغ عدد جيش قريش في أحد؟',o:['ألف مقاتل','ألفا مقاتل','ثلاثة آلاف مقاتل','خمسة آلاف مقاتل'],a:2},
+        {t:'قائد جيش قريش',q:'مَن كان القائد العام لجيش قريش في أحد؟',o:['أبو جهل','أبو سفيان بن حرب','خالد بن الوليد','عكرمة بن أبي جهل'],a:1},
+        {t:'خيّالة الميمنة',q:'مَن قاد خيّالة الميمنة في جيش قريش؟',o:['عكرمة بن أبي جهل','عمرو بن العاص','خالد بن الوليد','صفوان بن أمية'],a:2}
+      ]},
+      {title:'الخطة النبوية وانسحاب المنافقين',questions:[
+        {t:'رأي النبي ﷺ',q:'ما كان رأي النبي ﷺ الشخصي في خطة المعركة؟',o:['الخروج لملاقاة العدو','البقاء في المدينة والدفاع من داخلها','الهجوم المباشر على مكة','التحصن في جبل أحد'],a:1},
+        {t:'عدد جيش المسلمين',q:'كم بقي مع النبي ﷺ بعد انسحاب المنافقين؟',o:['ألف مقاتل','سبعمئة مقاتل','خمسمئة مقاتل','ثلاثمئة مقاتل'],a:1},
+        {t:'قائد الرماة',q:'مَن عيّنه النبي ﷺ قائدًا لخمسين راميًا على جبل الرماة؟',o:['سعد بن أبي وقاص','عبد الله بن جبير','أبو دجانة','حمزة بن عبد المطلب'],a:1},
+        {t:'أمر الرماة',q:'ما الأمر الذي أعطاه النبي ﷺ للرماة؟',o:['أن ينزلوا إذا انتصر المسلمون','أن يتقدموا مع الجيش','ألا يبرحوا مكانهم حتى لو تخطّفتهم الطير','أن يهاجموا فرسان العدو'],a:2},
+        {t:'عبد الله بن أُبي',q:'كم انسحب مع عبد الله بن أُبي من الجيش؟',o:['مئة رجل','مئتا رجل','ثلاثمئة رجل','خمسمئة رجل'],a:2}
+      ]},
+      {title:'أحداث المعركة',questions:[
+        {t:'حامل سيف النبي ﷺ',q:'مَن أخذ سيف النبي ﷺ وقاتل به في أحد؟',o:['علي بن أبي طالب','حمزة بن عبد المطلب','أبو دجانة سماك بن خرشة','الزبير بن العوام'],a:2},
+        {t:'حملة اللواء',q:'كم قُتل من حملة لواء قريش من بني عبد الدار في أحد؟',o:['ثلاثة','خمسة','سبعة','تسعة'],a:3},
+        {t:'عدد الرماة الذين نزلوا',q:'كم راميًا نزل عن جبل الرماة مخالفًا الأمر؟',o:['عشرون','ثلاثون','أربعون','خمسون'],a:2},
+        {t:'مقتل حمزة',q:'مَن قتل حمزة بن عبد المطلب رضي الله عنه؟',o:['أبو سفيان','خالد بن الوليد','وحشي بن حرب','عكرمة بن أبي جهل'],a:2},
+        {t:'إصابة النبي ﷺ',q:'ما الذي أُصيب به النبي ﷺ في أحد؟',o:['كُسر ذراعه','كُسرت رباعيته وشُجّ وجهه وغارت حلقتا المِغفر في وجنته','أُصيب في ساقه فقط','لم يُصب بأذى'],a:1}
+      ]},
+      {title:'النتائج والدروس',questions:[
+        {t:'عدد شهداء المسلمين',q:'كم بلغ عدد شهداء المسلمين في أحد؟',o:['عشرون','أربعون','سبعون','مئة'],a:2},
+        {t:'إشاعة مقتل النبي',q:'من الذي قُتل وكان يُشبه النبي ﷺ مما أدى لإشاعة مقتله؟',o:['حمزة بن عبد المطلب','مصعب بن عمير','طلحة بن عبيد الله','سعد بن أبي وقاص'],a:1},
+        {t:'حمراء الأسد',q:'ما الذي فعله النبي ﷺ في اليوم التالي لأحد؟',o:['أمر بالبقاء في المدينة','خرج لمطاردة قريش حتى حمراء الأسد','أرسل وفدًا لمفاوضة قريش','حاصر يهود بني قينقاع'],a:1},
+        {t:'آيات آل عمران',q:'كم آية تقريبًا نزلت في سورة آل عمران تحلّل غزوة أحد؟',o:['عشر آيات','عشرون آية','أربعون آية','ستون آية'],a:3},
+        {t:'درس قرآني',q:'ما الذي وصفه القرآن بسبب نزول الرماة عن مواقعهم؟',o:['الكفر بالنعمة','حب الدنيا عند بعضهم: «منكم من يريد الدنيا ومنكم من يريد الآخرة»','الخيانة العظمى','ضعف الإيمان المطلق'],a:1}
+      ]}
+    ];
+    function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+    const totalQ=sections.reduce((s,sec)=>s+sec.questions.length,0);
+    let correct=0,answered=0;
+    const scoreEl=document.getElementById('ch16-score'),container=document.getElementById('ch16-quiz-container'),retryBtn=document.getElementById('ch16-retry');
+    function updateScore(){scoreEl.textContent=toArabicNum(correct)+' / '+toArabicNum(totalQ)}
+    function buildQuiz(){
+      correct=0;answered=0;container.innerHTML='';retryBtn.style.display='none';updateScore();
+      let qNum=0;
+      sections.forEach(function(sec,sIdx){
+        const details=document.createElement('details');details.className='quiz-section-block';if(sIdx===0)details.open=true;
+        const summary=document.createElement('summary');summary.innerHTML=sec.title+'<span class="q-arrow">&#x276F;</span>';details.appendChild(summary);
+        const body=document.createElement('div');body.className='q-section-body';
+        var qs=sec.questions.slice();shuffle(qs);
+        qs.forEach(function(item){
+          qNum++;
+          var card=document.createElement('article');card.className='q-card';
+          var h=document.createElement('h4');h.textContent='سؤال '+toArabicNum(qNum)+': '+item.t;card.appendChild(h);
+          var p=document.createElement('p');p.textContent=item.q;card.appendChild(p);
+          var optsDiv=document.createElement('div');optsDiv.className='q-opts';
+          var fb=document.createElement('div');fb.className='q-feedback';
+          var indices=item.o.map(function(_,i){return i});shuffle(indices);
+          indices.forEach(function(origIdx){
+            var btn=document.createElement('button');btn.textContent=item.o[origIdx];
+            btn.addEventListener('click',function(){
+              if(card.dataset.done)return;card.dataset.done='1';answered++;
+              optsDiv.querySelectorAll('button').forEach(function(b){b.classList.add('q-off')});
+              optsDiv.querySelectorAll('button').forEach(function(b,bIdx){if(indices[bIdx]===item.a)b.classList.add('q-correct')});
+              if(origIdx===item.a){btn.classList.add('q-correct');fb.textContent='إجابة صحيحة!';fb.className='q-feedback q-correct';correct++}
+              else{btn.classList.add('q-wrong');fb.textContent='إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';fb.className='q-feedback q-wrong'}
+              updateScore();if(answered===totalQ)retryBtn.style.display='inline-block';
+            });optsDiv.appendChild(btn);
+          });
+          card.appendChild(optsDiv);card.appendChild(fb);body.appendChild(card);
+        });
+        details.appendChild(body);container.appendChild(details);
+      });
+    }
+    retryBtn.addEventListener('click',function(){buildQuiz();document.getElementById('quiz-root').scrollIntoView({behavior:'smooth'})});
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>أُعِدَّ الملخص استنادًا إلى فصل «غزوة أحد» من كتاب «الرحيق المختوم»</footer>
+
+</body>
+</html>
