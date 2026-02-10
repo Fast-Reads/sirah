@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>صلح الحديبية — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#1e3a5f;--navy-deep:#0d1b2a;--gold:#b8860b;--gold-light:#f5e6c8;--gold-pale:#fdf6e3;--cream:#faf8f2;--white:#ffffff;--text:#2d3436;--text-light:#636e72;--border:#e8e0d4;--shadow:rgba(30,58,95,0.08);--radius:14px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased}
+    .hero{background:linear-gradient(160deg,#0a1628 0%,#132f4c 40%,#1e3a5f 100%);color:#fff;padding:3.5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 20% 30%,rgba(184,134,11,0.3) 50%,transparent 50%),radial-gradient(1px 1px at 60% 20%,rgba(255,255,255,0.15) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 80% 60%,rgba(184,134,11,0.2) 50%,transparent 50%),radial-gradient(1px 1px at 40% 70%,rgba(255,255,255,0.1) 50%,transparent 50%),radial-gradient(1px 1px at 10% 80%,rgba(255,255,255,0.12) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 90% 40%,rgba(184,134,11,0.15) 50%,transparent 50%);background-size:200px 200px;animation:twinkle 8s ease-in-out infinite alternate}
+    @keyframes twinkle{from{opacity:0.6}to{opacity:1}}
+    .hero>*{position:relative;z-index:1}
+    .hero-ornament{width:60px;height:3px;background:var(--gold);margin:0 auto 1.5rem;border-radius:2px}
+    .hero h1{font-family:'Amiri',serif;font-size:2.4rem;font-weight:700;letter-spacing:0.5px}
+    .hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.7);max-width:620px;margin:0.8rem auto 0}
+    .breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:0.6rem 1rem;display:flex;justify-content:center;align-items:center;gap:0.4rem;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px var(--shadow)}
+    .breadcrumb a{text-decoration:none;color:var(--text-light);font-size:0.85rem;font-weight:500;padding:0.4rem 0.85rem;border-radius:8px;transition:all 0.2s;white-space:nowrap}
+    .breadcrumb a:hover{background:var(--gold-pale);color:var(--navy)}
+    .breadcrumb .sep{color:var(--border);font-size:0.8rem}
+    .breadcrumb .current{font-size:0.85rem;font-weight:700;color:var(--navy)}
+    .toc{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;max-width:880px;margin:1.5rem auto 0;padding:0 1.5rem}
+    .toc a{padding:0.4rem 1rem;border-radius:8px;background:var(--white);border:1px solid var(--border);color:var(--navy);text-decoration:none;font-size:0.85rem;font-weight:500;transition:all 0.2s}
+    .toc a:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    main{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem 1rem}
+    section{margin-bottom:1.5rem}
+    h2{font-family:'Amiri',serif;color:var(--navy);border-right:3px solid var(--gold);padding-right:0.75rem;margin-top:2.5rem;margin-bottom:0.8rem;font-size:1.5rem}
+    h3{font-family:'Amiri',serif;color:var(--navy);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.5rem}
+    p{color:var(--text);text-align:justify;font-size:1rem;margin:0.5rem 0 1.5rem}
+    ul{list-style:none;padding:0;margin:0 0 1.5rem}
+    ul li{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.6rem;border-right:3px solid var(--gold-light)}
+    .visual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0 0.5rem}
+    .visual-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s}
+    .visual-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px var(--shadow)}
+    .visual-icon{font-size:2rem;margin-bottom:0.4rem;display:block}
+    .visual-title{font-weight:600;margin:0 0 0.35rem;color:var(--navy)}
+    .visual-text{margin:0;color:var(--text-light);line-height:1.5;font-size:0.95rem}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0 1.5rem}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.3rem;transition:transform 0.2s ease,box-shadow 0.2s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px var(--shadow)}
+    .card h4{margin:0 0 0.4rem;color:var(--navy);font-size:1rem;font-weight:700}
+    .card p{margin:0;font-size:0.95rem;color:var(--text-light)}
+    .flowline{border-right:3px solid var(--gold-light);margin-top:1.3rem;padding-right:1.3rem}
+    .flow-item{position:relative;margin-bottom:1.2rem;padding:0.8rem 1rem 0.8rem 0;background:var(--white);border:1px solid var(--border);border-radius:10px;transition:box-shadow 0.2s ease}
+    .flow-item:hover{box-shadow:0 8px 20px var(--shadow)}
+    .flow-item::before{content:"";position:absolute;right:-1.6rem;top:50%;transform:translateY(-50%);width:14px;height:14px;background:var(--gold);border:3px solid var(--white);border-radius:50%;box-shadow:0 0 0 2px var(--gold-light)}
+    .flow-title{margin:0;color:var(--navy);font-weight:600}
+    .flow-text{margin:0.3rem 0 0;font-size:0.95rem;color:var(--text-light);line-height:1.6}
+    .tribe-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:0.95rem}
+    .tribe-table th{background:var(--navy);color:#fff;padding:0.75rem 1rem;text-align:right;font-family:'Amiri',serif;font-weight:700}
+    .tribe-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--border);background:var(--white)}
+    .tribe-table tr:hover td{background:var(--gold-pale)}
+    .insight{background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .insight-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--gold);margin-bottom:0.4rem}
+    .insight p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    .connection{background:linear-gradient(135deg,#eef3f9 0%,#f5f0e8 100%);border:1px solid #d4dce8;border-right:3px solid var(--navy);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .connection-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--navy);margin-bottom:0.4rem}
+    .connection p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    a.person-link{color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-light);padding-bottom:0.05rem}
+    a.person-link:hover{color:var(--navy);border-bottom-color:var(--navy)}
+    blockquote{background:var(--gold-pale);border-right:4px solid var(--gold);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1rem 0 1.5rem;font-family:'Amiri',serif;font-size:1.1rem;color:var(--navy);line-height:2}
+    .quiz-wrapper{margin-top:3rem;padding-top:2.5rem;border-top:2px solid var(--gold-light)}
+    .quiz-wrapper>h2{text-align:center;border-right:none;padding-right:0;font-size:1.6rem;margin-bottom:0.3rem}
+    .quiz-intro{text-align:center;color:var(--text-light);font-size:0.92rem;margin:0 auto 1.5rem;max-width:600px}
+    .quiz-score-bar{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 12px var(--shadow);display:flex;justify-content:space-between;align-items:center}
+    .quiz-score-bar span{font-size:0.9rem;color:var(--text-light);font-weight:500}
+    .quiz-score-bar .q-score{font-family:'Amiri',serif;font-size:1.15rem;color:var(--navy);font-weight:700}
+    .quiz-section-block{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1rem;box-shadow:0 4px 24px var(--shadow);overflow:hidden}
+    .quiz-section-block summary{cursor:pointer;padding:1rem 1.4rem;font-weight:700;font-size:1.02rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;transition:background 0.2s;list-style:none}
+    .quiz-section-block summary::-webkit-details-marker{display:none}
+    .quiz-section-block summary::marker{content:""}
+    .quiz-section-block summary:hover{background:rgba(245,230,200,0.25)}
+    .quiz-section-block summary .q-arrow{transition:transform 0.3s;font-size:0.8rem;color:var(--text-light)}
+    .quiz-section-block[open] summary .q-arrow{transform:rotate(90deg)}
+    .q-section-body{padding:0 1.4rem 1.4rem}
+    .q-card{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:1.15rem 1.3rem;margin-top:0.9rem}
+    .q-card h4{margin:0 0 0.35rem;color:var(--navy);font-size:0.95rem;font-weight:700}
+    .q-card p{margin:0 0 0.75rem;font-size:0.92rem;color:var(--text);text-align:right}
+    .q-opts{display:flex;flex-direction:column;gap:0.45rem}
+    .q-opts button{border:1px solid var(--border);background:var(--white);border-radius:10px;padding:0.65rem 1rem;font-size:0.92rem;font-family:'Tajawal',sans-serif;text-align:right;cursor:pointer;transition:all 0.2s;color:var(--text)}
+    .q-opts button:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    .q-opts button.q-correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:600}
+    .q-opts button.q-wrong{border-color:#c53030;background:#fde8e8;color:#c53030}
+    .q-opts button.q-off{pointer-events:none;opacity:0.6}
+    .q-feedback{margin-top:0.5rem;font-weight:700;font-size:0.86rem;min-height:1.3em}
+    .q-feedback.q-correct{color:#2e7d32}
+    .q-feedback.q-wrong{color:#c53030}
+    .quiz-retry-wrap{text-align:center;margin-top:1.5rem}
+    .quiz-retry-btn{display:inline-block;background:var(--navy);color:#fff;border:none;border-radius:10px;padding:0.75rem 2.2rem;font-size:1rem;font-family:'Tajawal',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s,transform 0.2s}
+    .quiz-retry-btn:hover{background:#14293f;transform:translateY(-2px)}
+    footer{text-align:center;color:var(--text-light);font-size:0.82rem;border-top:1px solid var(--border);padding:2rem 1.5rem;margin-top:3rem}
+    @media(max-width:700px){.hero h1{font-size:1.9rem}.hero{padding:2.5rem 1.2rem 3rem}main{padding:1.5rem 1rem 1rem}.visual-grid,.card-grid{grid-template-columns:1fr}.breadcrumb a{font-size:0.78rem;padding:0.35rem 0.6rem}.tribe-table{font-size:0.85rem}.quiz-score-bar{flex-direction:column;gap:0.5rem;text-align:center}.q-section-body{padding:0 1rem 1rem}.toc{gap:0.35rem}}
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>صلح الحديبية</h1>
+    <p class="subtitle">من رؤيا النبي ﷺ بالعمرة إلى بيعة الرضوان وصلح غيّر مسار التاريخ — الفتح المبين الذي لم تُرَق فيه قطرة دم</p>
+  </header>
+
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">صلح الحديبية</span>
+  </nav>
+
+  <div class="toc">
+    <a href="#why">لماذا هذا الفصل؟</a>
+    <a href="#background">السياق والانطلاق</a>
+    <a href="#quraysh-react">ردّ فعل قريش</a>
+    <a href="#bayah">بيعة الرضوان</a>
+    <a href="#negotiations">المفاوضات</a>
+    <a href="#treaty">بنود الصلح</a>
+    <a href="#aftermath">لماذا كان فتحًا مبينًا؟</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <section id="why">
+      <h2>لماذا ندرس هذا الفصل؟</h2>
+      <p>
+        في السنة السادسة للهجرة كانت المواجهة العسكرية بين المسلمين وقريش قد بلغت طريقًا مسدودًا:
+        قريش لم تستطع اقتحام المدينة في الأحزاب، والمسلمون لم يكونوا قادرين على دخول مكة بالقوة.
+        في هذه اللحظة بالذات رأى النبي ﷺ رؤيا أنه يدخل المسجد الحرام معتمرًا — فاتخذ قرارًا
+        فاجأ الجميع: الذهاب إلى مكة بلا سلاح. ما حدث بعدها كان أعظم درس في الفقه السياسي
+        والاستراتيجي في السيرة كلها.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح الفهم</span>
+        <p>
+          صلح الحديبية يبدو في ظاهره تنازلًا مُذلًّا — لكن القرآن سمّاه «فتحًا مبينًا».
+          هذا الفصل يعلّمك أن تنظر إلى ما وراء الظاهر: النبي ﷺ ربح السلام الذي كان يحتاجه
+          لنشر الدعوة بحرية، وفي عامين فقط تضاعف عدد المسلمين أضعافًا مضاعفة.
+          الحرب كانت تمنع الناس من سماع الإسلام — السلم فتح لهم الأبواب.
+        </p>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>السياق والانطلاق — ذو القعدة، السنة السادسة</h2>
+      <p>
+        رأى النبي ﷺ في المنام أنه يدخل المسجد الحرام هو وأصحابه محلّقين رؤوسهم ومقصّرين.
+        ورؤيا الأنبياء حق — فأعلن نيته أداء العمرة ودعا المسلمين للخروج معه. استجاب نحو
+        ١٤٠٠ صحابي (وقيل ١٥٠٠)، وأحرموا من ذي الحُلَيفة وساقوا معهم الهَدْي (٧٠ بدنة)
+        إعلانًا صريحًا أنهم جاءوا حُجّاجًا لا محاربين.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F319;</span>
+          <p class="visual-title">الرؤيا</p>
+          <p class="visual-text">رأى النبي ﷺ في منامه دخول المسجد الحرام — ورؤيا الأنبياء وحي يتحقق.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F465;</span>
+          <p class="visual-title">العدد</p>
+          <p class="visual-text">نحو ١٤٠٠ صحابي خرجوا مُحرِمين بلا سلاح حربي — فقط سلاح المسافر (السيوف في أغمادها).</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F42A;</span>
+          <p class="visual-title">الهَدْي</p>
+          <p class="visual-text">ساقوا ٧٠ بدنة مُقلَّدة — رسالة واضحة للعرب: هؤلاء عُمّار لا غُزاة.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">لماذا هذا التوقيت؟</span>
+        <p>
+          اختار النبي ﷺ شهر ذي القعدة — وهو من الأشهر الحُرُم التي يحرّم فيها العرب القتال
+          بالإجماع. هذا يعني أن أي اعتداء من قريش سيكون انتهاكًا صارخًا لأعراف العرب جميعًا،
+          ويُفقدهم شرعيتهم الأخلاقية أمام القبائل. كان النبي ﷺ يضع قريشًا في موقف لا تستطيع
+          فيه استخدام القوة دون فضيحة.
+        </p>
+      </div>
+    </section>
+
+    <section id="quraysh-react">
+      <h2>ردّ فعل قريش — بين الذعر والمكابرة</h2>
+      <p>
+        لما علمت قريش بمسير النبي ﷺ أصابها الذعر: إن صدّته عن البيت في شهر حرام فضحها العرب،
+        وإن تركته يدخل مكة اعتبره العرب انتصارًا. فاختارت الخيار الأصعب: المواجهة. أرسلت
+        <a class="person-link" href="persons.html">خالد بن الوليد</a> في ٢٠٠ فارس لاعتراض المسلمين عند كُراع الغَمِيم.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">قريش ترسل خالد بن الوليد</p>
+          <p class="flow-text">٢٠٠ فارس يتمركزون في كُراع الغَمِيم لمنع المسلمين من التقدم نحو مكة.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">النبي ﷺ يغيّر المسار</p>
+          <p class="flow-text">بدلًا من المواجهة، أخذ النبي ﷺ طريقًا وعرًا عبر ثنية المرار تجنّبًا للصدام — تأكيدًا على نيّة السلم.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">بروك القصواء في الحديبية</p>
+          <p class="flow-text">بركت ناقة النبي ﷺ (القصواء) عند الحديبية على أطراف الحرم. قال الصحابة: خلأت القصواء! فقال ﷺ: «ما خلأت، ولكن حبسها حابس الفيل» — إشارة إلى أن الله هو من أوقفهم هنا.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">معسكر المسلمين</p>
+          <p class="flow-text">نزل المسلمون في الحديبية — وهي بئر كادت تنضب فبصق فيها النبي ﷺ فجاشت بالماء الكثير.</p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لماذا تجنّب القتال؟</span>
+        <p>
+          النبي ﷺ كان قادرًا على المواجهة — لكنه جاء معتمرًا لا محاربًا. لو قاتل في الأشهر الحُرُم
+          لخسر المعركة الأخلاقية حتى لو ربح المعركة العسكرية. هذا الفقه الاستراتيجي هو ما جعل
+          القبائل المحايدة تنحاز لاحقًا إلى جانب المسلمين: رأوا أن قريشًا هي التي تصدّ عن البيت الحرام.
+        </p>
+      </div>
+    </section>
+
+    <section id="bayah">
+      <h2>بيعة الرضوان — تحت الشجرة</h2>
+      <p>
+        أرسل النبي ﷺ <a class="person-link" href="persons.html">عثمان بن عفان</a> إلى قريش ليبلّغهم أن المسلمين
+        جاءوا للعمرة لا للحرب. لكن قريشًا حبست عثمان، وشاعت إشاعة أنه قُتل. عندها دعا النبي ﷺ
+        أصحابه للبيعة تحت شجرة — فبايعوه على ألا يفرّوا حتى الموت:
+      </p>
+      <blockquote>
+        قال الله تعالى: ﴿لَقَدْ رَضِيَ اللَّهُ عَنِ الْمُؤْمِنِينَ إِذْ يُبَايِعُونَكَ تَحْتَ الشَّجَرَةِ
+        فَعَلِمَ مَا فِي قُلُوبِهِمْ فَأَنزَلَ السَّكِينَةَ عَلَيْهِمْ وَأَثَابَهُمْ فَتْحًا قَرِيبًا﴾ — سورة الفتح: ١٨
+      </blockquote>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F333;</span>
+          <p class="visual-title">الشجرة</p>
+          <p class="visual-text">بايعوا تحت شجرة سمرة في الحديبية — بيعة على الموت لا على الفرار.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F91D;</span>
+          <p class="visual-title">يد النبي ﷺ عن عثمان</p>
+          <p class="visual-text">ضرب النبي ﷺ بإحدى يديه على الأخرى وقال: «هذه يد عثمان» — فبايع عنه.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x2764;</span>
+          <p class="visual-title">رضا الله</p>
+          <p class="visual-text">نزل القرآن يشهد برضا الله عن هؤلاء المبايعين — شهادة ربانية خالدة.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">ستقابل هذا لاحقًا</span>
+        <p>
+          بيعة الرضوان أرعبت قريشًا — فأسرعت في الإفراج عن عثمان وبدأت المفاوضات الجدية.
+          والمبايعون تحت الشجرة سيحتلّون مكانة خاصة في التاريخ الإسلامي: شهد لهم القرآن بالرضوان،
+          ولن يدخل النار أحد منهم كما أخبر النبي ﷺ.
+        </p>
+      </div>
+    </section>
+
+    <section id="negotiations">
+      <h2>المفاوضات — سلسلة من الرسل</h2>
+      <p>
+        لم تبدأ المفاوضات مباشرة، بل مرّت بعدة مراحل ورسل من الطرفين، كل منها كشفت
+        جانبًا من موازين القوى والحسابات السياسية:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr><th>المرسَل</th><th>من طرف</th><th>ما حدث</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a class="person-link" href="persons.html">بُدَيل بن ورقاء الخزاعي</a></td>
+            <td>وسيط (خزاعة)</td>
+            <td>جاء يستطلع نيّة النبي ﷺ — فأخبره أنه جاء معتمرًا لا محاربًا. نقل الرسالة لقريش فاتهموه بالميل للمسلمين.</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">عروة بن مسعود الثقفي</a></td>
+            <td>قريش</td>
+            <td>جاء مفاوضًا، ولمس لحية النبي ﷺ أثناء الحديث فنهاه <a class="person-link" href="persons.html">المغيرة بن شعبة</a>. رجع لقريش وقال: «والله لقد وفدتُ على الملوك — كسرى وقيصر والنجاشي — فما رأيت ملكًا يعظّمه أصحابه كما يعظّم أصحاب محمد محمدًا.»</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">عثمان بن عفان</a></td>
+            <td>المسلمون</td>
+            <td>أرسله النبي ﷺ لقريش — حُبس، ثم أُشيع مقتله مما أدى إلى بيعة الرضوان.</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">سُهَيل بن عمرو</a></td>
+            <td>قريش</td>
+            <td>المفاوض الأخير — وقّع الصلح نيابة عن قريش. شروطه بدت قاسية على المسلمين.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">شهادة عروة بن مسعود</span>
+        <p>
+          شهادة عروة — وهو سيد ثقيف ولم يكن مسلمًا بعد — كانت أبلغ دعاية للمسلمين.
+          عاد يقول لقريش: رأيتهم يبتدرون وَضوءه، ويتسابقون إلى نُخامته، ولا يرفعون أصواتهم عنده.
+          هذا الوصف نُقل بين العرب وزاد من هيبة المسلمين وجعل القبائل تعيد حساباتها.
+        </p>
+      </div>
+
+      <h3>كتابة الصلح — جدل حول كل كلمة</h3>
+      <p>
+        أملى النبي ﷺ على <a class="person-link" href="persons.html">علي بن أبي طالب</a>: «بسم الله الرحمن الرحيم».
+        فاعترض سهيل: اكتب «باسمك اللهم». فقبل النبي ﷺ. ثم أملى: «هذا ما صالح عليه محمد رسول الله».
+        فاعترض سهيل: لو أقررنا أنك رسول الله ما صددناك — اكتب «محمد بن عبد الله». فقبل النبي ﷺ أيضًا.
+      </p>
+      <div class="insight">
+        <span class="insight-label">لماذا قبل النبي ﷺ هذه التنازلات اللفظية؟</span>
+        <p>
+          لأن الحقيقة لا تتغير بتغيير الألفاظ: هو رسول الله سواء كُتبت أم لم تُكتب.
+          النبي ﷺ كان يركّز على المكسب الاستراتيجي الحقيقي (الهدنة والاعتراف) لا على المكاسب الشكلية.
+          وقال لعلي حين رفض محو «رسول الله»: «أرِنيها» — ومحاها بيده الشريفة. هذه المرونة في
+          التفاوض درس بليغ في فقه الأولويات.
+        </p>
+      </div>
+    </section>
+
+    <section id="treaty">
+      <h2>بنود صلح الحديبية</h2>
+      <p>
+        اتفق الطرفان على البنود التالية التي بدت في ظاهرها مجحفة بحق المسلمين:
+      </p>
+      <ul>
+        <li><strong>١. العودة هذا العام:</strong> يرجع المسلمون هذا العام دون أداء العمرة، ويعودون العام المقبل فيدخلون مكة ثلاثة أيام بسلاح المسافر فقط (السيوف في القُرُب).</li>
+        <li><strong>٢. هدنة عشر سنوات:</strong> وضع الحرب بين الطرفين عشر سنوات، يأمن فيها الناس ويكفّ بعضهم عن بعض.</li>
+        <li><strong>٣. من أتى محمدًا من قريش بغير إذن وليّه رُدّ إليهم:</strong> أي فارّ من قريش إلى المسلمين يُعاد لقريش.</li>
+        <li><strong>٤. من أتى قريشًا من أصحاب محمد لم يُردّ:</strong> أي مسلم يذهب إلى قريش لا يُعاد.</li>
+        <li><strong>٥. حرية التحالفات:</strong> من أحبّ أن يدخل في عقد محمد دخل، ومن أحبّ أن يدخل في عقد قريش دخل.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">البند الخامس هو المفتاح</span>
+        <p>
+          بند حرية التحالفات بدا تفصيلًا هامشيًا — لكنه كان أخطر بنود الصلح. بموجبه دخلت
+          <strong>خزاعة</strong> في عقد النبي ﷺ، ودخلت <strong>بنو بكر</strong> في عقد قريش.
+          وحين اعتدت بنو بكر على خزاعة بدعم قريش بعد عامين، انتقض الصلح — وكان ذلك السبب
+          المباشر لفتح مكة. قريش وقّعت بيدها على ما سيدمّرها.
+        </p>
+      </div>
+
+      <h3>قصة أبي جندل — المشهد الأصعب</h3>
+      <p>
+        بينما يُكتب الصلح، أقبل <a class="person-link" href="persons.html">أبو جندل بن سهيل بن عمرو</a>
+        — ابن المفاوض نفسه — يرسف في قيوده هاربًا من سجن قريش. صاح بالمسلمين: أتردّونني إلى
+        المشركين يفتنونني في ديني؟! فقال النبي ﷺ بألم:
+      </p>
+      <blockquote>
+        «يا أبا جندل، اصبر واحتسب، فإن الله جاعل لك ولمن معك من المستضعفين فرجًا ومخرجًا. إنّا قد عقدنا بيننا وبين القوم صلحًا وأعطيناهم على ذلك وأعطَونا عهد الله، وإنّا لا نغدر.»
+      </blockquote>
+      <div class="insight">
+        <span class="insight-label">الوفاء بالعهد فوق العاطفة</span>
+        <p>
+          هذا المشهد كان أقسى لحظة في الحديبية — النبي ﷺ يردّ مسلمًا مُعذَّبًا إلى جلّاديه
+          وفاءً بالعهد. لكن هذا الوفاء الصارم هو ما أكسب المسلمين احترام العرب:
+          قوم يوفون بالعهد حتى لو كان ضدّهم. وأبو جندل نفسه سيكون لاحقًا أحد أبطال
+          المجموعة التي ستُرغم قريشًا على إلغاء بند ردّ الفارّين.
+        </p>
+      </div>
+    </section>
+
+    <section id="aftermath">
+      <h2>لماذا كان الحديبية «فتحًا مبينًا»؟</h2>
+      <p>
+        بعد الصلح كان كثير من الصحابة مكتئبين — حتى <a class="person-link" href="persons.html">عمر بن الخطاب</a>
+        جاء يسأل النبي ﷺ: ألسنا على الحق وهم على الباطل؟ فلماذا نُعطي الدنيّة في ديننا؟
+        فأجابه النبي ﷺ: «إني رسول الله ولست أعصيه وهو ناصري.»
+        ثم نزلت سورة الفتح في الطريق: ﴿إِنَّا فَتَحْنَا لَكَ فَتْحًا مُبِينًا﴾.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4C8;</span>
+          <p class="visual-title">تضاعف الأعداد</p>
+          <p class="visual-text">في عامين فقط دخل في الإسلام أكثر مما دخل في الـ١٩ سنة السابقة كلها. السلم أتاح للناس سماع الإسلام بحرية.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3F3;</span>
+          <p class="visual-title">اعتراف دولي</p>
+          <p class="visual-text">لأول مرة اعترفت قريش بالمسلمين ككيان مستقل يُوقَّع معه معاهدات — ندًّا لند.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4E8;</span>
+          <p class="visual-title">رسائل الملوك</p>
+          <p class="visual-text">بعد الصلح مباشرة أرسل النبي ﷺ رسائل إلى كسرى وقيصر والنجاشي والمقوقس — فتح باب الدعوة العالمية.</p>
+        </article>
+      </div>
+
+      <h3>قصة أبي بصير — كيف انقلب البند على قريش</h3>
+      <p>
+        فرّ <a class="person-link" href="persons.html">أبو بصير عتبة بن أسيد</a> من مكة إلى المدينة،
+        فردّه النبي ﷺ وفاءً بالصلح. لكن أبا بصير قتل أحد حراسه في الطريق وعاد، فقال له النبي ﷺ:
+        «ويل أمه مِسْعَر حرب لو كان له أحد!» — تلميح ذكي فهمه أبو بصير.
+        فذهب إلى ساحل البحر الأحمر على طريق تجارة قريش، والتحق به كل مسلم يفرّ من مكة
+        حتى صاروا مجموعة تقطع تجارة قريش.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">أبو بصير يعترض طريق التجارة</p>
+          <p class="flow-text">كوّن مجموعة على ساحل البحر الأحمر تعترض كل قافلة لقريش — بند ردّ الفارّين لم يمنعهم فهم ليسوا في المدينة.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">قريش تستغيث بالنبي ﷺ</p>
+          <p class="flow-text">أرسلت قريش تتوسل النبي ﷺ أن يضمّ هؤلاء إليه في المدينة — أي أن يُلغي بند ردّ الفارّين بنفسها!</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">النتيجة: إلغاء البند الأظلم</p>
+          <p class="flow-text">البند الذي بدا ظالمًا للمسلمين انقلب على قريش وأُلغي بطلب منها — تخطيط نبوي بعيد المدى.</p>
+        </div>
+      </div>
+
+      <h3>إسلام القادة — ثمرة السلم</h3>
+      <p>
+        في الفترة بين صلح الحديبية وفتح مكة أسلم عدد من أعظم قادة قريش الذين كانوا أشد أعدائه:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr><th>الاسم</th><th>مكانته قبل الإسلام</th><th>دوره بعد الإسلام</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a class="person-link" href="persons.html">خالد بن الوليد</a></td>
+            <td>قائد خيّالة قريش — هزم المسلمين في أُحد</td>
+            <td>سيف الله المسلول — فاتح العراق والشام</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">عمرو بن العاص</a></td>
+            <td>دبلوماسي قريش — أُرسل للنجاشي لاسترداد المهاجرين</td>
+            <td>فاتح مصر وواليها</td>
+          </tr>
+          <tr>
+            <td><a class="person-link" href="persons.html">عثمان بن طلحة</a></td>
+            <td>حاجب الكعبة من بني عبد الدار</td>
+            <td>أعاد له النبي ﷺ مفتاح الكعبة يوم الفتح — في ذريته إلى اليوم</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">السلم فتح القلوب</span>
+        <p>
+          خالد وعمرو كانا من أخطر أعداء الإسلام — لكن الحرب المستمرة كانت تمنعهما من التفكير
+          والتأمل. الهدنة أتاحت لهما رؤية الإسلام عن قرب دون ضغط المعركة.
+          هذا بالضبط ما قصده النبي ﷺ: السلم يفتح قلوبًا لا تفتحها السيوف.
+          ألمع قادة الفتوحات الإسلامية جاءوا ثمرةً لصلح بدا «هزيمة».
+        </p>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. الرؤيا والانطلاق</h4>
+          <p>١٤٠٠ صحابي خرجوا مُحرِمين بلا سلاح حربي — رسالة سلم لا حرب.</p>
+        </article>
+        <article class="card">
+          <h4>٢. بيعة الرضوان</h4>
+          <p>بايعوا على الموت تحت الشجرة — فنزل القرآن يشهد برضا الله عنهم.</p>
+        </article>
+        <article class="card">
+          <h4>٣. مفاوضات ذكية</h4>
+          <p>النبي ﷺ تنازل عن الشكليات (لفظ «رسول الله») وربح الجوهر (الهدنة والاعتراف).</p>
+        </article>
+        <article class="card">
+          <h4>٤. بنود بدت ظالمة</h4>
+          <p>بند ردّ الفارّين انقلب على قريش بقصة أبي بصير — وأُلغي بطلبها.</p>
+        </article>
+        <article class="card">
+          <h4>٥. فتح مبين بلا سيف</h4>
+          <p>السلم أتاح نشر الدعوة — تضاعف المسلمون في عامين أكثر من ١٩ سنة سبقتها.</p>
+        </article>
+        <article class="card">
+          <h4>٦. تمهيد لفتح مكة</h4>
+          <p>بند التحالفات أدى لانتقاض الصلح بسبب قريش نفسها — ففُتحت مكة.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch18-score">٠ / ٢٠</span>
+      </div>
+      <div id="ch18-quiz-container"></div>
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch18-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+  (function(){
+    const toArabicNum=n=>n.toString().replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+    const sections=[
+      {title:'السياق والانطلاق',questions:[
+        {t:'توقيت الخروج',q:'في أي شهر وسنة خرج النبي ﷺ لأداء العمرة التي أدت إلى صلح الحديبية؟',o:['شوال، السنة الخامسة للهجرة','ذو القعدة، السنة السادسة للهجرة','محرم، السنة السابعة للهجرة','رمضان، السنة الثامنة للهجرة'],a:1},
+        {t:'سبب الخروج',q:'ما الذي دفع النبي ﷺ للخروج نحو مكة؟',o:['رغبة في فتح مكة عسكريًّا','رؤيا رآها أنه يدخل المسجد الحرام معتمرًا','طلب من قريش للتفاوض','استنجاد من مسلمي مكة'],a:1},
+        {t:'عدد المسلمين',q:'كم كان عدد المسلمين الذين خرجوا مع النبي ﷺ تقريبًا؟',o:['٥٠٠ صحابي','١٠٠٠ صحابي','١٤٠٠ صحابي','٣٠٠٠ صحابي'],a:2},
+        {t:'الهدي',q:'كم بدنة ساق المسلمون معهم هديًا؟',o:['٣٠ بدنة','٧٠ بدنة','١٠٠ بدنة','١٥٠ بدنة'],a:1},
+        {t:'اختيار الشهر',q:'لماذا اختار النبي ﷺ شهر ذي القعدة للخروج؟',o:['لأنه شهر الحج','لأنه من الأشهر الحرم التي يُحرَّم فيها القتال','لأن الطقس معتدل','لأن قريش تكون مشغولة بالتجارة'],a:1}
+      ]},
+      {title:'ردّ فعل قريش وبيعة الرضوان',questions:[
+        {t:'قائد خيالة قريش',q:'من أرسلته قريش لاعتراض المسلمين عند كُراع الغَمِيم؟',o:['أبو سفيان بن حرب','عمرو بن العاص','خالد بن الوليد','عكرمة بن أبي جهل'],a:2},
+        {t:'بروك القصواء',q:'ماذا قال النبي ﷺ حين بركت ناقته القصواء في الحديبية؟',o:['ارحلوا فقد رفضت المسير','ما خلأت ولكن حبسها حابس الفيل','هذا أمر الله أن نعود','سنقاتل من هنا'],a:1},
+        {t:'رسول المسلمين',q:'من أرسله النبي ﷺ إلى قريش ليبلّغهم أنه جاء معتمرًا؟',o:['عمر بن الخطاب','علي بن أبي طالب','عثمان بن عفان','أبو بكر الصديق'],a:2},
+        {t:'سبب البيعة',q:'ما السبب المباشر لبيعة الرضوان؟',o:['نزول آية قرآنية تأمر بالبيعة','إشاعة مقتل عثمان بن عفان','إعلان قريش الحرب رسميًّا','رغبة الصحابة في فتح مكة'],a:1},
+        {t:'يد عثمان',q:'كيف بايع النبي ﷺ عن عثمان بن عفان الغائب؟',o:['طلب من أبي بكر أن ينوب عنه','ضرب بإحدى يديه على الأخرى وقال هذه يد عثمان','أجّل بيعته حتى رجع','لم يبايع عنه'],a:1}
+      ]},
+      {title:'المفاوضات وبنود الصلح',questions:[
+        {t:'شهادة عروة',q:'ماذا قال عروة بن مسعود لقريش بعد عودته من عند النبي ﷺ؟',o:['إنهم ضعفاء يمكن هزيمتهم','ما رأيت ملكًا يعظّمه أصحابه كما يعظّم أصحاب محمد محمدًا','إنهم مستعدون للحرب','لا فائدة من التفاوض معهم'],a:1},
+        {t:'مفاوض قريش الأخير',q:'من وقّع الصلح نيابة عن قريش؟',o:['أبو سفيان بن حرب','عروة بن مسعود','سهيل بن عمرو','صفوان بن أمية'],a:2},
+        {t:'جدل الكتابة',q:'اعترض سهيل بن عمرو على كتابة «محمد رسول الله» وطلب كتابة:',o:['محمد بن هاشم','محمد سيد قريش','محمد بن عبد الله','محمد القرشي'],a:2},
+        {t:'مدة الهدنة',q:'كم كانت مدة الهدنة المتفق عليها في صلح الحديبية؟',o:['سنة واحدة','خمس سنوات','عشر سنوات','عشرون سنة'],a:2},
+        {t:'بند التحالفات',q:'ما البند الذي يسمح للقبائل بحرية الانضمام لأي طرف؟',o:['البند الأول','البند الثاني','البند الثالث','البند الخامس'],a:3}
+      ]},
+      {title:'النتائج والفتح المبين',questions:[
+        {t:'سؤال عمر',q:'ماذا سأل عمر بن الخطاب النبي ﷺ بعد الصلح؟',o:['هل ننقض الصلح؟','ألسنا على الحق فلماذا نُعطي الدنيّة في ديننا؟','متى نعود لمكة؟','هل نحارب قريش غدًا؟'],a:1},
+        {t:'الآية النازلة',q:'ما السورة التي نزلت في طريق العودة وسمّت الصلح فتحًا مبينًا؟',o:['سورة النصر','سورة الفتح','سورة الأنفال','سورة التوبة'],a:1},
+        {t:'قصة أبي بصير',q:'ماذا فعل أبو بصير بعد أن ردّه النبي ﷺ لقريش وفاءً بالصلح؟',o:['عاد إلى مكة واستسلم','ذهب إلى ساحل البحر الأحمر واعترض تجارة قريش','هاجر إلى الحبشة','بقي في المدينة متخفيًا'],a:1},
+        {t:'إلغاء البند',q:'كيف أُلغي بند ردّ الفارّين من قريش؟',o:['النبي ﷺ أعلن إلغاءه','قريش نفسها طلبت إلغاءه بسبب أبي بصير','انتهت مدته تلقائيًا','ألغته قبيلة خزاعة'],a:1},
+        {t:'إسلام القادة',q:'أيّ من هؤلاء أسلم في الفترة بين صلح الحديبية وفتح مكة؟',o:['أبو سفيان بن حرب','حمزة بن عبد المطلب','خالد بن الوليد وعمرو بن العاص','أبو لهب وأبو جهل'],a:2}
+      ]}
+    ];
+    function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+    const totalQ=sections.reduce((s,sec)=>s+sec.questions.length,0);
+    let correct=0,answered=0;
+    const scoreEl=document.getElementById('ch18-score'),container=document.getElementById('ch18-quiz-container'),retryBtn=document.getElementById('ch18-retry');
+    function updateScore(){scoreEl.textContent=toArabicNum(correct)+' / '+toArabicNum(totalQ)}
+    function buildQuiz(){
+      correct=0;answered=0;container.innerHTML='';retryBtn.style.display='none';updateScore();
+      let qNum=0;
+      sections.forEach(function(sec,sIdx){
+        const details=document.createElement('details');details.className='quiz-section-block';if(sIdx===0)details.open=true;
+        const summary=document.createElement('summary');summary.innerHTML=sec.title+'<span class="q-arrow">&#x276F;</span>';details.appendChild(summary);
+        const body=document.createElement('div');body.className='q-section-body';
+        var qs=sec.questions.slice();shuffle(qs);
+        qs.forEach(function(item){
+          qNum++;
+          var card=document.createElement('article');card.className='q-card';
+          var h=document.createElement('h4');h.textContent='سؤال '+toArabicNum(qNum)+': '+item.t;card.appendChild(h);
+          var p=document.createElement('p');p.textContent=item.q;card.appendChild(p);
+          var optsDiv=document.createElement('div');optsDiv.className='q-opts';
+          var fb=document.createElement('div');fb.className='q-feedback';
+          var indices=item.o.map(function(_,i){return i});shuffle(indices);
+          indices.forEach(function(origIdx){
+            var btn=document.createElement('button');btn.textContent=item.o[origIdx];
+            btn.addEventListener('click',function(){
+              if(card.dataset.done)return;card.dataset.done='1';answered++;
+              optsDiv.querySelectorAll('button').forEach(function(b){b.classList.add('q-off')});
+              optsDiv.querySelectorAll('button').forEach(function(b,bIdx){if(indices[bIdx]===item.a)b.classList.add('q-correct')});
+              if(origIdx===item.a){btn.classList.add('q-correct');fb.textContent='إجابة صحيحة!';fb.className='q-feedback q-correct';correct++}
+              else{btn.classList.add('q-wrong');fb.textContent='إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';fb.className='q-feedback q-wrong'}
+              updateScore();if(answered===totalQ)retryBtn.style.display='inline-block';
+            });optsDiv.appendChild(btn);
+          });
+          card.appendChild(optsDiv);card.appendChild(fb);body.appendChild(card);
+        });
+        details.appendChild(body);container.appendChild(details);
+      });
+    }
+    retryBtn.addEventListener('click',function(){buildQuiz();document.getElementById('quiz-root').scrollIntoView({behavior:'smooth'})});
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>أُعِدَّ الملخص استنادًا إلى فصل «صلح الحديبية» من كتاب «الرحيق المختوم»</footer>
+
+</body>
+</html>

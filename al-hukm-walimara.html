@@ -3,56 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الحكم والإمارة في العرب</title>
+  <title>الحكم والإمارة في العرب — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      margin: 0;
-      background: #f6f6f8;
-      color: #222;
-      line-height: 1.8;
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
     }
-    header {
-      background: linear-gradient(125deg, #522258, #c32d7b);
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
       color: #fff;
-      padding: 2.5rem 1.5rem;
+      padding: 3.5rem 1.5rem 4rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    nav {
-      text-align: center;
-      margin: -25px 0 25px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
     }
-    nav a {
-      display: inline-block;
-      background: #8c1c4b;
-      color: #fff;
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .hero .subtitle {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 620px;
+      margin: 0.8rem auto 0;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
       text-decoration: none;
-      padding: 0.6rem 1.4rem;
-      border-radius: 28px;
-      font-size: 0.95rem;
-      transition: background 0.2s ease;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
     }
-    nav a:hover {
-      background: #6a1035;
+    .breadcrumb a:hover {
+      background: var(--gold-pale);
+      color: var(--navy);
     }
+    .breadcrumb .sep {
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+    .breadcrumb .current {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* TOC */
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      max-width: 880px;
+      margin: 1.5rem auto 0;
+      padding: 0 1.5rem;
+    }
+    .toc a {
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .toc a:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+
+    /* MAIN */
     main {
-      max-width: 920px;
-      margin: -40px auto 40px;
-      background: #fff;
-      border-radius: 14px;
-      padding: 2.7rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
     }
+
+    /* SECTIONS */
+    section { margin-bottom: 1.5rem; }
     h2 {
-      color: #8c1c4b;
-      margin-top: 2.3rem;
-      border-right: 4px solid #c32d7b;
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
       padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
     }
     p {
-      margin: 0.5rem 0 1.5rem;
+      color: var(--text);
       text-align: justify;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.5rem;
     }
+
+    /* LISTS */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+    }
+    ul li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+    }
+
+    /* VISUAL GRID */
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .visual-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+    .visual-icon {
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .visual-title {
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+    }
+    .visual-text {
+      margin: 0;
+      color: var(--text-light);
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* CARD GRID */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -60,68 +232,45 @@
       margin: 1rem 0 1.5rem;
     }
     .card {
-      background: linear-gradient(140deg, #fff9fc, #ffe0ef);
-      border-radius: 14px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 1.3rem;
-      box-shadow: 0 12px 26px rgba(140, 28, 75, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .card h3 {
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow);
+    }
+    .card h4 {
       margin: 0 0 0.4rem;
-      color: #74153f;
+      color: var(--navy);
       font-size: 1rem;
+      font-weight: 700;
     }
     .card p {
       margin: 0;
       font-size: 0.95rem;
-      color: #3c3c3c;
+      color: var(--text-light);
     }
-    .map-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 1rem;
-      margin: 1rem 0 1.6rem;
-    }
-    .map-card {
-      background: #f4f8ff;
-      border-radius: 16px;
-      padding: 1.2rem;
-      box-shadow: inset 0 0 0 1px #d8e5ff;
-      text-align: center;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    .map-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 28px rgba(38, 68, 122, 0.15);
-    }
-    .map-icon {
-      font-size: 2.1rem;
-      margin-bottom: 0.4rem;
-      display: block;
-    }
-    .map-card h3 {
-      margin: 0 0 0.4rem;
-      color: #26447a;
-    }
-    .map-card p {
-      margin: 0;
-      font-size: 0.92rem;
-      color: #374559;
-    }
+
+    /* FLOW TIMELINE */
     .flowline {
-      border-right: 4px solid #ffe0ef;
+      border-right: 3px solid var(--gold-light);
       margin-top: 1.3rem;
       padding-right: 1.3rem;
     }
     .flow-item {
       position: relative;
       margin-bottom: 1.2rem;
-      padding: 0.1rem 0.8rem 0.1rem 0;
-      background: #fff6fa;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
       border-radius: 10px;
-      box-shadow: 0 8px 16px rgba(195, 45, 123, 0.08);
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover {
+      box-shadow: 0 8px 20px var(--shadow);
     }
     .flow-item::before {
       content: "";
@@ -131,42 +280,337 @@
       transform: translateY(-50%);
       width: 14px;
       height: 14px;
-      background: #c32d7b;
-      border: 3px solid #fff;
+      background: var(--gold);
+      border: 3px solid var(--white);
       border-radius: 50%;
-      box-shadow: 0 0 0 2px #ffe0ef;
+      box-shadow: 0 0 0 2px var(--gold-light);
     }
     .flow-title {
       margin: 0;
-      color: #8c1c4b;
+      color: var(--navy);
       font-weight: 600;
     }
     .flow-text {
       margin: 0.3rem 0 0;
       font-size: 0.95rem;
-      color: #402534;
+      color: var(--text-light);
       line-height: 1.6;
     }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+    }
+    .tribe-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tribe-table tr:hover td {
+      background: var(--gold-pale);
+    }
+
+    /* INSIGHT / CONNECTION BOX */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .insight p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .connection p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* PERSON LINK */
+    a.person-link {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 0.05rem;
+    }
+    a.person-link:hover {
+      color: var(--navy);
+      border-bottom-color: var(--navy);
+    }
+
+    /* BLOCKQUOTE */
+    blockquote {
+      background: var(--gold-pale);
+      border-right: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 1.2rem 1.5rem;
+      margin: 1rem 0 1.5rem;
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      line-height: 2;
+    }
+
+    /* QUIZ */
+    .quiz-wrapper {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--gold-light);
+    }
+    .quiz-wrapper > h2 {
+      text-align: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+    .quiz-intro {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin: 0 auto 1.5rem;
+      max-width: 600px;
+    }
+    .quiz-score-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .quiz-score-bar span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .quiz-score-bar .q-score {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .quiz-section-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer;
+      padding: 1rem 1.4rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow {
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body {
+      padding: 0 1.4rem 1.4rem;
+    }
+    .q-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.3rem;
+      margin-top: 0.9rem;
+    }
+    .q-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .q-card p {
+      margin: 0 0 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      text-align: right;
+    }
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .q-opts button {
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      font-size: 0.92rem;
+      font-family: 'Tajawal', sans-serif;
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text);
+    }
+    .q-opts button:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+    .q-opts button.q-correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .q-opts button.q-wrong {
+      border-color: #c53030;
+      background: #fde8e8;
+      color: #c53030;
+    }
+    .q-opts button.q-off {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .q-feedback {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      font-size: 0.86rem;
+      min-height: 1.3em;
+    }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .quiz-retry-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2.2rem;
+      font-size: 1rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover {
+      background: #14293f;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      color: #666;
-      font-size: 0.9rem;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
       margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+      .toc { gap: 0.35rem; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>القسم الثاني: الحكم والإمارة في العرب</h1>
-    <p style="max-width: 620px; margin: 0.8rem auto 0; text-align: center;">عرض موجز لملامح السلطة والزعامة في الجزيرة قبيل البعثة</p>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>الحكم والإمارة في العرب</h1>
+    <p class="subtitle">كيف توزّعت السلطة في الجزيرة بين ملوك تابعين وزعماء قبائل وقيادة روحية في الحجاز قبيل البعثة</p>
   </header>
 
-  <nav>
-    <a href="index.html">العودة إلى الصفحة الرئيسة</a>
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">الحكم والإمارة في العرب</span>
   </nav>
 
+  <!-- Table of Contents -->
+  <div class="toc">
+    <a href="#why">لماذا الحكم؟</a>
+    <a href="#patterns">أنماط السلطة</a>
+    <a href="#map">خريطة النفوذ</a>
+    <a href="#yemen">اليمن</a>
+    <a href="#hira">الحيرة</a>
+    <a href="#sham">الشام</a>
+    <a href="#hijaz">الحجاز</a>
+    <a href="#tribes">حكم القبائل</a>
+    <a href="#before">قبيل البعثة</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
   <main>
-    <section>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section id="why">
       <h2>لماذا ندرس الحكم قبل الإسلام؟</h2>
       <p>
         يسهّل فهم صورة الحكم والإمارة قبل الإسلام قراءة الأحداث التي صاحبت البعثة، إذ تكشف
@@ -174,94 +618,91 @@
         على استقبال الدعوة الجديدة ومسارها.
       </p>
       <p>
-        في هذا الملخص نتابع ما يعنيه سؤال «الحكم والإمارة في العرب» من زوايا متعددة: كيف توزعت
+        في هذا الفصل نتابع ما يعنيه سؤال «الحكم والإمارة في العرب» من زوايا متعددة: كيف توزعت
         السلطة بين الملوك والقبائل، وما دور القوى الكبرى، وكيف حفظ الحجاز زعامته الروحية وسط ذلك.
       </p>
+      <div class="insight">
+        <span class="insight-label">القاعدة</span>
+        <p>
+          كلما قرأت عن موقف قريش من الدعوة أو عن حلفاء النبي ﷺ في المدينة، عُد إلى هذا الفصل
+          لتفهم خلفية القوة والتبعية التي شكّلت قرارات كل طرف. ليس المطلوب حفظ كل اسم، بل بناء
+          «خريطة ذهنية» للنفوذ السياسي تجعل بقية السيرة أوضح.
+        </p>
+      </div>
     </section>
 
-    <section>
+    <!-- ═══════ أنماط السلطة ═══════ -->
+
+    <section id="patterns">
       <h2>أنماط السلطة في الجزيرة</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>ملوك بتيجان</h3>
-          <p>ظهر ملوك متوجون في اليمن والحيرة والشام، لكن أغلبهم كان تابعًا لقوى أكبر كالفُرس والروم.</p>
-        </article>
-        <article class="card">
-          <h3>رؤساء قبائل</h3>
-          <p>قادة العشائر حكموا معظم الجزيرة بلا تيجان، مع استقلال شبه كامل وتنظيمات تقليدية تحمي مصالح القبيلة.</p>
-        </article>
-      </div>
+      <p>
+        لم يكن للعرب نظام حكم واحد، بل تراوح الأمر بين نمطين رئيسيين تحدّد كل منهما بعلاقة
+        مختلفة مع القوى الخارجية:
+      </p>
+      <ul>
+        <li><strong>ملوك بتيجان:</strong> ظهر ملوك متوجون في اليمن والحيرة والشام، لكن أغلبهم كان تابعًا لقوى أكبر كالفُرس والروم. السلطة هنا هرمية رسمية لكنها مقيّدة بالولاء الخارجي.</li>
+        <li><strong>رؤساء قبائل:</strong> قادة العشائر حكموا معظم الجزيرة بلا تيجان، مع استقلال شبه كامل وتنظيمات تقليدية تحمي مصالح القبيلة. السلطة هنا قائمة على العصبية والسمعة.</li>
+      </ul>
       <p>
         وبين هذين النمطين نشأت علاقات تبعية أو تحالفات متبدلة بحسب الحاجة للتجارة أو لصدّ النفوذ الأجنبي.
       </p>
+      <div class="connection">
+        <span class="connection-label">لماذا هذا مهم لاحقًا؟</span>
+        <p>
+          هذا التوزع في السلطة يفسّر لماذا لم يستطع العرب التوحد ضد الدعوة: لا مركز قرار واحد يأمر
+          فيُطاع. وهو أيضًا يفسّر لماذا نجحت المدينة كقاعدة: لم تكن تابعة لفارس ولا لروما، بل كانت
+          مستقلة كالحجاز — بيئة مثالية لبناء دولة جديدة.
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>مشهد السلطة على الخريطة</h2>
+    <!-- ═══════ خريطة النفوذ ═══════ -->
+
+    <section id="map">
+      <h2>خريطة النفوذ — أربعة أقاليم</h2>
       <p>
         هذه البطاقات تقدم «خريطة ذهنية» للأقاليم الأربعة التي تشكل محور الحكم في الجزيرة ومحيطها.
+        كل إقليم سيظهر لاحقًا في أحداث السيرة:
       </p>
-      <div class="map-grid">
-        <a class="map-card" href="#yemen">
-          <span class="map-icon" aria-hidden="true">🗻</span>
-          <h3>اليمن التجاري</h3>
-          <p>سلالات محلية مع منافسة أجنبية على طرق البحر والسدود.</p>
-        </a>
-        <a class="map-card" href="#hira">
-          <span class="map-icon" aria-hidden="true">🏺</span>
-          <h3>حزام العراق</h3>
-          <p>حكم اللخميين تحت المظلة الفارسية لضبط القبائل المجاورة.</p>
-        </a>
-        <a class="map-card" href="#sham">
-          <span class="map-icon" aria-hidden="true">🛡️</span>
-          <h3>الشام الحدودي</h3>
-          <p>الغساسنة والضجاعمة كخط دفاع رومي أمام البوادي.</p>
-        </a>
-        <a class="map-card" href="#hijaz">
-          <span class="map-icon" aria-hidden="true">🕋</span>
-          <h3>الحجاز الروحي</h3>
-          <p>زعامة دينية تدير الحرم وتعتمد على رمزية البيت العتيق.</p>
-        </a>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3D4;&#xFE0F;</span>
+          <p class="visual-title">اليمن التجاري</p>
+          <p class="visual-text">سلالات محلية مع منافسة أجنبية على طرق البحر والسدود</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3FA;</span>
+          <p class="visual-title">حزام العراق</p>
+          <p class="visual-text">حكم اللخميين تحت المظلة الفارسية لضبط القبائل المجاورة</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F6E1;&#xFE0F;</span>
+          <p class="visual-title">الشام الحدودي</p>
+          <p class="visual-text">الغساسنة والضجاعمة كخط دفاع رومي أمام البوادي</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F54B;</span>
+          <p class="visual-title">الحجاز الروحي</p>
+          <p class="visual-text">زعامة دينية تدير الحرم وتعتمد على رمزية البيت العتيق</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لاحظ النمط</span>
+        <p>
+          ثلاثة أقاليم من أربعة خاضعة لنفوذ أجنبي (فارس أو روما أو الحبشة). الحجاز وحده مستقل —
+          وهذا الاستقلال هو الذي جعله المكان الذي وُلدت فيه الرسالة، ثم انطلقت منه لتحرير
+          بقية الأقاليم.
+        </p>
       </div>
     </section>
 
-    <section>
-      <h2>بطاقات تعريف للأسماء البارزة</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>الغساسنة</h3>
-          <p>
-            تحالف عربي مسيحي في الشام دعمته بيزنطة ليحمي حدودها من غارات البادية.
-          </p>
-        </article>
-        <article class="card">
-          <h3>سبئية</h3>
-          <p>
-            أقدم ممالك اليمن المزدهرة، اشتهرت بالزراعة وإدارة السدود قبل انتقال السلطة لغيرها.
-          </p>
-        </article>
-        <article class="card">
-          <h3>حميري</h3>
-          <p>
-            سلالة جنوبية حكمت اليمن بعد السبئيين، سيطرت على التجارة البحرية ثم ضعفت بالتدخلات الأجنبية.
-          </p>
-        </article>
-        <article class="card">
-          <h3>الضجاعمة</h3>
-          <p>
-            قبيلة عربية موالية للرومان سبقت الغساسنة في حماية مشارف الشام.
-          </p>
-        </article>
-      </div>
-      <p>
-        يمكن استخدام هذه البطاقات كمرجع سريع عند قراءة التسلسل التاريخي دون عناء حفظ أسماء طويلة.
-      </p>
-    </section>
+    <!-- ═══════ اليمن ═══════ -->
 
     <section id="yemen">
       <h2>ملامح الحكم في اليمن</h2>
       <p>
-        يبرز اليمن كمثال على انتقال الحكم بين سلالات محلية وتأثير النفوذ الخارجي، وهو جزء أساسي من الإجابة عن سؤالنا.
+        يبرز اليمن كمثال على انتقال الحكم بين سلالات محلية وتأثير النفوذ الخارجي، وهو جزء أساسي
+        من الإجابة عن سؤالنا.
       </p>
       <p>
         تعاقبت على اليمن سلالات عربية قديمة ازدهرت ثم ضعفت بتأثير السيطرة على التجارة وتبدّل القوى العالمية.
@@ -269,7 +710,48 @@
         انتهى بإسلام ولاتهم. تكررت الانقلابات والدعوات الدينية، وانتهى الأمر بتدخلات خارجية أبرزها حملة الفيل وعودة
         الاستقرار النسبي قبيل الإسلام.
       </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>السلالة / القوة</th>
+            <th>الفترة التقريبية</th>
+            <th>ستقابلها في...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>سبأ</strong></td>
+            <td>الأقدم — ازدهار الزراعة والسدود</td>
+            <td>سورة سبأ وقصة سيل العرم</td>
+          </tr>
+          <tr>
+            <td><strong>حمير</strong></td>
+            <td>بعد سبأ — سيطرة على التجارة البحرية</td>
+            <td>ذو نواس واضطهاد أصحاب الأخدود</td>
+          </tr>
+          <tr>
+            <td><strong>الأحباش</strong></td>
+            <td>تدخل مسيحي من الحبشة</td>
+            <td>حملة أبرهة وعام الفيل (مولد النبي ﷺ)</td>
+          </tr>
+          <tr>
+            <td><strong>الفرس</strong></td>
+            <td>آخر مرحلة قبل الإسلام</td>
+            <td>إسلام <a class="person-link" href="persons.html">باذان</a> والي فارس على اليمن</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="connection">
+        <span class="connection-label">اليمن والسيرة</span>
+        <p>
+          حملة أبرهة على مكة (عام الفيل) — التي هي نتيجة مباشرة للتدخل الحبشي في اليمن — وقعت
+          في العام الذي وُلد فيه النبي ﷺ. وإسلام باذان الفارسي في اليمن سيكون من أوائل انتصارات
+          الدعوة خارج الحجاز. تاريخ اليمن السياسي يمهّد لفهم هذين الحدثين المحوريين.
+        </p>
+      </div>
     </section>
+
+    <!-- ═══════ الحيرة ═══════ -->
 
     <section id="hira">
       <h2>نفوذ الحيرة وحدود التبعية</h2>
@@ -277,11 +759,21 @@
         في تخوم العراق تظهر كيفية استخدام الفرس للحكام العرب لضبط البادية، ما يوضح جانب التبعية في الحكم.
       </p>
       <p>
-        تداخلت مصالح الفرس مع القبائل على تخوم العراق، فظهر حكم اللخميين كحزام عربي يحمي الغساسنة ويضبط البوادي.
-        كان الولاء للفرس، لكن القرار اليومي ظل عربيًا يعتمد على العصبية والقوة. أدى ذلك إلى صدامات متكررة مثل يوم ذي قار
-        الذي أظهر لأول مرة قدرة العرب على صد النفوذ الأجنبي.
+        تداخلت مصالح الفرس مع القبائل على تخوم العراق، فظهر حكم اللخميين كحزام عربي يحمي الحدود ويضبط البوادي.
+        كان الولاء للفرس، لكن القرار اليومي ظل عربيًا يعتمد على العصبية والقوة. أدى ذلك إلى صدامات متكررة مثل
+        <strong>يوم ذي قار</strong> الذي أظهر لأول مرة قدرة العرب على صد النفوذ الأجنبي.
       </p>
+      <div class="insight">
+        <span class="insight-label">يوم ذي قار</span>
+        <p>
+          يوم ذي قار أول يوم انتصر فيه العرب على الفرس. قال عنه النبي ﷺ: «هذا أول يوم انتصفت فيه
+          العرب من العجم، وبي نُصروا.» هذه المعركة كشفت أن التبعية الفارسية ليست أبدية، وأن العرب
+          قادرون على الاستقلال — وهو ما سيتحقق كاملًا بالفتح الإسلامي للعراق.
+        </p>
+      </div>
     </section>
+
+    <!-- ═══════ الشام ═══════ -->
 
     <section id="sham">
       <h2>إمارة الشام وحدود الغساسنة</h2>
@@ -292,7 +784,31 @@
         في الشمال الغربي دعم الرومان حلفاء عربًا ليحرسوا الحدود ويكفوا غارات البادية، فبرز الغساسنة بعد الضجاعمة.
         امتلكوا إمارات مسيحية موالية لبيزنطة، واستمر نفوذهم حتى معركة اليرموك التي أنهت دورهم لصالح الحكم الإسلامي.
       </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">الضجاعمة</p>
+          <p class="flow-text">أول قبيلة عربية موالية للرومان حمت مشارف الشام من غارات البادية.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الغساسنة</p>
+          <p class="flow-text">خلفوا الضجاعمة بتحالف أقوى مع بيزنطة، وبنوا إمارات مسيحية على الحدود.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">معركة اليرموك</p>
+          <p class="flow-text">أنهت الفتوحات الإسلامية دور الغساسنة ونقلت الشام من التبعية الرومانية إلى الحكم الإسلامي.</p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">الغساسنة والسيرة</span>
+        <p>
+          الغساسنة سيظهرون لاحقًا عندما يرسل النبي ﷺ رسائل إلى الملوك بعد صلح الحديبية. ملك الغساسنة
+          <strong>شرحبيل بن عمرو</strong> سيقتل رسول النبي ﷺ الحارث بن عمير، مما يؤدي إلى غزوة مؤتة —
+          أول مواجهة بين المسلمين والروم وحلفائهم.
+        </p>
+      </div>
     </section>
+
+    <!-- ═══════ الحجاز ═══════ -->
 
     <section id="hijaz">
       <h2>القيادة الدينية في الحجاز</h2>
@@ -303,34 +819,103 @@
         رغم بساطة مؤسساتها، حظيت مكة بمكانة روحية جعلت العرب يحترمون زعامتها. تداولت جرهم وخزاعة ثم قريش شؤون الحرم،
         وتطورت أدوار كالسقاية والرفادة ودار الندوة وإدارة المواسم، ما جعل الحجاز مركزًا يجمع بين الدين والإدارة العرفية.
       </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4A7;</span>
+          <p class="visual-title">السقاية</p>
+          <p class="visual-text">توفير الماء للحجاج — تولاها بنو هاشم (جد النبي ﷺ)</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F372;</span>
+          <p class="visual-title">الرفادة</p>
+          <p class="visual-text">إطعام الحجاج — شرف يجلب السمعة والنفوذ لصاحبه</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3DB;&#xFE0F;</span>
+          <p class="visual-title">دار الندوة</p>
+          <p class="visual-text">مجلس شورى قريش — لا يُقرّ أمر كبير إلا فيها</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F511;</span>
+          <p class="visual-title">الحجابة</p>
+          <p class="visual-text">مفتاح الكعبة — رمز أعلى سلطة دينية في مكة</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">دار الندوة ومؤامرة الهجرة</span>
+        <p>
+          دار الندوة — مجلس شورى قريش الذي تعرفه هنا — هي المكان نفسه الذي سيجتمع فيه سادة قريش
+          ليلة الهجرة لتدبير اغتيال النبي ﷺ. الأدوار القرشية التي نراها هنا (سقاية، رفادة، ندوة)
+          ستظهر في تفاصيل الصراع بين الدعوة وقريش — لأن كل منصب يعني مصلحة يُخشى فقدانها.
+        </p>
+      </div>
     </section>
 
-    <section>
+    <!-- ═══════ حكم القبائل ═══════ -->
+
+    <section id="tribes">
       <h2>حكم القبائل داخل الجزيرة</h2>
       <p>
         قبائل البادية تمثل الإجابة المكملة: سلطة محلية قائمة على العصبية بعيدًا عن التاج والهرميات الرسمية.
       </p>
       <p>
         في البوادي استقر نمط الحكم القبلي؛ شيخٌ له الكلمة الفصل، تدعمه العصبية، وتخضع له الموارد والغنائم.
-        أخذ القادة حصصًا من المكاسب، مقابل حماية الأرض وتنظيم الحروب والأسواق. ورغم الاستبداد، فإن المنافسة على السمعة
-        دفعتهم إلى الكرم، وحماية الضيف، ونصرة التحالفات.
+        أخذ القادة حصصًا من المكاسب (المِرباع = الربع)، مقابل حماية الأرض وتنظيم الحروب والأسواق. ورغم الاستبداد،
+        فإن المنافسة على السمعة دفعتهم إلى الكرم، وحماية الضيف، ونصرة التحالفات.
       </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>العنصر</th>
+            <th>في نظام القبيلة</th>
+            <th>في الإسلام لاحقًا</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>مصدر السلطة</strong></td>
+            <td>العصبية والنسب</td>
+            <td>التقوى والكفاءة</td>
+          </tr>
+          <tr>
+            <td><strong>الولاء</strong></td>
+            <td>للقبيلة فقط</td>
+            <td>للأمة الواحدة</td>
+          </tr>
+          <tr>
+            <td><strong>حماية الفرد</strong></td>
+            <td>بالعشيرة أو الحلف</td>
+            <td>بالشريعة والحق</td>
+          </tr>
+          <tr>
+            <td><strong>العدالة</strong></td>
+            <td>للقوي والسيد</td>
+            <td>المساواة أمام القانون</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">لماذا يهم هذا؟</span>
+        <p>
+          الإسلام لم يلغِ القبيلة بل أعاد تعريف الولاء. فهم النظام القبلي يفسّر لماذا كانت «المؤاخاة»
+          بين المهاجرين والأنصار في المدينة ثورة اجتماعية حقيقية: ربطت بين أناس لا تجمعهم عصبية —
+          وهذا كان غير مسبوق في تاريخ العرب.
+        </p>
+      </div>
     </section>
 
-    <section>
+    <!-- ═══════ الصورة السياسية قبيل البعثة ═══════ -->
+
+    <section id="before">
       <h2>الصورة السياسية قبيل البعثة</h2>
       <p>
-        يجمع هذا الملخص الخيوط ليُظهر النتيجة النهائية لسؤال الحكم والإمارة؛ فراغ سياسي وتبعية متقلبة.
+        يجمع هذا القسم الخيوط ليُظهر النتيجة النهائية لسؤال الحكم والإمارة: فراغ سياسي وتبعية متقلبة.
       </p>
       <p>
         الأقطار المقربة من القوى الأجنبية كانت تعاني الاستبداد والضرائب، بينما عاشت القبائل الحرة صراعات لا تنتهي.
         لم يكن للعرب مرجع موحد، بل تحالفات مرحلية تتأرجح بين الفرس والروم. وسط ذلك برزت مكة كجهة محترمة، لكنها محدودة
         النفوذ العسكري، ما مهّد لرسالة تجمع العرب على مشروع جديد يوحد الهوية والسلطة.
       </p>
-    </section>
-
-    <section>
-      <h2>مسار النفوذ الخارجي</h2>
       <div class="flowline">
         <div class="flow-item">
           <p class="flow-title">سلالات محلية</p>
@@ -342,7 +927,7 @@
         </div>
         <div class="flow-item">
           <p class="flow-title">نفوذ فارسي</p>
-          <p class="flow-text">الحيرة واليمن خضعت لولاة موالين للفرس لضبط الجزيرة من الشرق.</p>
+          <p class="flow-text">الحيرة واليمن خضعتا لولاة موالين للفرس لضبط الجزيرة من الشرق.</p>
         </div>
         <div class="flow-item">
           <p class="flow-title">التحول الإسلامي</p>
@@ -351,9 +936,332 @@
       </div>
     </section>
 
-    <footer>
-      مستلخص من فصل «الحكم والإمارة في العرب» – الرحيق المختوم
-    </footer>
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. نمطان للحكم</h4>
+          <p>ملوك تابعون لقوى خارجية، ورؤساء قبائل مستقلون بالعصبية. لا وحدة سياسية بين العرب.</p>
+        </article>
+        <article class="card">
+          <h4>٢. ثلاثة أقاليم تابعة</h4>
+          <p>اليمن والحيرة والشام خضعت للفرس أو الروم أو الأحباش — الحجاز وحده المستقل.</p>
+        </article>
+        <article class="card">
+          <h4>٣. مكة: سلطة بلا جيش</h4>
+          <p>زعامة قريش الروحية عبر خدمة الحرم أعطتها نفوذًا يفوق حجمها العسكري.</p>
+        </article>
+        <article class="card">
+          <h4>٤. القبيلة: وحدة الحكم الأساسية</h4>
+          <p>العصبية هي الأمن والهوية والقانون — والإسلام سيعيد تعريف هذا الولاء.</p>
+        </article>
+        <article class="card">
+          <h4>٥. فراغ سياسي ممهِّد</h4>
+          <p>غياب مرجع موحد للعرب خلق الحاجة لمشروع جامع — والإسلام ملأ هذا الفراغ.</p>
+        </article>
+        <article class="card">
+          <h4>٦. أحداث ستعود</h4>
+          <p>حملة الفيل، يوم ذي قار، دار الندوة، إسلام باذان — كلها تبدأ هنا وتكتمل لاحقًا.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch2-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch2-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch2-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
   </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'أنماط السلطة وخريطة النفوذ',
+        questions: [
+          {
+            t: 'نمطا الحكم',
+            q: 'ما النمطان الرئيسيان للحكم عند العرب قبل الإسلام؟',
+            o: ['ملوك بتيجان ورؤساء قبائل', 'خلفاء وأمراء', 'كهنة وقضاة', 'ملوك وسفراء'],
+            a: 0
+          },
+          {
+            t: 'الإقليم المستقل',
+            q: 'أي الأقاليم الأربعة كان مستقلًا عن النفوذ الأجنبي؟',
+            o: ['اليمن', 'الحيرة', 'الشام', 'الحجاز'],
+            a: 3
+          },
+          {
+            t: 'سبب التبعية',
+            q: 'لماذا كان أغلب ملوك العرب المتوجين تابعين لقوى خارجية؟',
+            o: ['لأنهم ضعفاء عسكريًا ويحتاجون الحماية والتجارة', 'لأنهم أرادوا الدين المسيحي', 'لأن الرومان احتلوا أراضيهم', 'لأنهم لم يعرفوا فن الحكم'],
+            a: 0
+          },
+          {
+            t: 'الحيرة والفرس',
+            q: 'تحت أي نفوذ أجنبي كانت الحيرة؟',
+            o: ['الروم', 'الأحباش', 'الفرس', 'المصريون'],
+            a: 2
+          },
+          {
+            t: 'الغساسنة',
+            q: 'من الذي دعم الغساسنة في الشام؟',
+            o: ['الفرس', 'بيزنطة (الروم)', 'الأحباش', 'قريش'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'اليمن وتاريخ السلالات',
+        questions: [
+          {
+            t: 'أقدم ممالك اليمن',
+            q: 'ما أقدم الممالك المزدهرة في اليمن؟',
+            o: ['حمير', 'سبأ', 'كندة', 'لخم'],
+            a: 1
+          },
+          {
+            t: 'حمير',
+            q: 'ماذا اشتهرت به مملكة حمير بعد سبأ؟',
+            o: ['الصناعة والحدادة', 'السيطرة على التجارة البحرية', 'بناء القلاع الجبلية', 'تربية الخيول'],
+            a: 1
+          },
+          {
+            t: 'حملة الفيل',
+            q: 'ما علاقة حملة أبرهة بالتدخل الأجنبي في اليمن؟',
+            o: ['أبرهة قائد فارسي غزا مكة', 'أبرهة حاكم حبشي على اليمن حاول هدم الكعبة', 'أبرهة ملك رومي أرسل جيشًا للحجاز', 'أبرهة زعيم قبلي يمني تمرد على قريش'],
+            a: 1
+          },
+          {
+            t: 'باذان',
+            q: 'من هو باذان وما أهميته في السيرة؟',
+            o: ['ملك حبشي ساعد المسلمين', 'والي فارس على اليمن الذي أسلم', 'قائد رومي حارب المسلمين', 'زعيم يمني رفض الإسلام'],
+            a: 1
+          },
+          {
+            t: 'عام الفيل',
+            q: 'ما الحدث الذي وقع في عام الفيل؟',
+            o: ['هجرة النبي ﷺ', 'فتح مكة', 'مولد النبي ﷺ', 'غزوة بدر'],
+            a: 2
+          }
+        ]
+      },
+      {
+        title: 'الحجاز والقيادة الدينية',
+        questions: [
+          {
+            t: 'سلطة مكة',
+            q: 'على ماذا اعتمدت زعامة مكة بين العرب؟',
+            o: ['الجيش القوي', 'خدمة الحرم والزعامة الدينية', 'التحالف مع الفرس', 'السيطرة على الزراعة'],
+            a: 1
+          },
+          {
+            t: 'السقاية',
+            q: 'ما المقصود بالسقاية في مكة؟ ومن تولاها؟',
+            o: ['سقاية الماشية — بنو أمية', 'توفير الماء للحجاج — بنو هاشم', 'حراسة الآبار — بنو مخزوم', 'بيع الماء للتجار — بنو عبد الدار'],
+            a: 1
+          },
+          {
+            t: 'دار الندوة',
+            q: 'ما وظيفة دار الندوة في مكة؟',
+            o: ['مدرسة لتعليم الأطفال', 'مجلس شورى قريش لا يُقرّ أمر كبير إلا فيه', 'سوق لبيع الأصنام', 'مستودع لحفظ الأسلحة'],
+            a: 1
+          },
+          {
+            t: 'دار الندوة والهجرة',
+            q: 'ما الحدث اللاحق في السيرة المرتبط بدار الندوة؟',
+            o: ['بيعة العقبة', 'مؤامرة اغتيال النبي ﷺ ليلة الهجرة', 'صلح الحديبية', 'غزوة بدر'],
+            a: 1
+          },
+          {
+            t: 'تداول مكة',
+            q: 'ما ترتيب القبائل التي تداولت شؤون الحرم في مكة؟',
+            o: ['قريش ← خزاعة ← جرهم', 'جرهم ← خزاعة ← قريش', 'خزاعة ← جرهم ← قريش', 'قريش ← جرهم ← خزاعة'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'حكم القبائل والصورة العامة',
+        questions: [
+          {
+            t: 'المِرباع',
+            q: 'ما المِرباع في النظام القبلي؟',
+            o: ['اسم سلاح', 'ربع الغنائم يأخذه الشيخ', 'ضريبة للفرس', 'حصة التجارة مع الشام'],
+            a: 1
+          },
+          {
+            t: 'مصدر السلطة القبلية',
+            q: 'على ماذا اعتمدت سلطة شيخ القبيلة؟',
+            o: ['القانون المكتوب', 'العصبية والنسب والسمعة', 'التعيين من ملك مركزي', 'الثروة فقط'],
+            a: 1
+          },
+          {
+            t: 'يوم ذي قار',
+            q: 'ما أهمية يوم ذي قار؟',
+            o: ['أول معركة بين المسلمين والروم', 'أول يوم انتصر فيه العرب على الفرس', 'أول غزوة في الإسلام', 'أول اتفاق تجاري بين العرب والفرس'],
+            a: 1
+          },
+          {
+            t: 'الفراغ السياسي',
+            q: 'لماذا يصف المباركفوري الحالة السياسية للعرب قبيل البعثة بالفراغ؟',
+            o: ['لأن كل القبائل اتحدت تحت ملك واحد', 'لأنه لم يكن للعرب مرجع سياسي موحد بل تحالفات مرحلية متقلبة', 'لأن الفرس حكموا الجزيرة كلها', 'لأن العرب لم يكن لهم أي حكم'],
+            a: 1
+          },
+          {
+            t: 'المؤاخاة ثورة',
+            q: 'لماذا كانت المؤاخاة بين المهاجرين والأنصار ثورة اجتماعية؟',
+            o: ['لأنها ألغت الضرائب', 'لأنها ربطت بين أناس لا تجمعهم عصبية قبلية — وهذا غير مسبوق', 'لأنها منعت الحروب', 'لأنها وزعت الأراضي بالتساوي'],
+            a: 1
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch2-score');
+    const container = document.getElementById('ch2-quiz-container');
+    const retryBtn = document.getElementById('ch2-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «الحكم والإمارة في العرب» من كتاب «الرحيق المختوم»
+  </footer>
+
 </body>
 </html>

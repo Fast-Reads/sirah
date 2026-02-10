@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حجة الوداع وإلى الرفيق الأعلى — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#1e3a5f;--navy-deep:#0d1b2a;--gold:#b8860b;--gold-light:#f5e6c8;--gold-pale:#fdf6e3;--cream:#faf8f2;--white:#ffffff;--text:#2d3436;--text-light:#636e72;--border:#e8e0d4;--shadow:rgba(30,58,95,0.08);--radius:14px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased}
+    .hero{background:linear-gradient(160deg,#0a1628 0%,#132f4c 40%,#1e3a5f 100%);color:#fff;padding:3.5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 20% 30%,rgba(184,134,11,0.3) 50%,transparent 50%),radial-gradient(1px 1px at 60% 20%,rgba(255,255,255,0.15) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 80% 60%,rgba(184,134,11,0.2) 50%,transparent 50%),radial-gradient(1px 1px at 40% 70%,rgba(255,255,255,0.1) 50%,transparent 50%),radial-gradient(1px 1px at 10% 80%,rgba(255,255,255,0.12) 50%,transparent 50%),radial-gradient(1.5px 1.5px at 90% 40%,rgba(184,134,11,0.15) 50%,transparent 50%);background-size:200px 200px;animation:twinkle 8s ease-in-out infinite alternate}
+    @keyframes twinkle{from{opacity:0.6}to{opacity:1}}
+    .hero>*{position:relative;z-index:1}
+    .hero-ornament{width:60px;height:3px;background:var(--gold);margin:0 auto 1.5rem;border-radius:2px}
+    .hero h1{font-family:'Amiri',serif;font-size:2.4rem;font-weight:700;letter-spacing:0.5px}
+    .hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.7);max-width:620px;margin:0.8rem auto 0}
+    .breadcrumb{background:var(--white);border-bottom:1px solid var(--border);padding:0.6rem 1rem;display:flex;justify-content:center;align-items:center;gap:0.4rem;flex-wrap:wrap;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px var(--shadow)}
+    .breadcrumb a{text-decoration:none;color:var(--text-light);font-size:0.85rem;font-weight:500;padding:0.4rem 0.85rem;border-radius:8px;transition:all 0.2s;white-space:nowrap}
+    .breadcrumb a:hover{background:var(--gold-pale);color:var(--navy)}
+    .breadcrumb .sep{color:var(--border);font-size:0.8rem}
+    .breadcrumb .current{font-size:0.85rem;font-weight:700;color:var(--navy)}
+    .toc{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;max-width:880px;margin:1.5rem auto 0;padding:0 1.5rem}
+    .toc a{padding:0.4rem 1rem;border-radius:8px;background:var(--white);border:1px solid var(--border);color:var(--navy);text-decoration:none;font-size:0.85rem;font-weight:500;transition:all 0.2s}
+    .toc a:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    main{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem 1rem}
+    section{margin-bottom:1.5rem}
+    h2{font-family:'Amiri',serif;color:var(--navy);border-right:3px solid var(--gold);padding-right:0.75rem;margin-top:2.5rem;margin-bottom:0.8rem;font-size:1.5rem}
+    h3{font-family:'Amiri',serif;color:var(--navy);font-size:1.15rem;margin-top:1.5rem;margin-bottom:0.5rem}
+    p{color:var(--text);text-align:justify;font-size:1rem;margin:0.5rem 0 1.5rem}
+    ul{list-style:none;padding:0;margin:0 0 1.5rem}
+    ul li{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:0.6rem;border-right:3px solid var(--gold-light)}
+    .visual-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0 0.5rem}
+    .visual-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s}
+    .visual-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px var(--shadow)}
+    .visual-icon{font-size:2rem;margin-bottom:0.4rem;display:block}
+    .visual-title{font-weight:600;margin:0 0 0.35rem;color:var(--navy)}
+    .visual-text{margin:0;color:var(--text-light);line-height:1.5;font-size:0.95rem}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0 1.5rem}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.3rem;transition:transform 0.2s ease,box-shadow 0.2s ease}
+    .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px var(--shadow)}
+    .card h4{margin:0 0 0.4rem;color:var(--navy);font-size:1rem;font-weight:700}
+    .card p{margin:0;font-size:0.95rem;color:var(--text-light)}
+    .flowline{border-right:3px solid var(--gold-light);margin-top:1.3rem;padding-right:1.3rem}
+    .flow-item{position:relative;margin-bottom:1.2rem;padding:0.8rem 1rem 0.8rem 0;background:var(--white);border:1px solid var(--border);border-radius:10px;transition:box-shadow 0.2s ease}
+    .flow-item:hover{box-shadow:0 8px 20px var(--shadow)}
+    .flow-item::before{content:"";position:absolute;right:-1.6rem;top:50%;transform:translateY(-50%);width:14px;height:14px;background:var(--gold);border:3px solid var(--white);border-radius:50%;box-shadow:0 0 0 2px var(--gold-light)}
+    .flow-title{margin:0;color:var(--navy);font-weight:600}
+    .flow-text{margin:0.3rem 0 0;font-size:0.95rem;color:var(--text-light);line-height:1.6}
+    .tribe-table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:0.95rem}
+    .tribe-table th{background:var(--navy);color:#fff;padding:0.75rem 1rem;text-align:right;font-family:'Amiri',serif;font-weight:700}
+    .tribe-table td{padding:0.7rem 1rem;border-bottom:1px solid var(--border);background:var(--white)}
+    .tribe-table tr:hover td{background:var(--gold-pale)}
+    .insight{background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .insight-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--gold);margin-bottom:0.4rem}
+    .insight p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    .connection{background:linear-gradient(135deg,#eef3f9 0%,#f5f0e8 100%);border:1px solid #d4dce8;border-right:3px solid var(--navy);border-radius:12px;padding:1.2rem 1.4rem;margin:1rem 0 1.8rem}
+    .connection-label{display:inline-block;font-family:'Amiri',serif;font-weight:700;font-size:0.92rem;color:var(--navy);margin-bottom:0.4rem}
+    .connection p{margin:0;font-size:0.95rem;color:var(--text);line-height:1.75}
+    a.person-link{color:var(--gold);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-light);padding-bottom:0.05rem}
+    a.person-link:hover{color:var(--navy);border-bottom-color:var(--navy)}
+    blockquote{background:var(--gold-pale);border-right:4px solid var(--gold);border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1rem 0 1.5rem;font-family:'Amiri',serif;font-size:1.1rem;color:var(--navy);line-height:2}
+    .quiz-wrapper{margin-top:3rem;padding-top:2.5rem;border-top:2px solid var(--gold-light)}
+    .quiz-wrapper>h2{text-align:center;border-right:none;padding-right:0;font-size:1.6rem;margin-bottom:0.3rem}
+    .quiz-intro{text-align:center;color:var(--text-light);font-size:0.92rem;margin:0 auto 1.5rem;max-width:600px}
+    .quiz-score-bar{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 2px 12px var(--shadow);display:flex;justify-content:space-between;align-items:center}
+    .quiz-score-bar span{font-size:0.9rem;color:var(--text-light);font-weight:500}
+    .quiz-score-bar .q-score{font-family:'Amiri',serif;font-size:1.15rem;color:var(--navy);font-weight:700}
+    .quiz-section-block{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1rem;box-shadow:0 4px 24px var(--shadow);overflow:hidden}
+    .quiz-section-block summary{cursor:pointer;padding:1rem 1.4rem;font-weight:700;font-size:1.02rem;color:var(--navy);display:flex;justify-content:space-between;align-items:center;transition:background 0.2s;list-style:none}
+    .quiz-section-block summary::-webkit-details-marker{display:none}
+    .quiz-section-block summary::marker{content:""}
+    .quiz-section-block summary:hover{background:rgba(245,230,200,0.25)}
+    .quiz-section-block summary .q-arrow{transition:transform 0.3s;font-size:0.8rem;color:var(--text-light)}
+    .quiz-section-block[open] summary .q-arrow{transform:rotate(90deg)}
+    .q-section-body{padding:0 1.4rem 1.4rem}
+    .q-card{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:1.15rem 1.3rem;margin-top:0.9rem}
+    .q-card h4{margin:0 0 0.35rem;color:var(--navy);font-size:0.95rem;font-weight:700}
+    .q-card p{margin:0 0 0.75rem;font-size:0.92rem;color:var(--text);text-align:right}
+    .q-opts{display:flex;flex-direction:column;gap:0.45rem}
+    .q-opts button{border:1px solid var(--border);background:var(--white);border-radius:10px;padding:0.65rem 1rem;font-size:0.92rem;font-family:'Tajawal',sans-serif;text-align:right;cursor:pointer;transition:all 0.2s;color:var(--text)}
+    .q-opts button:hover{background:var(--gold-pale);border-color:var(--gold-light)}
+    .q-opts button.q-correct{border-color:#2e7d32;background:#e8f5e9;color:#2e7d32;font-weight:600}
+    .q-opts button.q-wrong{border-color:#c53030;background:#fde8e8;color:#c53030}
+    .q-opts button.q-off{pointer-events:none;opacity:0.6}
+    .q-feedback{margin-top:0.5rem;font-weight:700;font-size:0.86rem;min-height:1.3em}
+    .q-feedback.q-correct{color:#2e7d32}
+    .q-feedback.q-wrong{color:#c53030}
+    .quiz-retry-wrap{text-align:center;margin-top:1.5rem}
+    .quiz-retry-btn{display:inline-block;background:var(--navy);color:#fff;border:none;border-radius:10px;padding:0.75rem 2.2rem;font-size:1rem;font-family:'Tajawal',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s,transform 0.2s}
+    .quiz-retry-btn:hover{background:#14293f;transform:translateY(-2px)}
+    footer{text-align:center;color:var(--text-light);font-size:0.82rem;border-top:1px solid var(--border);padding:2rem 1.5rem;margin-top:3rem}
+    @media(max-width:700px){.hero h1{font-size:1.9rem}.hero{padding:2.5rem 1.2rem 3rem}main{padding:1.5rem 1rem 1rem}.visual-grid,.card-grid{grid-template-columns:1fr}.breadcrumb a{font-size:0.78rem;padding:0.35rem 0.6rem}.tribe-table{font-size:0.85rem}.quiz-score-bar{flex-direction:column;gap:0.5rem;text-align:center}.q-section-body{padding:0 1rem 1rem}.toc{gap:0.35rem}}
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>حجة الوداع وإلى الرفيق الأعلى</h1>
+    <p class="subtitle">آخر حج للنبي ﷺ وخطبته الخالدة للبشرية ثم مرض الوفاة وانتقاله إلى جوار ربه — ختام أعظم سيرة في التاريخ</p>
+  </header>
+
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">حجة الوداع وإلى الرفيق الأعلى</span>
+  </nav>
+
+  <div class="toc">
+    <a href="#why">لماذا هذا الفصل؟</a>
+    <a href="#hajj-prep">التجهّز للحج</a>
+    <a href="#khutba">خطبة الوداع</a>
+    <a href="#tamam">إتمام النعمة</a>
+    <a href="#marad">مرض الوفاة</a>
+    <a href="#last-days">الأيام الأخيرة</a>
+    <a href="#wafah">الانتقال إلى الرفيق الأعلى</a>
+    <a href="#summary">الخلاصة</a>
+  </div>
+
+  <main>
+
+    <section id="why">
+      <h2>لماذا ندرس هذا الفصل؟</h2>
+      <p>
+        هذا الفصل هو خاتمة السيرة النبوية — وفيه أعظم خطبة ألقاها بشر على وجه الأرض،
+        وفيه اللحظات الأخيرة من حياة أعظم إنسان عرفته البشرية. حجة الوداع لم تكن مجرد
+        شعيرة — بل كانت وصية النبي ﷺ لأمته إلى يوم القيامة: ميثاق لحقوق الإنسان، وتلخيص
+        لجوهر الإسلام، وتوديع يعلم صاحبه أنه لن يلقى هؤلاء بعد عامه هذا.
+        ومرض الوفاة يكشف عن إنسانية النبي ﷺ في أجلى صورها — نبيّ يتألم ويحتضر
+        ويختار الرفيق الأعلى وهو يوصي بالصلاة وما ملكت الأيمان.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح الفهم</span>
+        <p>
+          خطبة الوداع ليست مجرد حدث تاريخي — إنها دستور حقوق الإنسان في الإسلام:
+          حرمة الدم والمال والعرض، والمساواة بين الناس، وحقوق المرأة، وإبطال الربا وثارات الجاهلية.
+          وهي آخر ما قاله النبي ﷺ لأكبر تجمّع من أمته رآه في حياته — فاختار لهذا الجمع
+          أعظم ما يوصيهم به.
+        </p>
+      </div>
+    </section>
+
+    <section id="hajj-prep">
+      <h2>التجهّز للحج — ذو القعدة، السنة العاشرة</h2>
+      <p>
+        في أواخر ذي القعدة من السنة العاشرة للهجرة أعلن النبي ﷺ عزمه على الحج. لم يحجّ
+        النبي ﷺ بعد الهجرة إلا هذه الحجة الواحدة — فسُميت حجة الوداع وحجة الإسلام وحجة البلاغ.
+        تقاطر الناس من كل أنحاء الجزيرة ليحجّوا مع النبي ﷺ ويتعلّموا منه المناسك.
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4C5;</span>
+          <p class="visual-title">التاريخ</p>
+          <p class="visual-text">خرج من المدينة يوم السبت لخمس بقين من ذي القعدة، السنة العاشرة للهجرة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F465;</span>
+          <p class="visual-title">الأعداد</p>
+          <p class="visual-text">حجّ معه أكثر من مئة ألف مسلم — أكبر تجمع إسلامي في حياته ﷺ.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F54B;</span>
+          <p class="visual-title">الإحرام</p>
+          <p class="visual-text">أحرم ﷺ من ذي الحُلَيفة قارنًا بين الحج والعمرة وساق معه الهَدْي.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">من ١٣ رجلًا إلى ١٠٠ ألف</span>
+        <p>
+          تأمّل المسافة: قبل ٢٣ سنة كان المسلمون ١٣ شخصًا يختبئون في دار الأرقم.
+          اليوم يحجّ مع النبي ﷺ أكثر من مئة ألف. هذا هو ثمار الصبر والدعوة والتخطيط
+          من غار حراء إلى عرفات — رحلة ربع قرن غيّرت وجه التاريخ.
+        </p>
+      </div>
+    </section>
+
+    <section id="khutba">
+      <h2>خطبة الوداع — يوم عرفة، ٩ ذي الحجة</h2>
+      <p>
+        يوم عرفة، التاسع من ذي الحجة، وقف النبي ﷺ على ناقته القصواء في بطن وادي
+        عُرَنة أمام أكبر تجمع بشري شهدته الجزيرة العربية، وألقى خطبته الخالدة.
+        أمر <a class="person-link" href="persons.html">ربيعة بن أمية بن خلف</a> أن يُبلّغ الناس
+        كلماته لبُعد المسافة. وكان يقول بعد كل فقرة: «ألا هل بلّغت؟» فيقولون: نعم.
+        فيقول: «اللهم فاشهد.»
+      </p>
+      <blockquote>
+        «أيها الناس، اسمعوا قولي فإني لا أدري لعلّي لا ألقاكم بعد عامي هذا بهذا الموقف أبدًا.»
+      </blockquote>
+
+      <h3>محاور الخطبة الكبرى</h3>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">حرمة الدماء والأموال والأعراض</p>
+          <p class="flow-text">«إن دماءكم وأموالكم وأعراضكم عليكم حرام كحرمة يومكم هذا في شهركم هذا في بلدكم هذا.» — أعظم إعلان لحقوق الإنسان في التاريخ.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">إبطال أمور الجاهلية</p>
+          <p class="flow-text">«ألا كل شيء من أمر الجاهلية تحت قدميّ موضوع.» أبطل ثارات الجاهلية وربا الجاهلية، وبدأ بأهله: ربا عمه العباس وثأر ابن ربيعة بن الحارث.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الوصية بالنساء</p>
+          <p class="flow-text">«استوصوا بالنساء خيرًا فإنهن عوان عندكم... ولهنّ عليكم رزقهنّ وكسوتهنّ بالمعروف.» — تكريم واضح لحقوق المرأة.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">المساواة بين الناس</p>
+          <p class="flow-text">«أيها الناس، إن ربكم واحد وإن أباكم واحد. ألا لا فضل لعربي على عجمي ولا لعجمي على عربي ولا لأحمر على أسود ولا لأسود على أحمر إلا بالتقوى.»</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">التمسك بالكتاب والسنة</p>
+          <p class="flow-text">«تركت فيكم ما لن تضلوا بعده إن اعتصمتم به: كتاب الله.» — الوصية الأخيرة والأعظم.</p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">خطبة لكل البشرية</span>
+        <p>
+          لاحظ أن النبي ﷺ لم يخاطب المسلمين فقط — بل قال «أيها الناس». هذه الخطبة
+          تؤسّس لمبادئ إنسانية شاملة قبل إعلان حقوق الإنسان بأكثر من ١٣ قرنًا:
+          حرمة الدم، المساواة العرقية، حقوق المرأة، تحريم الربا والاستغلال.
+          كل جملة فيها تصلح أن تكون مادة دستورية.
+        </p>
+      </div>
+    </section>
+
+    <section id="tamam">
+      <h2>إتمام النعمة — نزول آخر آية</h2>
+      <p>
+        في يوم عرفة نفسه، والنبي ﷺ واقف في ذلك الموقف العظيم، نزلت آية هي من أعظم آيات القرآن:
+      </p>
+      <blockquote>
+        ﴿الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الْإِسْلَامَ دِينًا﴾ — المائدة: ٣
+      </blockquote>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4D6;</span>
+          <p class="visual-title">اكتمال الدين</p>
+          <p class="visual-text">٢٣ سنة من الوحي بلغت تمامها — لم يبقَ حكم يحتاجه المسلمون إلا نزل.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3AF;</span>
+          <p class="visual-title">إتمام النعمة</p>
+          <p class="visual-text">نعمة الإسلام والهداية والتشريع والأخوّة اكتملت في هذا اليوم المبارك.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4A7;</span>
+          <p class="visual-title">بكاء أبي بكر</p>
+          <p class="visual-text">بكى <a class="person-link" href="persons.html">أبو بكر</a> حين سمعها — فهم أن اكتمال الدين يعني قرب رحيل صاحب الرسالة ﷺ.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">يهودي يشهد بعظمة اليوم</span>
+        <p>
+          قال يهودي لـ<a class="person-link" href="persons.html">عمر بن الخطاب</a>: «آية في كتابكم لو علينا
+          — معشر اليهود — نزلت لاتخذنا ذلك اليوم عيدًا.» فقال عمر: «قد عرفتُ أيَّ آية هي
+          ومتى نزلت وأين نزلت — نزلت يوم عرفة ونحن مع رسول الله ﷺ بعرفة — وكلاهما بحمد الله عيد.»
+        </p>
+      </div>
+    </section>
+
+    <section id="marad">
+      <h2>مرض الوفاة — صفر، السنة الحادية عشرة</h2>
+      <p>
+        بعد عودته من حجة الوداع بأشهر قليلة، بدأت علامات المرض تظهر على النبي ﷺ.
+        في أواخر شهر صفر من السنة الحادية عشرة خرج ﷺ إلى البقيع ليلًا فاستغفر لأهله،
+        ثم بدأ الوجع يشتدّ عليه. كان مرضه ﷺ حُمّى شديدة — حين وضع
+        <a class="person-link" href="persons.html">عبد الله بن مسعود</a> يده عليه قال: «إنك لتوعك وعكًا شديدًا!»
+        فقال ﷺ: «أجل، إني أوعك كما يوعك رجلان منكم.»
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr><th>الحدث</th><th>التفصيل</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>بداية المرض</td>
+            <td>صداع شديد أصابه ﷺ وهو في بيت <a class="person-link" href="persons.html">ميمونة</a> — ثم استأذن أزواجه أن يُمرَّض في بيت <a class="person-link" href="persons.html">عائشة</a>.</td>
+          </tr>
+          <tr>
+            <td>شدة الحمّى</td>
+            <td>كان يوضع في خميصة فإذا اشتد عليه الوجع طرحها وقال: «لا إله إلا الله، إن للموت لسكرات.»</td>
+          </tr>
+          <tr>
+            <td>إناء الماء</td>
+            <td>كان يُدخل يده في إناء الماء فيمسح بها وجهه من شدة الحرارة.</td>
+          </tr>
+          <tr>
+            <td>التخيير</td>
+            <td>خُيّر بين الدنيا والرفيق الأعلى — فاختار الرفيق الأعلى.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">لماذا اشتدّ المرض على الأنبياء؟</span>
+        <p>
+          قال ﷺ: «أشد الناس بلاءً الأنبياء ثم الأمثل فالأمثل.» شدة مرض النبي ﷺ
+          ليست عقوبة — بل رفع درجات ومضاعفة أجر. وهي تُظهر بشريته الكاملة:
+          نبيّ يتألم ويمرض ويموت — لكنه يواجه كل ذلك بصبر وتسليم ورضا بقضاء الله.
+        </p>
+      </div>
+    </section>
+
+    <section id="last-days">
+      <h2>الأيام الأخيرة — وصايا ومواقف خالدة</h2>
+      <p>
+        في أيامه الأخيرة تركّزت وصايا النبي ﷺ على ثلاثة محاور: الصلاة، والصحابة، وتسوية الحقوق.
+        كان يوصي وهو يعالج سكرات الموت:
+      </p>
+      <ul>
+        <li><strong>الصلاة الصلاة:</strong> ظلّ يكرر «الصلاة الصلاة وما ملكت أيمانكم» حتى جعل يُغرغر بها صدره ولا يفيض بها لسانه.</li>
+        <li><strong>إمامة أبي بكر:</strong> أمر أن يصلّي <a class="person-link" href="persons.html">أبو بكر</a> بالناس — وهو إشارة واضحة لخلافته. قالت <a class="person-link" href="persons.html">عائشة</a>: «إن أبا بكر رجل أسيف (رقيق القلب) ومتى يقم مقامك يبكي.» فأصرّ ﷺ: «مُروا أبا بكر فليصلِّ بالناس.»</li>
+        <li><strong>تسوية المظالم:</strong> صعد المنبر وقال: «من كنتُ جلدتُ له ظهرًا فهذا ظهري فليستقِدْ منه، ومن كنتُ أخذتُ له مالًا فهذا مالي فليأخذ منه.»</li>
+        <li><strong>إخراج المشركين:</strong> أوصى بإخراج المشركين من جزيرة العرب وإجازة الوفود كما كان يُجيزها.</li>
+      </ul>
+
+      <h3>آخر صلاة في المسجد</h3>
+      <p>
+        يوم الإثنين، فُرج ستر حجرة <a class="person-link" href="persons.html">عائشة</a> والناس في صلاة الصبح
+        خلف أبي بكر — فنظر النبي ﷺ إلى المسلمين وهم صفوف في الصلاة فتبسّم يضحك.
+        كاد أبو بكر أن يتأخر ظنًّا أنه يريد الخروج للصلاة، فأشار إليهم: أتمّوا صلاتكم.
+        ثم أرخى الستر — وكانت آخر مرة يراهم فيها.
+      </p>
+      <div class="insight">
+        <span class="insight-label">الابتسامة الأخيرة</span>
+        <p>
+          آخر ما رآه الصحابة من النبي ﷺ كان ابتسامة — ابتسامة رضا حين رأى أمته
+          قائمة في الصلاة خلف أبي بكر. اطمأنّ أن الأمة ستستمر، وأن الصلاة ستُقام،
+          وأن القيادة في يد أمينة. فابتسم ابتسامة وداع وأرخى الستر إلى الأبد.
+        </p>
+      </div>
+    </section>
+
+    <section id="wafah">
+      <h2>الانتقال إلى الرفيق الأعلى — يوم الإثنين ١٢ ربيع الأول</h2>
+      <p>
+        ضُحى يوم الإثنين الثاني عشر من ربيع الأول سنة ١١ للهجرة، وبين يدي
+        <a class="person-link" href="persons.html">عائشة</a> وفي حِجرها، اشتد الوجع على النبي ﷺ.
+        كان بين يديه إناء فيه ماء فجعل يُدخل يده في الماء ويمسح وجهه ويقول:
+      </p>
+      <blockquote>
+        «لا إله إلا الله، إن للموت لسكرات.»
+      </blockquote>
+      <p>
+        ثم رفع إصبعه وشخص بصره نحو السقف وتحركت شفتاه، فأصغت إليه عائشة
+        وهو يقول:
+      </p>
+      <blockquote>
+        «مع الذين أنعمتَ عليهم من النبيين والصدّيقين والشهداء والصالحين... اللهم اغفر لي وارحمني وألحقني بالرفيق الأعلى... اللهم الرفيق الأعلى.»
+      </blockquote>
+      <p>
+        قالت عائشة: «فعرفتُ أنه يُخيَّر، وأنه اختار الرفيق الأعلى.» ومالت يده ﷺ
+        ولحق بالرفيق الأعلى. وكان عمره ﷺ ثلاثًا وستين سنة.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">ردّ فعل عمر بن الخطاب</p>
+          <p class="flow-text">لم يصدّق عمر الخبر، وقام يقول: «إن رجالًا من المنافقين يزعمون أن رسول الله ﷺ توفّي، وإنه لم يمت!» — من شدة الصدمة.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">موقف أبي بكر الصديق</p>
+          <p class="flow-text">جاء أبو بكر فكشف عن وجه النبي ﷺ وقبّله وقال: «بأبي أنت وأمي، طبتَ حيًّا وميتًا.» ثم خرج إلى الناس وقال كلمته الخالدة.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">كلمة أبي بكر الخالدة</p>
+          <p class="flow-text">«ألا مَن كان يعبد محمدًا فإن محمدًا قد مات، ومَن كان يعبد الله فإن الله حيٌّ لا يموت.» ثم تلا: ﴿وَمَا مُحَمَّدٌ إِلَّا رَسُولٌ قَدْ خَلَتْ مِن قَبْلِهِ الرُّسُلُ﴾.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">الدفن والتغسيل</p>
+          <p class="flow-text">غُسّل ﷺ في ثيابه ودُفن في حجرة عائشة حيث قُبض — في المكان الذي مات فيه، لأن الأنبياء يُدفنون حيث يموتون.</p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">كلمة أبي بكر — لحظة فارقة</span>
+        <p>
+          بكلمته هذه أنقذ أبو بكر الأمة من الفوضى. عمر وقف مذهولًا يهدد من يقول إن النبي ﷺ مات.
+          لكن أبا بكر ثبت وذكّر الناس بالحقيقة: محمد رسول وليس إلهًا — الرسالة باقية والرسول بشر.
+          قال عمر لاحقًا: «والله ما إن سمعت أبا بكر تلاها حتى عُقرت — أي سقطت — حتى ما تحملني رجلاي،
+          وحتى أهويتُ إلى الأرض حين سمعته تلاها عرفتُ أن النبي ﷺ قد مات.»
+        </p>
+      </div>
+
+      <h3>عمره ﷺ ومكان الدفن</h3>
+      <table class="tribe-table">
+        <thead>
+          <tr><th>البيان</th><th>التفصيل</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>تاريخ الوفاة</td><td>يوم الإثنين ١٢ ربيع الأول سنة ١١ هـ (٨ يونيو ٦٣٢ م)</td></tr>
+          <tr><td>العمر</td><td>٦٣ سنة</td></tr>
+          <tr><td>مكان الوفاة</td><td>حجرة عائشة بنت أبي بكر في المدينة المنورة</td></tr>
+          <tr><td>مكان الدفن</td><td>في نفس الحجرة حيث قُبض — وهي اليوم داخل المسجد النبوي الشريف</td></tr>
+          <tr><td>من غسّله</td><td>العباس وعلي والفضل وقُثَم ابنا العباس وأسامة بن زيد وشُقران مولاه</td></tr>
+          <tr><td>من صلّى عليه</td><td>صلوا عليه أرسالًا (جماعات جماعات) بلا إمام — تكريمًا له</td></tr>
+        </tbody>
+      </table>
+      <div class="insight">
+        <span class="insight-label">لماذا دُفن حيث مات؟</span>
+        <p>
+          قال <a class="person-link" href="persons.html">أبو بكر</a>: سمعت رسول الله ﷺ يقول:
+          «ما قُبض نبيٌّ إلا دُفن حيث يُقبض.» فرُفع فراشه وحُفر له في مكانه تحته.
+          ولهذا قبره ﷺ اليوم في قلب المسجد النبوي — في الحجرة التي عاش فيها ومات فيها.
+        </p>
+      </div>
+    </section>
+
+    <section id="summary">
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. حجة الوداع</h4>
+          <p>أكثر من ١٠٠ ألف مسلم — من ١٣ في دار الأرقم إلى أمة تملأ عرفات.</p>
+        </article>
+        <article class="card">
+          <h4>٢. خطبة لكل البشرية</h4>
+          <p>حرمة الدم والمال والعرض، المساواة، حقوق المرأة، إبطال الربا وثارات الجاهلية.</p>
+        </article>
+        <article class="card">
+          <h4>٣. اكتمال الدين</h4>
+          <p>﴿اليوم أكملت لكم دينكم﴾ — ٢٣ سنة من الوحي بلغت تمامها يوم عرفة.</p>
+        </article>
+        <article class="card">
+          <h4>٤. الوصية الأخيرة</h4>
+          <p>«الصلاة الصلاة وما ملكت أيمانكم» — آخر ما نطق به ﷺ وصايا.</p>
+        </article>
+        <article class="card">
+          <h4>٥. اختيار الرفيق الأعلى</h4>
+          <p>خُيّر بين الدنيا والآخرة فاختار الرفيق الأعلى — بين يدي عائشة وفي حِجرها.</p>
+        </article>
+        <article class="card">
+          <h4>٦. كلمة أبي بكر</h4>
+          <p>«من كان يعبد محمدًا فإن محمدًا قد مات ومن كان يعبد الله فإن الله حيٌّ لا يموت.»</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch23-score">٠ / ٢٠</span>
+      </div>
+      <div id="ch23-quiz-container"></div>
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch23-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+  (function(){
+    const toArabicNum=n=>n.toString().replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+    const sections=[
+      {title:'حجة الوداع والتجهّز',questions:[
+        {t:'تاريخ الحج',q:'في أي سنة هجرية كانت حجة الوداع؟',o:['السنة الثامنة','السنة التاسعة','السنة العاشرة','السنة الحادية عشرة'],a:2},
+        {t:'عدد الحجاج',q:'كم كان عدد المسلمين الذين حجّوا مع النبي ﷺ تقريبًا؟',o:['عشرة آلاف','أربعون ألفًا','سبعون ألفًا','أكثر من مئة ألف'],a:3},
+        {t:'نوع الإحرام',q:'كيف أحرم النبي ﷺ في حجة الوداع؟',o:['مُفرِدًا بالحج','مُتمتعًا','قارنًا بين الحج والعمرة','لم يُحرم'],a:2},
+        {t:'مكان الإحرام',q:'من أين أحرم النبي ﷺ؟',o:['من مكة','من ذي الحُلَيفة','من الجُحفة','من المدينة'],a:1},
+        {t:'تسمية الحجة',q:'بماذا سُمّيت هذه الحجة إلى جانب حجة الوداع؟',o:['حجة النصر','حجة البلاغ وحجة الإسلام','حجة الفتح','حجة الأمة'],a:1}
+      ]},
+      {title:'خطبة الوداع ومحاورها',questions:[
+        {t:'مكان الخطبة',q:'أين ألقى النبي ﷺ خطبة الوداع؟',o:['على جبل عرفات','في بطن وادي عُرَنة بعرفة','في مسجد الخَيف بمنى','عند الكعبة المشرفة'],a:1},
+        {t:'افتتاحية الخطبة',q:'بماذا افتتح النبي ﷺ خطبة الوداع؟',o:['بالتكبير والتهليل','بقوله: لا أدري لعلي لا ألقاكم بعد عامي هذا','بتلاوة سورة الفاتحة','بمدح الأنصار والمهاجرين'],a:1},
+        {t:'حرمة الدماء',q:'بماذا شبّه النبي ﷺ حرمة الدماء والأموال والأعراض؟',o:['بحرمة الكعبة','بحرمة يوم عرفة في ذلك الشهر في ذلك البلد','بحرمة شهر رمضان','بحرمة المسجد النبوي'],a:1},
+        {t:'إبطال ربا الجاهلية',q:'بربا مَن بدأ النبي ﷺ حين أبطل ربا الجاهلية؟',o:['ربا أبي سفيان','ربا أبي لهب','ربا عمه العباس بن عبد المطلب','ربا عبد الله بن أبي'],a:2},
+        {t:'الوصية بالنساء',q:'ماذا قال النبي ﷺ في حق النساء في خطبة الوداع؟',o:['اتركوهن في بيوتهن','استوصوا بالنساء خيرًا','زوّجوهن صغارًا','لا حق لهن في الميراث'],a:1}
+      ]},
+      {title:'إتمام النعمة ومرض الوفاة',questions:[
+        {t:'آية الإكمال',q:'ما الآية التي نزلت يوم عرفة في حجة الوداع؟',o:['﴿إنا فتحنا لك فتحًا مبينًا﴾','﴿اليوم أكملت لكم دينكم﴾','﴿إذا جاء نصر الله والفتح﴾','﴿واتقوا يومًا ترجعون فيه إلى الله﴾'],a:1},
+        {t:'بكاء أبي بكر',q:'لماذا بكى أبو بكر حين سمع آية إكمال الدين؟',o:['من فرحة اكتمال الدين','لأنه فهم أن اكتمال الدين يعني قرب رحيل النبي ﷺ','لأن الآية عاتبته','من شدة التأثر بالموقف فقط'],a:1},
+        {t:'شدة المرض',q:'بماذا وصف النبي ﷺ شدة مرضه حين قال ابن مسعود: إنك لتوعك وعكًا شديدًا؟',o:['إن الله يمتحنني','إني أوعك كما يوعك رجلان منكم','هذا قدر الله','سأشفى قريبًا'],a:1},
+        {t:'بيت التمريض',q:'في بيت أي زوجة طلب النبي ﷺ أن يُمرَّض؟',o:['ميمونة','حفصة','أم سلمة','عائشة'],a:3},
+        {t:'إمامة الصلاة',q:'من أمر النبي ﷺ أن يصلّي بالناس حين اشتد مرضه؟',o:['عمر بن الخطاب','علي بن أبي طالب','أبو بكر الصديق','عثمان بن عفان'],a:2}
+      ]},
+      {title:'الوفاة وما بعدها',questions:[
+        {t:'تاريخ الوفاة',q:'متى توفّي النبي ﷺ؟',o:['١٢ ربيع الأول سنة ١١ هـ','١ محرم سنة ١١ هـ','١٥ رمضان سنة ١٠ هـ','١٠ ذي الحجة سنة ١٠ هـ'],a:0},
+        {t:'عمره ﷺ',q:'كم كان عمر النبي ﷺ حين توفّي؟',o:['٦٠ سنة','٦٣ سنة','٦٥ سنة','٧٠ سنة'],a:1},
+        {t:'آخر كلمات',q:'ما آخر كلمات النبي ﷺ قبل وفاته؟',o:['لا إله إلا الله','اللهم الرفيق الأعلى','الصلاة الصلاة','اللهم اغفر لأمتي'],a:1},
+        {t:'موقف عمر',q:'ما كان ردّ فعل عمر بن الخطاب حين بلغه خبر الوفاة؟',o:['بكى بهدوء وتقبّل الأمر','لم يصدق وهدّد من يقول إن النبي ﷺ مات','أسرع إلى السقيفة لاختيار خليفة','سقط مغشيًّا عليه فقط'],a:1},
+        {t:'كلمة أبي بكر',q:'ماذا قال أبو بكر حين خرج إلى الناس بعد وفاة النبي ﷺ؟',o:['لقد مات خير البشر','من كان يعبد محمدًا فإن محمدًا قد مات ومن كان يعبد الله فإن الله حيّ لا يموت','يجب أن نختار خليفة فورًا','لا تبكوا فإنه في الجنة'],a:1}
+      ]}
+    ];
+    function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+    const totalQ=sections.reduce((s,sec)=>s+sec.questions.length,0);
+    let correct=0,answered=0;
+    const scoreEl=document.getElementById('ch23-score'),container=document.getElementById('ch23-quiz-container'),retryBtn=document.getElementById('ch23-retry');
+    function updateScore(){scoreEl.textContent=toArabicNum(correct)+' / '+toArabicNum(totalQ)}
+    function buildQuiz(){
+      correct=0;answered=0;container.innerHTML='';retryBtn.style.display='none';updateScore();
+      let qNum=0;
+      sections.forEach(function(sec,sIdx){
+        const details=document.createElement('details');details.className='quiz-section-block';if(sIdx===0)details.open=true;
+        const summary=document.createElement('summary');summary.innerHTML=sec.title+'<span class="q-arrow">&#x276F;</span>';details.appendChild(summary);
+        const body=document.createElement('div');body.className='q-section-body';
+        var qs=sec.questions.slice();shuffle(qs);
+        qs.forEach(function(item){
+          qNum++;
+          var card=document.createElement('article');card.className='q-card';
+          var h=document.createElement('h4');h.textContent='سؤال '+toArabicNum(qNum)+': '+item.t;card.appendChild(h);
+          var p=document.createElement('p');p.textContent=item.q;card.appendChild(p);
+          var optsDiv=document.createElement('div');optsDiv.className='q-opts';
+          var fb=document.createElement('div');fb.className='q-feedback';
+          var indices=item.o.map(function(_,i){return i});shuffle(indices);
+          indices.forEach(function(origIdx){
+            var btn=document.createElement('button');btn.textContent=item.o[origIdx];
+            btn.addEventListener('click',function(){
+              if(card.dataset.done)return;card.dataset.done='1';answered++;
+              optsDiv.querySelectorAll('button').forEach(function(b){b.classList.add('q-off')});
+              optsDiv.querySelectorAll('button').forEach(function(b,bIdx){if(indices[bIdx]===item.a)b.classList.add('q-correct')});
+              if(origIdx===item.a){btn.classList.add('q-correct');fb.textContent='إجابة صحيحة!';fb.className='q-feedback q-correct';correct++}
+              else{btn.classList.add('q-wrong');fb.textContent='إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';fb.className='q-feedback q-wrong'}
+              updateScore();if(answered===totalQ)retryBtn.style.display='inline-block';
+            });optsDiv.appendChild(btn);
+          });
+          card.appendChild(optsDiv);card.appendChild(fb);body.appendChild(card);
+        });
+        details.appendChild(body);container.appendChild(details);
+      });
+    }
+    retryBtn.addEventListener('click',function(){buildQuiz();document.getElementById('quiz-root').scrollIntoView({behavior:'smooth'})});
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>أُعِدَّ الملخص استنادًا إلى فصل «حجة الوداع وإلى الرفيق الأعلى» من كتاب «الرحيق المختوم»</footer>
+
+</body>
+</html>

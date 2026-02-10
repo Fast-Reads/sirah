@@ -3,68 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ملخص موقع العرب وأقوامها</title>
+  <title>موقع العرب وأقوامها — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      margin: 0;
-      background: #f7f7f7;
-      color: #222;
-      line-height: 1.8;
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
     }
-    header {
-      background: linear-gradient(120deg, #173f5f, #20639b);
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
       color: #fff;
-      padding: 2.5rem 1.5rem;
+      padding: 3.5rem 1.5rem 4rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    nav {
-      text-align: center;
-      margin: -25px 0 20px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
     }
-    nav a {
-      display: inline-block;
-      background: #20639b;
-      color: #fff;
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
       text-decoration: none;
-      padding: 0.65rem 1.5rem;
-      border-radius: 30px;
-      font-size: 0.95rem;
-      transition: background 0.2s ease;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
     }
-    nav a:hover {
-      background: #173f5f;
+    .breadcrumb a:hover {
+      background: var(--gold-pale);
+      color: var(--navy);
     }
+    .breadcrumb .sep {
+      color: var(--border);
+      font-size: 0.8rem;
+    }
+    .breadcrumb .current {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* MAIN */
     main {
-      max-width: 900px;
-      margin: -40px auto 40px;
-      background: #fff;
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 1rem;
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 1.5rem;
     }
     h2 {
-      color: #173f5f;
-      margin-top: 2.2rem;
-      border-right: 4px solid #20639b;
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
       padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
     }
     p {
-      margin: 0.5rem 0 1.5rem;
+      color: var(--text);
       text-align: justify;
+      font-size: 1rem;
+      margin: 0.5rem 0 1.5rem;
     }
+
+    /* LISTS */
     ul {
       list-style: none;
       padding: 0;
-      margin: 0 0 2rem;
+      margin: 0 0 1.5rem;
     }
     ul li {
-      background: #f0f5f9;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
       padding: 1rem 1.25rem;
-      border-radius: 8px;
-      margin-bottom: 0.85rem;
-      border-right: 4px solid #20639b;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
     }
+
+    /* VISUAL GRID */
     .visual-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -72,11 +166,16 @@
       margin: 1rem 0 0.5rem;
     }
     .visual-card {
-      background: linear-gradient(140deg, #f9fbff, #e6f0ff);
-      border-radius: 14px;
-      padding: 1.1rem;
-      box-shadow: 0 12px 28px rgba(23, 63, 95, 0.08);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
       text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px var(--shadow);
     }
     .visual-icon {
       font-size: 2rem;
@@ -86,212 +185,1150 @@
     .visual-title {
       font-weight: 600;
       margin: 0 0 0.35rem;
-      color: #173f5f;
+      color: var(--navy);
     }
     .visual-text {
       margin: 0;
-      color: #3c4a57;
+      color: var(--text-light);
       line-height: 1.5;
       font-size: 0.95rem;
     }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px var(--shadow);
+    }
+    .card h4 {
+      margin: 0 0 0.4rem;
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+
+    /* FLOW TIMELINE */
+    .flowline {
+      border-right: 3px solid var(--gold-light);
+      margin-top: 1.3rem;
+      padding-right: 1.3rem;
+    }
+    .flow-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover {
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+    .flow-item::before {
+      content: "";
+      position: absolute;
+      right: -1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .flow-title {
+      margin: 0;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .flow-text {
+      margin: 0.3rem 0 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+    }
+    .tribe-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .tribe-table tr:hover td {
+      background: var(--gold-pale);
+    }
+
+    /* ── INSIGHT / CONNECTION BOX ── */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .insight p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* connection variant — links forward to later chapters */
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .connection p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* PERSON LINK */
     a.person-link {
-      color: #173f5f;
+      color: var(--gold);
       font-weight: 600;
       text-decoration: none;
-      border-bottom: 2px solid rgba(23, 63, 95, 0.3);
+      border-bottom: 1px solid var(--gold-light);
       padding-bottom: 0.05rem;
     }
     a.person-link:hover {
-      color: #0d2d4a;
-      border-bottom-color: #0d2d4a;
+      color: var(--navy);
+      border-bottom-color: var(--navy);
     }
+
+    /* ── QUIZ ── */
+    .quiz-wrapper {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid var(--gold-light);
+    }
+    .quiz-wrapper > h2 {
+      text-align: center;
+      border-right: none;
+      padding-right: 0;
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+    .quiz-intro {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      margin: 0 auto 1.5rem;
+      max-width: 600px;
+    }
+    .quiz-score-bar {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 12px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .quiz-score-bar span {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+    .quiz-score-bar .q-score {
+      font-family: 'Amiri', serif;
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .quiz-section-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer;
+      padding: 1rem 1.4rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+      list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow {
+      transition: transform 0.3s;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body {
+      padding: 0 1.4rem 1.4rem;
+    }
+    .q-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.15rem 1.3rem;
+      margin-top: 0.9rem;
+    }
+    .q-card h4 {
+      margin: 0 0 0.35rem;
+      color: var(--navy);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .q-card p {
+      margin: 0 0 0.75rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      text-align: right;
+    }
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .q-opts button {
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 10px;
+      padding: 0.65rem 1rem;
+      font-size: 0.92rem;
+      font-family: 'Tajawal', sans-serif;
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text);
+    }
+    .q-opts button:hover {
+      background: var(--gold-pale);
+      border-color: var(--gold-light);
+    }
+    .q-opts button.q-correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-weight: 600;
+    }
+    .q-opts button.q-wrong {
+      border-color: #c53030;
+      background: #fde8e8;
+      color: #c53030;
+    }
+    .q-opts button.q-off {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+    .q-feedback {
+      margin-top: 0.5rem;
+      font-weight: 700;
+      font-size: 0.86rem;
+      min-height: 1.3em;
+    }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .quiz-retry-btn {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 2.2rem;
+      font-size: 1rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover {
+      background: #14293f;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      color: #666;
-      font-size: 0.9rem;
+      color: var(--text-light);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
       margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
     <h1>موقع العرب وأقوامها</h1>
   </header>
 
-  <nav>
-    <a href="index.html">العودة إلى الصفحة الرئيسة</a>
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">موقع العرب وأقوامها</span>
   </nav>
 
   <main>
-    <section>
-      <h2>جوهر السيرة ونطاق الدراسة</h2>
-      <p>
-        يقدّم كتاب «الرحيق المختوم» هذا العرض ضمن قسم «موقع العرب وأقوامها»، حيث
-        يوضح أن السيرة النبوية انعكاس للرسالة التي حملها النبي محمد ﷺ للبشرية،
-        والتي أخرجت الناس من ظلمات الجهل إلى نور التوحيد. فهمُ ملامح هذه الرسالة
-        يقتضي تحليل البيئة التي سبقتها ومقارنتها بما أعقبها من آثار حضارية وروحية.
-        لذلك يركّز هذا الملخص على أقوام العرب وتطوراتهم قبل الإسلام وعلى الظروف التي
-        مهدت لظهور الرسالة الخاتمة.
-      </p>
-    </section>
+
+    <!-- ═══════ المدخل: لماذا نبدأ من هنا؟ ═══════ -->
 
     <section>
-      <h2>موقع العرب وأقوامها</h2>
+      <h2>لماذا نبدأ بالجغرافيا والقبائل؟</h2>
       <p>
-        في اللغة ارتبط لفظ «العرب» بالصحارى والقفار والأراضي المجدبة، ثم توسّع ليشمل
-        سكان تلك الرقعة الجغرافية الذين اتخذوا الجزيرة العربية وطنًا لهم منذ أقدم العصور.
-        فالعرب إذن هم أهل البادية والواحات الذين حافظوا على خصوصيتهم اللغوية والثقافية في
-        نطاق موطنهم الطبيعي.
+        قبل أن نتحدث عن النبي ﷺ نحتاج خريطة ذهنية للعالم الذي وُلد فيه.
+        المباركفوري يبدأ كتابه من هنا لأن كل حدث في السيرة — من الحصار في الشِّعب
+        إلى غزوة الأحزاب إلى فتح مكة — لا يُفهم بعمق إلا إذا عرفتَ: مَن هذه القبائل؟
+        أين تسكن؟ ما علاقتها ببعضها؟ ولماذا كانت مكة بهذه الأهمية؟
       </p>
+      <div class="insight">
+        <span class="insight-label">القاعدة</span>
+        <p>
+          كلما صادفتَ اسم قبيلة أو مكان في فصول السيرة اللاحقة، يمكنك العودة إلى هذا الفصل
+          كمرجع سريع. المعلومات هنا ليست للحفظ، بل لبناء «حاسة اتجاه» تجعل بقية الكتاب أوضح.
+        </p>
+      </div>
     </section>
 
+    <!-- ═══════ الموقع الجغرافي ═══════ -->
+
     <section>
-      <h2>حدود الجزيرة العربية ومساحتها</h2>
+      <h2>الجزيرة العربية: الحصن الطبيعي</h2>
+      <p>
+        الجزيرة العربية كتلة ضخمة (أكثر من مليون ميل مربع) تحيط بها المياه من ثلاث جهات
+        والصحراء من الرابعة. هذا العزل الطبيعي يعني أمرين مهمين:
+      </p>
       <ul>
-        <li><strong>الحد الغربي:</strong> البحر الأحمر وشبه جزيرة سيناء.</li>
-        <li><strong>الحد الشرقي:</strong> الخليج العربي وأجزاء واسعة من جنوب العراق.</li>
-        <li><strong>الحد الجنوبي:</strong> بحر العرب الذي يمثل امتدادًا لبحر الهند.</li>
-        <li><strong>الحد الشمالي:</strong> بلاد الشام وأجزاء أخرى من العراق مع اختلاف طفيف في التحديد.</li>
+        <li><strong>الاستقلال:</strong> لم تستطع الإمبراطوريتان العظميان (الفرس والروم) احتلال قلب الجزيرة رغم سيطرتهما على العالم. العرب بقوا أحرارًا بينما شعوب كثيرة خضعت.</li>
+        <li><strong>الموقع الوسيط:</strong> الجزيرة تقع في مفترق طرق ثلاث قارات — أفريقيا عبر البحر الأحمر، وآسيا عبر الخليج والعراق، وأوروبا عبر الشام. هذا جعلها ممرًا تجاريًا عالميًا.</li>
       </ul>
-      <p>
-        تُقدَّر مساحة الجزيرة بين مليون ومليون وثلاثمائة ألف ميل مربع، ما يجعلها كتلة جغرافية
-        ضخمة ومتماسكة تتوسط العالم القديم.
-      </p>
-      <div class="visual-grid">
-        <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">🌅</span>
-          <p class="visual-title">بوابة الغرب</p>
-          <p class="visual-text">من شواطئ البحر الأحمر انطلقت رحلات الحجاز إلى مصر والحبشة.</p>
-        </article>
-        <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">🌊</span>
-          <p class="visual-title">الساحل الشرقي</p>
-          <p class="visual-text">الخليج ومصبّات العراق شكّلت ممراً للتجارة واللؤلؤ.</p>
-        </article>
-        <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">🧭</span>
-          <p class="visual-title">المفترق الشمالي</p>
-          <p class="visual-text">حدود الشام مدت جسور التواصل مع الإمبراطوريات المجاورة.</p>
-        </article>
-        <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">⚓</span>
-          <p class="visual-title">المحيط الجنوبي</p>
-          <p class="visual-text">بحر العرب وصل الجزيرة بطرق الهند والساحل الإفريقي.</p>
-        </article>
+      <div class="connection">
+        <span class="connection-label">لماذا هذا مهم لاحقًا؟</span>
+        <p>
+          هذا الموقع الوسيط يفسّر لماذا اختار الله هذا المكان لرسالته الأخيرة: بيئة مستقلة لا يتحكم فيها
+          طاغية، ومركز يستطيع إيصال الرسالة لكل الحضارات المحيطة. وعندما ترسل الرسائل
+          للملوك في الفصول المتأخرة، ستفهم لماذا وصلت بسرعة — الطرق التجارية كانت جاهزة.
+        </p>
       </div>
     </section>
 
     <section>
-      <h2>الأهمية الجغرافية والاستراتيجية</h2>
+      <h2>أقسام الجزيرة الخمسة</h2>
       <p>
-        لعب الموقع الطبيعي للجزيرة دور الحصن المنيع؛ إذ أحاطت بها الصحارى من كل جانب،
-        فصعب على القوى الأجنبية اختراقها أو فرض السيطرة عليها. هذا التحصين الطبيعي منح
-        سكانها استقلالًا واسعًا حتى مع مجاورتهم لإمبراطوريتين عظميين. خارجيًا، تتقاطع الجزيرة
-        مع قارات العالم القديم برًا وبحرًا، فشمالها الغربي بوابة إلى أفريقيا، ومنافذها الشرقية
-        والشمالية تربطها بآسيا، بينما يفتح جنوبها على طرق التجارة البحرية الكبرى.
-      </p>
-    </section>
-
-    <section>
-      <h2>الممرات العالمية وتأثيرها</h2>
-      <p>
-        يشكّل الركن الشمالي الشرقي مفتاحًا مباشرًا نحو أوروبا، فيما تفتح الجهة الشرقية مسارات
-        سهلة إلى بلاد العجم وامتداد الشرق الأوسط وصولًا إلى الهند والصين. هذا التداخل البري والبحري
-        جعل الموانئ العربية محطات إلزامية للسفن والقوافل، وحوّل شمال الجزيرة وجنوبها إلى ساحات نشطة
-        لتبادل التجارة والثقافة والأديان والفنون عبر العصور.
+        احفظ هذه الأقاليم الخمسة لأن أسماءها ستتكرر كثيرًا في السيرة:
       </p>
       <div class="visual-grid">
         <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">🛳️</span>
-          <p class="visual-title">مرافئ مزدوجة</p>
-          <p class="visual-text">ينفتح البحر الأحمر والخليج العربي على خطوط بحرية تربط آسيا وأفريقيا.</p>
+          <span class="visual-icon" aria-hidden="true">&#x1F3D6;&#xFE0F;</span>
+          <p class="visual-title">تهامة</p>
+          <p class="visual-text">الشريط الساحلي على البحر الأحمر. فيها <strong>مكة</strong>، قلب الأحداث.</p>
         </article>
         <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">🚚</span>
-          <p class="visual-title">قوافل الشمال</p>
-          <p class="visual-text">طريق تبوك ودومة الجندل نقل البضائع والوفود إلى بلاد الشام.</p>
+          <span class="visual-icon" aria-hidden="true">&#x26F0;&#xFE0F;</span>
+          <p class="visual-title">الحجاز</p>
+          <p class="visual-text">الجبال شرق تهامة. فيها <strong>المدينة</strong> و<strong>الطائف</strong> — وجهتا هجرة النبي ﷺ.</p>
         </article>
         <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">📜</span>
-          <p class="visual-title">تبادل ثقافي</p>
-          <p class="visual-text">اختلاط الأمم في الحجاز صنع فضاءً لتلاقح المعرفة والأديان.</p>
+          <span class="visual-icon" aria-hidden="true">&#x1F3DC;&#xFE0F;</span>
+          <p class="visual-title">نجد</p>
+          <p class="visual-text">الهضبة الوسطى. موطن قبائل كبرى مثل <strong>هوازن</strong> و<strong>تميم</strong> و<strong>غطفان</strong>.</p>
         </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F30A;</span>
+          <p class="visual-title">العروض</p>
+          <p class="visual-text">الشرق المطل على الخليج. ستأتي وفودهم في <strong>عام الوفود</strong> قبيل الوفاة.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3D4;&#xFE0F;</span>
+          <p class="visual-title">اليمن</p>
+          <p class="visual-text">الجنوب الخصب. منه جاء أجداد <strong>الأنصار</strong> الذين آووا النبي ﷺ.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">خريطة ذهنية</span>
+        <p>
+          مكة في تهامة (غرب)، المدينة والطائف في الحجاز (أعلى قليلًا)، القبائل المعادية غالبًا في نجد (الوسط)،
+          أصل الأنصار من اليمن (جنوب). هذا التوزيع يرسم خط الصراع الأساسي في السيرة.
+        </p>
       </div>
     </section>
 
+    <!-- ═══════ تصنيف أقوام العرب ═══════ -->
+
     <section>
-      <h2>تصنيف أقوام العرب</h2>
+      <h2>ثلاث طبقات من العرب</h2>
+      <p>
+        المؤرخون يقسمون العرب إلى ثلاث طبقات حسب القِدم. هذا التقسيم ليس أكاديميًا فحسب —
+        بل يحدد مَن يمتّ بصلة لمن، ومن يحق له الفخر بالنسب، وكيف تتحالف القبائل:
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>العرب البائدة</h4>
+          <p>شعوب قديمة هلكت تمامًا — عاد وثمود وطسم وغيرها. انتهى وجودها لكن قصصها حية في القرآن.</p>
+        </article>
+        <article class="card">
+          <h4>العرب العاربة</h4>
+          <p>القحطانيون — العرب «الأصليون» من اليمن. منهم جاء الأنصار (الأوس والخزرج).</p>
+        </article>
+        <article class="card">
+          <h4>العرب المستعربة</h4>
+          <p>العدنانيون — ذرية إسماعيل عليه السلام. «تعرّبوا» بالاختلاط. منهم قريش والنبي ﷺ.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">رابط مهم</span>
+        <p>
+          هذا التقسيم يفسّر توترًا خفيًا في السيرة: القحطانيون (الأنصار) والعدنانيون (قريش/المهاجرون)
+          كانا «عرقين» مختلفين جمعهما الإسلام. عندما تقرأ عن المؤاخاة بين المهاجرين والأنصار في المدينة،
+          ستدرك أن النبي ﷺ كان يوحّد شعبين لا عائلتين فقط.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── العرب البائدة ─── -->
+
+    <section>
+      <h2>العرب البائدة — الدرس الأول</h2>
+      <p>
+        شعوب عربية قديمة اندثرت تمامًا قبل الإسلام بقرون. المباركفوري يذكرها لأن القرآن يذكرها،
+        وقريش كانت تعرف قصصها. أبرزها:
+      </p>
       <ul>
-        <li><strong>العرب البائدة:</strong> شعوب موغلة في القدم انقطع خبرها، مثل عاد وثمود، وتبقى قصصها
-          شواهد على عمق التاريخ العربي.</li>
-        <li><strong>العرب العاربة:</strong> أبناء القحطانيين في جنوب الجزيرة، اشتهروا بإدارة المدن والواحات
-          وبتأسيس قبائل شكلت لاحقًا نواة حواضر اليمن والحجاز.</li>
-        <li><strong>العرب المستعربة:</strong> ذرية إسماعيل بن <a class="person-link" href="ibrahim.html">إبراهيم</a> عليهم السلام، اندمجوا في البيئة المكية
-          وشكّلوا لاحقًا القبائل العدنانية التي انبثق منها نسب النبي ﷺ.</li>
+        <li><strong>عاد:</strong> قوم هود عليه السلام في الأحقاف (جنوب الجزيرة). عُرفوا بضخامة أجسامهم وبطشهم. أهلكهم الله بريح صرصر عاتية.</li>
+        <li><strong>ثمود:</strong> قوم صالح عليه السلام في الحِجر (شمال الحجاز). نحتوا بيوتهم في الجبال. أهلكتهم الصيحة بعد عقرهم الناقة.</li>
+        <li><strong>طسم وجديس:</strong> سكنوا اليمامة وسط الجزيرة. أفنى بعضهم بعضًا في حروب داخلية.</li>
+        <li><strong>العماليق:</strong> من أقدم سكان الجزيرة، انتشروا في مناطق متعددة ثم تلاشوا.</li>
       </ul>
-      <p>
-        هذا التقسيم التاريخي يساعد على فهم اختلاف اللهجات والعادات ومسارات الانتشار من الجنوب إلى الحجاز
-        فالشمال، دون الحاجة إلى حفظ أسماء كثيرة.
-      </p>
+      <div class="insight">
+        <span class="insight-label">لماذا ذُكروا؟</span>
+        <p>
+          القرآن يستخدم قصص عاد وثمود كتحذير مباشر لقريش: «أمم أقوى منكم كذّبت رسلها فأُهلكت، فاحذروا
+          نفس المصير». عندما تقرأ سور الشعراء والقمر والحاقة لاحقًا، ستجد هذا الرابط واضحًا —
+          الله يُذكّر قريشًا بجيرانهم الذين مرّوا على آثارهم في أسفارهم التجارية.
+        </p>
+      </div>
     </section>
 
+    <!-- ─── العرب العاربة ─── -->
+
     <section>
-      <h2>الهجرات وتحولات المجتمع</h2>
+      <h2>العرب العاربة (القحطانيون)</h2>
       <p>
-        تعرض جنوب الجزيرة لتحديات اقتصادية بعد تحكّم الرومان في الطرق البحرية، الأمر الذي دفع بطونًا قحطانية
-        كثيرة إلى الهجرة شمالًا وشرقًا قبل انهيار سد مأرب في اليمن. وزّعت تلك الهجرات القبائل بين الحجاز والشام والعراق،
-        فأُسست إمارات محلية، وبرزت مجموعات مثل الأزد ولخم وطيء في مناطق متفرقة دون ضرورة للخوض في تفاصيل الأفخاذ.
-        أما في الوسط والشرق فاستقرت القبائل العدنانية حول موارد المياه وروافد التجارة، مما أوجد شبكة من التحالفات
-        ربطت بادية العراق بالحجاز واليمن.
+        هؤلاء هم العرب «الأصليون» — تكلموا العربية أصالةً. ينحدرون من قحطان، وموطنهم اليمن.
+        انقسموا إلى شعبين عظيمين:
       </p>
-      <div class="visual-grid">
-        <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">⛰️</span>
-          <p class="visual-title">هجرات الجبال</p>
-          <p class="visual-text">انتقال الأزد إلى الحجاز والشام أعاد تشكيل خريطة الحواضر الشمالية.</p>
-        </article>
-        <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">🏜️</span>
-          <p class="visual-title">استقرار العدنانيين</p>
-          <p class="visual-text">على طرق نجد والعراق استقرت بطون معد ومضر حول موارد المياه.</p>
-        </article>
-        <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">🤝</span>
-          <p class="visual-title">تحالفات وأسواق</p>
-          <p class="visual-text">التحالفات بين القبائل وفرت الأمان لأسواق مثل عكاظ وذي المجاز.</p>
-        </article>
+
+      <h3>حمير</h3>
+      <p>
+        حكمت اليمن بعد سبأ، وسيطرت على طرق التجارة البحرية. من أشهر بطونها
+        <strong>قضاعة</strong> الواسعة الانتشار. ضعفت حمير تحت التدخلات الأحبشية والفارسية.
+      </p>
+
+      <h3>كهلان</h3>
+      <p>
+        الفرع الأهم بالنسبة للسيرة لأن منه خرجت قبائل كثيرة ستقابلها لاحقًا:
+      </p>
+      <ul>
+        <li><strong>الأزد:</strong> أكبر بطون كهلان وأكثرها تفرعًا — منها الأوس والخزرج وخزاعة والغساسنة (تفصيلها أدناه).</li>
+        <li><strong>همدان:</strong> قبيلة يمنية عريقة كان لها دور كبير في الفتوحات الإسلامية.</li>
+        <li><strong>طيء:</strong> هاجروا شمالًا عند جبلَي أجأ وسلمى. منهم حاتم الطائي المشهور بالكرم.</li>
+        <li><strong>كندة:</strong> أسست حكومة قوية في نجد لكنها تفككت سريعًا.</li>
+        <li><strong>لخم:</strong> أسسوا مملكة الحيرة على تخوم العراق تحت حماية الفرس.</li>
+        <li><strong>جذام:</strong> هاجروا إلى تخوم الشام.</li>
+        <li><strong>مذحج:</strong> ظلوا في مواطنهم جنوب الجزيرة.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">خريطة الروابط المستقبلية</span>
+        <p>
+          <strong>الأزد ← الأنصار:</strong> الأوس والخزرج (أنصار المدينة) هم أبناء الأزد. أي أن الذين
+          آووا النبي ﷺ ونصروه هم قحطانيون يمنيون هاجر أجدادهم إلى يثرب قبل قرون.
+          <br/>
+          <strong>طيء ← عدي بن حاتم:</strong> حفيد حاتم الطائي سيأتي مسلمًا في عام الوفود ومعه قبيلته.
+          <br/>
+          <strong>كندة ← الأشعث بن قيس:</strong> سيقود وفد كندة إلى النبي ﷺ.
+          <br/>
+          <strong>لخم ← ملوك الحيرة:</strong> النبي ﷺ سيراسل حكام الحيرة ضمن رسائله للملوك.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── هجرة الأزد: القصة الكبرى ─── -->
+
+    <section>
+      <h2>هجرة بطون كهلان — كيف وصل الأنصار إلى يثرب؟</h2>
+      <p>
+        هذا من أهم ما في هذا الفصل. بعد ضعف التجارة اليمنية وبوادر انهيار سد مأرب، هاجرت
+        بطون كهلان من اليمن متفرقة. أكبر موجة كانت موجة <strong>الأزد</strong> بقيادة عمران بن عمرو مزيقياء:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">ثعلبة بن عمرو ← يثرب ← الأوس والخزرج</p>
+          <p class="flow-text">
+            اتجه إلى يثرب (المدينة المنورة لاحقًا) واستقر فيها. خرج من نسله <strong>الأوس والخزرج</strong> —
+            وهم الذين سيبايعون النبي ﷺ في العقبة بعد قرون ويدعونه للهجرة إلى مدينتهم.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">خزاعة ← مكة ← سدانة الكعبة</p>
+          <p class="flow-text">
+            نزلت خزاعة بمكة وتولت شؤون الحرم بعد جرهم. ظلت تحكم مكة حتى جاء قصي بن كلاب
+            وانتزع الولاية منها. لاحقًا ستتحالف خزاعة مع النبي ﷺ، والاعتداء عليها هو الذي سيشعل فتيل فتح مكة.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">جفنة بن عمرو ← الشام ← مملكة الغساسنة</p>
+          <p class="flow-text">
+            توجه إلى جنوب الشام وأسس مملكة الغساسنة تحت المظلة الرومية. النبي ﷺ سيراسل
+            ملكهم الحارث بن أبي شمر، وجيش مؤتة سيُرسل إلى تلك المنطقة.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">لخم ← العراق ← مملكة الحيرة</p>
+          <p class="flow-text">
+            أسس نصر بن ربيعة اللخمي أسرة ملوك الحيرة تحت حماية الفرس.
+            دولة عميلة تحكم تخوم العراق، وستكون من أوائل من يسقط في الفتوحات الإسلامية.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">الصورة الكبيرة</span>
+        <p>
+          لاحظ كيف وضعت الهجرات اليمنية قطعًا على رقعة الشطرنج قبل الإسلام بقرون:
+          الأنصار في يثرب، وخزاعة في مكة، والغساسنة في الشام، والحيرة في العراق.
+          كل واحدة من هذه القطع ستلعب دورًا محوريًا في أحداث السيرة لاحقًا.
+          الله يُعدّ المسرح قبل أن يبدأ الفصل الرئيسي.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ العرب المستعربة ═══════ -->
+
+    <section>
+      <h2>العرب المستعربة — سلسلة نسب النبي ﷺ</h2>
+      <p>
+        هنا ندخل في النسب النبوي مباشرة. <a class="person-link" href="ibrahim.html">إبراهيم عليه السلام</a>
+        هاجر من العراق وأسكن ابنه إسماعيل في مكة. إسماعيل لم يكن عربيًا — تعلم العربية من
+        قبيلة <strong>جرهم</strong> القحطانية التي جاورته بعد تفجّر زمزم. لذلك سُمّي نسله «مستعربة»:
+        عرب بالاكتساب لا بالأصل.
+      </p>
+      <p>
+        أنجب إسماعيل <strong>اثني عشر ولدًا</strong>. أهم اثنين: <strong>نابت</strong>
+        (جد الأنباط الذين بنوا حضارة البتراء في الأردن) و<strong>قيدار</strong> الذي ظل نسله
+        في مكة. من نسل قيدار جاء <strong>عدنان</strong> — الجد الأعلى الذي تنتهي عنده أنساب
+        القبائل العدنانية باتفاق، والجد الحادي والعشرون في سلسلة نسب النبي ﷺ.
+      </p>
+      <div class="insight">
+        <span class="insight-label">لماذا «المستعربة»؟</span>
+        <p>
+          هذا المصطلح يحمل معنى عميقًا: النبي ﷺ ينحدر من سلالة إبراهيم (غير العربي)
+          الذي جاء إلى بيئة عربية. فالرسالة من بدايتها ليست «عربية حصرية» بل عالمية بجذورها —
+          إبراهيم أبو الأنبياء جمع بين الحضارات في ذريته.
+        </p>
       </div>
     </section>
 
     <section>
-      <h2>الجذور الإبراهيمية للعرب المستعربة</h2>
+      <h2>من عدنان إلى أربعة فروع</h2>
       <p>
-        يروي الكتاب قصة انتقال <a class="person-link" href="ibrahim.html">إبراهيم</a> عليه السلام من العراق إلى الحجاز مع هاجر وابنه إسماعيل، وكيف تفجّرت زمزم
-        لتؤسس الحياة في مكة. شكّل استقرار إسماعيل بين جرهم بداية تزاوج العرب المستعربة مع أهل الحرم، ثم بنى مع أبيه
-        الكعبة وأعلن الدعوة إلى الحج. توارثت ذرية إسماعيل التجارة ورعاية البيت حتى ظهر عدنان ومن بعده مضر وقريش،
-        وصولًا إلى بني هاشم الذين خرج منهم رسول الله ﷺ.
+        عدنان ← معد ← <strong>نزار</strong>. من نزار تفرعت أربع شُعب هي الهيكل العظمي
+        لقبائل شمال الجزيرة ووسطها:
       </p>
-      <div class="visual-grid">
-        <article class="visual-card">
-          <span class="visual-icon" aria-hidden="true">🕋</span>
-          <p class="visual-title">سيرة إبراهيم</p>
-          <p class="visual-text">تعرف على تفاصيل رحلات الخليل وبناء الكعبة عبر صفحة <a class="person-link" href="ibrahim.html">إبراهيم عليه السلام</a>.</p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>إياد</h4>
+          <p>تخوم العراق. ذابوا مع الزمن في القبائل الأخرى.</p>
         </article>
+        <article class="card">
+          <h4>أنمار</h4>
+          <p>جبال السراة. منهم خثعم وبجيلة.</p>
+        </article>
+        <article class="card">
+          <h4>ربيعة</h4>
+          <p>شرق الجزيرة. فروعهم: عبد القيس، بكر بن وائل، تغلب.</p>
+        </article>
+        <article class="card">
+          <h4>مضر ⭐</h4>
+          <p>أعظم الفروع. منها قريش وهوازن وتميم. منها النبي ﷺ.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">ربيعة ومضر — المنافسة التاريخية</span>
+        <p>
+          ربيعة ومضر هما أكبر فرعين من عدنان، وبينهما تنافس قديم. عندما تقرأ عن القبائل
+          التي تأخرت في الإسلام أو جاءت في عام الوفود، ستلاحظ أن كثيرًا منها من ربيعة
+          (مثل بكر بن وائل في البحرين والعراق) بينما قريش من مضر.
+        </p>
       </div>
     </section>
 
     <section>
-      <h2>خلاصة دلالية</h2>
+      <h2>بطون مضر — فرع النبي ﷺ</h2>
       <p>
-        إبراز موقع العرب وأقوامها قبل الإسلام يوضح تهيؤ الجزيرة لاستقبال الرسالة المحمدية:
-        فبيئتها المحصنة حافظت على حرية أهلها، وموقعها الوسيط جعلها نقطة التقاء حضاري. هذا المزج
-        بين الاستقلال والانفتاح أفرز مجتمعًا قادرًا على حمل رسالة تتجاوز حدوده إلى العالم أجمع.
+        مضر انقسمت إلى فرعين: <strong>قيس عيلان</strong> (البدو الرحّل غالبًا)
+        و<strong>إلياس بن مضر</strong> (منهم كنانة ثم قريش). تعرّف على أهم البطون لأنك ستقابلها كثيرًا:
       </p>
+
+      <h3>قيس عيلان — بدو مضر</h3>
+      <ul>
+        <li><strong>هوازن:</strong> شرق مكة. منهم <strong>ثقيف</strong> أهل الطائف. ستواجه النبي ﷺ في <strong>غزوة حنين</strong> بعد فتح مكة مباشرة — أكبر جيش عربي يواجهه.</li>
+        <li><strong>غطفان:</strong> شمال نجد. منهم عبس وذبيان. سينضمون إلى <strong>تحالف الأحزاب</strong> ضد المدينة في غزوة الخندق.</li>
+        <li><strong>بنو سليم:</strong> بين المدينة وخيبر. في البداية عادوا الإسلام ثم أسلموا وشاركوا في الفتوحات.</li>
+      </ul>
+
+      <h3>إلياس بن مضر — حضر مضر</h3>
+      <ul>
+        <li><strong>تميم:</strong> أكبر قبائل العرب عددًا في نجد والبصرة. وفدهم جاء متأخرًا لكنهم صاروا ركيزة الفتوحات شرقًا.</li>
+        <li><strong>هذيل:</strong> جيران مكة الشرقيون، عُرفوا بالفصاحة المطلقة. يُستشهد بشعرهم في علوم اللغة.</li>
+        <li><strong>بنو أسد:</strong> بين تيماء والكوفة.</li>
+        <li><strong>كنانة ← قريش:</strong> كنانة في تهامة، ومن صُلبها خرجت <strong>قريش</strong> — محور السيرة بالكامل.</li>
+      </ul>
+
+      <div class="insight">
+        <span class="insight-label">نمط تتبعه</span>
+        <p>
+          قيس عيلان (هوازن، غطفان، سليم) = القبائل البدوية القوية عسكريًا التي ستكون أكبر
+          تهديد عسكري للمسلمين بعد قريش. إلياس (كنانة/قريش، تميم، هذيل) = القبائل الأقرب
+          لمكة والأكثر ارتباطًا بها تجاريًا وثقافيًا.
+        </p>
+      </div>
     </section>
 
-    <footer>
-      أُعِدَّ الملخص استنادًا إلى فصل «موقع العرب وأقوامها» من كتاب «الرحيق المختوم»
-    </footer>
+    <!-- ─── قريش ─── -->
+
+    <section>
+      <h2>من كنانة إلى قريش — مركز السيرة</h2>
+      <p>
+        قريش هم أبناء <strong>فهر بن مالك بن النضر بن كنانة</strong>. اسمهم من «التقرّش» أي التجمع
+        والتكسّب. كانوا متفرقين حول مكة حتى جاء <strong>قصي بن كلاب</strong> وجمعهم. تعرّف على
+        بطون قريش الرئيسية لأنها شخصيات السيرة:
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>بنو هاشم</h4>
+          <p>بيت النبي ﷺ. منهم عبد المطلب وأبو طالب وحمزة والعباس وعلي. حماة الرسالة.</p>
+        </article>
+        <article class="card">
+          <h4>بنو عبد شمس</h4>
+          <p>أبناء عمومة بني هاشم ومنافسوهم. منهم <strong>أبو سفيان</strong> وأسرته — قيادة المعارضة لسنوات ثم الإسلام.</p>
+        </article>
+        <article class="card">
+          <h4>بنو مخزوم</h4>
+          <p>أقوى بطون قريش عسكريًا. منهم <strong>أبو جهل</strong> (ألدّ الأعداء) و<strong>خالد بن الوليد</strong> (سيف الله).</p>
+        </article>
+        <article class="card">
+          <h4>بنو تيم</h4>
+          <p>بطن <strong>أبي بكر الصديق</strong> — أول من آمن من الرجال وأول الخلفاء.</p>
+        </article>
+        <article class="card">
+          <h4>بنو عدي</h4>
+          <p>بطن <strong>عمر بن الخطاب</strong> — الذي كان إسلامه نقطة تحول أعزّت المسلمين.</p>
+        </article>
+        <article class="card">
+          <h4>بنو زهرة</h4>
+          <p>أخوال النبي ﷺ — بطن أمه <strong>آمنة بنت وهب</strong>. ومنهم عبد الرحمن بن عوف.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">لماذا هذا التقسيم حاسم؟</span>
+        <p>
+          كل صراع في السيرة المكية هو صراع <strong>داخل</strong> قريش: بنو هاشم يحمون النبي ﷺ،
+          بنو عبد شمس وبنو مخزوم يقودون الحرب ضده، بنو تيم وبنو عدي يخرج منهم أقرب أصحابه.
+          القبيلة الواحدة منقسمة على نفسها — وهذا يفسّر لماذا لم تستطع قريش ببساطة قتل النبي ﷺ:
+          قتله يعني حربًا أهلية بين البطون.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── قصي بن كلاب ─── -->
+
+    <section>
+      <h2>قصي بن كلاب — مَن بنى النظام الذي ورثه النبي ﷺ</h2>
+      <p>
+        قصي هو المؤسس الحقيقي لمكة كما عرفها النبي ﷺ. قبله كانت قريش متفرقة خارج مكة
+        و<strong>خزاعة</strong> تتولى الكعبة. قصي غيّر كل شيء:
+      </p>
+      <ul>
+        <li><strong>جمع قريشًا:</strong> أسكن البطون في بطن مكة حول الكعبة — ولّد الوحدة القرشية.</li>
+        <li><strong>انتزع سدانة الكعبة:</strong> اشترى حق السدانة من أبي غبشان الخزاعي، فانتقل الحرم لقريش.</li>
+        <li><strong>أسس دار الندوة:</strong> مجلس شورى تُتخذ فيه كل القرارات — الحرب والسلم والزواج والتجارة.</li>
+        <li><strong>وضع أربعة مناصب:</strong> السقاية (سقي الحجاج)، الرفادة (إطعامهم)، اللواء (راية الحرب)، الحجابة (خدمة الكعبة).</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">هذا النظام هو مسرح السيرة</span>
+        <p>
+          <strong>دار الندوة</strong> = المكان الذي ستجتمع فيه قريش ليلة الهجرة لتقرر اغتيال النبي ﷺ.
+          <br/>
+          <strong>السقاية والرفادة</strong> = آلت إلى هاشم ثم عبد المطلب ثم العباس. عند فتح مكة
+          سيقول النبي ﷺ: «مَن دخل دار أبي سفيان فهو آمن» — لأن لكل بطن دارًا ونفوذًا.
+          <br/>
+          <strong>الحجابة</strong> = ظلت في بني عبد الدار. عند فتح مكة أعاد النبي ﷺ المفتاح إلى عثمان بن طلحة
+          (من بني عبد الدار)، مؤكدًا احترام البنية القائمة مع تطهيرها من الشرك.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>توزيع المناصب بعد قصي — بذور الصراع</h2>
+      <p>
+        بعد وفاة قصي، وُزعت المناصب بين أبنائه. المهم هنا أن
+        <strong>بني عبد مناف</strong> (فرع هاشم) أخذوا السقاية والرفادة،
+        بينما <strong>بنو عبد الدار</strong> أخذوا الحجابة واللواء ودار الندوة.
+        هذا التقسيم خلق منافسة مستمرة بين الفرعين.
+      </p>
+      <p>
+        السقاية والرفادة انتقلت: عبد مناف ← <strong>هاشم</strong> (الذي نظّم رحلة الشتاء والصيف)
+        ← المطلب ← <strong>عبد المطلب</strong> (الذي حفر زمزم وواجه أبرهة)
+        ← <strong>العباس</strong> (عم النبي ﷺ الذي كان يتولى السقاية يوم الفتح).
+      </p>
+      <div class="insight">
+        <span class="insight-label">الخلاصة</span>
+        <p>
+          النبي ﷺ وُلد في أعرق بيت في أعرق بطن (بني هاشم) في أعرق قبيلة (قريش)
+          في أقدس مكان عند العرب (مكة). هذا النسب لم يكن عشوائيًا — بل جعل الرسالة تنطلق
+          من مركز الثِقل الروحي والسياسي والتجاري في الجزيرة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── خريطة القبائل ─── -->
+
+    <section>
+      <h2>خريطة القبائل العدنانية — مرجع سريع</h2>
+      <p>
+        هذا الجدول للعودة إليه كلما صادفتَ اسم قبيلة في الفصول القادمة:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>القبيلة</th>
+            <th>المنطقة</th>
+            <th>ستقابلها في...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>قريش</td><td>مكة</td><td>كل فصل تقريبًا</td></tr>
+          <tr><td>ثقيف</td><td>الطائف</td><td>رحلة الطائف، حصار الطائف</td></tr>
+          <tr><td>هوازن</td><td>شرق مكة</td><td>غزوة حنين</td></tr>
+          <tr><td>غطفان</td><td>شمال نجد</td><td>غزوة الأحزاب (الخندق)</td></tr>
+          <tr><td>بنو سليم</td><td>قرب المدينة</td><td>بئر معونة، ثم الفتوحات</td></tr>
+          <tr><td>تميم</td><td>نجد والبصرة</td><td>عام الوفود</td></tr>
+          <tr><td>بنو أسد</td><td>شرق تيماء</td><td>سرايا ما بعد بدر</td></tr>
+          <tr><td>عبد القيس</td><td>البحرين</td><td>أول وفد يأتي من الشرق</td></tr>
+          <tr><td>بكر بن وائل</td><td>العراق والبحرين</td><td>الفتوحات الإسلامية</td></tr>
+          <tr><td>تغلب</td><td>ضفاف الفرات</td><td>الفتوحات الإسلامية</td></tr>
+          <tr><td>كنانة</td><td>تهامة</td><td>حلف الفضول، الحديبية</td></tr>
+          <tr><td>بنو حنيفة</td><td>اليمامة</td><td>وفدهم، ومسيلمة الكذاب</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ─── الخلاصة الكبرى ─── -->
+
+    <section>
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. الجزيرة حصن مستقل</h4>
+          <p>بيئة حرة لا يحكمها طاغية — المكان المثالي لرسالة تحررية.</p>
+        </article>
+        <article class="card">
+          <h4>٢. قحطان وعدنان</h4>
+          <p>شعبان جمعهما الإسلام: قحطان (الأنصار) وعدنان (المهاجرون/قريش).</p>
+        </article>
+        <article class="card">
+          <h4>٣. هجرات اليمن</h4>
+          <p>وضعت الأوس والخزرج في يثرب وخزاعة في مكة — قطع جاهزة للمسرح.</p>
+        </article>
+        <article class="card">
+          <h4>٤. قريش ليست كتلة واحدة</h4>
+          <p>بطون متنافسة — وهذا التشقق هو ما أتاح للإسلام النمو داخلها.</p>
+        </article>
+        <article class="card">
+          <h4>٥. نظام قصي</h4>
+          <p>دار الندوة والسقاية والحجابة — هذا النظام سيكون مسرح كل أحداث مكة.</p>
+        </article>
+        <article class="card">
+          <h4>٦. النسب الأعرق</h4>
+          <p>النبي ﷺ من أشرف بيت في أشرف قبيلة في أقدس مكان — ليس مصادفة بل اختيار إلهي.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch1-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch1-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch1-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
   </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'الجغرافيا وحصانة الجزيرة',
+        questions: [
+          {
+            t: 'الحصن الطبيعي',
+            q: 'ما العنصر الذي جعل الجزيرة العربية حصنًا لم تخترقه القوى الكبرى؟',
+            o: ['الأنهار الكبرى والسهول الخصبة', 'الصحاري والبحار المحيطة بها من كل جهة', 'الغابات الاستوائية الكثيفة', 'سلاسل الجبال المرتفعة جدًا'],
+            a: 1
+          },
+          {
+            t: 'أقسام الجزيرة',
+            q: 'كم قسمًا رئيسيًا تُقسم إليه الجزيرة العربية في الكتاب؟',
+            o: ['ثلاثة أقسام', 'خمسة أقسام', 'سبعة أقسام'],
+            a: 1
+          },
+          {
+            t: 'موقع مكة',
+            q: 'في أي قسم من أقسام الجزيرة تقع مكة المكرمة؟',
+            o: ['نجد', 'الحجاز', 'تهامة', 'اليمن'],
+            a: 1
+          },
+          {
+            t: 'الممرات التجارية',
+            q: 'ما الذي جعل الجزيرة مفترق طرق تجاري عالمي رغم قسوة بيئتها؟',
+            o: ['اكتشاف النفط مبكرًا', 'اتصالها ببحر العرب والبحر الأحمر ومسارات التجارة مع الهند', 'الأنهار الملاحية الداخلية'],
+            a: 1
+          },
+          {
+            t: 'الحكمة الإلهية',
+            q: 'لماذا كانت الجزيرة المكان المثالي لنزول الرسالة حسب ما أشار إليه الفصل؟',
+            o: ['لأنها الأغنى اقتصاديًا في العالم القديم', 'لأنها بيئة حرة مستقلة لم يسيطر عليها طاغية — مثالية لرسالة تحررية', 'لأن سكانها كانوا متعلمين أكثر من غيرهم'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'أصول العرب وأنسابهم',
+        questions: [
+          {
+            t: 'الطبقات الثلاث',
+            q: 'ما الطبقات الثلاث التي قُسم إليها العرب حسب النسب؟',
+            o: ['حضرية وبدوية وتجارية', 'بائدة وعاربة ومستعربة', 'قحطانية وعدنانية وإسماعيلية'],
+            a: 1
+          },
+          {
+            t: 'العرب البائدة',
+            q: 'لماذا سُمي العرب البائدة بهذا الاسم؟',
+            o: ['لأنهم أول من سكن البوادي', 'لأنهم بادوا وانقرضوا ولم يبقَ لهم نسل متصل', 'لأنهم هاجروا إلى بلاد فارس'],
+            a: 1
+          },
+          {
+            t: 'جد القحطانيين',
+            q: 'من هو أبو العرب العاربة (القحطانيين)؟',
+            o: ['عدنان', 'إسماعيل عليه السلام', 'يعرب بن قحطان', 'كهلان بن سبأ'],
+            a: 2
+          },
+          {
+            t: 'العرب المستعربة',
+            q: 'من يكون جد العرب المستعربة؟',
+            o: ['قحطان', 'إسماعيل عليه السلام', 'عاد بن عوص'],
+            a: 1
+          },
+          {
+            t: 'كيف صار إسماعيل عربيًا',
+            q: 'كيف صار إسماعيل عليه السلام عربيًا وأبوه إبراهيم ليس عربيًا؟',
+            o: ['علمه جبريل عليه السلام العربية', 'تعلّم العربية من قبيلة جُرهم التي نشأ بينها في مكة', 'كانت العربية لغة أمه هاجر'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'الهجرات وخريطة القبائل',
+        questions: [
+          {
+            t: 'سبب هجرة كهلان',
+            q: 'ما السبب الرئيسي لهجرة بطون كهلان من اليمن؟',
+            o: ['الحروب الداخلية فقط', 'انهيار سد مأرب وتراجع التجارة بعد سيطرة الروم والأحباش', 'البحث عن مراعٍ أفضل في الشمال'],
+            a: 1
+          },
+          {
+            t: 'الأوس والخزرج',
+            q: 'أي القبائل القحطانية استقرت في يثرب (المدينة المنورة)؟',
+            o: ['خزاعة ولخم', 'الأوس والخزرج (من الأزد)', 'غسان وكندة', 'طيئ وجُذام'],
+            a: 1
+          },
+          {
+            t: 'أهمية يثرب',
+            q: 'لماذا يُهمنا استقرار الأوس والخزرج في يثرب؟',
+            o: ['لأنهم أسسوا أول دولة عربية', 'لأنهم سيكونون «الأنصار» الذين ينصرون النبي ﷺ بعد الهجرة', 'لأنهم اخترعوا نظام الكتابة العربية'],
+            a: 1
+          },
+          {
+            t: 'خزاعة ومكة',
+            q: 'أي قبيلة قحطانية سيطرت على مكة قبل قصي بن كلاب؟',
+            o: ['غسان', 'خزاعة', 'كندة', 'طيئ'],
+            a: 1
+          },
+          {
+            t: 'فروع عدنان',
+            q: 'ما الفروع الأربعة الكبرى من نسل عدنان؟',
+            o: ['قريش ، كنانة ، تميم ، أسد', 'إياد ، أنمار ، ربيعة ، مُضَر', 'هاشم ، أمية ، مخزوم ، زهرة'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'قريش ونظام مكة والربط بالسيرة',
+        questions: [
+          {
+            t: 'فرع قريش',
+            q: 'من أي فرع من فروع مُضَر تنحدر قريش؟',
+            o: ['قيس عيلان لأنه الأكبر عددًا', 'إلياس بن مضر — عبر كنانة ثم فِهر (قريش)', 'تميم بن مر لأنه فرع الخلفاء'],
+            a: 1
+          },
+          {
+            t: 'إنجاز قصي',
+            q: 'ما الذي فعله قصي بن كلاب لمكة؟',
+            o: ['فتحها عسكريًا من الروم', 'وحّد قريشًا وأسس نظام الحكم: دار الندوة والسقاية والرفادة واللواء والحجابة', 'بنى الكعبة لأول مرة'],
+            a: 1
+          },
+          {
+            t: 'دار الندوة',
+            q: 'ما هي دار الندوة؟',
+            o: ['مسجد للعبادة', 'مجلس شورى قريش — برلمانها السياسي والاجتماعي', 'سوق تجاري ضخم'],
+            a: 1
+          },
+          {
+            t: 'الربط بليلة الهجرة',
+            q: 'لماذا سنحتاج لفهم دار الندوة لاحقًا في السيرة؟',
+            o: ['لأنها ستكون أول مدرسة إسلامية', 'لأنها المكان الذي اجتمعت فيه قريش وخططت لقتل النبي ﷺ ليلة الهجرة', 'لأنها ستصبح مقرًا للخلافة'],
+            a: 1
+          },
+          {
+            t: 'حماية البطون',
+            q: 'لماذا لم تستطع قريش قتل النبي ﷺ بسهولة رغم عدائها الشديد له؟',
+            o: ['لحمايته بجيش خارجي من الحبشة', 'لأن قريش بطون متعددة وكل بطن يحمي أفراده — ولا يمكن لبطن أن يقتل فردًا من بطن آخر دون حرب أهلية', 'لأن العرب لا تقتل أبدًا حسب عرفها'],
+            a: 1
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch1-score');
+    const container = document.getElementById('ch1-quiz-container');
+    const retryBtn = document.getElementById('ch1-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              // highlight correct answer
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصل «موقع العرب وأقوامها» من كتاب «الرحيق المختوم»
+  </footer>
+
 </body>
 </html>

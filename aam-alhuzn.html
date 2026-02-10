@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عام الحزن والخروج إلى الطائف — الرحيق المختوم</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1e3a5f;
+      --navy-deep: #0d1b2a;
+      --gold: #b8860b;
+      --gold-light: #f5e6c8;
+      --gold-pale: #fdf6e3;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #2d3436;
+      --text-light: #636e72;
+      --border: #e8e0d4;
+      --shadow: rgba(30, 58, 95, 0.08);
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO HEADER */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #132f4c 40%, #1e3a5f 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1.5px 1.5px at 20% 30%, rgba(184,134,11,0.3) 50%, transparent 50%),
+        radial-gradient(1px 1px at 60% 20%, rgba(255,255,255,0.15) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(184,134,11,0.2) 50%, transparent 50%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.1) 50%, transparent 50%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.12) 50%, transparent 50%),
+        radial-gradient(1.5px 1.5px at 90% 40%, rgba(184,134,11,0.15) 50%, transparent 50%);
+      background-size: 200px 200px;
+      animation: twinkle 8s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from { opacity: 0.6; } to { opacity: 1; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-ornament {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 0 auto 1.5rem;
+      border-radius: 2px;
+    }
+    .hero h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* BREADCRUMB NAV */
+    .breadcrumb {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px var(--shadow);
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .breadcrumb a:hover { background: var(--gold-pale); color: var(--navy); }
+    .breadcrumb .sep { color: var(--border); font-size: 0.8rem; }
+    .breadcrumb .current { font-size: 0.85rem; font-weight: 700; color: var(--navy); }
+
+    /* MAIN */
+    main { max-width: 820px; margin: 0 auto; padding: 2.5rem 1.5rem 1rem; }
+
+    /* SECTIONS */
+    section { margin-bottom: 1.5rem; }
+    h2 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      border-right: 3px solid var(--gold);
+      padding-right: 0.75rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p { color: var(--text); text-align: justify; font-size: 1rem; margin: 0.5rem 0 1.5rem; }
+
+    /* LISTS */
+    ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+    ul li {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.6rem;
+      border-right: 3px solid var(--gold-light);
+    }
+
+    /* VISUAL GRID */
+    .visual-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .visual-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .visual-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
+    .visual-icon { font-size: 2rem; margin-bottom: 0.4rem; display: block; }
+    .visual-title { font-weight: 600; margin: 0 0 0.35rem; color: var(--navy); }
+    .visual-text { margin: 0; color: var(--text-light); line-height: 1.5; font-size: 0.95rem; }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px var(--shadow); }
+    .card h4 { margin: 0 0 0.4rem; color: var(--navy); font-size: 1rem; font-weight: 700; }
+    .card p { margin: 0; font-size: 0.95rem; color: var(--text-light); }
+
+    /* FLOW TIMELINE */
+    .flowline {
+      border-right: 3px solid var(--gold-light);
+      margin-top: 1.3rem;
+      padding-right: 1.3rem;
+    }
+    .flow-item {
+      position: relative;
+      margin-bottom: 1.2rem;
+      padding: 0.8rem 1rem 0.8rem 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: box-shadow 0.2s ease;
+    }
+    .flow-item:hover { box-shadow: 0 8px 20px var(--shadow); }
+    .flow-item::before {
+      content: "";
+      position: absolute;
+      right: -1.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px; height: 14px;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .flow-title { margin: 0; color: var(--navy); font-weight: 600; }
+    .flow-text { margin: 0.3rem 0 0; font-size: 0.95rem; color: var(--text-light); line-height: 1.6; }
+
+    /* TABLE */
+    .tribe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tribe-table th {
+      background: var(--navy); color: #fff; padding: 0.75rem 1rem;
+      text-align: right; font-family: 'Amiri', serif; font-weight: 700;
+    }
+    .tribe-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); background: var(--white); }
+    .tribe-table tr:hover td { background: var(--gold-pale); }
+
+    /* INSIGHT / CONNECTION */
+    .insight {
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .insight-label {
+      display: inline-block; font-family: 'Amiri', serif; font-weight: 700;
+      font-size: 0.92rem; color: var(--gold); margin-bottom: 0.4rem;
+    }
+    .insight p { margin: 0; font-size: 0.95rem; color: var(--text); line-height: 1.75; }
+
+    .connection {
+      background: linear-gradient(135deg, #eef3f9 0%, #f5f0e8 100%);
+      border: 1px solid #d4dce8;
+      border-right: 3px solid var(--navy);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1rem 0 1.8rem;
+    }
+    .connection-label {
+      display: inline-block; font-family: 'Amiri', serif; font-weight: 700;
+      font-size: 0.92rem; color: var(--navy); margin-bottom: 0.4rem;
+    }
+    .connection p { margin: 0; font-size: 0.95rem; color: var(--text); line-height: 1.75; }
+
+    /* PERSON LINK */
+    a.person-link {
+      color: var(--gold); font-weight: 600; text-decoration: none;
+      border-bottom: 1px solid var(--gold-light); padding-bottom: 0.05rem;
+    }
+    a.person-link:hover { color: var(--navy); border-bottom-color: var(--navy); }
+
+    /* QUIZ */
+    .quiz-wrapper { margin-top: 3rem; padding-top: 2.5rem; border-top: 2px solid var(--gold-light); }
+    .quiz-wrapper > h2 { text-align: center; border-right: none; padding-right: 0; font-size: 1.6rem; margin-bottom: 0.3rem; }
+    .quiz-intro { text-align: center; color: var(--text-light); font-size: 0.92rem; margin: 0 auto 1.5rem; max-width: 600px; }
+    .quiz-score-bar {
+      background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 12px var(--shadow);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .quiz-score-bar span { font-size: 0.9rem; color: var(--text-light); font-weight: 500; }
+    .quiz-score-bar .q-score { font-family: 'Amiri', serif; font-size: 1.15rem; color: var(--navy); font-weight: 700; }
+    .quiz-section-block {
+      background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+      margin-bottom: 1rem; box-shadow: 0 4px 24px var(--shadow); overflow: hidden;
+    }
+    .quiz-section-block summary {
+      cursor: pointer; padding: 1rem 1.4rem; font-weight: 700; font-size: 1.02rem; color: var(--navy);
+      display: flex; justify-content: space-between; align-items: center;
+      transition: background 0.2s; list-style: none;
+    }
+    .quiz-section-block summary::-webkit-details-marker { display: none; }
+    .quiz-section-block summary::marker { content: ""; }
+    .quiz-section-block summary:hover { background: rgba(245,230,200,0.25); }
+    .quiz-section-block summary .q-arrow { transition: transform 0.3s; font-size: 0.8rem; color: var(--text-light); }
+    .quiz-section-block[open] summary .q-arrow { transform: rotate(90deg); }
+    .q-section-body { padding: 0 1.4rem 1.4rem; }
+    .q-card { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 1.15rem 1.3rem; margin-top: 0.9rem; }
+    .q-card h4 { margin: 0 0 0.35rem; color: var(--navy); font-size: 0.95rem; font-weight: 700; }
+    .q-card p { margin: 0 0 0.75rem; font-size: 0.92rem; color: var(--text); text-align: right; }
+    .q-opts { display: flex; flex-direction: column; gap: 0.45rem; }
+    .q-opts button {
+      border: 1px solid var(--border); background: var(--white); border-radius: 10px;
+      padding: 0.65rem 1rem; font-size: 0.92rem; font-family: 'Tajawal', sans-serif;
+      text-align: right; cursor: pointer; transition: all 0.2s; color: var(--text);
+    }
+    .q-opts button:hover { background: var(--gold-pale); border-color: var(--gold-light); }
+    .q-opts button.q-correct { border-color: #2e7d32; background: #e8f5e9; color: #2e7d32; font-weight: 600; }
+    .q-opts button.q-wrong { border-color: #c53030; background: #fde8e8; color: #c53030; }
+    .q-opts button.q-off { pointer-events: none; opacity: 0.6; }
+    .q-feedback { margin-top: 0.5rem; font-weight: 700; font-size: 0.86rem; min-height: 1.3em; }
+    .q-feedback.q-correct { color: #2e7d32; }
+    .q-feedback.q-wrong { color: #c53030; }
+    .quiz-retry-wrap { text-align: center; margin-top: 1.5rem; }
+    .quiz-retry-btn {
+      display: inline-block; background: var(--navy); color: #fff; border: none; border-radius: 10px;
+      padding: 0.75rem 2.2rem; font-size: 1rem; font-family: 'Tajawal', sans-serif;
+      font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.2s;
+    }
+    .quiz-retry-btn:hover { background: #14293f; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer { text-align: center; color: var(--text-light); font-size: 0.82rem; border-top: 1px solid var(--border); padding: 2rem 1.5rem; margin-top: 3rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero { padding: 2.5rem 1.2rem 3rem; }
+      main { padding: 1.5rem 1rem 1rem; }
+      .visual-grid, .card-grid { grid-template-columns: 1fr; }
+      .breadcrumb a { font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+      .tribe-table { font-size: 0.85rem; }
+      .quiz-score-bar { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .q-section-body { padding: 0 1rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero-ornament"></div>
+    <h1>عام الحزن والخروج إلى الطائف</h1>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb">
+    <a href="index.html">الصفحة الرئيسة</a>
+    <span class="sep">/</span>
+    <span class="current">عام الحزن والخروج إلى الطائف</span>
+  </nav>
+
+  <main>
+
+    <!-- ═══════ المدخل ═══════ -->
+
+    <section>
+      <h2>لماذا يُعدّ هذا الفصل أشدّ فصول السيرة ألمًا؟</h2>
+      <p>
+        في العام العاشر من البعثة — أي بعد عشر سنوات كاملة من الدعوة — وقع على النبي ﷺ
+        ما لم يقع على بشر: فقدَ زوجته التي آوته وصدّقته منذ اللحظة الأولى، وفقدَ عمّه الذي حماه
+        من قريش طوال عقد كامل، ثم خرج يبحث عن نصرة فاستقبلته مدينة بالحجارة والدم.
+        هذا الفصل هو «الليل الحالك» الذي سبق فجر الإسراء والمعراج والهجرة — ولا يُفهم النور
+        الآتي إلا بمعرفة عمق هذا الظلام.
+      </p>
+      <div class="insight">
+        <span class="insight-label">مفتاح القراءة</span>
+        <p>
+          تأمّل كيف يتصرف النبي ﷺ تحت أقسى الضغوط: لا ينتقم، ولا ييأس، ولا يتنازل عن مبدئه.
+          ردّ فعله في كل مصيبة من مصائب هذا الفصل هو درس في القيادة تحت الأزمات.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ السياق: ما قبل عام الحزن ═══════ -->
+
+    <section>
+      <h2>ما الذي سبق عام الحزن؟</h2>
+      <p>
+        لفهم ثقل هذا العام، تذكّر ما كان يحدث قبله مباشرة: قريش حاصرت بني هاشم في شِعب
+        أبي طالب ثلاث سنوات كاملة — مقاطعة اقتصادية واجتماعية شاملة. لا بيع ولا شراء
+        ولا زواج ولا تعامل. أكل المسلمون أوراق الشجر حتى سُمع بكاء الأطفال من وراء الشِّعب.
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">السنة ٧ للبعثة — بدء الحصار</p>
+          <p class="flow-text">
+            علّقت قريش صحيفة المقاطعة في جوف الكعبة. تعاهدوا على عدم التعامل مع بني هاشم
+            وبني المطلب حتى يسلّموا محمدًا ﷺ.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">ثلاث سنوات من الحصار القاسي</p>
+          <p class="flow-text">
+            بنو هاشم — مسلمهم وكافرهم — احتموا في الشِّعب. أبو طالب (وهو لم يُسلم) رفض
+            أن يُسلم ابن أخيه ووقف معه. خديجة أنفقت كل مالها على إطعام المحاصَرين.
+          </p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">السنة ١٠ للبعثة — نقض الصحيفة</p>
+          <p class="flow-text">
+            أخبر النبي ﷺ عمّه أن الأرضة (الأرَضة) أكلت الصحيفة ولم تبقِ إلا اسم الله.
+            تحقّقوا فوجدوا ذلك صحيحًا. أدّى هذا — مع ضغط بعض شرفاء قريش — إلى نقض المقاطعة.
+          </p>
+        </div>
+      </div>
+      <div class="insight">
+        <span class="insight-label">أبو طالب — الحامي الذي لم يُسلم</span>
+        <p>
+          أبو طالب يمثّل معادلة محيّرة: يحمي النبي ﷺ بكل ما يملك لكنه لا يدخل الإسلام.
+          حمايته لم تكن إيمانية بل قبلية ونفسية — حبّ ابن أخيه وعزّة بني هاشم. لكن هذه الحماية
+          كانت الدرع الوحيد الذي منع قريشًا من قتل النبي ﷺ. ولهذا كان فقدانه كارثة أمنية
+          بقدر ما هو كارثة عاطفية.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ وفاة أبي طالب ═══════ -->
+
+    <section>
+      <h2>وفاة أبي طالب — سقوط الدرع السياسي</h2>
+      <p>
+        بعد خروج بني هاشم من الحصار بأشهر قليلة مرض أبو طالب مرضًا شديدًا. جاءه النبي ﷺ
+        وعنده نفر من قريش فيهم
+        <a class="person-link" href="persons.html">أبو جهل</a>
+        و<a class="person-link" href="persons.html">عبد الله بن أبي أمية</a>.
+        قال النبي ﷺ: «يا عمّ، قل لا إله إلا الله — كلمة أُحاجّ لك بها عند الله».
+      </p>
+      <p>
+        فقال أبو جهل وعبد الله بن أبي أمية: «يا أبا طالب، أترغب عن ملة عبد المطلب؟»
+        فكان آخر ما قاله أبو طالب: «على ملة عبد المطلب». ومات على ذلك.
+      </p>
+      <div class="card-grid">
+        <article class="card">
+          <h4>الأثر العاطفي</h4>
+          <p>حزن النبي ﷺ حزنًا شديدًا. قال: «لأستغفرنّ لك ما لم أُنهَ عنك». فنزلت: ﴿ما كان للنبي والذين آمنوا أن يستغفروا للمشركين﴾.</p>
+        </article>
+        <article class="card">
+          <h4>الأثر الأمني</h4>
+          <p>سقط «الدرع القبلي». قريش لم تعد تخشى ردّ فعل بني هاشم بنفس القوة. تجرّأت على النبي ﷺ بأشكال لم تكن تجرؤ عليها من قبل.</p>
+        </article>
+        <article class="card">
+          <h4>الأثر السياسي</h4>
+          <p>انتقلت زعامة بني هاشم إلى أبي لهب — عدو النبي ﷺ اللدود. صار الحامي عدوًّا بين ليلة وضحاها.</p>
+        </article>
+      </div>
+      <div class="connection">
+        <span class="connection-label">لماذا لم يُسلم أبو طالب؟</span>
+        <p>
+          العصبية القبلية التي قرأت عنها في فصل «صور من المجتمع الجاهلي» هي المفتاح: ملة
+          عبد المطلب كانت هوية وانتماءً لا مجرد عبادة. ضغط الأقران (أبو جهل) في لحظة الموت
+          كان أقوى من حبّه لابن أخيه. هذا يوضّح لماذا كان تغيير العقيدة في تلك البيئة
+          أصعب قرار يتخذه إنسان — إنه انسلاخ كامل من الهوية.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ وفاة خديجة ═══════ -->
+
+    <section>
+      <h2>وفاة خديجة — سقوط السند العاطفي</h2>
+      <p>
+        بعد وفاة أبي طالب بأيام — لا تكاد تتجاوز ثلاثة أيام في بعض الروايات — توفيت
+        <a class="person-link" href="persons.html">خديجة بنت خويلد</a>
+        رضي الله عنها. الضربتان جاءتا متلاحقتين حتى سُمّي ذلك العام «عام الحزن».
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F49A;</span>
+          <p class="visual-title">أول مَن آمن</p>
+          <p class="visual-text">صدّقته حين كذّبه الناس، وآوته حين طرده الناس، وأنفقت عليه حين حرمه الناس.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3E0;</span>
+          <p class="visual-title">السكن والطمأنينة</p>
+          <p class="visual-text">كانت الملاذ الذي يعود إليه من كل معركة. «زمّلوني» — إليها لجأ أول ما نزل الوحي.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F4B0;</span>
+          <p class="visual-title">السند المادي</p>
+          <p class="visual-text">أنفقت ثروتها كلها على الدعوة. موّلت الحصار وأطعمت المحاصرين ولم تبخل بشيء.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x2B50;</span>
+          <p class="visual-title">مكانة فريدة</p>
+          <p class="visual-text">أرسل الله لها السلام عبر جبريل وبشّرها ببيت في الجنة من قصب — لا صخب فيه ولا نصب.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">لم ينسها قط</span>
+        <p>
+          بعد سنوات طويلة من وفاتها كان النبي ﷺ يذبح الشاة فيوزّعها على صديقات خديجة.
+          وكان إذا ذُكرت أثنى عليها حتى غارت عائشة فقالت: «ما تذكر من عجوز حمراء الشدقين
+          قد أبدلك الله خيرًا منها!» فقال ﷺ: «ما أبدلني الله خيرًا منها. آمنت بي إذ كفر بي
+          الناس، وصدقتني إذ كذبني الناس، وواستني بمالها إذ حرمني الناس، ورزقني الله
+          ولدها إذ حرمني أولاد النساء». وفاء بعد الموت — هذا خُلق النبوة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ تصاعد الأذى ═══════ -->
+
+    <section>
+      <h2>تصاعد الأذى — قريش بلا رادع</h2>
+      <p>
+        بعد سقوط الحمايتين تجرّأت قريش على النبي ﷺ بأشكال جديدة لم تكن تجرؤ عليها من قبل.
+        المباركفوري يذكر عدة حوادث تكشف حجم التحوّل:
+      </p>
+      <ul>
+        <li><strong>سلا الجزور:</strong> ألقى أحد المشركين أحشاء ناقة على ظهر النبي ﷺ وهو يصلّي عند الكعبة — لم يجرؤ أحد على هذا في حياة أبي طالب.</li>
+        <li><strong>التراب على الرأس:</strong> نثر أحدهم التراب على رأس النبي ﷺ وهو عائد إلى بيته. دخل على إحدى بناته فجعلت تغسل عنه التراب وتبكي، وهو يقول: «لا تبكي يا بنية، فإن الله مانع أباك».</li>
+        <li><strong>أبو لهب الجار:</strong> صار أبو لهب — ابن عمه — يؤذيه من بيته المجاور. يلقي القاذورات أمام بابه ويحرّض الناس عليه.</li>
+        <li><strong>رفض الجوار:</strong> حاول أبو لهب (كزعيم جديد لبني هاشم) إخراج النبي ﷺ من حماية البطن كليًّا. لأول مرة لم يعد للنبي ﷺ «جوار» قبلي حقيقي في مكة.</li>
+      </ul>
+      <div class="connection">
+        <span class="connection-label">لماذا لم يُقتل؟</span>
+        <p>
+          رغم فقدان حماية أبي طالب، ظلّ هناك عامل واحد يمنع قتله: الخوف من ردّ فعل بطون
+          قريش الأخرى التي لا تريد حربًا أهلية. هذا «التوازن القبلي» الذي قرأت عنه في الفصول
+          الأولى هو ما أبقى النبي ﷺ حيًّا حتى جاء الإذن بالهجرة. لكن قريشًا ستجد الحل
+          في ليلة الهجرة: أن يشترك من كل بطن شاب في القتل ليتفرّق الدم.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخروج إلى الطائف ═══════ -->
+
+    <section>
+      <h2>الخروج إلى الطائف — أشدّ يوم على الإطلاق</h2>
+      <p>
+        بعد أن أُغلقت أبواب مكة في وجهه خرج النبي ﷺ ماشيًا إلى الطائف — نحو ١٠٠ كيلومتر
+        جنوب شرق مكة — يبحث عن نصرة. كانت الطائف ثاني أكبر مدينة في الحجاز وفيها ثقيف
+        (بطن من هوازن)، وكان يأمل أن يجد عندهم ما لم يجده في قريش.
+      </p>
+
+      <h3>المقابلة مع سادة ثقيف</h3>
+      <p>
+        توجّه إلى ثلاثة إخوة هم سادة ثقيف: عبد ياليل ومسعود وحبيب — أبناء عمرو بن عمير الثقفي.
+        عرض عليهم الإسلام وطلب نصرتهم. ردودهم كانت ساخرة مهينة:
+      </p>
+      <table class="tribe-table">
+        <thead>
+          <tr>
+            <th>مَن</th>
+            <th>ردّه</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>الأول</strong></td>
+            <td>«أنا أمرط ثياب الكعبة إن كان الله أرسلك!» — أي: أقسم أنك كاذب.</td>
+          </tr>
+          <tr>
+            <td><strong>الثاني</strong></td>
+            <td>«أما وجد الله أحدًا غيرك يرسله؟» — سخرية من شخصه ﷺ.</td>
+          </tr>
+          <tr>
+            <td><strong>الثالث</strong></td>
+            <td>«والله لا أكلّمك أبدًا. إن كنتَ رسولًا فأنت أعظم من أن أردّ عليك، وإن كنتَ كاذبًا فلا ينبغي لي أن أكلّمك.» — ذكاء خبيث في الرفض.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>الحجارة والدم</h3>
+      <p>
+        لم يكتفوا بالرفض بل أغروا به سفهاءهم وعبيدهم وصبيانهم. صفّوهم في صفّين على جانبي
+        الطريق يرمونه بالحجارة. سالت الدماء من قدميه الشريفتين حتى تخضّب نعلاه.
+        <a class="person-link" href="persons.html">زيد بن حارثة</a> — مرافقه الوحيد —
+        كان يحاول أن يقيه بجسده فأصيب في رأسه بعدة جراحات.
+      </p>
+      <div class="insight">
+        <span class="insight-label">أشدّ يوم</span>
+        <p>
+          سألته عائشة لاحقًا: «هل أتى عليك يوم كان أشدّ من يوم أُحد؟» فقال ﷺ: «لقد لقيتُ من
+          قومك ما لقيت، وكان أشدّ ما لقيتُ منهم يوم العقبة (أي الطائف)». هذا يعني أن ما
+          حدث في الطائف كان — في نظر النبي ﷺ نفسه — أقسى من المعركة التي كُسرت فيها
+          رباعيته وشُجّ رأسه. لأن الأذى الجسدي في أُحد جاء في معركة بين جيشين، أما هنا
+          فجاء من مدنيين طلب منهم النصرة فاستقبلوه بالحجارة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الدعاء العظيم ═══════ -->
+
+    <section>
+      <h2>دعاء الطائف — أعظم دعاء في تاريخ البشرية</h2>
+      <p>
+        لجأ النبي ﷺ إلى بستان لعتبة وشيبة ابنَي ربيعة، مثخنًا بالجراح، وحيدًا إلا من ربه.
+        رفع يديه ودعا بدعاء حفظه التاريخ كلمة كلمة:
+      </p>
+      <div class="insight">
+        <span class="insight-label">الدعاء</span>
+        <p>
+          «اللهم إليك أشكو ضعف قوتي، وقلة حيلتي، وهواني على الناس. يا أرحم الراحمين،
+          أنت ربّ المستضعفين وأنت ربي. إلى من تكلني؟ إلى بعيدٍ يتجهمني، أم إلى عدوٍّ
+          ملّكته أمري؟ إن لم يكن بك عليّ غضبٌ فلا أبالي، ولكن عافيتك هي أوسع لي.
+          أعوذ بنور وجهك الذي أشرقت له الظلمات، وصلح عليه أمر الدنيا والآخرة، من أن ينزل
+          بي غضبك، أو يحلّ عليّ سخطك. لك العتبى حتى ترضى، ولا حول ولا قوة إلا بك.»
+        </p>
+      </div>
+      <p>
+        تأمّل: لم يدعُ عليهم بل قال «إن لم يكن بك غضب فلا أبالي». همّه الوحيد: هل الله
+        راضٍ عنه أم لا. الألم الجسدي والإهانة البشرية كلها تهون إن كان الله معه.
+      </p>
+      <div class="connection">
+        <span class="connection-label">ملك الجبال</span>
+        <p>
+          بعد هذا الدعاء أرسل الله ملك الجبال فقال: «يا محمد، إن الله قد سمع قول قومك لك،
+          وأنا ملك الجبال، وقد بعثني ربك إليك لتأمرني بأمرك. إن شئتَ أطبقتُ عليهم الأخشبين
+          (جبلَي مكة)». فقال ﷺ: «بل أرجو أن يُخرج الله من أصلابهم من يعبد الله وحده
+          لا يشرك به شيئًا». هذا المشهد ستفهمه أعمق عند فتح مكة — حين يدخلها النبي ﷺ
+          فاتحًا ويقول لمن عذّبوه: «اذهبوا فأنتم الطلقاء».
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ عدّاس ═══════ -->
+
+    <section>
+      <h2>عدّاس — ومضة ضوء في أحلك ساعة</h2>
+      <p>
+        وهو في البستان رآه عتبة وشيبة — وكانا مشركَين — فرقّا لحاله وأرسلا غلامهما
+        <a class="person-link" href="persons.html">عدّاسًا</a> النصراني بعنب. حين أخذ النبي ﷺ العنب
+        قال: «بسم الله». فتعجّب عدّاس: «إن هذا الكلام ما يقوله أهل هذه البلاد!» سأله
+        النبي ﷺ: «من أي البلاد أنت؟» قال: «من نينوى». قال: «من قرية الرجل الصالح يونس
+        بن متى!» فقال عدّاس: «وما يدريك ما يونس بن متى؟» فأخبره النبي ﷺ عن يونس
+        فانكبّ عدّاس يقبّل رأسه ويديه وقدميه.
+      </p>
+      <div class="insight">
+        <span class="insight-label">الرسالة في التوقيت</span>
+        <p>
+          في أقسى لحظة — مرفوض من ثقيف ومطرود ومدمّى — يأتيه عبد نصراني غريب من العراق
+          فيؤمن به. كأن الله يقول له: بابٌ أُغلق وبابٌ يُفتح. هذا النمط (فرج بعد شدة)
+          سيتكرر في السيرة: بعد وفاة أبي طالب سيأتي الإسراء والمعراج، وبعد إغلاق مكة
+          ستُفتح المدينة، وبعد أُحد سيأتي فتح خيبر.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ العودة إلى مكة ═══════ -->
+
+    <section>
+      <h2>العودة إلى مكة — بجوار مَن؟</h2>
+      <p>
+        لم يستطع النبي ﷺ أن يعود إلى مكة بلا جوار — فقد خرج أبو لهب عليه من حماية بني
+        هاشم. أرسل إلى عدة رجال يطلب جوارهم:
+      </p>
+      <div class="flowline">
+        <div class="flow-item">
+          <p class="flow-title">الأخنس بن شريق — رفض</p>
+          <p class="flow-text">اعتذر بأنه حليف لا أصيل في قريش فلا يستطيع إجارة أحد.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">سهيل بن عمرو — رفض</p>
+          <p class="flow-text">رفض إجارته رغم مكانته في قريش.</p>
+        </div>
+        <div class="flow-item">
+          <p class="flow-title">المطعم بن عدي — قَبِل</p>
+          <p class="flow-text">
+            سيّد بني نوفل (من بطون قريش) قَبِل الجوار. أصبح يمشي في أبنائه متسلحين
+            ويعلن: «إني قد أجرتُ محمدًا». دخل النبي ﷺ مكة تحت حمايته.
+          </p>
+        </div>
+      </div>
+      <div class="connection">
+        <span class="connection-label">وفاء النبي ﷺ للمطعم</span>
+        <p>
+          بعد غزوة بدر وقع في الأسر عدد من قريش. قال النبي ﷺ: «لو كان المطعم بن عدي حيًّا
+          ثم كلّمني في هؤلاء النتنى لتركتهم له». وفاء لجميل المطعم رغم أنه مات مشركًا.
+          هذا يؤكد أن الإسلام يعترف بالمعروف ويكافئه بغض النظر عن ديانة صاحبه — نفس مبدأ
+          حلف الفضول الذي قرأته في الفصول السابقة.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ ماذا بعد عام الحزن؟ ═══════ -->
+
+    <section>
+      <h2>ماذا بعد عام الحزن؟ — الفرج القادم</h2>
+      <p>
+        عام الحزن كان «قاع» المنحنى — بعده مباشرة ستأتي أعظم أحداث السيرة تتابعًا سريعًا:
+      </p>
+      <div class="visual-grid">
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F320;</span>
+          <p class="visual-title">الإسراء والمعراج</p>
+          <p class="visual-text">تكريم إلهي مباشر: رحلة ليلية من مكة إلى بيت المقدس ثم إلى السماء. جبر للخاطر بعد الألم.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F91D;</span>
+          <p class="visual-title">بيعة العقبة الأولى</p>
+          <p class="visual-text">في موسم الحج التقى النبي ﷺ بنفر من الخزرج فآمنوا — بذرة الهجرة بدأت تنبت.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F3D9;&#xFE0F;</span>
+          <p class="visual-title">بيعة العقبة الثانية</p>
+          <p class="visual-text">٧٣ رجلًا وامرأتان من الأنصار بايعوا على النصرة — الباب فُتح أخيرًا.</p>
+        </article>
+        <article class="visual-card">
+          <span class="visual-icon" aria-hidden="true">&#x1F552;</span>
+          <p class="visual-title">الهجرة إلى المدينة</p>
+          <p class="visual-text">الانتقال من مكة إلى المدينة — من الاضطهاد إلى بناء الدولة. بداية حقبة جديدة.</p>
+        </article>
+      </div>
+      <div class="insight">
+        <span class="insight-label">القاعدة القرآنية</span>
+        <p>
+          ﴿فإن مع العسر يسرًا · إن مع العسر يسرًا﴾. لاحظ «مع» وليس «بعد» — أي أن اليسر
+          يبدأ في ذات لحظة العسر لكنك لا تراه بعد. بيعة العقبة بدأت تتشكّل في نفس الفترة
+          التي كان الأذى فيها أشدّ ما يكون. الله كان يفتح باب المدينة بينما أبواب مكة تُغلق واحدًا
+          تلو الآخر.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ الخلاصة ═══════ -->
+
+    <section>
+      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h4>١. فقدان السندين</h4>
+          <p>أبو طالب = الدرع السياسي. خديجة = السند العاطفي والمادي. فقدهما معًا في أسابيع = كارثة مزدوجة.</p>
+        </article>
+        <article class="card">
+          <h4>٢. الطائف = أقسى يوم</h4>
+          <p>أشد على النبي ﷺ من أُحد نفسها. رفض + إهانة + حجارة + دماء. ولم يدعُ عليهم.</p>
+        </article>
+        <article class="card">
+          <h4>٣. «إن لم يكن بك غضب»</h4>
+          <p>دعاء الطائف يكشف أن بوصلة النبي ﷺ الوحيدة هي رضا الله — كل شيء آخر يهون.</p>
+        </article>
+        <article class="card">
+          <h4>٤. «أرجو أن يُخرج من أصلابهم»</h4>
+          <p>رفض إهلاك مَن آذوه وتمنّى هدايتهم. هذا الموقف سيتكرر حرفيًّا يوم فتح مكة.</p>
+        </article>
+        <article class="card">
+          <h4>٥. الفرج يولد من الألم</h4>
+          <p>بعد أحلك ليلة جاء الإسراء والمعراج. وبعد إغلاق مكة فُتحت المدينة. اليسر مع العسر لا بعده.</p>
+        </article>
+        <article class="card">
+          <h4>٦. الوفاء لا يموت</h4>
+          <p>وفاء النبي ﷺ لخديجة بعد موتها ولجميل المطعم بن عدي بعد بدر — خُلق يتجاوز الزمن.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- ─── اختبر فهمك ─── -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+
+    <div class="quiz-wrapper" id="quiz-root">
+      <h2>اختبر فهمك لهذا الفصل</h2>
+      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+
+      <div class="quiz-score-bar">
+        <span>النتيجة</span>
+        <span class="q-score" id="ch11-score">٠ / ٢٠</span>
+      </div>
+
+      <div id="ch11-quiz-container"></div>
+
+      <div class="quiz-retry-wrap">
+        <button class="quiz-retry-btn" id="ch11-retry" style="display:none;">أعد المحاولة بترتيب جديد</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ Quiz Script ═══ -->
+  <script>
+  (function() {
+    const toArabicNum = n => n.toString().replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]);
+
+    const sections = [
+      {
+        title: 'الحصار ووفاة أبي طالب',
+        questions: [
+          {
+            t: 'مدة الحصار',
+            q: 'كم استمر حصار بني هاشم في شِعب أبي طالب؟',
+            o: ['سنة واحدة', 'سنتين', 'ثلاث سنوات', 'خمس سنوات'],
+            a: 2
+          },
+          {
+            t: 'نقض الصحيفة',
+            q: 'كيف انتهت المقاطعة؟',
+            o: ['هجوم عسكري من بني هاشم', 'أكلت الأرضة الصحيفة ولم تبقِ إلا اسم الله مع ضغط شرفاء قريش', 'استسلام النبي ﷺ لمطالب قريش', 'وساطة من ملك الحبشة'],
+            a: 1
+          },
+          {
+            t: 'آخر كلام أبي طالب',
+            q: 'ما آخر ما قاله أبو طالب قبل وفاته؟',
+            o: ['لا إله إلا الله', 'على ملة عبد المطلب', 'أنا مسلم', 'لا أدري ماذا أقول'],
+            a: 1
+          },
+          {
+            t: 'ضغط الأقران',
+            q: 'مَن الذي ضغط على أبي طالب لئلا يشهد الشهادة وهو على فراش الموت؟',
+            o: ['أبو سفيان وحده', 'أبو جهل وعبد الله بن أبي أمية', 'أبو لهب وزوجته', 'عتبة وشيبة ابنا ربيعة'],
+            a: 1
+          },
+          {
+            t: 'الأثر الأمني',
+            q: 'ما الأثر المباشر لوفاة أبي طالب على أمان النبي ﷺ؟',
+            o: ['لم يتغير شيء', 'سقط الدرع القبلي وتجرّأت قريش عليه بأذى لم تكن تجرؤ عليه من قبل', 'أسلمت قريش كلها', 'هاجر فورًا إلى المدينة'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'وفاة خديجة وعام الحزن',
+        questions: [
+          {
+            t: 'الفاصل الزمني',
+            q: 'كم كان الفاصل الزمني تقريبًا بين وفاة أبي طالب ووفاة خديجة؟',
+            o: ['سنة كاملة', 'ستة أشهر', 'أيام قليلة (في بعض الروايات ثلاثة أيام)', 'وقعتا في نفس اليوم'],
+            a: 2
+          },
+          {
+            t: 'لقب العام',
+            q: 'لماذا سُمّي العام العاشر من البعثة بـ«عام الحزن»؟',
+            o: ['بسبب هزيمة عسكرية كبيرة', 'بسبب وفاة أبي طالب وخديجة متتابعَين', 'بسبب مجاعة في مكة', 'بسبب وفاة ابنه القاسم'],
+            a: 1
+          },
+          {
+            t: 'فضل خديجة',
+            q: 'ما التكريم الإلهي الخاص الذي نالته خديجة رضي الله عنها؟',
+            o: ['ذُكرت بالاسم في القرآن', 'أرسل الله لها السلام عبر جبريل وبشّرها ببيت في الجنة', 'رأت الملائكة بعينها', 'نزلت سورة كاملة باسمها'],
+            a: 1
+          },
+          {
+            t: 'وفاء بعد الموت',
+            q: 'كيف أظهر النبي ﷺ وفاءه لخديجة بعد سنوات من وفاتها؟',
+            o: ['لم يتزوج بعدها أبدًا', 'كان يذبح الشاة ويرسلها لصديقاتها ويثني عليها دائمًا', 'بنى مسجدًا باسمها', 'ذكرها في خطبة الوداع فقط'],
+            a: 1
+          },
+          {
+            t: 'انتقال الزعامة',
+            q: 'إلى مَن انتقلت زعامة بني هاشم بعد وفاة أبي طالب؟',
+            o: ['العباس بن عبد المطلب', 'حمزة بن عبد المطلب', 'أبو لهب — عدو النبي ﷺ', 'أبو سفيان بن حرب'],
+            a: 2
+          }
+        ]
+      },
+      {
+        title: 'رحلة الطائف',
+        questions: [
+          {
+            t: 'المسافة',
+            q: 'تقع الطائف على بُعد نحو كم كيلومتر من مكة؟',
+            o: ['٣٠ كيلومترًا', '١٠٠ كيلومتر', '٣٠٠ كيلومتر', '٥٠٠ كيلومتر'],
+            a: 1
+          },
+          {
+            t: 'ردّ ثقيف',
+            q: 'كيف ردّ سادة ثقيف الثلاثة على دعوة النبي ﷺ؟',
+            o: ['طلبوا مهلة للتفكير', 'ردّوا بسخرية مهينة ثم أغروا به السفهاء والصبيان', 'رفضوا بأدب واعتذروا', 'قبلوا الإسلام سرًّا'],
+            a: 1
+          },
+          {
+            t: 'المرافق الوحيد',
+            q: 'مَن الذي رافق النبي ﷺ إلى الطائف وأصيب دفاعًا عنه؟',
+            o: ['أبو بكر الصديق', 'علي بن أبي طالب', 'زيد بن حارثة', 'بلال بن رباح'],
+            a: 2
+          },
+          {
+            t: 'أشدّ يوم',
+            q: 'قارن النبي ﷺ يوم الطائف بأي يوم آخر فقال إنه كان أشدّ؟',
+            o: ['يوم بدر', 'يوم أُحد', 'يوم الخندق', 'يوم حنين'],
+            a: 1
+          },
+          {
+            t: 'ملك الجبال',
+            q: 'ماذا عرض ملك الجبال على النبي ﷺ بعد حادثة الطائف؟',
+            o: ['أن يُغرق أهل مكة', 'أن يُطبق عليهم الأخشبين (جبلَي مكة)', 'أن يرسل عليهم وباءً', 'أن يُحرق مزارعهم'],
+            a: 1
+          }
+        ]
+      },
+      {
+        title: 'الدعاء والعودة وما بعد عام الحزن',
+        questions: [
+          {
+            t: 'جوهر الدعاء',
+            q: 'ما الجملة المحورية في دعاء الطائف التي تكشف بوصلة النبي ﷺ؟',
+            o: ['اللهم أهلكهم كما أهلكت عادًا', 'إن لم يكن بك عليّ غضب فلا أبالي', 'اللهم انصرني عليهم نصرًا عزيزًا', 'اللهم اجعلني ملكًا على الطائف'],
+            a: 1
+          },
+          {
+            t: 'ردّ النبي ﷺ على ملك الجبال',
+            q: 'لماذا رفض النبي ﷺ إهلاك أهل مكة؟',
+            o: ['خوفًا من قوتهم العسكرية', 'رجاء أن يُخرج الله من أصلابهم من يعبد الله', 'لأنه لم يصدّق ملك الجبال', 'لأنه كان يخطط للعودة بجيش'],
+            a: 1
+          },
+          {
+            t: 'عدّاس',
+            q: 'مَن هو عدّاس وما علاقته بالأحداث؟',
+            o: ['أحد سادة ثقيف الثلاثة', 'غلام نصراني من نينوى قبّل رأس النبي ﷺ ويديه حين عرف أنه نبي', 'حارس بستان ثقيف الذي طرده', 'رجل من أهل الطائف أسلم علنًا'],
+            a: 1
+          },
+          {
+            t: 'جوار المطعم',
+            q: 'مَن الذي أجار النبي ﷺ عند عودته إلى مكة من الطائف؟',
+            o: ['أبو سفيان بن حرب', 'الأخنس بن شريق', 'المطعم بن عدي من بني نوفل', 'سهيل بن عمرو'],
+            a: 2
+          },
+          {
+            t: 'ما بعد الحزن',
+            q: 'ما أول حدث عظيم جاء بعد عام الحزن مباشرة ليكون تكريمًا إلهيًّا للنبي ﷺ؟',
+            o: ['غزوة بدر الكبرى', 'الإسراء والمعراج', 'فتح مكة', 'إسلام عمر بن الخطاب'],
+            a: 1
+          }
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    const totalQ = sections.reduce((s, sec) => s + sec.questions.length, 0);
+    let correct = 0;
+    let answered = 0;
+    const scoreEl = document.getElementById('ch11-score');
+    const container = document.getElementById('ch11-quiz-container');
+    const retryBtn = document.getElementById('ch11-retry');
+
+    function updateScore() {
+      scoreEl.textContent = toArabicNum(correct) + ' / ' + toArabicNum(totalQ);
+    }
+
+    function buildQuiz() {
+      correct = 0;
+      answered = 0;
+      container.innerHTML = '';
+      retryBtn.style.display = 'none';
+      updateScore();
+
+      let qNum = 0;
+
+      sections.forEach(function(sec, sIdx) {
+        const details = document.createElement('details');
+        details.className = 'quiz-section-block';
+        if (sIdx === 0) details.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = sec.title + '<span class="q-arrow">&#x276F;</span>';
+        details.appendChild(summary);
+
+        const body = document.createElement('div');
+        body.className = 'q-section-body';
+
+        var qs = sec.questions.slice();
+        shuffle(qs);
+
+        qs.forEach(function(item) {
+          qNum++;
+          var card = document.createElement('article');
+          card.className = 'q-card';
+
+          var h = document.createElement('h4');
+          h.textContent = 'سؤال ' + toArabicNum(qNum) + ': ' + item.t;
+          card.appendChild(h);
+
+          var p = document.createElement('p');
+          p.textContent = item.q;
+          card.appendChild(p);
+
+          var optsDiv = document.createElement('div');
+          optsDiv.className = 'q-opts';
+
+          var fb = document.createElement('div');
+          fb.className = 'q-feedback';
+
+          var indices = item.o.map(function(_, i) { return i; });
+          shuffle(indices);
+
+          indices.forEach(function(origIdx) {
+            var btn = document.createElement('button');
+            btn.textContent = item.o[origIdx];
+            btn.addEventListener('click', function() {
+              if (card.dataset.done) return;
+              card.dataset.done = '1';
+              answered++;
+
+              optsDiv.querySelectorAll('button').forEach(function(b) {
+                b.classList.add('q-off');
+              });
+
+              optsDiv.querySelectorAll('button').forEach(function(b, bIdx) {
+                if (indices[bIdx] === item.a) {
+                  b.classList.add('q-correct');
+                }
+              });
+
+              if (origIdx === item.a) {
+                btn.classList.add('q-correct');
+                fb.textContent = 'إجابة صحيحة!';
+                fb.className = 'q-feedback q-correct';
+                correct++;
+              } else {
+                btn.classList.add('q-wrong');
+                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.className = 'q-feedback q-wrong';
+              }
+              updateScore();
+
+              if (answered === totalQ) {
+                retryBtn.style.display = 'inline-block';
+              }
+            });
+            optsDiv.appendChild(btn);
+          });
+
+          card.appendChild(optsDiv);
+          card.appendChild(fb);
+          body.appendChild(card);
+        });
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    retryBtn.addEventListener('click', function() {
+      buildQuiz();
+      document.getElementById('quiz-root').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    buildQuiz();
+  })();
+  </script>
+
+  <footer>
+    أُعِدَّ الملخص استنادًا إلى فصلَي «عام الحزن» و«الخروج إلى الطائف» من كتاب «الرحيق المختوم»
+  </footer>
+
+</body>
+</html>
