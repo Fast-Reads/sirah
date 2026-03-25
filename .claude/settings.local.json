@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "Bash(gh auth:*)",
+      "Bash(chmod +x d:/Saada/push.sh d:/Saada/pull.sh)",
+      "Bash(gh api:*)"
+    ]
+  }
+}
