@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physiotherapy — Move Better, Live Better</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --teal:    #0d9488;
+      --teal-dk: #0f766e;
+      --teal-lt: #ccfbf1;
+      --gray:    #f1f5f9;
+      --dark:    #0f172a;
+      --mid:     #475569;
+      --white:   #ffffff;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 6%;
+      background: var(--white);
+      box-shadow: 0 1px 8px rgba(0,0,0,.08);
+    }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--teal); letter-spacing: -.5px; }
+    .logo span { color: var(--dark); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a { text-decoration: none; color: var(--mid); font-size: .95rem; font-weight: 500; transition: color .2s; }
+    nav ul a:hover { color: var(--teal); }
+    .nav-cta {
+      background: var(--teal); color: var(--white) !important;
+      padding: .5rem 1.2rem; border-radius: 6px; font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--teal-dk); color: var(--white) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      display: flex; align-items: center; gap: 4rem;
+      padding: 6rem 6% 5rem;
+      background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+    }
+    .hero-text { flex: 1; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--teal-lt); color: var(--teal-dk);
+      font-size: .8rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+      padding: .35rem .9rem; border-radius: 999px; margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800; line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em { color: var(--teal); font-style: normal; }
+    .hero p {
+      font-size: 1.1rem; color: var(--mid); line-height: 1.7;
+      max-width: 480px; margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block; padding: .85rem 2rem; border-radius: 8px;
+      font-weight: 700; font-size: 1rem; text-decoration: none; transition: .2s;
+    }
+    .btn-primary { background: var(--teal); color: var(--white); }
+    .btn-primary:hover { background: var(--teal-dk); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13,148,136,.3); }
+    .btn-outline { border: 2px solid var(--teal); color: var(--teal); margin-left: 1rem; }
+    .btn-outline:hover { background: var(--teal); color: var(--white); }
+    .hero-visual {
+      flex: 1; display: flex; justify-content: center;
+    }
+    .hero-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,.1);
+      text-align: center; max-width: 320px;
+    }
+    .hero-icon { font-size: 5rem; margin-bottom: 1rem; }
+    .hero-card h3 { font-size: 1.1rem; color: var(--teal-dk); margin-bottom: .5rem; }
+    .hero-card p { font-size: .9rem; color: var(--mid); line-height: 1.6; }
+    .stats { display: flex; gap: 1.5rem; margin-top: 1.5rem; justify-content: center; }
+    .stat { text-align: center; }
+    .stat strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--teal); }
+    .stat span { font-size: .75rem; color: var(--mid); }
+
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 6%; }
+    .section-label { color: var(--teal); font-weight: 700; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .5rem; }
+    .section-title { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 1rem; }
+    .section-sub { color: var(--mid); font-size: 1rem; line-height: 1.7; max-width: 560px; margin-bottom: 3rem; }
+
+    /* ── WHY ── */
+    .why { background: var(--gray); }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .why-card {
+      background: var(--white); border-radius: 12px; padding: 2rem 1.5rem;
+      border-top: 4px solid var(--teal);
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+    .why-card .icon { font-size: 2.2rem; margin-bottom: .8rem; }
+    .why-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+    .why-card p { font-size: .88rem; color: var(--mid); line-height: 1.6; }
+
+    /* ── SERVICES ── */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .service-card {
+      border-radius: 14px; overflow: hidden;
+      border: 1.5px solid #e2e8f0;
+      transition: .2s;
+    }
+    .service-card:hover { border-color: var(--teal); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(13,148,136,.12); }
+    .service-header {
+      background: linear-gradient(135deg, var(--teal), var(--teal-dk));
+      padding: 1.8rem 1.5rem; text-align: center;
+    }
+    .service-header .icon { font-size: 2.8rem; }
+    .service-body { padding: 1.5rem; }
+    .service-body h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .6rem; }
+    .service-body p { font-size: .88rem; color: var(--mid); line-height: 1.65; }
+    .service-tag {
+      display: inline-block; margin-top: .8rem;
+      background: var(--teal-lt); color: var(--teal-dk);
+      font-size: .75rem; font-weight: 600; padding: .25rem .7rem; border-radius: 999px;
+    }
+
+    /* ── PROCESS ── */
+    .process { background: var(--dark); color: var(--white); }
+    .process .section-title { color: var(--white); }
+    .process .section-sub { color: #94a3b8; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+    .step { text-align: center; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--teal); color: var(--white);
+      font-size: 1.4rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .step h3 { font-size: 1rem; margin-bottom: .5rem; }
+    .step p { font-size: .86rem; color: #94a3b8; line-height: 1.6; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--gray); }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .testi-card {
+      background: var(--white); border-radius: 12px; padding: 1.8rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: .8rem; }
+    .testi-card p { font-size: .92rem; color: var(--mid); line-height: 1.7; font-style: italic; margin-bottom: 1rem; }
+    .testi-author { display: flex; align-items: center; gap: .8rem; }
+    .avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--teal); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem;
+    }
+    .author-info strong { display: block; font-size: .9rem; }
+    .author-info span { font-size: .8rem; color: var(--mid); }
+
+    /* ── CTA ── */
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(135deg, var(--teal) 0%, #0369a1 100%);
+      color: var(--white); padding: 5rem 6%;
+    }
+    .cta-section h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; margin-bottom: 1rem; }
+    .cta-section p { font-size: 1.05rem; opacity: .9; max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.7; }
+    .btn-white { background: var(--white); color: var(--teal); font-weight: 700; }
+    .btn-white:hover { background: var(--teal-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+    /* ── CONTACT ── */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .contact-info h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; }
+    .contact-info p { color: var(--mid); line-height: 1.7; margin-bottom: 2rem; }
+    .contact-detail { display: flex; align-items: center; gap: .8rem; margin-bottom: 1rem; }
+    .contact-detail .icon { font-size: 1.3rem; }
+    .contact-detail span { font-size: .95rem; color: var(--mid); }
+    form { display: flex; flex-direction: column; gap: 1rem; }
+    form input, form textarea, form select {
+      padding: .85rem 1rem; border-radius: 8px;
+      border: 1.5px solid #e2e8f0;
+      font-size: .95rem; font-family: inherit;
+      transition: border-color .2s;
+      outline: none;
+    }
+    form input:focus, form textarea:focus, form select:focus { border-color: var(--teal); }
+    form textarea { resize: vertical; min-height: 120px; }
+    form button {
+      padding: .9rem; border: none; border-radius: 8px;
+      background: var(--teal); color: var(--white);
+      font-size: 1rem; font-weight: 700; cursor: pointer;
+      transition: .2s;
+    }
+    form button:hover { background: var(--teal-dk); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark); color: #94a3b8;
+      text-align: center; padding: 2rem 6%;
+      font-size: .88rem;
+    }
+    footer a { color: var(--teal); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .hero { flex-direction: column; padding: 3rem 5%; text-align: center; }
+      .hero p { max-width: 100%; }
+      .contact-grid { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Physio<span>Care</span></div>
+  <ul>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-badge">Professional Physiotherapy</div>
+    <h1>Stop the Pain.<br><em>Reclaim Your Life.</em></h1>
+    <p>
+      Expert physiotherapy tailored to your body, your goals, and your lifestyle.
+      Whether you're recovering from injury or looking to move better — I'm here to help.
+    </p>
+    <a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
+    <a href="#services" class="btn btn-outline">See Services</a>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hero-icon">🦴</div>
+      <h3>Evidence-Based Treatment</h3>
+      <p>Every session is personalised using the latest techniques in physiotherapy and rehabilitation.</p>
+      <div class="stats">
+        <div class="stat"><strong>200+</strong><span>Patients helped</span></div>
+        <div class="stat"><strong>98%</strong><span>Satisfaction</span></div>
+        <div class="stat"><strong>5★</strong><span>Rating</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <p class="section-label">Why Choose Me</p>
+  <h2 class="section-title">Your Recovery Is My Priority</h2>
+  <p class="section-sub">I combine clinical expertise with genuine care to get you back to doing what you love — faster and safely.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="icon">🎯</div>
+      <h3>Personalised Plans</h3>
+      <p>No cookie-cutter programs. Every treatment plan is built around you — your condition, your body, your goals.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🧠</div>
+      <h3>Evidence-Based Approach</h3>
+      <p>Treatments backed by the latest research in musculoskeletal and sports physiotherapy.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">⚡</div>
+      <h3>Fast, Visible Results</h3>
+      <p>Most patients feel significant improvement within the first few sessions — not months down the line.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🤝</div>
+      <h3>Ongoing Support</h3>
+      <p>I stay with you beyond the clinic — home exercise programs, follow-ups, and guidance whenever you need it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <p class="section-label">What I Offer</p>
+  <h2 class="section-title">Services Designed to Heal</h2>
+  <p class="section-sub">From acute injuries to chronic pain management — I cover the full spectrum of physiotherapy care.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-header"><div class="icon">🦵</div></div>
+      <div class="service-body">
+        <h3>Musculoskeletal Therapy</h3>
+        <p>Back pain, neck pain, joint problems, and postural issues treated with hands-on manual therapy and targeted exercises.</p>
+        <span class="service-tag">Most Popular</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-header"><div class="icon">🏃</div></div>
+      <div class="service-body">
+        <h3>Sports Injury Rehab</h3>
+        <p>Get back to peak performance after sprains, muscle tears, tendinopathies, and post-surgery recovery.</p>
+        <span class="service-tag">Athletes</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-header"><div class="icon">🧘</div></div>
+      <div class="service-body">
+        <h3>Postural Correction</h3>
+        <p>Desk workers, students, and anyone with bad posture — we'll realign your body and eliminate the aches it causes.</p>
+        <span class="service-tag">Office Workers</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-header"><div class="icon">👴</div></div>
+      <div class="service-body">
+        <h3>Elderly Mobility Care</h3>
+        <p>Gentle, effective programs to improve balance, strength, and independence for older adults.</p>
+        <span class="service-tag">All Ages</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-header"><div class="icon">🤕</div></div>
+      <div class="service-body">
+        <h3>Chronic Pain Management</h3>
+        <p>Long-term strategies combining education, movement therapy, and pain science to reclaim your quality of life.</p>
+        <span class="service-tag">Ongoing Care</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-header"><div class="icon">🏠</div></div>
+      <div class="service-body">
+        <h3>Home Visit Sessions</h3>
+        <p>Can't make it to the clinic? I come to you — same professional care, from the comfort of your home.</p>
+        <span class="service-tag">Flexible</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <p class="section-label" style="color: var(--teal);">How It Works</p>
+  <h2 class="section-title">3 Simple Steps to Feeling Better</h2>
+  <p class="section-sub">Getting started is easy. Here's what your journey looks like from first contact to full recovery.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Book a Free Call</h3>
+      <p>Tell me what's going on. We'll have a quick conversation to understand your condition and see if we're the right fit.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Full Assessment</h3>
+      <p>A thorough evaluation of your movement, strength, and pain points to build the perfect treatment plan for you.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Treat & Progress</h3>
+      <p>Hands-on therapy + personalised exercises. We track your progress every step of the way until you're back to your best.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <p class="section-label">Patient Stories</p>
+  <h2 class="section-title">Real People. Real Results.</h2>
+  <p class="section-sub">Don't take my word for it — here's what patients say after working with me.</p>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>"After years of lower back pain, I finally feel normal again. The personalised exercises made all the difference. Highly recommend!"</p>
+      <div class="testi-author">
+        <div class="avatar">S</div>
+        <div class="author-info"><strong>Sara M.</strong><span>Chronic back pain patient</span></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>"I had a knee injury 3 months before my marathon. Thanks to targeted rehab, I ran the race fully recovered. Incredible work!"</p>
+      <div class="testi-author">
+        <div class="avatar">K</div>
+        <div class="author-info"><strong>Khalid R.</strong><span>Marathon runner</span></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>"My neck and shoulder pain from sitting at a desk all day is gone. The posture correction program was a game changer for me."</p>
+      <div class="testi-author">
+        <div class="avatar">L</div>
+        <div class="author-info"><strong>Lena H.</strong><span>Software developer</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-section">
+  <h2>Ready to Move Without Pain?</h2>
+  <p>Book your free consultation today and take the first step toward a stronger, pain-free life.</p>
+  <a href="#contact" class="btn btn-white">Get Started — It's Free</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="section-label">Get In Touch</p>
+      <h2>Book Your Session</h2>
+      <p>Fill in the form and I'll get back to you within 24 hours to confirm your appointment or answer any questions.</p>
+      <div class="contact-detail"><span class="icon">📍</span><span>Available for clinic &amp; home visits</span></div>
+      <div class="contact-detail"><span class="icon">📞</span><span>+XXX XXX XXX XXX</span></div>
+      <div class="contact-detail"><span class="icon">📧</span><span>hello@physiocare.com</span></div>
+      <div class="contact-detail"><span class="icon">🕐</span><span>Mon–Sat: 8:00 AM – 7:00 PM</span></div>
+    </div>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="email" placeholder="Email Address" />
+      <select required>
+        <option value="" disabled selected>What are you dealing with?</option>
+        <option>Back or Neck Pain</option>
+        <option>Sports Injury</option>
+        <option>Post-Surgery Rehab</option>
+        <option>Posture Issues</option>
+        <option>Chronic Pain</option>
+        <option>Other</option>
+      </select>
+      <textarea placeholder="Tell me a little more about your situation (optional)..."></textarea>
+      <button type="submit">Send My Request →</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 PhysioCare. Built with care for better movement.</p>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.textContent = '✅ Request Sent! I\'ll contact you soon.';
+    btn.style.background = '#059669';
+    btn.disabled = true;
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
