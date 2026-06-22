@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الحكم والإمارة في العرب — الرحيق المختوم</title>
+  <title>الحكم والإمارة في العرب، الرحيق المختوم</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
   <style>
     :root {
       --navy: #1e3a5f;
@@ -319,6 +322,153 @@
     }
     .tribe-table tr:hover td {
       background: var(--gold-pale);
+    }
+
+    /* POWERS MAP (Leaflet) */
+    .powers-map-wrap {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1rem 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .powers-map-wrap h4 {
+      text-align: center;
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin: 0 0 0.4rem;
+      font-weight: 700;
+    }
+    .map-caption {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      margin: 0 auto 1.1rem;
+      max-width: 520px;
+      text-align: center;
+      line-height: 1.7;
+    }
+    #powers-leaflet-map {
+      width: 100%;
+      max-width: 760px;
+      height: 500px;
+      margin: 0 auto;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      direction: ltr;
+    }
+    .ref-pin { background: transparent; border: none; }
+    .ref-pin-inner {
+      width: 10px;
+      height: 10px;
+      background: var(--navy);
+      border: 2px solid white;
+      border-radius: 50%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .leaflet-popup-content {
+      font-family: 'Tajawal', sans-serif;
+      direction: rtl;
+      text-align: right;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin: 12px 14px;
+    }
+    .leaflet-popup-content strong.tribe-name {
+      font-family: 'Amiri', serif;
+      color: var(--navy);
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .ref-city-label {
+      font-family: 'Tajawal', sans-serif !important;
+      background: rgba(255,255,255,0.92) !important;
+      border: 1px solid var(--border) !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+      color: var(--navy) !important;
+      font-weight: 600 !important;
+      font-size: 11px !important;
+      padding: 1px 6px !important;
+      border-radius: 4px !important;
+    }
+    .ref-city-label::before { display: none; }
+    .ref-city-region {
+      font-size: 9px !important;
+      opacity: 0.7;
+      font-weight: 500 !important;
+      margin-right: 2px;
+    }
+    .region-label { background: transparent; border: none; }
+    .region-label-inner {
+      font-family: 'Amiri', serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 0 2px rgba(0,0,0,0.5);
+      text-align: center;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .powers-legend {
+      display: flex;
+      gap: 0.9rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0.8rem;
+      font-family: 'Amiri', serif;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+    .powers-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 700;
+    }
+    .powers-legend i {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 1.5px solid rgba(0,0,0,0.2);
+      opacity: 0.75;
+    }
+
+    /* SABA-STYLE CHAIN */
+    .saba-chain {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem 0.5rem;
+      margin: 0.9rem 0 0.5rem;
+    }
+    .saba-node {
+      background: var(--white);
+      border: 1.5px solid var(--gold-light);
+      border-radius: 6px;
+      padding: 0.3rem 0.7rem;
+      font-family: 'Amiri', serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 0.92rem;
+      white-space: nowrap;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .saba-node.featured {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: white;
+      box-shadow: 0 2px 8px rgba(184,134,11,0.3);
+    }
+    .saba-sep {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1;
     }
 
     /* INSIGHT / CONNECTION BOX */
@@ -640,8 +790,8 @@
         مختلفة مع القوى الخارجية:
       </p>
       <ul>
-        <li><strong>ملوك بتيجان:</strong> ظهر ملوك متوجون في اليمن والحيرة والشام، لكن أغلبهم كان تابعًا لقوى أكبر كالفُرس والروم. السلطة هنا هرمية رسمية لكنها مقيّدة بالولاء الخارجي.</li>
-        <li><strong>رؤساء قبائل:</strong> قادة العشائر حكموا معظم الجزيرة بلا تيجان، مع استقلال شبه كامل وتنظيمات تقليدية تحمي مصالح القبيلة. السلطة هنا قائمة على العصبية والسمعة.</li>
+        <li><strong>ملوكٌ متوَّجون</strong> <em style="color:var(--text-light);font-weight:400;">(يلبسون التيجان، أصحاب لقبٍ ملكيّ رسميّ)</em>: ظهروا في اليمن والحيرة والشام، لكنّ أغلبهم كان تابعًا لقوًى أكبر كالفُرس والروم. السلطة هنا هرميّةٌ رسميّة، غير أنّها مقيَّدةٌ بالولاء الخارجيّ.</li>
+        <li><strong>رؤساء قبائل</strong> <em style="color:var(--text-light);font-weight:400;">(زعماء بلا تاج، سلطتهم بالعصبيّة والسمعة)</em>: حكموا معظم الجزيرة باستقلالٍ شبه كامل، وبتنظيماتٍ عُرفيّة تحمي مصالح القبيلة.</li>
       </ul>
       <p>
         وبين هذين النمطين نشأت علاقات تبعية أو تحالفات متبدلة بحسب الحاجة للتجارة أو لصدّ النفوذ الأجنبي.
@@ -651,7 +801,7 @@
         <p>
           هذا التوزع في السلطة يفسّر لماذا لم يستطع العرب التوحد ضد الدعوة: لا مركز قرار واحد يأمر
           فيُطاع. وهو أيضًا يفسّر لماذا نجحت المدينة كقاعدة: لم تكن تابعة لفارس ولا لروما، بل كانت
-          مستقلة كالحجاز — بيئة مثالية لبناء دولة جديدة.
+          مستقلة كالحجاز، بيئة مثالية لبناء دولة جديدة.
         </p>
       </div>
     </section>
@@ -659,16 +809,30 @@
     <!-- ═══════ خريطة النفوذ ═══════ -->
 
     <section id="map">
-      <h2>خريطة النفوذ — أربعة أقاليم</h2>
+      <h2>خريطة النفوذ: أربعة أقاليم</h2>
       <p>
-        هذه البطاقات تقدم «خريطة ذهنية» للأقاليم الأربعة التي تشكل محور الحكم في الجزيرة ومحيطها.
-        كل إقليم سيظهر لاحقًا في أحداث السيرة:
+        هذه البطاقات تقدّم «خريطة ذهنيّة» للأقاليم الأربعة التي تشكّل محور الحكم في الجزيرة ومحيطها.
+        كلُّ إقليمٍ سيظهر لاحقًا في أحداث السيرة:
       </p>
+
+      <div class="insight">
+        <span class="insight-label">تنبيه: هذا تقسيمٌ سياسيٌّ لا جغرافيّ</span>
+        <p>
+          الأقسام الجغرافيّة للجزيرة خمسةٌ (تِهامة، الحجاز، نَجْد، العَروض، اليمن) كما في
+          <a class="person-link" href="mowqe-al-arab.html#regions">فصل موقع العرب</a>.
+          أمّا هنا فالأقاليم الأربعة هي مراكز <strong>الحكم والسلطة</strong>:
+        </p>
+        <ul style="margin-top:0.6rem;">
+          <li><strong>الحجاز</strong> في هذه الخريطة يعني المجال السياسيّ القُرَشيّ كلَّه؛ يشمل مكةَ (وهي جغرافيًّا في تِهامة) ويثربَ والطائفَ.</li>
+          <li><strong>نَجْد والعَروض</strong> لا تظهران كإقليمَين مستقلَّين هنا، لأنّ سكّانهما قبائل بدويّة بلا ملكٍ ولا تاج. هم يندرجون تحت النمط الثاني، «رؤساء القبائل».</li>
+        </ul>
+      </div>
+
       <div class="visual-grid">
         <article class="visual-card">
           <span class="visual-icon" aria-hidden="true">&#x1F3D4;&#xFE0F;</span>
           <p class="visual-title">اليمن التجاري</p>
-          <p class="visual-text">سلالات محلية مع منافسة أجنبية على طرق البحر والسدود</p>
+          <p class="visual-text">سلالات محلّيّة مع منافسة أجنبيّة على طرق البحر وسدّ مأرب</p>
         </article>
         <article class="visual-card">
           <span class="visual-icon" aria-hidden="true">&#x1F3FA;</span>
@@ -678,18 +842,34 @@
         <article class="visual-card">
           <span class="visual-icon" aria-hidden="true">&#x1F6E1;&#xFE0F;</span>
           <p class="visual-title">الشام الحدودي</p>
-          <p class="visual-text">الغساسنة والضجاعمة كخط دفاع رومي أمام البوادي</p>
+          <p class="visual-text">الضَّجاعمة ثم الغَسَاسنة كخطّ دفاعٍ روميّ أمام البوادي</p>
         </article>
         <article class="visual-card">
           <span class="visual-icon" aria-hidden="true">&#x1F54B;</span>
           <p class="visual-title">الحجاز الروحي</p>
-          <p class="visual-text">زعامة دينية تدير الحرم وتعتمد على رمزية البيت العتيق</p>
+          <p class="visual-text">زعامة دينيّة تدير الحرم وتعتمد على رمزيّة البيت العتيق</p>
         </article>
       </div>
+
+      <!-- ─── خريطة النفوذ الجغرافيّة ─── -->
+      <div class="powers-map-wrap">
+        <h4>الأقاليم الأربعة على الخريطة</h4>
+        <p class="map-caption">
+          نطاقات تقريبيّة لكلِّ إقليم. اضغط على أيِّ منطقة ملوّنة لرؤية تفاصيل الحكم فيها والتبعيّة الأجنبيّة.
+        </p>
+        <div id="powers-leaflet-map"></div>
+        <div class="powers-legend">
+          <span><i style="background:#d4a017"></i> الحجاز (مستقلّ)</span>
+          <span><i style="background:#7fb069"></i> اليمن (نفوذ حبشي/فارسي)</span>
+          <span><i style="background:#c63d3d"></i> الحيرة (تابعة للفرس)</span>
+          <span><i style="background:#4a90d9"></i> الشام (تابعة للروم)</span>
+        </div>
+      </div>
+
       <div class="insight">
         <span class="insight-label">لاحظ النمط</span>
         <p>
-          ثلاثة أقاليم من أربعة خاضعة لنفوذ أجنبي (فارس أو روما أو الحبشة). الحجاز وحده مستقل —
+          ثلاثة أقاليم من أربعة خاضعة لنفوذ أجنبي (فارس أو روما أو الحبشة). الحجاز وحده مستقل،
           وهذا الاستقلال هو الذي جعله المكان الذي وُلدت فيه الرسالة، ثم انطلقت منه لتحرير
           بقية الأقاليم.
         </p>
@@ -721,12 +901,12 @@
         <tbody>
           <tr>
             <td><strong>سبأ</strong></td>
-            <td>الأقدم — ازدهار الزراعة والسدود</td>
-            <td>سورة سبأ وقصة سيل العرم — (مفصّلة في فصل موقع العرب)</td>
+            <td>الأقدم، ازدهار الزراعة والسدود</td>
+            <td>سورة سبأ وقصة سيل العرم، (مفصّلة في فصل موقع العرب)</td>
           </tr>
           <tr>
             <td><strong>حمير</strong></td>
-            <td>بعد سبأ — سيطرة على التجارة البحرية</td>
+            <td>بعد سبأ، سيطرة على التجارة البحرية</td>
             <td>ذو نواس واضطهاد أصحاب الأخدود</td>
           </tr>
           <tr>
@@ -741,10 +921,28 @@
           </tr>
         </tbody>
       </table>
+
+      <div class="insight">
+        <span class="insight-label">شخصيّات يمنيّة محوريّة في السيرة</span>
+        <p style="margin-bottom:0.6rem;">
+          <strong>ذو نُواس:</strong> آخر ملوك حِمْيَر (نحو ٥٢٠م)، تهوّد ثم اضطهد مسيحيّي نجران وألقاهم في الأخاديد المحرقة.
+          ذُكرت قصّتهم في القرآن: ﴿قُتِلَ أَصْحَابُ الْأُخْدُودِ﴾.
+        </p>
+        <p style="margin-bottom:0.6rem;">
+          <strong>أبرهة الأَشْرَم:</strong> قائدٌ حبشيٌّ مسيحيّ حكم اليمن بعد سقوط ذي نواس.
+          بنى كنيسة «القُلَّيْس» في صنعاء ليصرف العرب عن الحجّ إلى مكة، ولمّا فشل سار بجيشٍ فيه أفيال لهدم الكعبة سنة <strong>عام الفيل</strong> (نحو ٥٧٠م).
+          وفي ذلك العام وُلد النبي ﷺ.
+        </p>
+        <p>
+          <strong>باذَان:</strong> آخر وُلاة الفرس على اليمن. وصلَتْه رسالةُ النبي ﷺ تدعوه إلى الإسلام،
+          فأسلم هو ومَن معه من الأبناء (الأبناء الفُرس في اليمن). كان إسلامه من أوائل انتصارات الدعوة خارج الحجاز.
+        </p>
+      </div>
+
       <div class="connection">
         <span class="connection-label">اليمن والسيرة</span>
         <p>
-          حملة أبرهة على مكة (عام الفيل) — التي هي نتيجة مباشرة للتدخل الحبشي في اليمن — وقعت
+          حملة أبرهة على مكة (عام الفيل)، التي هي نتيجة مباشرة للتدخل الحبشي في اليمن، وقعت
           في العام الذي وُلد فيه النبي ﷺ. وإسلام باذان الفارسي في اليمن سيكون من أوائل انتصارات
           الدعوة خارج الحجاز. تاريخ اليمن السياسي يمهّد لفهم هذين الحدثين المحوريين.
         </p>
@@ -768,7 +966,7 @@
         <p>
           يوم ذي قار أول يوم انتصر فيه العرب على الفرس. قال عنه النبي ﷺ: «هذا أول يوم انتصفت فيه
           العرب من العجم، وبي نُصروا.» هذه المعركة كشفت أن التبعية الفارسية ليست أبدية، وأن العرب
-          قادرون على الاستقلال — وهو ما سيتحقق كاملًا بالفتح الإسلامي للعراق.
+          قادرون على الاستقلال، وهو ما سيتحقق كاملًا بالفتح الإسلامي للعراق.
         </p>
       </div>
     </section>
@@ -802,7 +1000,7 @@
         <span class="connection-label">الغساسنة والسيرة</span>
         <p>
           الغساسنة سيظهرون لاحقًا عندما يرسل النبي ﷺ رسائل إلى الملوك بعد صلح الحديبية. ملك الغساسنة
-          <strong>شرحبيل بن عمرو</strong> سيقتل رسول النبي ﷺ الحارث بن عمير، مما يؤدي إلى غزوة مؤتة —
+          <strong>شرحبيل بن عمرو</strong> سيقتل رسول النبي ﷺ الحارث بن عمير، مما يؤدي إلى غزوة مؤتة،
           أول مواجهة بين المسلمين والروم وحلفائهم.
         </p>
       </div>
@@ -816,37 +1014,53 @@
         يوضح هذا القسم كيف تحولت خدمة الحرم إلى شكل من أشكال الحكم الذي يحظى بشرعية دينية لا عسكرية.
       </p>
       <p>
-        رغم بساطة مؤسساتها، حظيت مكة بمكانة روحية جعلت العرب يحترمون زعامتها. تداولت جرهم وخزاعة ثم قريش شؤون الحرم،
-        وتطورت أدوار كالسقاية والرفادة ودار الندوة وإدارة المواسم، ما جعل الحجاز مركزًا يجمع بين الدين والإدارة العرفية.
+        رغم بساطة مؤسساتها، حظيت مكة بمكانة روحيّة جعلت العرب يحترمون زعامتها. تداولت ولايةَ الحرم ثلاثُ قبائل قبل أن تستقرّ
+        في قُريش، وتطوّرت أدوارٌ كالسقاية والرفادة ودار الندوة وإدارة المواسم، فاجتمع للحجاز الدينُ والإدارة العرفيّة.
       </p>
+
+      <div class="insight">
+        <span class="insight-label">تتابع ولاية البيت الحرام</span>
+        <div class="saba-chain">
+          <span class="saba-node">جُرْهُم<small style="display:block;font-family:'Tajawal',sans-serif;font-weight:400;font-size:0.7rem;color:var(--text-light);margin-top:2px;">قحطانيّة، استوطنت مكة زمن إسماعيل ﷺ</small></span>
+          <span class="saba-sep">←</span>
+          <span class="saba-node">خُزاعة<small style="display:block;font-family:'Tajawal',sans-serif;font-weight:400;font-size:0.7rem;color:var(--text-light);margin-top:2px;">من الأزد، أخرجت جُرهم بعد فسادها</small></span>
+          <span class="saba-sep">←</span>
+          <span class="saba-node featured">قُريش<small style="display:block;font-family:'Tajawal',sans-serif;font-weight:400;font-size:0.7rem;color:#fff;opacity:0.85;margin-top:2px;">انتزع قُصَيٌّ السدانة بقوّة الحلف وحقوق النسب</small></span>
+        </div>
+        <p style="margin-top:0.6rem;">
+          عند مولد النبي ﷺ كانت ولاية الحرم في قُريش منذ نحو قرنَين. وهذه الزعامة الدينيّة هي ما أعطى مكة ثقلًا
+          يفوق حجمها العسكريّ، وما جعل المُساس بها معركةً تخصّ كلّ العرب لا قبيلةً وحدها.
+        </p>
+      </div>
+
       <div class="visual-grid">
         <article class="visual-card">
           <span class="visual-icon" aria-hidden="true">&#x1F4A7;</span>
           <p class="visual-title">السقاية</p>
-          <p class="visual-text">توفير الماء للحجاج — تولاها بنو هاشم (جد النبي ﷺ)</p>
+          <p class="visual-text">توفير الماء للحجاج. تولاها بنو هاشم (جدّ النبي ﷺ).</p>
         </article>
         <article class="visual-card">
           <span class="visual-icon" aria-hidden="true">&#x1F372;</span>
           <p class="visual-title">الرفادة</p>
-          <p class="visual-text">إطعام الحجاج — شرف يجلب السمعة والنفوذ لصاحبه</p>
+          <p class="visual-text">إطعام الحجاج. شرفٌ يجلب السمعة والنفوذ لصاحبه.</p>
         </article>
         <article class="visual-card">
           <span class="visual-icon" aria-hidden="true">&#x1F3DB;&#xFE0F;</span>
           <p class="visual-title">دار الندوة</p>
-          <p class="visual-text">مجلس شورى قريش — لا يُقرّ أمر كبير إلا فيها</p>
+          <p class="visual-text">مجلس شورى قريش. لا يُقرّ أمرٌ كبير إلا فيها.</p>
         </article>
         <article class="visual-card">
           <span class="visual-icon" aria-hidden="true">&#x1F511;</span>
           <p class="visual-title">الحجابة</p>
-          <p class="visual-text">مفتاح الكعبة — رمز أعلى سلطة دينية في مكة</p>
+          <p class="visual-text">مفتاح الكعبة. رمز أعلى سلطة دينيّة في مكة.</p>
         </article>
       </div>
       <div class="connection">
         <span class="connection-label">دار الندوة ومؤامرة الهجرة</span>
         <p>
-          دار الندوة — مجلس شورى قريش الذي تعرفه هنا — هي المكان نفسه الذي سيجتمع فيه سادة قريش
+          دار الندوة، مجلس شورى قريش الذي تعرفه هنا، هي المكان نفسه الذي سيجتمع فيه سادة قريش
           ليلة الهجرة لتدبير اغتيال النبي ﷺ. الأدوار القرشية التي نراها هنا (سقاية، رفادة، ندوة)
-          ستظهر في تفاصيل الصراع بين الدعوة وقريش — لأن كل منصب يعني مصلحة يُخشى فقدانها.
+          ستظهر في تفاصيل الصراع بين الدعوة وقريش، لأن كل منصب يعني مصلحة يُخشى فقدانها.
         </p>
       </div>
     </section>
@@ -898,7 +1112,7 @@
         <span class="insight-label">لماذا يهم هذا؟</span>
         <p>
           الإسلام لم يلغِ القبيلة بل أعاد تعريف الولاء. فهم النظام القبلي يفسّر لماذا كانت «المؤاخاة»
-          بين المهاجرين والأنصار في المدينة ثورة اجتماعية حقيقية: ربطت بين أناس لا تجمعهم عصبية —
+          بين المهاجرين والأنصار في المدينة ثورة اجتماعية حقيقية: ربطت بين أناس لا تجمعهم عصبية،
           وهذا كان غير مسبوق في تاريخ العرب.
         </p>
       </div>
@@ -939,7 +1153,7 @@
     <!-- ═══════ الخلاصة ═══════ -->
 
     <section id="summary">
-      <h2>الخلاصة — ما الذي تأخذه معك من هذا الفصل؟</h2>
+      <h2>الخلاصة: ما الذي تأخذه معك من هذا الفصل؟</h2>
       <div class="card-grid">
         <article class="card">
           <h4>١. نمطان للحكم</h4>
@@ -947,7 +1161,7 @@
         </article>
         <article class="card">
           <h4>٢. ثلاثة أقاليم تابعة</h4>
-          <p>اليمن والحيرة والشام خضعت للفرس أو الروم أو الأحباش — الحجاز وحده المستقل.</p>
+          <p>اليمن والحيرة والشام خضعت للفرس أو الروم أو الأحباش، الحجاز وحده المستقل.</p>
         </article>
         <article class="card">
           <h4>٣. مكة: سلطة بلا جيش</h4>
@@ -955,15 +1169,15 @@
         </article>
         <article class="card">
           <h4>٤. القبيلة: وحدة الحكم الأساسية</h4>
-          <p>العصبية هي الأمن والهوية والقانون — والإسلام سيعيد تعريف هذا الولاء.</p>
+          <p>العصبية هي الأمن والهوية والقانون، والإسلام سيعيد تعريف هذا الولاء.</p>
         </article>
         <article class="card">
           <h4>٥. فراغ سياسي ممهِّد</h4>
-          <p>غياب مرجع موحد للعرب خلق الحاجة لمشروع جامع — والإسلام ملأ هذا الفراغ.</p>
+          <p>غياب مرجع موحد للعرب خلق الحاجة لمشروع جامع، والإسلام ملأ هذا الفراغ.</p>
         </article>
         <article class="card">
           <h4>٦. أحداث ستعود</h4>
-          <p>حملة الفيل، يوم ذي قار، دار الندوة، إسلام باذان — كلها تبدأ هنا وتكتمل لاحقًا.</p>
+          <p>حملة الفيل، يوم ذي قار، دار الندوة، إسلام باذان، كلها تبدأ هنا وتكتمل لاحقًا.</p>
         </article>
       </div>
     </section>
@@ -974,7 +1188,7 @@
 
     <div class="quiz-wrapper" id="quiz-root">
       <h2>اختبر فهمك لهذا الفصل</h2>
-      <p class="quiz-intro">٢٠ سؤالًا تغطي كل مفاهيم الفصل — أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
+      <p class="quiz-intro">٢٠ سؤالًا تغطّي كلَّ مفاهيم الفصل. أعد المحاولة حتى تحفظها عن ظهر قلب!</p>
 
       <div class="quiz-score-bar">
         <span>النتيجة</span>
@@ -990,6 +1204,127 @@
 
   </main>
 
+  <!-- ═══ Leaflet Powers Map ═══ -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script>
+  (function() {
+    if (typeof L === 'undefined') return;
+    const mapEl = document.getElementById('powers-leaflet-map');
+    if (!mapEl) return;
+
+    const map = L.map('powers-leaflet-map', {
+      center: [25, 43],
+      zoom: 5,
+      scrollWheelZoom: false,
+      minZoom: 4,
+      maxZoom: 8
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18
+    }).addTo(map);
+
+    const powers = [
+      {
+        name: 'الحجاز',
+        color: '#d4a017',
+        coords: [
+          [28.0, 35.5], [28.0, 41.0], [25.5, 42.0], [22.5, 42.5],
+          [20.0, 41.5], [19.5, 39.5], [22.0, 38.0], [25.0, 36.5]
+        ],
+        labelLat: 23.5, labelLng: 39.5,
+        desc: '<strong>مستقلّ.</strong> زعامة قُرَيش الروحيّة عبر خدمة الحرم. لم تخضع لفارس ولا للروم. هذا الاستقلال جعله البيئة المناسبة لانطلاق الرسالة.'
+      },
+      {
+        name: 'اليمن',
+        color: '#7fb069',
+        coords: [
+          [19.0, 42.5], [19.0, 50.0], [17.0, 55.0], [13.5, 53.0],
+          [12.5, 47.0], [13.0, 43.5], [15.0, 42.5], [17.5, 42.5]
+        ],
+        labelLat: 15.0, labelLng: 47.5,
+        desc: '<strong>تحت نفوذ متقلّب.</strong> سلالات محلّيّة (سَبَأ ثم حِمْيَر)، ثم تدخّل الأحباش (أبرهة وعام الفيل)، ثم وُلاة الفرس (آخرهم باذَان الذي أسلم).'
+      },
+      {
+        name: 'الحيرة',
+        color: '#c63d3d',
+        coords: [
+          [33.5, 42.0], [33.5, 47.5], [30.0, 48.5], [28.5, 46.0],
+          [29.0, 43.0], [31.0, 41.5]
+        ],
+        labelLat: 31.5, labelLng: 44.5,
+        desc: '<strong>تابعة للفرس.</strong> مملكة اللَّخْميّين كحزامٍ عربيّ يحرس حدود فارس ويضبط البوادي. شهدت <strong>يوم ذي قار</strong>، أوّل انتصار للعرب على الفرس.'
+      },
+      {
+        name: 'الشام',
+        color: '#4a90d9',
+        coords: [
+          [34.5, 35.5], [34.5, 39.0], [31.5, 39.5], [28.5, 38.0],
+          [29.0, 35.5], [32.0, 34.5], [34.0, 35.0]
+        ],
+        labelLat: 32.5, labelLng: 36.5,
+        desc: '<strong>تابعة للروم.</strong> الضَّجاعمة ثم الغَسَاسنة كحزامٍ عربيٍّ مسيحيٍّ تحت بيزنطة. ينتهي دورهم في معركة <strong>اليرموك</strong>.'
+      }
+    ];
+
+    const refCities = [
+      { name: 'مكة', region: 'الحجاز', lat: 21.42, lng: 39.83 },
+      { name: 'يثرب (المدينة)', region: 'الحجاز', lat: 24.47, lng: 39.61 },
+      { name: 'صنعاء', region: 'اليمن', lat: 15.35, lng: 44.21 },
+      { name: 'الحيرة', region: 'العراق', lat: 31.95, lng: 44.40 },
+      { name: 'بُصرى', region: 'الشام', lat: 32.52, lng: 36.48 }
+    ];
+
+    powers.forEach(function(r) {
+      L.polygon(r.coords, {
+        color: r.color,
+        fillColor: r.color,
+        fillOpacity: 0.5,
+        weight: 2.5,
+        opacity: 0.9
+      })
+      .addTo(map)
+      .bindPopup('<strong class="tribe-name">' + r.name + '</strong>' + r.desc, { maxWidth: 280 });
+
+      L.marker([r.labelLat, r.labelLng], {
+        icon: L.divIcon({
+          className: 'region-label',
+          html: '<div class="region-label-inner">' + r.name + '</div>',
+          iconSize: [100, 24],
+          iconAnchor: [50, 12]
+        }),
+        interactive: false
+      }).addTo(map);
+    });
+
+    function refIcon() {
+      return L.divIcon({
+        className: 'ref-pin',
+        html: '<div class="ref-pin-inner"></div>',
+        iconSize: [10, 10],
+        iconAnchor: [5, 5]
+      });
+    }
+
+    refCities.forEach(function(c) {
+      const label = c.region
+        ? c.name + ' <span class="ref-city-region">(' + c.region + ')</span>'
+        : c.name;
+      L.marker([c.lat, c.lng], { icon: refIcon() })
+        .addTo(map)
+        .bindTooltip(label, {
+          permanent: true,
+          direction: 'right',
+          offset: [6, 0],
+          className: 'ref-city-label'
+        });
+    });
+  })();
+  </script>
+
   <!-- ═══ Quiz Script ═══ -->
   <script>
   (function() {
@@ -1002,7 +1337,7 @@
           {
             t: 'نمطا الحكم',
             q: 'ما النمطان الرئيسيان للحكم عند العرب قبل الإسلام؟',
-            o: ['ملوك بتيجان ورؤساء قبائل', 'خلفاء وأمراء', 'كهنة وقضاة', 'ملوك وسفراء'],
+            o: ['ملوكٌ متوَّجون ورؤساء قبائل', 'خلفاء وأمراء', 'كهنة وقضاة', 'ملوك وسفراء'],
             a: 0
           },
           {
@@ -1078,7 +1413,7 @@
           {
             t: 'السقاية',
             q: 'ما المقصود بالسقاية في مكة؟ ومن تولاها؟',
-            o: ['سقاية الماشية — بنو أمية', 'توفير الماء للحجاج — بنو هاشم', 'حراسة الآبار — بنو مخزوم', 'بيع الماء للتجار — بنو عبد الدار'],
+            o: ['سقاية الماشية، بنو أمية', 'توفير الماء للحجاج، بنو هاشم', 'حراسة الآبار، بنو مخزوم', 'بيع الماء للتجار، بنو عبد الدار'],
             a: 1
           },
           {
@@ -1124,14 +1459,14 @@
           },
           {
             t: 'الفراغ السياسي',
-            q: 'لماذا يصف المباركفوري الحالة السياسية للعرب قبيل البعثة بالفراغ؟',
+            q: 'لماذا تُوصف الحالة السياسية للعرب قبيل البعثة بالفراغ؟',
             o: ['لأن كل القبائل اتحدت تحت ملك واحد', 'لأنه لم يكن للعرب مرجع سياسي موحد بل تحالفات مرحلية متقلبة', 'لأن الفرس حكموا الجزيرة كلها', 'لأن العرب لم يكن لهم أي حكم'],
             a: 1
           },
           {
             t: 'المؤاخاة ثورة',
             q: 'لماذا كانت المؤاخاة بين المهاجرين والأنصار ثورة اجتماعية؟',
-            o: ['لأنها ألغت الضرائب', 'لأنها ربطت بين أناس لا تجمعهم عصبية قبلية — وهذا غير مسبوق', 'لأنها منعت الحروب', 'لأنها وزعت الأراضي بالتساوي'],
+            o: ['لأنها ألغت الضرائب', 'لأنها ربطت بين أناس لا تجمعهم عصبية قبلية، وهذا غير مسبوق', 'لأنها منعت الحروب', 'لأنها وزعت الأراضي بالتساوي'],
             a: 1
           }
         ]
@@ -1228,7 +1563,7 @@
                 correct++;
               } else {
                 btn.classList.add('q-wrong');
-                fb.textContent = 'إجابة غير صحيحة — الصحيحة موضحة بالأخضر.';
+                fb.textContent = 'إجابة غير صحيحة. الصحيحة موضحة بالأخضر.';
                 fb.className = 'q-feedback q-wrong';
               }
               updateScore();
